@@ -11,7 +11,7 @@ $ecms_config['db']['usedb']='mysql';	//数据库类型
 $ecms_config['db']['dbver']='5.0';	//数据库版本
 $ecms_config['db']['dbserver']='localhost';	//数据库登录地址
 $ecms_config['db']['dbport']='';	//端口，不填为按默认
-$ecms_config['db']['dbusername']='test';	//数据库用户名
+$ecms_config['db']['dbusername']='ziyi';	//数据库用户名
 $ecms_config['db']['dbpassword']='123456';	//数据库密码
 $ecms_config['db']['dbname']='ziyi';	//数据库名
 $ecms_config['db']['setchar']='utf8';	//设置默认编码
@@ -82,7 +82,7 @@ $ecms_config['memberf']['userkey']='userkey';//用户密钥字段
 
 //后台安全设置
 $ecms_config['esafe']['loginauth']='';	//登录认证码,如果设置登录需要输入此认证码才能通过
-$ecms_config['esafe']['ecookiernd']='B6YjYz8esB5f2qFEaAvKR4viX7CBrh';	//后台登录COOKIE认证码(填写10~50个任意字符，最好多种字符组合)
+$ecms_config['esafe']['ecookiernd']='CjvhmU6zzjNx4ufkCFxQyMWxMuCmtB';	//后台登录COOKIE认证码(填写10~50个任意字符，最好多种字符组合)
 $ecms_config['esafe']['ckhloginfile']=0;	//后台是否启用文件验证,0为验证,1为不验证
 $ecms_config['esafe']['ckhloginip']=0;	//后台是否验证登录IP,0为不验证,1为验证
 $ecms_config['esafe']['ckhsession']=0;	//后台是否启用SESSION验证,0为不验证,1为验证
@@ -93,10 +93,10 @@ $ecms_config['esafe']['ckfromurl']=0;	//是否启用来源地址验证,0为不�
 //COOKIE设置
 $ecms_config['cks']['ckdomain']='';		//cookie作用域
 $ecms_config['cks']['ckpath']='/';		//cookie作用路径
-$ecms_config['cks']['ckvarpre']='nagns';		//前台cookie变量前缀
-$ecms_config['cks']['ckadminvarpre']='qfngp';		//后台cookie变量前缀
-$ecms_config['cks']['ckrnd']='DsXYYaEaRy952xspXGH77wT4uncsyj';	//COOKIE验证随机码(填写10~50个任意字符，最好多种字符组合)
-$ecms_config['cks']['ckrndtwo']='PsWgMjnPTY6Pa7BnEa5KHHaHSMEtBt';	//COOKIE验证随机码2(填写10~50个任意字符，最好多种字符组合)
+$ecms_config['cks']['ckvarpre']='jxlkv';		//前台cookie变量前缀
+$ecms_config['cks']['ckadminvarpre']='bykut';		//后台cookie变量前缀
+$ecms_config['cks']['ckrnd']='ByzhJm6XauFANLRXTUmbMV5Sh5PxFe';	//COOKIE验证随机码(填写10~50个任意字符，最好多种字符组合)
+$ecms_config['cks']['ckrndtwo']='Hucbbs62AmAU4CQhgMhrBpCdtYXcZz';	//COOKIE验证随机码2(填写10~50个任意字符，最好多种字符组合)
 
 //网站防火墙配置
 $ecms_config['fw']['eopen']=0;	//开启防火墙(0为关闭,1为开启)
@@ -126,7 +126,7 @@ $ecms_config['sets']['realplayertype']=',.rm,.ra,.rmvb,.mp4,.mov,.avi,.wav,.ram,
 
 //------------e_public
 $public_r=array('sitename'=>'帝国网站管理系统',
-'newsurl'=>'/ziyi/empire/',
+'newsurl'=>'/ziyi/',
 'filetype'=>'|.gif|.jpg|.swf|.rar|.zip|.mp3|.wmv|.txt|.doc|',
 'filesize'=>2048,
 'relistnum'=>8,
@@ -149,14 +149,14 @@ $public_r=array('sitename'=>'帝国网站管理系统',
 'exittime'=>40,
 'smalltextlen'=>160,
 'defaultgroupid'=>1,
-'fileurl'=>'/ziyi/empire/d/file/',
+'fileurl'=>'/ziyi/d/file/',
 'install'=>0,
 'phpmode'=>0,
 'dorepnum'=>300,
 'loadtempnum'=>50,
 'bakdbpath'=>'bdata',
 'bakdbzip'=>'zip',
-'downpass'=>'ikTLjfvjwxTfwb5Bfk7m',
+'downpass'=>'VX4e8fTsGTNaKxHzv3t5',
 'filechmod'=>1,
 'loginkey_ok'=>0,
 'tbname'=>'news',
@@ -230,7 +230,7 @@ $public_r=array('sitename'=>'帝国网站管理系统',
 'ebakcanlistdb'=>0,
 'keytog'=>2,
 'keytime'=>30,
-'keyrnd'=>'vs8KAfVDyaMRsQXfT8YW78pU5i66Wi',
+'keyrnd'=>'U5yRZcmF2k4ji6RQ6H76A8q2R2rzmv',
 'checkdorepstr'=>',0,0,0,0,',
 'regkey_ok'=>0,
 'opengetdown'=>0,
@@ -292,7 +292,7 @@ $public_r=array('sitename'=>'帝国网站管理系统',
 'filedatatbs'=>',1,',
 'filedeftb'=>1,
 'pldeftb'=>1,
-'plurl'=>'/ziyi/empire/e/pl/',
+'plurl'=>'/ziyi/e/pl/',
 'plkey_ok'=>1,
 'plface'=>'||[~e.jy~]##1.gif||[~e.kq~]##2.gif||[~e.se~]##3.gif||[~e.sq~]##4.gif||[~e.lh~]##5.gif||[~e.ka~]##6.gif||[~e.hh~]##7.gif||[~e.ys~]##8.gif||[~e.ng~]##9.gif||[~e.ot~]##10.gif||',
 'plf'=>'',
