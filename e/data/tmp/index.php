@@ -4,26 +4,15 @@ if(!defined('InEmpireCMS'))
 	exit();
 }
 ?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<!--
-Design by Free CSS Templates
-http://www.freecsstemplates.org
-Released for free under a Creative Commons Attribution 2.5 License
-
-Name       : Briefcase 
-Description: A two-column, fixed-width design with dark color scheme.
-Version    : 1.0
-Released   : 20132602
-
--->
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Briefcase by FCT</title>
+<title>ziyi title</title>
 <meta name="keywords" content="" />
 <meta name="description" content="" />
 <script type="text/javascript" src="/ziyi/briefcase/jquery-1.7.1.min.js"></script>
 <script type="text/javascript" src="/ziyi/briefcase/jquery.slidertron-1.1.js"></script>
-<link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700|Archivo+Narrow:400,700" rel="stylesheet" type="text/css">
+
 <link href="/ziyi/briefcase/default.css" rel="stylesheet" type="text/css" media="all" />
 <!--[if IE 6]>
 <link href="/ziyi/briefcase//ziyi/briefcase/default_ie6.css" rel="stylesheet" type="text/css" />
@@ -35,12 +24,7 @@ Released   : 20132602
         <h1><a href="/ziyi/briefcase/#">BriefCase</a></h1>
     </div>
     <div id="menu">
-        <ul>
-            <li class="active"><a href="/ziyi/briefcase/#" accesskey="1" title="">Homepage</a></li>
-            <li><a href="/ziyi/briefcase/#" accesskey="2" title="">My Designs</a></li>
-            <li><a href="/ziyi/briefcase/#" accesskey="3" title="">About Me</a></li>
-            <li><a href="/ziyi/briefcase/#" accesskey="4" title="">Contact</a></li>
-        </ul>
+       <? @sys_ShowClassByTemp('0',13,0,0);?>
     </div>
 </div>
 <div id="banner" class="container">
@@ -150,4 +134,11 @@ Released   : 20132602
     <p>Copyright (c) 2013 Sitename.com. All rights reserved. Design by <a href="/ziyi/briefcase/http://www.freecsstemplates.org/" rel="nofollow">FreeCSSTemplates.org</a>. Photos by <a href="/ziyi/briefcase/http://fotogrph.com/">Fotogrph</a>.</p>
 </div>
 </body>
-</html>
+</html><div id="header" class="container">
+    <div id="logo">
+        <h1><a href="/ziyi/briefcase/#">BriefCase</a></h1>
+    </div>
+    <div id="menu">
+       <? @sys_ShowClassByTemp('0',13,0,0);?>
+    </div>
+</div>

@@ -87,7 +87,7 @@ hr {
 
 #logo {
 	float: left;
-	width: 300px;
+	width: 195px;
 	height: 150px;
 }
 
@@ -110,7 +110,7 @@ hr {
 
 #menu {
 	float: right;
-	width: 600px;
+	width: 705px;
 	height: 99px;
 }
 
@@ -124,7 +124,7 @@ hr {
 
 #menu li {
 	float: left;
-	margin-left: 3em;
+	margin-left: 20px;
 }
 
 #menu a {
