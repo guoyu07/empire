@@ -1,6 +1,0 @@
-<?php
-echo my name is assnr 
-hello world!
-hello world!
-hello assnr
-?>
