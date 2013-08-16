@@ -134,11 +134,4 @@ if(!defined('InEmpireCMS'))
     <p>Copyright (c) 2013 Sitename.com. All rights reserved. Design by <a href="/ziyi/briefcase/http://www.freecsstemplates.org/" rel="nofollow">FreeCSSTemplates.org</a>. Photos by <a href="/ziyi/briefcase/http://fotogrph.com/">Fotogrph</a>.</p>
 </div>
 </body>
-</html><div id="header" class="container">
-    <div id="logo">
-        <h1><a href="/ziyi/briefcase/#">BriefCase</a></h1>
-    </div>
-    <div id="menu">
-       <? @sys_ShowClassByTemp('0',13,0,0);?>
-    </div>
-</div>
+</html>
