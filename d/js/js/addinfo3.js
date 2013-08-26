@@ -1,1 +1,1 @@
-document.write("<option value=\'9\' style=\'background:#99C4E3\'>|-首页焦点</option>");
+document.write("<option value=\'9\' style=\'background:#99C4E3\'>|-首页焦点切换 </option>");

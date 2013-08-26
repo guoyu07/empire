@@ -19,7 +19,7 @@
         <h1><a href="[!--news.url--]briefcase/#">BriefCase</a></h1>
     </div>
     <div id="menu">
-       [showclasstemp]'0',13,0,0[/showclasstemp]
+       [showclasstemp]'0',13,0,7[/showclasstemp]
     </div>
 </div>
 <div id="banner" class="container">

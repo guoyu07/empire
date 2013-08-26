@@ -24,19 +24,12 @@ if(!defined('InEmpireCMS'))
         <h1><a href="/ziyi/briefcase/#">BriefCase</a></h1>
     </div>
     <div id="menu">
-       <? @sys_ShowClassByTemp('0',13,0,0);?>
+       <? @sys_ShowClassByTemp('0',13,0,7);?>
     </div>
 </div>
 <div id="banner" class="container">
     <div id="slider">
-        <div class="viewer">
-            <div class="reel">
-                <div class="slide"> <a class="link" href="/ziyi/briefcase/http://nodethirtythree.com/#slidertron-slide-1">Full story ...</a> <img src="/ziyi/briefcase/images/pic01.jpg" alt="" /> </div>
-                <div class="slide"> <a class="link" href="/ziyi/briefcase/http://nodethirtythree.com/#slidertron-slide-2">Full story ...</a> <img src="/ziyi/briefcase/images/pic02.jpg" alt="" /> </div>
-                <div class="slide"> <a class="link" href="/ziyi/briefcase/http://nodethirtythree.com/#slidertron-slide-1">Full story ...</a> <img src="/ziyi/briefcase/images/pic04.jpg" alt="" /> </div>
-                <div class="slide"> <a class="link" href="/ziyi/briefcase/http://nodethirtythree.com/#slidertron-slide-2">Full story ...</a> <img src="/ziyi/briefcase/images/pic05.jpg" alt="" /> </div>
-            </div>
-        </div>
+    <? @sys_GetEcmsInfo(9,4,32,0,0,14,0);?>
         <div class="indicator">
             <ul>
                 <li class="active">1</li>
