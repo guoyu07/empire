@@ -62,7 +62,12 @@ if(!defined('InEmpireCMS'))
         <div id="two-column">
             <div class="box-content">
                 <h2 class="title title01">Nulla luctus eleifend</h2>
-                <p>Pellentesque tristique ante ut risus. Quisque dictum. Integer nisl risus, sagittis convallis, rutrum id, elementum congue, nibh. Suspendisse dictum porta lectus. Donec placerat odio vel elit. Nullam ante orci, pellentesque quis.</p>
+                <div style="float:left;width:320px">Pellentesque tristique ante ut risus. Quisque dictum. Integer nisl risus, sagittis convallis, rutrum id, elementum congue, nibh. Suspendisse dictum porta lectus. Donec placerat odio vel elit. Nullam ante orci, pellentesque quis.</div>
+		<div style="float:left;width:200px">
+			this is float left
+		</div>
+		<div style="clear:both">
+		</div>
             </div>
             <div class="box-content">
                 <h2 class="title title02">Maecenas luctus lectus</h2>
