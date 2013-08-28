@@ -21,7 +21,7 @@ if(!defined('InEmpireCMS'))
 <body>
 <div id="header" class="container">
     <div id="logo">
-        <h1><a href="/ziyi/briefcase/#">BriefCase</a></h1>
+        <h1><a href="/ziyi/"><img src="/ziyi/briefcase/images/logo.png"/></a></h1>
     </div>
     <div id="menu">
        <? @sys_ShowClassByTemp('0',13,0,7);?>
