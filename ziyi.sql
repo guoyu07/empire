@@ -1,8 +1,8 @@
--- MySQL dump 10.13  Distrib 5.5.32, for Linux (x86_64)
+-- MySQL dump 10.11
 --
 -- Host: localhost    Database: ziyi
 -- ------------------------------------------------------
--- Server version	5.5.32
+-- Server version	5.0.51b-community-nt-log
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -20,47 +20,47 @@
 --
 
 DROP TABLE IF EXISTS `ziyi_ecms_article`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_ecms_article` (
-  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `classid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `ttid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `onclick` int(10) unsigned NOT NULL DEFAULT '0',
-  `plnum` mediumint(8) unsigned NOT NULL DEFAULT '0',
-  `totaldown` mediumint(8) unsigned NOT NULL DEFAULT '0',
-  `newspath` char(20) NOT NULL DEFAULT '',
-  `filename` char(36) NOT NULL DEFAULT '',
-  `userid` mediumint(8) unsigned NOT NULL DEFAULT '0',
-  `username` char(20) NOT NULL DEFAULT '',
-  `firsttitle` tinyint(1) NOT NULL DEFAULT '0',
-  `isgood` tinyint(1) NOT NULL DEFAULT '0',
-  `ispic` tinyint(1) NOT NULL DEFAULT '0',
-  `istop` tinyint(1) NOT NULL DEFAULT '0',
-  `isqf` tinyint(1) NOT NULL DEFAULT '0',
-  `ismember` tinyint(1) NOT NULL DEFAULT '0',
-  `isurl` tinyint(1) NOT NULL DEFAULT '0',
-  `truetime` int(10) unsigned NOT NULL DEFAULT '0',
-  `lastdotime` int(10) unsigned NOT NULL DEFAULT '0',
-  `havehtml` tinyint(1) NOT NULL DEFAULT '0',
-  `groupid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `userfen` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `titlefont` char(14) NOT NULL DEFAULT '',
-  `titleurl` char(200) NOT NULL DEFAULT '',
-  `stb` tinyint(3) unsigned NOT NULL DEFAULT '1',
-  `fstb` tinyint(3) unsigned NOT NULL DEFAULT '1',
-  `restb` tinyint(3) unsigned NOT NULL DEFAULT '1',
-  `keyboard` char(80) NOT NULL DEFAULT '',
-  `title` char(100) NOT NULL DEFAULT '',
-  `newstime` int(10) unsigned NOT NULL DEFAULT '0',
-  `titlepic` char(120) NOT NULL DEFAULT '',
-  `ftitle` char(120) NOT NULL DEFAULT '',
-  `smalltext` char(255) NOT NULL DEFAULT '',
-  `writer` char(30) NOT NULL DEFAULT '',
-  `befrom` char(60) NOT NULL DEFAULT '',
-  `newstext` char(50) NOT NULL DEFAULT '',
-  `diggtop` int(11) NOT NULL DEFAULT '0',
-  PRIMARY KEY (`id`),
+  `id` int(10) unsigned NOT NULL auto_increment,
+  `classid` smallint(5) unsigned NOT NULL default '0',
+  `ttid` smallint(5) unsigned NOT NULL default '0',
+  `onclick` int(10) unsigned NOT NULL default '0',
+  `plnum` mediumint(8) unsigned NOT NULL default '0',
+  `totaldown` mediumint(8) unsigned NOT NULL default '0',
+  `newspath` char(20) NOT NULL default '',
+  `filename` char(36) NOT NULL default '',
+  `userid` mediumint(8) unsigned NOT NULL default '0',
+  `username` char(20) NOT NULL default '',
+  `firsttitle` tinyint(1) NOT NULL default '0',
+  `isgood` tinyint(1) NOT NULL default '0',
+  `ispic` tinyint(1) NOT NULL default '0',
+  `istop` tinyint(1) NOT NULL default '0',
+  `isqf` tinyint(1) NOT NULL default '0',
+  `ismember` tinyint(1) NOT NULL default '0',
+  `isurl` tinyint(1) NOT NULL default '0',
+  `truetime` int(10) unsigned NOT NULL default '0',
+  `lastdotime` int(10) unsigned NOT NULL default '0',
+  `havehtml` tinyint(1) NOT NULL default '0',
+  `groupid` smallint(5) unsigned NOT NULL default '0',
+  `userfen` smallint(5) unsigned NOT NULL default '0',
+  `titlefont` char(14) NOT NULL default '',
+  `titleurl` char(200) NOT NULL default '',
+  `stb` tinyint(3) unsigned NOT NULL default '1',
+  `fstb` tinyint(3) unsigned NOT NULL default '1',
+  `restb` tinyint(3) unsigned NOT NULL default '1',
+  `keyboard` char(80) NOT NULL default '',
+  `title` char(100) NOT NULL default '',
+  `newstime` int(10) unsigned NOT NULL default '0',
+  `titlepic` char(120) NOT NULL default '',
+  `ftitle` char(120) NOT NULL default '',
+  `smalltext` char(255) NOT NULL default '',
+  `writer` char(30) NOT NULL default '',
+  `befrom` char(60) NOT NULL default '',
+  `newstext` char(50) NOT NULL default '',
+  `diggtop` int(11) NOT NULL default '0',
+  PRIMARY KEY  (`id`),
   KEY `classid` (`classid`),
   KEY `newstime` (`newstime`),
   KEY `ttid` (`ttid`),
@@ -68,7 +68,7 @@ CREATE TABLE `ziyi_ecms_article` (
   KEY `isgood` (`isgood`),
   KEY `ispic` (`ispic`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_ecms_article`
@@ -84,47 +84,47 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_ecms_article_check`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_ecms_article_check` (
-  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `classid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `ttid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `onclick` int(10) unsigned NOT NULL DEFAULT '0',
-  `plnum` mediumint(8) unsigned NOT NULL DEFAULT '0',
-  `totaldown` mediumint(8) unsigned NOT NULL DEFAULT '0',
-  `newspath` char(20) NOT NULL DEFAULT '',
-  `filename` char(36) NOT NULL DEFAULT '',
-  `userid` mediumint(8) unsigned NOT NULL DEFAULT '0',
-  `username` char(20) NOT NULL DEFAULT '',
-  `firsttitle` tinyint(1) NOT NULL DEFAULT '0',
-  `isgood` tinyint(1) NOT NULL DEFAULT '0',
-  `ispic` tinyint(1) NOT NULL DEFAULT '0',
-  `istop` tinyint(1) NOT NULL DEFAULT '0',
-  `isqf` tinyint(1) NOT NULL DEFAULT '0',
-  `ismember` tinyint(1) NOT NULL DEFAULT '0',
-  `isurl` tinyint(1) NOT NULL DEFAULT '0',
-  `truetime` int(10) unsigned NOT NULL DEFAULT '0',
-  `lastdotime` int(10) unsigned NOT NULL DEFAULT '0',
-  `havehtml` tinyint(1) NOT NULL DEFAULT '0',
-  `groupid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `userfen` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `titlefont` char(14) NOT NULL DEFAULT '',
-  `titleurl` char(200) NOT NULL DEFAULT '',
-  `stb` tinyint(3) unsigned NOT NULL DEFAULT '1',
-  `fstb` tinyint(3) unsigned NOT NULL DEFAULT '1',
-  `restb` tinyint(3) unsigned NOT NULL DEFAULT '1',
-  `keyboard` char(80) NOT NULL DEFAULT '',
-  `title` char(100) NOT NULL DEFAULT '',
-  `newstime` int(10) unsigned NOT NULL DEFAULT '0',
-  `titlepic` char(120) NOT NULL DEFAULT '',
-  `ftitle` char(120) NOT NULL DEFAULT '',
-  `smalltext` char(255) NOT NULL DEFAULT '',
-  `writer` char(30) NOT NULL DEFAULT '',
-  `befrom` char(60) NOT NULL DEFAULT '',
-  `newstext` char(50) NOT NULL DEFAULT '',
-  `diggtop` int(11) NOT NULL DEFAULT '0',
-  PRIMARY KEY (`id`),
+  `id` int(10) unsigned NOT NULL auto_increment,
+  `classid` smallint(5) unsigned NOT NULL default '0',
+  `ttid` smallint(5) unsigned NOT NULL default '0',
+  `onclick` int(10) unsigned NOT NULL default '0',
+  `plnum` mediumint(8) unsigned NOT NULL default '0',
+  `totaldown` mediumint(8) unsigned NOT NULL default '0',
+  `newspath` char(20) NOT NULL default '',
+  `filename` char(36) NOT NULL default '',
+  `userid` mediumint(8) unsigned NOT NULL default '0',
+  `username` char(20) NOT NULL default '',
+  `firsttitle` tinyint(1) NOT NULL default '0',
+  `isgood` tinyint(1) NOT NULL default '0',
+  `ispic` tinyint(1) NOT NULL default '0',
+  `istop` tinyint(1) NOT NULL default '0',
+  `isqf` tinyint(1) NOT NULL default '0',
+  `ismember` tinyint(1) NOT NULL default '0',
+  `isurl` tinyint(1) NOT NULL default '0',
+  `truetime` int(10) unsigned NOT NULL default '0',
+  `lastdotime` int(10) unsigned NOT NULL default '0',
+  `havehtml` tinyint(1) NOT NULL default '0',
+  `groupid` smallint(5) unsigned NOT NULL default '0',
+  `userfen` smallint(5) unsigned NOT NULL default '0',
+  `titlefont` char(14) NOT NULL default '',
+  `titleurl` char(200) NOT NULL default '',
+  `stb` tinyint(3) unsigned NOT NULL default '1',
+  `fstb` tinyint(3) unsigned NOT NULL default '1',
+  `restb` tinyint(3) unsigned NOT NULL default '1',
+  `keyboard` char(80) NOT NULL default '',
+  `title` char(100) NOT NULL default '',
+  `newstime` int(10) unsigned NOT NULL default '0',
+  `titlepic` char(120) NOT NULL default '',
+  `ftitle` char(120) NOT NULL default '',
+  `smalltext` char(255) NOT NULL default '',
+  `writer` char(30) NOT NULL default '',
+  `befrom` char(60) NOT NULL default '',
+  `newstext` char(50) NOT NULL default '',
+  `diggtop` int(11) NOT NULL default '0',
+  PRIMARY KEY  (`id`),
   KEY `classid` (`classid`),
   KEY `newstime` (`newstime`),
   KEY `ttid` (`ttid`),
@@ -132,7 +132,7 @@ CREATE TABLE `ziyi_ecms_article_check` (
   KEY `isgood` (`isgood`),
   KEY `ispic` (`ispic`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_ecms_article_check`
@@ -148,21 +148,21 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_ecms_article_check_data`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_ecms_article_check_data` (
-  `id` int(10) unsigned NOT NULL DEFAULT '0',
-  `classid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `keyid` char(255) NOT NULL DEFAULT '',
-  `dokey` tinyint(1) NOT NULL DEFAULT '0',
-  `newstempid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `closepl` tinyint(1) NOT NULL DEFAULT '0',
-  `haveaddfen` tinyint(1) NOT NULL DEFAULT '0',
-  `infotags` char(80) NOT NULL DEFAULT '',
-  PRIMARY KEY (`id`),
+  `id` int(10) unsigned NOT NULL default '0',
+  `classid` smallint(5) unsigned NOT NULL default '0',
+  `keyid` char(255) NOT NULL default '',
+  `dokey` tinyint(1) NOT NULL default '0',
+  `newstempid` smallint(5) unsigned NOT NULL default '0',
+  `closepl` tinyint(1) NOT NULL default '0',
+  `haveaddfen` tinyint(1) NOT NULL default '0',
+  `infotags` char(80) NOT NULL default '',
+  PRIMARY KEY  (`id`),
   KEY `classid` (`classid`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_ecms_article_check_data`
@@ -178,21 +178,21 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_ecms_article_data_1`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_ecms_article_data_1` (
-  `id` int(10) unsigned NOT NULL DEFAULT '0',
-  `classid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `keyid` char(255) NOT NULL DEFAULT '',
-  `dokey` tinyint(1) NOT NULL DEFAULT '0',
-  `newstempid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `closepl` tinyint(1) NOT NULL DEFAULT '0',
-  `haveaddfen` tinyint(1) NOT NULL DEFAULT '0',
-  `infotags` char(80) NOT NULL DEFAULT '',
-  PRIMARY KEY (`id`),
+  `id` int(10) unsigned NOT NULL default '0',
+  `classid` smallint(5) unsigned NOT NULL default '0',
+  `keyid` char(255) NOT NULL default '',
+  `dokey` tinyint(1) NOT NULL default '0',
+  `newstempid` smallint(5) unsigned NOT NULL default '0',
+  `closepl` tinyint(1) NOT NULL default '0',
+  `haveaddfen` tinyint(1) NOT NULL default '0',
+  `infotags` char(80) NOT NULL default '',
+  PRIMARY KEY  (`id`),
   KEY `classid` (`classid`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_ecms_article_data_1`
@@ -208,47 +208,47 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_ecms_article_doc`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_ecms_article_doc` (
-  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `classid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `ttid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `onclick` int(10) unsigned NOT NULL DEFAULT '0',
-  `plnum` mediumint(8) unsigned NOT NULL DEFAULT '0',
-  `totaldown` mediumint(8) unsigned NOT NULL DEFAULT '0',
-  `newspath` char(20) NOT NULL DEFAULT '',
-  `filename` char(36) NOT NULL DEFAULT '',
-  `userid` mediumint(8) unsigned NOT NULL DEFAULT '0',
-  `username` char(20) NOT NULL DEFAULT '',
-  `firsttitle` tinyint(1) NOT NULL DEFAULT '0',
-  `isgood` tinyint(1) NOT NULL DEFAULT '0',
-  `ispic` tinyint(1) NOT NULL DEFAULT '0',
-  `istop` tinyint(1) NOT NULL DEFAULT '0',
-  `isqf` tinyint(1) NOT NULL DEFAULT '0',
-  `ismember` tinyint(1) NOT NULL DEFAULT '0',
-  `isurl` tinyint(1) NOT NULL DEFAULT '0',
-  `truetime` int(10) unsigned NOT NULL DEFAULT '0',
-  `lastdotime` int(10) unsigned NOT NULL DEFAULT '0',
-  `havehtml` tinyint(1) NOT NULL DEFAULT '0',
-  `groupid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `userfen` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `titlefont` char(14) NOT NULL DEFAULT '',
-  `titleurl` char(200) NOT NULL DEFAULT '',
-  `stb` tinyint(3) unsigned NOT NULL DEFAULT '1',
-  `fstb` tinyint(3) unsigned NOT NULL DEFAULT '1',
-  `restb` tinyint(3) unsigned NOT NULL DEFAULT '1',
-  `keyboard` char(80) NOT NULL DEFAULT '',
-  `title` char(100) NOT NULL DEFAULT '',
-  `newstime` int(10) unsigned NOT NULL DEFAULT '0',
-  `titlepic` char(120) NOT NULL DEFAULT '',
-  `ftitle` char(120) NOT NULL DEFAULT '',
-  `smalltext` char(255) NOT NULL DEFAULT '',
-  `writer` char(30) NOT NULL DEFAULT '',
-  `befrom` char(60) NOT NULL DEFAULT '',
-  `newstext` char(50) NOT NULL DEFAULT '',
-  `diggtop` int(11) NOT NULL DEFAULT '0',
-  PRIMARY KEY (`id`),
+  `id` int(10) unsigned NOT NULL auto_increment,
+  `classid` smallint(5) unsigned NOT NULL default '0',
+  `ttid` smallint(5) unsigned NOT NULL default '0',
+  `onclick` int(10) unsigned NOT NULL default '0',
+  `plnum` mediumint(8) unsigned NOT NULL default '0',
+  `totaldown` mediumint(8) unsigned NOT NULL default '0',
+  `newspath` char(20) NOT NULL default '',
+  `filename` char(36) NOT NULL default '',
+  `userid` mediumint(8) unsigned NOT NULL default '0',
+  `username` char(20) NOT NULL default '',
+  `firsttitle` tinyint(1) NOT NULL default '0',
+  `isgood` tinyint(1) NOT NULL default '0',
+  `ispic` tinyint(1) NOT NULL default '0',
+  `istop` tinyint(1) NOT NULL default '0',
+  `isqf` tinyint(1) NOT NULL default '0',
+  `ismember` tinyint(1) NOT NULL default '0',
+  `isurl` tinyint(1) NOT NULL default '0',
+  `truetime` int(10) unsigned NOT NULL default '0',
+  `lastdotime` int(10) unsigned NOT NULL default '0',
+  `havehtml` tinyint(1) NOT NULL default '0',
+  `groupid` smallint(5) unsigned NOT NULL default '0',
+  `userfen` smallint(5) unsigned NOT NULL default '0',
+  `titlefont` char(14) NOT NULL default '',
+  `titleurl` char(200) NOT NULL default '',
+  `stb` tinyint(3) unsigned NOT NULL default '1',
+  `fstb` tinyint(3) unsigned NOT NULL default '1',
+  `restb` tinyint(3) unsigned NOT NULL default '1',
+  `keyboard` char(80) NOT NULL default '',
+  `title` char(100) NOT NULL default '',
+  `newstime` int(10) unsigned NOT NULL default '0',
+  `titlepic` char(120) NOT NULL default '',
+  `ftitle` char(120) NOT NULL default '',
+  `smalltext` char(255) NOT NULL default '',
+  `writer` char(30) NOT NULL default '',
+  `befrom` char(60) NOT NULL default '',
+  `newstext` char(50) NOT NULL default '',
+  `diggtop` int(11) NOT NULL default '0',
+  PRIMARY KEY  (`id`),
   KEY `classid` (`classid`),
   KEY `newstime` (`newstime`),
   KEY `ttid` (`ttid`),
@@ -256,7 +256,7 @@ CREATE TABLE `ziyi_ecms_article_doc` (
   KEY `isgood` (`isgood`),
   KEY `ispic` (`ispic`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_ecms_article_doc`
@@ -272,21 +272,21 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_ecms_article_doc_data`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_ecms_article_doc_data` (
-  `id` int(10) unsigned NOT NULL DEFAULT '0',
-  `classid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `keyid` char(255) NOT NULL DEFAULT '',
-  `dokey` tinyint(1) NOT NULL DEFAULT '0',
-  `newstempid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `closepl` tinyint(1) NOT NULL DEFAULT '0',
-  `haveaddfen` tinyint(1) NOT NULL DEFAULT '0',
-  `infotags` char(80) NOT NULL DEFAULT '',
-  PRIMARY KEY (`id`),
+  `id` int(10) unsigned NOT NULL default '0',
+  `classid` smallint(5) unsigned NOT NULL default '0',
+  `keyid` char(255) NOT NULL default '',
+  `dokey` tinyint(1) NOT NULL default '0',
+  `newstempid` smallint(5) unsigned NOT NULL default '0',
+  `closepl` tinyint(1) NOT NULL default '0',
+  `haveaddfen` tinyint(1) NOT NULL default '0',
+  `infotags` char(80) NOT NULL default '',
+  PRIMARY KEY  (`id`),
   KEY `classid` (`classid`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_ecms_article_doc_data`
@@ -302,24 +302,24 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_ecms_article_doc_index`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_ecms_article_doc_index` (
-  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `classid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `checked` tinyint(1) NOT NULL DEFAULT '0',
-  `newstime` int(10) unsigned NOT NULL DEFAULT '0',
-  `truetime` int(10) unsigned NOT NULL DEFAULT '0',
-  `lastdotime` int(10) unsigned NOT NULL DEFAULT '0',
-  `havehtml` tinyint(1) NOT NULL DEFAULT '0',
-  PRIMARY KEY (`id`),
+  `id` int(10) unsigned NOT NULL auto_increment,
+  `classid` smallint(5) unsigned NOT NULL default '0',
+  `checked` tinyint(1) NOT NULL default '0',
+  `newstime` int(10) unsigned NOT NULL default '0',
+  `truetime` int(10) unsigned NOT NULL default '0',
+  `lastdotime` int(10) unsigned NOT NULL default '0',
+  `havehtml` tinyint(1) NOT NULL default '0',
+  PRIMARY KEY  (`id`),
   KEY `classid` (`classid`),
   KEY `checked` (`checked`),
   KEY `newstime` (`newstime`),
   KEY `truetime` (`truetime`,`id`),
   KEY `havehtml` (`classid`,`truetime`,`havehtml`,`checked`,`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_ecms_article_doc_index`
@@ -335,24 +335,24 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_ecms_article_index`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_ecms_article_index` (
-  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `classid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `checked` tinyint(1) NOT NULL DEFAULT '0',
-  `newstime` int(10) unsigned NOT NULL DEFAULT '0',
-  `truetime` int(10) unsigned NOT NULL DEFAULT '0',
-  `lastdotime` int(10) unsigned NOT NULL DEFAULT '0',
-  `havehtml` tinyint(1) NOT NULL DEFAULT '0',
-  PRIMARY KEY (`id`),
+  `id` int(10) unsigned NOT NULL auto_increment,
+  `classid` smallint(5) unsigned NOT NULL default '0',
+  `checked` tinyint(1) NOT NULL default '0',
+  `newstime` int(10) unsigned NOT NULL default '0',
+  `truetime` int(10) unsigned NOT NULL default '0',
+  `lastdotime` int(10) unsigned NOT NULL default '0',
+  `havehtml` tinyint(1) NOT NULL default '0',
+  PRIMARY KEY  (`id`),
   KEY `classid` (`classid`),
   KEY `checked` (`checked`),
   KEY `newstime` (`newstime`),
   KEY `truetime` (`truetime`,`id`),
   KEY `havehtml` (`classid`,`truetime`,`havehtml`,`checked`,`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_ecms_article_index`
@@ -368,49 +368,49 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_ecms_download`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_ecms_download` (
-  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `classid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `ttid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `onclick` int(10) unsigned NOT NULL DEFAULT '0',
-  `plnum` mediumint(8) unsigned NOT NULL DEFAULT '0',
-  `totaldown` mediumint(8) unsigned NOT NULL DEFAULT '0',
-  `newspath` varchar(20) NOT NULL DEFAULT '',
-  `filename` varchar(36) NOT NULL DEFAULT '',
-  `userid` mediumint(8) unsigned NOT NULL DEFAULT '0',
-  `username` varchar(20) NOT NULL DEFAULT '',
-  `firsttitle` tinyint(1) NOT NULL DEFAULT '0',
-  `isgood` tinyint(1) NOT NULL DEFAULT '0',
-  `ispic` tinyint(1) NOT NULL DEFAULT '0',
-  `istop` tinyint(1) NOT NULL DEFAULT '0',
-  `isqf` tinyint(1) NOT NULL DEFAULT '0',
-  `ismember` tinyint(1) NOT NULL DEFAULT '0',
-  `isurl` tinyint(1) NOT NULL DEFAULT '0',
-  `truetime` int(10) unsigned NOT NULL DEFAULT '0',
-  `lastdotime` int(10) unsigned NOT NULL DEFAULT '0',
-  `havehtml` tinyint(1) NOT NULL DEFAULT '0',
-  `groupid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `userfen` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `titlefont` varchar(14) NOT NULL DEFAULT '',
-  `titleurl` varchar(200) NOT NULL DEFAULT '',
-  `stb` tinyint(3) unsigned NOT NULL DEFAULT '1',
-  `fstb` tinyint(3) unsigned NOT NULL DEFAULT '1',
-  `restb` tinyint(3) unsigned NOT NULL DEFAULT '1',
-  `keyboard` varchar(80) NOT NULL DEFAULT '',
-  `title` varchar(100) NOT NULL DEFAULT '',
-  `newstime` int(10) unsigned NOT NULL DEFAULT '0',
-  `titlepic` varchar(120) NOT NULL DEFAULT '',
-  `softfj` varchar(255) NOT NULL DEFAULT '',
-  `language` varchar(16) NOT NULL DEFAULT '',
-  `softtype` varchar(16) NOT NULL DEFAULT '',
-  `softsq` varchar(16) NOT NULL DEFAULT '',
-  `star` tinyint(1) NOT NULL DEFAULT '0',
-  `filetype` varchar(10) NOT NULL DEFAULT '',
-  `filesize` varchar(16) NOT NULL DEFAULT '',
+  `id` int(10) unsigned NOT NULL auto_increment,
+  `classid` smallint(5) unsigned NOT NULL default '0',
+  `ttid` smallint(5) unsigned NOT NULL default '0',
+  `onclick` int(10) unsigned NOT NULL default '0',
+  `plnum` mediumint(8) unsigned NOT NULL default '0',
+  `totaldown` mediumint(8) unsigned NOT NULL default '0',
+  `newspath` varchar(20) NOT NULL default '',
+  `filename` varchar(36) NOT NULL default '',
+  `userid` mediumint(8) unsigned NOT NULL default '0',
+  `username` varchar(20) NOT NULL default '',
+  `firsttitle` tinyint(1) NOT NULL default '0',
+  `isgood` tinyint(1) NOT NULL default '0',
+  `ispic` tinyint(1) NOT NULL default '0',
+  `istop` tinyint(1) NOT NULL default '0',
+  `isqf` tinyint(1) NOT NULL default '0',
+  `ismember` tinyint(1) NOT NULL default '0',
+  `isurl` tinyint(1) NOT NULL default '0',
+  `truetime` int(10) unsigned NOT NULL default '0',
+  `lastdotime` int(10) unsigned NOT NULL default '0',
+  `havehtml` tinyint(1) NOT NULL default '0',
+  `groupid` smallint(5) unsigned NOT NULL default '0',
+  `userfen` smallint(5) unsigned NOT NULL default '0',
+  `titlefont` varchar(14) NOT NULL default '',
+  `titleurl` varchar(200) NOT NULL default '',
+  `stb` tinyint(3) unsigned NOT NULL default '1',
+  `fstb` tinyint(3) unsigned NOT NULL default '1',
+  `restb` tinyint(3) unsigned NOT NULL default '1',
+  `keyboard` varchar(80) NOT NULL default '',
+  `title` varchar(100) NOT NULL default '',
+  `newstime` int(10) unsigned NOT NULL default '0',
+  `titlepic` varchar(120) NOT NULL default '',
+  `softfj` varchar(255) NOT NULL default '',
+  `language` varchar(16) NOT NULL default '',
+  `softtype` varchar(16) NOT NULL default '',
+  `softsq` varchar(16) NOT NULL default '',
+  `star` tinyint(1) NOT NULL default '0',
+  `filetype` varchar(10) NOT NULL default '',
+  `filesize` varchar(16) NOT NULL default '',
   `softsay` text NOT NULL,
-  PRIMARY KEY (`id`),
+  PRIMARY KEY  (`id`),
   KEY `classid` (`classid`),
   KEY `newstime` (`newstime`),
   KEY `ttid` (`ttid`),
@@ -418,7 +418,7 @@ CREATE TABLE `ziyi_ecms_download` (
   KEY `isgood` (`isgood`),
   KEY `ispic` (`ispic`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_ecms_download`
@@ -434,49 +434,49 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_ecms_download_check`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_ecms_download_check` (
-  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `classid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `ttid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `onclick` int(10) unsigned NOT NULL DEFAULT '0',
-  `plnum` mediumint(8) unsigned NOT NULL DEFAULT '0',
-  `totaldown` mediumint(8) unsigned NOT NULL DEFAULT '0',
-  `newspath` varchar(20) NOT NULL DEFAULT '',
-  `filename` varchar(36) NOT NULL DEFAULT '',
-  `userid` mediumint(8) unsigned NOT NULL DEFAULT '0',
-  `username` varchar(20) NOT NULL DEFAULT '',
-  `firsttitle` tinyint(1) NOT NULL DEFAULT '0',
-  `isgood` tinyint(1) NOT NULL DEFAULT '0',
-  `ispic` tinyint(1) NOT NULL DEFAULT '0',
-  `istop` tinyint(1) NOT NULL DEFAULT '0',
-  `isqf` tinyint(1) NOT NULL DEFAULT '0',
-  `ismember` tinyint(1) NOT NULL DEFAULT '0',
-  `isurl` tinyint(1) NOT NULL DEFAULT '0',
-  `truetime` int(10) unsigned NOT NULL DEFAULT '0',
-  `lastdotime` int(10) unsigned NOT NULL DEFAULT '0',
-  `havehtml` tinyint(1) NOT NULL DEFAULT '0',
-  `groupid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `userfen` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `titlefont` varchar(14) NOT NULL DEFAULT '',
-  `titleurl` varchar(200) NOT NULL DEFAULT '',
-  `stb` tinyint(3) unsigned NOT NULL DEFAULT '1',
-  `fstb` tinyint(3) unsigned NOT NULL DEFAULT '1',
-  `restb` tinyint(3) unsigned NOT NULL DEFAULT '1',
-  `keyboard` varchar(80) NOT NULL DEFAULT '',
-  `title` varchar(100) NOT NULL DEFAULT '',
-  `newstime` int(10) unsigned NOT NULL DEFAULT '0',
-  `titlepic` varchar(120) NOT NULL DEFAULT '',
-  `softfj` varchar(255) NOT NULL DEFAULT '',
-  `language` varchar(16) NOT NULL DEFAULT '',
-  `softtype` varchar(16) NOT NULL DEFAULT '',
-  `softsq` varchar(16) NOT NULL DEFAULT '',
-  `star` tinyint(1) NOT NULL DEFAULT '0',
-  `filetype` varchar(10) NOT NULL DEFAULT '',
-  `filesize` varchar(16) NOT NULL DEFAULT '',
+  `id` int(10) unsigned NOT NULL auto_increment,
+  `classid` smallint(5) unsigned NOT NULL default '0',
+  `ttid` smallint(5) unsigned NOT NULL default '0',
+  `onclick` int(10) unsigned NOT NULL default '0',
+  `plnum` mediumint(8) unsigned NOT NULL default '0',
+  `totaldown` mediumint(8) unsigned NOT NULL default '0',
+  `newspath` varchar(20) NOT NULL default '',
+  `filename` varchar(36) NOT NULL default '',
+  `userid` mediumint(8) unsigned NOT NULL default '0',
+  `username` varchar(20) NOT NULL default '',
+  `firsttitle` tinyint(1) NOT NULL default '0',
+  `isgood` tinyint(1) NOT NULL default '0',
+  `ispic` tinyint(1) NOT NULL default '0',
+  `istop` tinyint(1) NOT NULL default '0',
+  `isqf` tinyint(1) NOT NULL default '0',
+  `ismember` tinyint(1) NOT NULL default '0',
+  `isurl` tinyint(1) NOT NULL default '0',
+  `truetime` int(10) unsigned NOT NULL default '0',
+  `lastdotime` int(10) unsigned NOT NULL default '0',
+  `havehtml` tinyint(1) NOT NULL default '0',
+  `groupid` smallint(5) unsigned NOT NULL default '0',
+  `userfen` smallint(5) unsigned NOT NULL default '0',
+  `titlefont` varchar(14) NOT NULL default '',
+  `titleurl` varchar(200) NOT NULL default '',
+  `stb` tinyint(3) unsigned NOT NULL default '1',
+  `fstb` tinyint(3) unsigned NOT NULL default '1',
+  `restb` tinyint(3) unsigned NOT NULL default '1',
+  `keyboard` varchar(80) NOT NULL default '',
+  `title` varchar(100) NOT NULL default '',
+  `newstime` int(10) unsigned NOT NULL default '0',
+  `titlepic` varchar(120) NOT NULL default '',
+  `softfj` varchar(255) NOT NULL default '',
+  `language` varchar(16) NOT NULL default '',
+  `softtype` varchar(16) NOT NULL default '',
+  `softsq` varchar(16) NOT NULL default '',
+  `star` tinyint(1) NOT NULL default '0',
+  `filetype` varchar(10) NOT NULL default '',
+  `filesize` varchar(16) NOT NULL default '',
   `softsay` text NOT NULL,
-  PRIMARY KEY (`id`),
+  PRIMARY KEY  (`id`),
   KEY `classid` (`classid`),
   KEY `newstime` (`newstime`),
   KEY `ttid` (`ttid`),
@@ -484,7 +484,7 @@ CREATE TABLE `ziyi_ecms_download_check` (
   KEY `isgood` (`isgood`),
   KEY `ispic` (`ispic`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_ecms_download_check`
@@ -500,25 +500,25 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_ecms_download_check_data`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_ecms_download_check_data` (
-  `id` int(10) unsigned NOT NULL DEFAULT '0',
-  `classid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `keyid` varchar(255) NOT NULL DEFAULT '',
-  `dokey` tinyint(1) NOT NULL DEFAULT '0',
-  `newstempid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `closepl` tinyint(1) NOT NULL DEFAULT '0',
-  `haveaddfen` tinyint(1) NOT NULL DEFAULT '0',
-  `infotags` varchar(80) NOT NULL DEFAULT '',
-  `softwriter` varchar(30) NOT NULL DEFAULT '',
-  `homepage` varchar(80) NOT NULL DEFAULT '',
-  `demo` varchar(120) NOT NULL DEFAULT '',
+  `id` int(10) unsigned NOT NULL default '0',
+  `classid` smallint(5) unsigned NOT NULL default '0',
+  `keyid` varchar(255) NOT NULL default '',
+  `dokey` tinyint(1) NOT NULL default '0',
+  `newstempid` smallint(5) unsigned NOT NULL default '0',
+  `closepl` tinyint(1) NOT NULL default '0',
+  `haveaddfen` tinyint(1) NOT NULL default '0',
+  `infotags` varchar(80) NOT NULL default '',
+  `softwriter` varchar(30) NOT NULL default '',
+  `homepage` varchar(80) NOT NULL default '',
+  `demo` varchar(120) NOT NULL default '',
   `downpath` mediumtext NOT NULL,
-  PRIMARY KEY (`id`),
+  PRIMARY KEY  (`id`),
   KEY `classid` (`classid`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_ecms_download_check_data`
@@ -534,25 +534,25 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_ecms_download_data_1`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_ecms_download_data_1` (
-  `id` int(10) unsigned NOT NULL DEFAULT '0',
-  `classid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `keyid` varchar(255) NOT NULL DEFAULT '',
-  `dokey` tinyint(1) NOT NULL DEFAULT '0',
-  `newstempid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `closepl` tinyint(1) NOT NULL DEFAULT '0',
-  `haveaddfen` tinyint(1) NOT NULL DEFAULT '0',
-  `infotags` varchar(80) NOT NULL DEFAULT '',
-  `softwriter` varchar(30) NOT NULL DEFAULT '',
-  `homepage` varchar(80) NOT NULL DEFAULT '',
-  `demo` varchar(120) NOT NULL DEFAULT '',
+  `id` int(10) unsigned NOT NULL default '0',
+  `classid` smallint(5) unsigned NOT NULL default '0',
+  `keyid` varchar(255) NOT NULL default '',
+  `dokey` tinyint(1) NOT NULL default '0',
+  `newstempid` smallint(5) unsigned NOT NULL default '0',
+  `closepl` tinyint(1) NOT NULL default '0',
+  `haveaddfen` tinyint(1) NOT NULL default '0',
+  `infotags` varchar(80) NOT NULL default '',
+  `softwriter` varchar(30) NOT NULL default '',
+  `homepage` varchar(80) NOT NULL default '',
+  `demo` varchar(120) NOT NULL default '',
   `downpath` mediumtext NOT NULL,
-  PRIMARY KEY (`id`),
+  PRIMARY KEY  (`id`),
   KEY `classid` (`classid`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_ecms_download_data_1`
@@ -568,49 +568,49 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_ecms_download_doc`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_ecms_download_doc` (
-  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `classid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `ttid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `onclick` int(10) unsigned NOT NULL DEFAULT '0',
-  `plnum` mediumint(8) unsigned NOT NULL DEFAULT '0',
-  `totaldown` mediumint(8) unsigned NOT NULL DEFAULT '0',
-  `newspath` varchar(20) NOT NULL DEFAULT '',
-  `filename` varchar(36) NOT NULL DEFAULT '',
-  `userid` mediumint(8) unsigned NOT NULL DEFAULT '0',
-  `username` varchar(20) NOT NULL DEFAULT '',
-  `firsttitle` tinyint(1) NOT NULL DEFAULT '0',
-  `isgood` tinyint(1) NOT NULL DEFAULT '0',
-  `ispic` tinyint(1) NOT NULL DEFAULT '0',
-  `istop` tinyint(1) NOT NULL DEFAULT '0',
-  `isqf` tinyint(1) NOT NULL DEFAULT '0',
-  `ismember` tinyint(1) NOT NULL DEFAULT '0',
-  `isurl` tinyint(1) NOT NULL DEFAULT '0',
-  `truetime` int(10) unsigned NOT NULL DEFAULT '0',
-  `lastdotime` int(10) unsigned NOT NULL DEFAULT '0',
-  `havehtml` tinyint(1) NOT NULL DEFAULT '0',
-  `groupid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `userfen` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `titlefont` varchar(14) NOT NULL DEFAULT '',
-  `titleurl` varchar(200) NOT NULL DEFAULT '',
-  `stb` tinyint(3) unsigned NOT NULL DEFAULT '1',
-  `fstb` tinyint(3) unsigned NOT NULL DEFAULT '1',
-  `restb` tinyint(3) unsigned NOT NULL DEFAULT '1',
-  `keyboard` varchar(80) NOT NULL DEFAULT '',
-  `title` varchar(100) NOT NULL DEFAULT '',
-  `newstime` int(10) unsigned NOT NULL DEFAULT '0',
-  `titlepic` varchar(120) NOT NULL DEFAULT '',
-  `softfj` varchar(255) NOT NULL DEFAULT '',
-  `language` varchar(16) NOT NULL DEFAULT '',
-  `softtype` varchar(16) NOT NULL DEFAULT '',
-  `softsq` varchar(16) NOT NULL DEFAULT '',
-  `star` tinyint(1) NOT NULL DEFAULT '0',
-  `filetype` varchar(10) NOT NULL DEFAULT '',
-  `filesize` varchar(16) NOT NULL DEFAULT '',
+  `id` int(10) unsigned NOT NULL auto_increment,
+  `classid` smallint(5) unsigned NOT NULL default '0',
+  `ttid` smallint(5) unsigned NOT NULL default '0',
+  `onclick` int(10) unsigned NOT NULL default '0',
+  `plnum` mediumint(8) unsigned NOT NULL default '0',
+  `totaldown` mediumint(8) unsigned NOT NULL default '0',
+  `newspath` varchar(20) NOT NULL default '',
+  `filename` varchar(36) NOT NULL default '',
+  `userid` mediumint(8) unsigned NOT NULL default '0',
+  `username` varchar(20) NOT NULL default '',
+  `firsttitle` tinyint(1) NOT NULL default '0',
+  `isgood` tinyint(1) NOT NULL default '0',
+  `ispic` tinyint(1) NOT NULL default '0',
+  `istop` tinyint(1) NOT NULL default '0',
+  `isqf` tinyint(1) NOT NULL default '0',
+  `ismember` tinyint(1) NOT NULL default '0',
+  `isurl` tinyint(1) NOT NULL default '0',
+  `truetime` int(10) unsigned NOT NULL default '0',
+  `lastdotime` int(10) unsigned NOT NULL default '0',
+  `havehtml` tinyint(1) NOT NULL default '0',
+  `groupid` smallint(5) unsigned NOT NULL default '0',
+  `userfen` smallint(5) unsigned NOT NULL default '0',
+  `titlefont` varchar(14) NOT NULL default '',
+  `titleurl` varchar(200) NOT NULL default '',
+  `stb` tinyint(3) unsigned NOT NULL default '1',
+  `fstb` tinyint(3) unsigned NOT NULL default '1',
+  `restb` tinyint(3) unsigned NOT NULL default '1',
+  `keyboard` varchar(80) NOT NULL default '',
+  `title` varchar(100) NOT NULL default '',
+  `newstime` int(10) unsigned NOT NULL default '0',
+  `titlepic` varchar(120) NOT NULL default '',
+  `softfj` varchar(255) NOT NULL default '',
+  `language` varchar(16) NOT NULL default '',
+  `softtype` varchar(16) NOT NULL default '',
+  `softsq` varchar(16) NOT NULL default '',
+  `star` tinyint(1) NOT NULL default '0',
+  `filetype` varchar(10) NOT NULL default '',
+  `filesize` varchar(16) NOT NULL default '',
   `softsay` text NOT NULL,
-  PRIMARY KEY (`id`),
+  PRIMARY KEY  (`id`),
   KEY `classid` (`classid`),
   KEY `newstime` (`newstime`),
   KEY `ttid` (`ttid`),
@@ -618,7 +618,7 @@ CREATE TABLE `ziyi_ecms_download_doc` (
   KEY `isgood` (`isgood`),
   KEY `ispic` (`ispic`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_ecms_download_doc`
@@ -634,25 +634,25 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_ecms_download_doc_data`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_ecms_download_doc_data` (
-  `id` int(10) unsigned NOT NULL DEFAULT '0',
-  `classid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `keyid` varchar(255) NOT NULL DEFAULT '',
-  `dokey` tinyint(1) NOT NULL DEFAULT '0',
-  `newstempid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `closepl` tinyint(1) NOT NULL DEFAULT '0',
-  `haveaddfen` tinyint(1) NOT NULL DEFAULT '0',
-  `infotags` varchar(80) NOT NULL DEFAULT '',
-  `softwriter` varchar(30) NOT NULL DEFAULT '',
-  `homepage` varchar(80) NOT NULL DEFAULT '',
-  `demo` varchar(120) NOT NULL DEFAULT '',
+  `id` int(10) unsigned NOT NULL default '0',
+  `classid` smallint(5) unsigned NOT NULL default '0',
+  `keyid` varchar(255) NOT NULL default '',
+  `dokey` tinyint(1) NOT NULL default '0',
+  `newstempid` smallint(5) unsigned NOT NULL default '0',
+  `closepl` tinyint(1) NOT NULL default '0',
+  `haveaddfen` tinyint(1) NOT NULL default '0',
+  `infotags` varchar(80) NOT NULL default '',
+  `softwriter` varchar(30) NOT NULL default '',
+  `homepage` varchar(80) NOT NULL default '',
+  `demo` varchar(120) NOT NULL default '',
   `downpath` mediumtext NOT NULL,
-  PRIMARY KEY (`id`),
+  PRIMARY KEY  (`id`),
   KEY `classid` (`classid`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_ecms_download_doc_data`
@@ -668,24 +668,24 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_ecms_download_doc_index`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_ecms_download_doc_index` (
-  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `classid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `checked` tinyint(1) NOT NULL DEFAULT '0',
-  `newstime` int(10) unsigned NOT NULL DEFAULT '0',
-  `truetime` int(10) unsigned NOT NULL DEFAULT '0',
-  `lastdotime` int(10) unsigned NOT NULL DEFAULT '0',
-  `havehtml` tinyint(1) NOT NULL DEFAULT '0',
-  PRIMARY KEY (`id`),
+  `id` int(10) unsigned NOT NULL auto_increment,
+  `classid` smallint(5) unsigned NOT NULL default '0',
+  `checked` tinyint(1) NOT NULL default '0',
+  `newstime` int(10) unsigned NOT NULL default '0',
+  `truetime` int(10) unsigned NOT NULL default '0',
+  `lastdotime` int(10) unsigned NOT NULL default '0',
+  `havehtml` tinyint(1) NOT NULL default '0',
+  PRIMARY KEY  (`id`),
   KEY `classid` (`classid`),
   KEY `checked` (`checked`),
   KEY `newstime` (`newstime`),
   KEY `truetime` (`truetime`,`id`),
   KEY `havehtml` (`classid`,`truetime`,`havehtml`,`checked`,`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_ecms_download_doc_index`
@@ -701,24 +701,24 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_ecms_download_index`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_ecms_download_index` (
-  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `classid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `checked` tinyint(1) NOT NULL DEFAULT '0',
-  `newstime` int(10) unsigned NOT NULL DEFAULT '0',
-  `truetime` int(10) unsigned NOT NULL DEFAULT '0',
-  `lastdotime` int(10) unsigned NOT NULL DEFAULT '0',
-  `havehtml` tinyint(1) NOT NULL DEFAULT '0',
-  PRIMARY KEY (`id`),
+  `id` int(10) unsigned NOT NULL auto_increment,
+  `classid` smallint(5) unsigned NOT NULL default '0',
+  `checked` tinyint(1) NOT NULL default '0',
+  `newstime` int(10) unsigned NOT NULL default '0',
+  `truetime` int(10) unsigned NOT NULL default '0',
+  `lastdotime` int(10) unsigned NOT NULL default '0',
+  `havehtml` tinyint(1) NOT NULL default '0',
+  PRIMARY KEY  (`id`),
   KEY `classid` (`classid`),
   KEY `checked` (`checked`),
   KEY `newstime` (`newstime`),
   KEY `truetime` (`truetime`,`id`),
   KEY `havehtml` (`classid`,`truetime`,`havehtml`,`checked`,`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_ecms_download_index`
@@ -734,49 +734,49 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_ecms_flash`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_ecms_flash` (
-  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `classid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `ttid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `onclick` int(10) unsigned NOT NULL DEFAULT '0',
-  `plnum` mediumint(8) unsigned NOT NULL DEFAULT '0',
-  `totaldown` mediumint(8) unsigned NOT NULL DEFAULT '0',
-  `newspath` varchar(20) NOT NULL DEFAULT '',
-  `filename` varchar(36) NOT NULL DEFAULT '',
-  `userid` mediumint(8) unsigned NOT NULL DEFAULT '0',
-  `username` varchar(20) NOT NULL DEFAULT '',
-  `firsttitle` tinyint(1) NOT NULL DEFAULT '0',
-  `isgood` tinyint(1) NOT NULL DEFAULT '0',
-  `ispic` tinyint(1) NOT NULL DEFAULT '0',
-  `istop` tinyint(1) NOT NULL DEFAULT '0',
-  `isqf` tinyint(1) NOT NULL DEFAULT '0',
-  `ismember` tinyint(1) NOT NULL DEFAULT '0',
-  `isurl` tinyint(1) NOT NULL DEFAULT '0',
-  `truetime` int(10) unsigned NOT NULL DEFAULT '0',
-  `lastdotime` int(10) unsigned NOT NULL DEFAULT '0',
-  `havehtml` tinyint(1) NOT NULL DEFAULT '0',
-  `groupid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `userfen` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `titlefont` varchar(14) NOT NULL DEFAULT '',
-  `titleurl` varchar(200) NOT NULL DEFAULT '',
-  `stb` tinyint(3) unsigned NOT NULL DEFAULT '1',
-  `fstb` tinyint(3) unsigned NOT NULL DEFAULT '1',
-  `restb` tinyint(3) unsigned NOT NULL DEFAULT '1',
-  `keyboard` varchar(80) NOT NULL DEFAULT '',
-  `title` varchar(100) NOT NULL DEFAULT '',
-  `newstime` int(10) unsigned NOT NULL DEFAULT '0',
-  `titlepic` varchar(120) NOT NULL DEFAULT '',
-  `flashwriter` varchar(30) NOT NULL DEFAULT '',
-  `email` varchar(80) NOT NULL DEFAULT '',
-  `star` tinyint(1) NOT NULL DEFAULT '0',
-  `filesize` varchar(16) NOT NULL DEFAULT '',
-  `flashurl` varchar(255) NOT NULL DEFAULT '',
-  `width` varchar(12) NOT NULL DEFAULT '',
-  `height` varchar(12) NOT NULL DEFAULT '',
+  `id` int(10) unsigned NOT NULL auto_increment,
+  `classid` smallint(5) unsigned NOT NULL default '0',
+  `ttid` smallint(5) unsigned NOT NULL default '0',
+  `onclick` int(10) unsigned NOT NULL default '0',
+  `plnum` mediumint(8) unsigned NOT NULL default '0',
+  `totaldown` mediumint(8) unsigned NOT NULL default '0',
+  `newspath` varchar(20) NOT NULL default '',
+  `filename` varchar(36) NOT NULL default '',
+  `userid` mediumint(8) unsigned NOT NULL default '0',
+  `username` varchar(20) NOT NULL default '',
+  `firsttitle` tinyint(1) NOT NULL default '0',
+  `isgood` tinyint(1) NOT NULL default '0',
+  `ispic` tinyint(1) NOT NULL default '0',
+  `istop` tinyint(1) NOT NULL default '0',
+  `isqf` tinyint(1) NOT NULL default '0',
+  `ismember` tinyint(1) NOT NULL default '0',
+  `isurl` tinyint(1) NOT NULL default '0',
+  `truetime` int(10) unsigned NOT NULL default '0',
+  `lastdotime` int(10) unsigned NOT NULL default '0',
+  `havehtml` tinyint(1) NOT NULL default '0',
+  `groupid` smallint(5) unsigned NOT NULL default '0',
+  `userfen` smallint(5) unsigned NOT NULL default '0',
+  `titlefont` varchar(14) NOT NULL default '',
+  `titleurl` varchar(200) NOT NULL default '',
+  `stb` tinyint(3) unsigned NOT NULL default '1',
+  `fstb` tinyint(3) unsigned NOT NULL default '1',
+  `restb` tinyint(3) unsigned NOT NULL default '1',
+  `keyboard` varchar(80) NOT NULL default '',
+  `title` varchar(100) NOT NULL default '',
+  `newstime` int(10) unsigned NOT NULL default '0',
+  `titlepic` varchar(120) NOT NULL default '',
+  `flashwriter` varchar(30) NOT NULL default '',
+  `email` varchar(80) NOT NULL default '',
+  `star` tinyint(1) NOT NULL default '0',
+  `filesize` varchar(16) NOT NULL default '',
+  `flashurl` varchar(255) NOT NULL default '',
+  `width` varchar(12) NOT NULL default '',
+  `height` varchar(12) NOT NULL default '',
   `flashsay` text NOT NULL,
-  PRIMARY KEY (`id`),
+  PRIMARY KEY  (`id`),
   KEY `classid` (`classid`),
   KEY `newstime` (`newstime`),
   KEY `ttid` (`ttid`),
@@ -784,7 +784,7 @@ CREATE TABLE `ziyi_ecms_flash` (
   KEY `isgood` (`isgood`),
   KEY `ispic` (`ispic`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_ecms_flash`
@@ -800,49 +800,49 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_ecms_flash_check`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_ecms_flash_check` (
-  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `classid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `ttid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `onclick` int(10) unsigned NOT NULL DEFAULT '0',
-  `plnum` mediumint(8) unsigned NOT NULL DEFAULT '0',
-  `totaldown` mediumint(8) unsigned NOT NULL DEFAULT '0',
-  `newspath` varchar(20) NOT NULL DEFAULT '',
-  `filename` varchar(36) NOT NULL DEFAULT '',
-  `userid` mediumint(8) unsigned NOT NULL DEFAULT '0',
-  `username` varchar(20) NOT NULL DEFAULT '',
-  `firsttitle` tinyint(1) NOT NULL DEFAULT '0',
-  `isgood` tinyint(1) NOT NULL DEFAULT '0',
-  `ispic` tinyint(1) NOT NULL DEFAULT '0',
-  `istop` tinyint(1) NOT NULL DEFAULT '0',
-  `isqf` tinyint(1) NOT NULL DEFAULT '0',
-  `ismember` tinyint(1) NOT NULL DEFAULT '0',
-  `isurl` tinyint(1) NOT NULL DEFAULT '0',
-  `truetime` int(10) unsigned NOT NULL DEFAULT '0',
-  `lastdotime` int(10) unsigned NOT NULL DEFAULT '0',
-  `havehtml` tinyint(1) NOT NULL DEFAULT '0',
-  `groupid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `userfen` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `titlefont` varchar(14) NOT NULL DEFAULT '',
-  `titleurl` varchar(200) NOT NULL DEFAULT '',
-  `stb` tinyint(3) unsigned NOT NULL DEFAULT '1',
-  `fstb` tinyint(3) unsigned NOT NULL DEFAULT '1',
-  `restb` tinyint(3) unsigned NOT NULL DEFAULT '1',
-  `keyboard` varchar(80) NOT NULL DEFAULT '',
-  `title` varchar(100) NOT NULL DEFAULT '',
-  `newstime` int(10) unsigned NOT NULL DEFAULT '0',
-  `titlepic` varchar(120) NOT NULL DEFAULT '',
-  `flashwriter` varchar(30) NOT NULL DEFAULT '',
-  `email` varchar(80) NOT NULL DEFAULT '',
-  `star` tinyint(1) NOT NULL DEFAULT '0',
-  `filesize` varchar(16) NOT NULL DEFAULT '',
-  `flashurl` varchar(255) NOT NULL DEFAULT '',
-  `width` varchar(12) NOT NULL DEFAULT '',
-  `height` varchar(12) NOT NULL DEFAULT '',
+  `id` int(10) unsigned NOT NULL auto_increment,
+  `classid` smallint(5) unsigned NOT NULL default '0',
+  `ttid` smallint(5) unsigned NOT NULL default '0',
+  `onclick` int(10) unsigned NOT NULL default '0',
+  `plnum` mediumint(8) unsigned NOT NULL default '0',
+  `totaldown` mediumint(8) unsigned NOT NULL default '0',
+  `newspath` varchar(20) NOT NULL default '',
+  `filename` varchar(36) NOT NULL default '',
+  `userid` mediumint(8) unsigned NOT NULL default '0',
+  `username` varchar(20) NOT NULL default '',
+  `firsttitle` tinyint(1) NOT NULL default '0',
+  `isgood` tinyint(1) NOT NULL default '0',
+  `ispic` tinyint(1) NOT NULL default '0',
+  `istop` tinyint(1) NOT NULL default '0',
+  `isqf` tinyint(1) NOT NULL default '0',
+  `ismember` tinyint(1) NOT NULL default '0',
+  `isurl` tinyint(1) NOT NULL default '0',
+  `truetime` int(10) unsigned NOT NULL default '0',
+  `lastdotime` int(10) unsigned NOT NULL default '0',
+  `havehtml` tinyint(1) NOT NULL default '0',
+  `groupid` smallint(5) unsigned NOT NULL default '0',
+  `userfen` smallint(5) unsigned NOT NULL default '0',
+  `titlefont` varchar(14) NOT NULL default '',
+  `titleurl` varchar(200) NOT NULL default '',
+  `stb` tinyint(3) unsigned NOT NULL default '1',
+  `fstb` tinyint(3) unsigned NOT NULL default '1',
+  `restb` tinyint(3) unsigned NOT NULL default '1',
+  `keyboard` varchar(80) NOT NULL default '',
+  `title` varchar(100) NOT NULL default '',
+  `newstime` int(10) unsigned NOT NULL default '0',
+  `titlepic` varchar(120) NOT NULL default '',
+  `flashwriter` varchar(30) NOT NULL default '',
+  `email` varchar(80) NOT NULL default '',
+  `star` tinyint(1) NOT NULL default '0',
+  `filesize` varchar(16) NOT NULL default '',
+  `flashurl` varchar(255) NOT NULL default '',
+  `width` varchar(12) NOT NULL default '',
+  `height` varchar(12) NOT NULL default '',
   `flashsay` text NOT NULL,
-  PRIMARY KEY (`id`),
+  PRIMARY KEY  (`id`),
   KEY `classid` (`classid`),
   KEY `newstime` (`newstime`),
   KEY `ttid` (`ttid`),
@@ -850,7 +850,7 @@ CREATE TABLE `ziyi_ecms_flash_check` (
   KEY `isgood` (`isgood`),
   KEY `ispic` (`ispic`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_ecms_flash_check`
@@ -866,21 +866,21 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_ecms_flash_check_data`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_ecms_flash_check_data` (
-  `id` int(10) unsigned NOT NULL DEFAULT '0',
-  `classid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `keyid` char(255) NOT NULL DEFAULT '',
-  `dokey` tinyint(1) NOT NULL DEFAULT '0',
-  `newstempid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `closepl` tinyint(1) NOT NULL DEFAULT '0',
-  `haveaddfen` tinyint(1) NOT NULL DEFAULT '0',
-  `infotags` char(80) NOT NULL DEFAULT '',
-  PRIMARY KEY (`id`),
+  `id` int(10) unsigned NOT NULL default '0',
+  `classid` smallint(5) unsigned NOT NULL default '0',
+  `keyid` char(255) NOT NULL default '',
+  `dokey` tinyint(1) NOT NULL default '0',
+  `newstempid` smallint(5) unsigned NOT NULL default '0',
+  `closepl` tinyint(1) NOT NULL default '0',
+  `haveaddfen` tinyint(1) NOT NULL default '0',
+  `infotags` char(80) NOT NULL default '',
+  PRIMARY KEY  (`id`),
   KEY `classid` (`classid`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_ecms_flash_check_data`
@@ -896,21 +896,21 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_ecms_flash_data_1`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_ecms_flash_data_1` (
-  `id` int(10) unsigned NOT NULL DEFAULT '0',
-  `classid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `keyid` char(255) NOT NULL DEFAULT '',
-  `dokey` tinyint(1) NOT NULL DEFAULT '0',
-  `newstempid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `closepl` tinyint(1) NOT NULL DEFAULT '0',
-  `haveaddfen` tinyint(1) NOT NULL DEFAULT '0',
-  `infotags` char(80) NOT NULL DEFAULT '',
-  PRIMARY KEY (`id`),
+  `id` int(10) unsigned NOT NULL default '0',
+  `classid` smallint(5) unsigned NOT NULL default '0',
+  `keyid` char(255) NOT NULL default '',
+  `dokey` tinyint(1) NOT NULL default '0',
+  `newstempid` smallint(5) unsigned NOT NULL default '0',
+  `closepl` tinyint(1) NOT NULL default '0',
+  `haveaddfen` tinyint(1) NOT NULL default '0',
+  `infotags` char(80) NOT NULL default '',
+  PRIMARY KEY  (`id`),
   KEY `classid` (`classid`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_ecms_flash_data_1`
@@ -926,49 +926,49 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_ecms_flash_doc`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_ecms_flash_doc` (
-  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `classid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `ttid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `onclick` int(10) unsigned NOT NULL DEFAULT '0',
-  `plnum` mediumint(8) unsigned NOT NULL DEFAULT '0',
-  `totaldown` mediumint(8) unsigned NOT NULL DEFAULT '0',
-  `newspath` varchar(20) NOT NULL DEFAULT '',
-  `filename` varchar(36) NOT NULL DEFAULT '',
-  `userid` mediumint(8) unsigned NOT NULL DEFAULT '0',
-  `username` varchar(20) NOT NULL DEFAULT '',
-  `firsttitle` tinyint(1) NOT NULL DEFAULT '0',
-  `isgood` tinyint(1) NOT NULL DEFAULT '0',
-  `ispic` tinyint(1) NOT NULL DEFAULT '0',
-  `istop` tinyint(1) NOT NULL DEFAULT '0',
-  `isqf` tinyint(1) NOT NULL DEFAULT '0',
-  `ismember` tinyint(1) NOT NULL DEFAULT '0',
-  `isurl` tinyint(1) NOT NULL DEFAULT '0',
-  `truetime` int(10) unsigned NOT NULL DEFAULT '0',
-  `lastdotime` int(10) unsigned NOT NULL DEFAULT '0',
-  `havehtml` tinyint(1) NOT NULL DEFAULT '0',
-  `groupid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `userfen` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `titlefont` varchar(14) NOT NULL DEFAULT '',
-  `titleurl` varchar(200) NOT NULL DEFAULT '',
-  `stb` tinyint(3) unsigned NOT NULL DEFAULT '1',
-  `fstb` tinyint(3) unsigned NOT NULL DEFAULT '1',
-  `restb` tinyint(3) unsigned NOT NULL DEFAULT '1',
-  `keyboard` varchar(80) NOT NULL DEFAULT '',
-  `title` varchar(100) NOT NULL DEFAULT '',
-  `newstime` int(10) unsigned NOT NULL DEFAULT '0',
-  `titlepic` varchar(120) NOT NULL DEFAULT '',
-  `flashwriter` varchar(30) NOT NULL DEFAULT '',
-  `email` varchar(80) NOT NULL DEFAULT '',
-  `star` tinyint(1) NOT NULL DEFAULT '0',
-  `filesize` varchar(16) NOT NULL DEFAULT '',
-  `flashurl` varchar(255) NOT NULL DEFAULT '',
-  `width` varchar(12) NOT NULL DEFAULT '',
-  `height` varchar(12) NOT NULL DEFAULT '',
+  `id` int(10) unsigned NOT NULL auto_increment,
+  `classid` smallint(5) unsigned NOT NULL default '0',
+  `ttid` smallint(5) unsigned NOT NULL default '0',
+  `onclick` int(10) unsigned NOT NULL default '0',
+  `plnum` mediumint(8) unsigned NOT NULL default '0',
+  `totaldown` mediumint(8) unsigned NOT NULL default '0',
+  `newspath` varchar(20) NOT NULL default '',
+  `filename` varchar(36) NOT NULL default '',
+  `userid` mediumint(8) unsigned NOT NULL default '0',
+  `username` varchar(20) NOT NULL default '',
+  `firsttitle` tinyint(1) NOT NULL default '0',
+  `isgood` tinyint(1) NOT NULL default '0',
+  `ispic` tinyint(1) NOT NULL default '0',
+  `istop` tinyint(1) NOT NULL default '0',
+  `isqf` tinyint(1) NOT NULL default '0',
+  `ismember` tinyint(1) NOT NULL default '0',
+  `isurl` tinyint(1) NOT NULL default '0',
+  `truetime` int(10) unsigned NOT NULL default '0',
+  `lastdotime` int(10) unsigned NOT NULL default '0',
+  `havehtml` tinyint(1) NOT NULL default '0',
+  `groupid` smallint(5) unsigned NOT NULL default '0',
+  `userfen` smallint(5) unsigned NOT NULL default '0',
+  `titlefont` varchar(14) NOT NULL default '',
+  `titleurl` varchar(200) NOT NULL default '',
+  `stb` tinyint(3) unsigned NOT NULL default '1',
+  `fstb` tinyint(3) unsigned NOT NULL default '1',
+  `restb` tinyint(3) unsigned NOT NULL default '1',
+  `keyboard` varchar(80) NOT NULL default '',
+  `title` varchar(100) NOT NULL default '',
+  `newstime` int(10) unsigned NOT NULL default '0',
+  `titlepic` varchar(120) NOT NULL default '',
+  `flashwriter` varchar(30) NOT NULL default '',
+  `email` varchar(80) NOT NULL default '',
+  `star` tinyint(1) NOT NULL default '0',
+  `filesize` varchar(16) NOT NULL default '',
+  `flashurl` varchar(255) NOT NULL default '',
+  `width` varchar(12) NOT NULL default '',
+  `height` varchar(12) NOT NULL default '',
   `flashsay` text NOT NULL,
-  PRIMARY KEY (`id`),
+  PRIMARY KEY  (`id`),
   KEY `classid` (`classid`),
   KEY `newstime` (`newstime`),
   KEY `ttid` (`ttid`),
@@ -976,7 +976,7 @@ CREATE TABLE `ziyi_ecms_flash_doc` (
   KEY `isgood` (`isgood`),
   KEY `ispic` (`ispic`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_ecms_flash_doc`
@@ -992,21 +992,21 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_ecms_flash_doc_data`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_ecms_flash_doc_data` (
-  `id` int(10) unsigned NOT NULL DEFAULT '0',
-  `classid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `keyid` char(255) NOT NULL DEFAULT '',
-  `dokey` tinyint(1) NOT NULL DEFAULT '0',
-  `newstempid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `closepl` tinyint(1) NOT NULL DEFAULT '0',
-  `haveaddfen` tinyint(1) NOT NULL DEFAULT '0',
-  `infotags` char(80) NOT NULL DEFAULT '',
-  PRIMARY KEY (`id`),
+  `id` int(10) unsigned NOT NULL default '0',
+  `classid` smallint(5) unsigned NOT NULL default '0',
+  `keyid` char(255) NOT NULL default '',
+  `dokey` tinyint(1) NOT NULL default '0',
+  `newstempid` smallint(5) unsigned NOT NULL default '0',
+  `closepl` tinyint(1) NOT NULL default '0',
+  `haveaddfen` tinyint(1) NOT NULL default '0',
+  `infotags` char(80) NOT NULL default '',
+  PRIMARY KEY  (`id`),
   KEY `classid` (`classid`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_ecms_flash_doc_data`
@@ -1022,24 +1022,24 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_ecms_flash_doc_index`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_ecms_flash_doc_index` (
-  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `classid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `checked` tinyint(1) NOT NULL DEFAULT '0',
-  `newstime` int(10) unsigned NOT NULL DEFAULT '0',
-  `truetime` int(10) unsigned NOT NULL DEFAULT '0',
-  `lastdotime` int(10) unsigned NOT NULL DEFAULT '0',
-  `havehtml` tinyint(1) NOT NULL DEFAULT '0',
-  PRIMARY KEY (`id`),
+  `id` int(10) unsigned NOT NULL auto_increment,
+  `classid` smallint(5) unsigned NOT NULL default '0',
+  `checked` tinyint(1) NOT NULL default '0',
+  `newstime` int(10) unsigned NOT NULL default '0',
+  `truetime` int(10) unsigned NOT NULL default '0',
+  `lastdotime` int(10) unsigned NOT NULL default '0',
+  `havehtml` tinyint(1) NOT NULL default '0',
+  PRIMARY KEY  (`id`),
   KEY `classid` (`classid`),
   KEY `checked` (`checked`),
   KEY `newstime` (`newstime`),
   KEY `truetime` (`truetime`,`id`),
   KEY `havehtml` (`classid`,`truetime`,`havehtml`,`checked`,`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_ecms_flash_doc_index`
@@ -1055,24 +1055,24 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_ecms_flash_index`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_ecms_flash_index` (
-  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `classid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `checked` tinyint(1) NOT NULL DEFAULT '0',
-  `newstime` int(10) unsigned NOT NULL DEFAULT '0',
-  `truetime` int(10) unsigned NOT NULL DEFAULT '0',
-  `lastdotime` int(10) unsigned NOT NULL DEFAULT '0',
-  `havehtml` tinyint(1) NOT NULL DEFAULT '0',
-  PRIMARY KEY (`id`),
+  `id` int(10) unsigned NOT NULL auto_increment,
+  `classid` smallint(5) unsigned NOT NULL default '0',
+  `checked` tinyint(1) NOT NULL default '0',
+  `newstime` int(10) unsigned NOT NULL default '0',
+  `truetime` int(10) unsigned NOT NULL default '0',
+  `lastdotime` int(10) unsigned NOT NULL default '0',
+  `havehtml` tinyint(1) NOT NULL default '0',
+  PRIMARY KEY  (`id`),
   KEY `classid` (`classid`),
   KEY `checked` (`checked`),
   KEY `newstime` (`newstime`),
   KEY `truetime` (`truetime`,`id`),
   KEY `havehtml` (`classid`,`truetime`,`havehtml`,`checked`,`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_ecms_flash_index`
@@ -1088,43 +1088,43 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_ecms_info`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_ecms_info` (
-  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `classid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `ttid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `onclick` int(10) unsigned NOT NULL DEFAULT '0',
-  `plnum` mediumint(8) unsigned NOT NULL DEFAULT '0',
-  `totaldown` mediumint(8) unsigned NOT NULL DEFAULT '0',
-  `newspath` varchar(20) NOT NULL DEFAULT '',
-  `filename` varchar(36) NOT NULL DEFAULT '',
-  `userid` mediumint(8) unsigned NOT NULL DEFAULT '0',
-  `username` varchar(20) NOT NULL DEFAULT '',
-  `firsttitle` tinyint(1) NOT NULL DEFAULT '0',
-  `isgood` tinyint(1) NOT NULL DEFAULT '0',
-  `ispic` tinyint(1) NOT NULL DEFAULT '0',
-  `istop` tinyint(1) NOT NULL DEFAULT '0',
-  `isqf` tinyint(1) NOT NULL DEFAULT '0',
-  `ismember` tinyint(1) NOT NULL DEFAULT '0',
-  `isurl` tinyint(1) NOT NULL DEFAULT '0',
-  `truetime` int(10) unsigned NOT NULL DEFAULT '0',
-  `lastdotime` int(10) unsigned NOT NULL DEFAULT '0',
-  `havehtml` tinyint(1) NOT NULL DEFAULT '0',
-  `groupid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `userfen` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `titlefont` varchar(14) NOT NULL DEFAULT '',
-  `titleurl` varchar(200) NOT NULL DEFAULT '',
-  `stb` tinyint(3) unsigned NOT NULL DEFAULT '1',
-  `fstb` tinyint(3) unsigned NOT NULL DEFAULT '1',
-  `restb` tinyint(3) unsigned NOT NULL DEFAULT '1',
-  `keyboard` varchar(80) NOT NULL DEFAULT '',
-  `title` varchar(100) NOT NULL DEFAULT '',
-  `newstime` int(10) unsigned NOT NULL DEFAULT '0',
-  `titlepic` varchar(120) NOT NULL DEFAULT '',
+  `id` int(10) unsigned NOT NULL auto_increment,
+  `classid` smallint(5) unsigned NOT NULL default '0',
+  `ttid` smallint(5) unsigned NOT NULL default '0',
+  `onclick` int(10) unsigned NOT NULL default '0',
+  `plnum` mediumint(8) unsigned NOT NULL default '0',
+  `totaldown` mediumint(8) unsigned NOT NULL default '0',
+  `newspath` varchar(20) NOT NULL default '',
+  `filename` varchar(36) NOT NULL default '',
+  `userid` mediumint(8) unsigned NOT NULL default '0',
+  `username` varchar(20) NOT NULL default '',
+  `firsttitle` tinyint(1) NOT NULL default '0',
+  `isgood` tinyint(1) NOT NULL default '0',
+  `ispic` tinyint(1) NOT NULL default '0',
+  `istop` tinyint(1) NOT NULL default '0',
+  `isqf` tinyint(1) NOT NULL default '0',
+  `ismember` tinyint(1) NOT NULL default '0',
+  `isurl` tinyint(1) NOT NULL default '0',
+  `truetime` int(10) unsigned NOT NULL default '0',
+  `lastdotime` int(10) unsigned NOT NULL default '0',
+  `havehtml` tinyint(1) NOT NULL default '0',
+  `groupid` smallint(5) unsigned NOT NULL default '0',
+  `userfen` smallint(5) unsigned NOT NULL default '0',
+  `titlefont` varchar(14) NOT NULL default '',
+  `titleurl` varchar(200) NOT NULL default '',
+  `stb` tinyint(3) unsigned NOT NULL default '1',
+  `fstb` tinyint(3) unsigned NOT NULL default '1',
+  `restb` tinyint(3) unsigned NOT NULL default '1',
+  `keyboard` varchar(80) NOT NULL default '',
+  `title` varchar(100) NOT NULL default '',
+  `newstime` int(10) unsigned NOT NULL default '0',
+  `titlepic` varchar(120) NOT NULL default '',
   `smalltext` text NOT NULL,
-  `myarea` varchar(30) NOT NULL DEFAULT '',
-  PRIMARY KEY (`id`),
+  `myarea` varchar(30) NOT NULL default '',
+  PRIMARY KEY  (`id`),
   KEY `classid` (`classid`),
   KEY `newstime` (`newstime`),
   KEY `ttid` (`ttid`),
@@ -1132,7 +1132,7 @@ CREATE TABLE `ziyi_ecms_info` (
   KEY `isgood` (`isgood`),
   KEY `ispic` (`ispic`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_ecms_info`
@@ -1148,43 +1148,43 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_ecms_info_check`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_ecms_info_check` (
-  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `classid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `ttid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `onclick` int(10) unsigned NOT NULL DEFAULT '0',
-  `plnum` mediumint(8) unsigned NOT NULL DEFAULT '0',
-  `totaldown` mediumint(8) unsigned NOT NULL DEFAULT '0',
-  `newspath` varchar(20) NOT NULL DEFAULT '',
-  `filename` varchar(36) NOT NULL DEFAULT '',
-  `userid` mediumint(8) unsigned NOT NULL DEFAULT '0',
-  `username` varchar(20) NOT NULL DEFAULT '',
-  `firsttitle` tinyint(1) NOT NULL DEFAULT '0',
-  `isgood` tinyint(1) NOT NULL DEFAULT '0',
-  `ispic` tinyint(1) NOT NULL DEFAULT '0',
-  `istop` tinyint(1) NOT NULL DEFAULT '0',
-  `isqf` tinyint(1) NOT NULL DEFAULT '0',
-  `ismember` tinyint(1) NOT NULL DEFAULT '0',
-  `isurl` tinyint(1) NOT NULL DEFAULT '0',
-  `truetime` int(10) unsigned NOT NULL DEFAULT '0',
-  `lastdotime` int(10) unsigned NOT NULL DEFAULT '0',
-  `havehtml` tinyint(1) NOT NULL DEFAULT '0',
-  `groupid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `userfen` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `titlefont` varchar(14) NOT NULL DEFAULT '',
-  `titleurl` varchar(200) NOT NULL DEFAULT '',
-  `stb` tinyint(3) unsigned NOT NULL DEFAULT '1',
-  `fstb` tinyint(3) unsigned NOT NULL DEFAULT '1',
-  `restb` tinyint(3) unsigned NOT NULL DEFAULT '1',
-  `keyboard` varchar(80) NOT NULL DEFAULT '',
-  `title` varchar(100) NOT NULL DEFAULT '',
-  `newstime` int(10) unsigned NOT NULL DEFAULT '0',
-  `titlepic` varchar(120) NOT NULL DEFAULT '',
+  `id` int(10) unsigned NOT NULL auto_increment,
+  `classid` smallint(5) unsigned NOT NULL default '0',
+  `ttid` smallint(5) unsigned NOT NULL default '0',
+  `onclick` int(10) unsigned NOT NULL default '0',
+  `plnum` mediumint(8) unsigned NOT NULL default '0',
+  `totaldown` mediumint(8) unsigned NOT NULL default '0',
+  `newspath` varchar(20) NOT NULL default '',
+  `filename` varchar(36) NOT NULL default '',
+  `userid` mediumint(8) unsigned NOT NULL default '0',
+  `username` varchar(20) NOT NULL default '',
+  `firsttitle` tinyint(1) NOT NULL default '0',
+  `isgood` tinyint(1) NOT NULL default '0',
+  `ispic` tinyint(1) NOT NULL default '0',
+  `istop` tinyint(1) NOT NULL default '0',
+  `isqf` tinyint(1) NOT NULL default '0',
+  `ismember` tinyint(1) NOT NULL default '0',
+  `isurl` tinyint(1) NOT NULL default '0',
+  `truetime` int(10) unsigned NOT NULL default '0',
+  `lastdotime` int(10) unsigned NOT NULL default '0',
+  `havehtml` tinyint(1) NOT NULL default '0',
+  `groupid` smallint(5) unsigned NOT NULL default '0',
+  `userfen` smallint(5) unsigned NOT NULL default '0',
+  `titlefont` varchar(14) NOT NULL default '',
+  `titleurl` varchar(200) NOT NULL default '',
+  `stb` tinyint(3) unsigned NOT NULL default '1',
+  `fstb` tinyint(3) unsigned NOT NULL default '1',
+  `restb` tinyint(3) unsigned NOT NULL default '1',
+  `keyboard` varchar(80) NOT NULL default '',
+  `title` varchar(100) NOT NULL default '',
+  `newstime` int(10) unsigned NOT NULL default '0',
+  `titlepic` varchar(120) NOT NULL default '',
   `smalltext` text NOT NULL,
-  `myarea` varchar(30) NOT NULL DEFAULT '',
-  PRIMARY KEY (`id`),
+  `myarea` varchar(30) NOT NULL default '',
+  PRIMARY KEY  (`id`),
   KEY `classid` (`classid`),
   KEY `newstime` (`newstime`),
   KEY `ttid` (`ttid`),
@@ -1192,7 +1192,7 @@ CREATE TABLE `ziyi_ecms_info_check` (
   KEY `isgood` (`isgood`),
   KEY `ispic` (`ispic`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_ecms_info_check`
@@ -1208,24 +1208,24 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_ecms_info_check_data`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_ecms_info_check_data` (
-  `id` int(10) unsigned NOT NULL DEFAULT '0',
-  `classid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `keyid` varchar(255) NOT NULL DEFAULT '',
-  `dokey` tinyint(1) NOT NULL DEFAULT '0',
-  `newstempid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `closepl` tinyint(1) NOT NULL DEFAULT '0',
-  `haveaddfen` tinyint(1) NOT NULL DEFAULT '0',
-  `infotags` varchar(80) NOT NULL DEFAULT '',
-  `email` varchar(80) NOT NULL DEFAULT '',
-  `mycontact` varchar(255) NOT NULL DEFAULT '',
-  `address` varchar(255) NOT NULL DEFAULT '',
-  PRIMARY KEY (`id`),
+  `id` int(10) unsigned NOT NULL default '0',
+  `classid` smallint(5) unsigned NOT NULL default '0',
+  `keyid` varchar(255) NOT NULL default '',
+  `dokey` tinyint(1) NOT NULL default '0',
+  `newstempid` smallint(5) unsigned NOT NULL default '0',
+  `closepl` tinyint(1) NOT NULL default '0',
+  `haveaddfen` tinyint(1) NOT NULL default '0',
+  `infotags` varchar(80) NOT NULL default '',
+  `email` varchar(80) NOT NULL default '',
+  `mycontact` varchar(255) NOT NULL default '',
+  `address` varchar(255) NOT NULL default '',
+  PRIMARY KEY  (`id`),
   KEY `classid` (`classid`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_ecms_info_check_data`
@@ -1241,24 +1241,24 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_ecms_info_data_1`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_ecms_info_data_1` (
-  `id` int(10) unsigned NOT NULL DEFAULT '0',
-  `classid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `keyid` varchar(255) NOT NULL DEFAULT '',
-  `dokey` tinyint(1) NOT NULL DEFAULT '0',
-  `newstempid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `closepl` tinyint(1) NOT NULL DEFAULT '0',
-  `haveaddfen` tinyint(1) NOT NULL DEFAULT '0',
-  `infotags` varchar(80) NOT NULL DEFAULT '',
-  `email` varchar(80) NOT NULL DEFAULT '',
-  `mycontact` varchar(255) NOT NULL DEFAULT '',
-  `address` varchar(255) NOT NULL DEFAULT '',
-  PRIMARY KEY (`id`),
+  `id` int(10) unsigned NOT NULL default '0',
+  `classid` smallint(5) unsigned NOT NULL default '0',
+  `keyid` varchar(255) NOT NULL default '',
+  `dokey` tinyint(1) NOT NULL default '0',
+  `newstempid` smallint(5) unsigned NOT NULL default '0',
+  `closepl` tinyint(1) NOT NULL default '0',
+  `haveaddfen` tinyint(1) NOT NULL default '0',
+  `infotags` varchar(80) NOT NULL default '',
+  `email` varchar(80) NOT NULL default '',
+  `mycontact` varchar(255) NOT NULL default '',
+  `address` varchar(255) NOT NULL default '',
+  PRIMARY KEY  (`id`),
   KEY `classid` (`classid`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_ecms_info_data_1`
@@ -1274,43 +1274,43 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_ecms_info_doc`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_ecms_info_doc` (
-  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `classid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `ttid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `onclick` int(10) unsigned NOT NULL DEFAULT '0',
-  `plnum` mediumint(8) unsigned NOT NULL DEFAULT '0',
-  `totaldown` mediumint(8) unsigned NOT NULL DEFAULT '0',
-  `newspath` varchar(20) NOT NULL DEFAULT '',
-  `filename` varchar(36) NOT NULL DEFAULT '',
-  `userid` mediumint(8) unsigned NOT NULL DEFAULT '0',
-  `username` varchar(20) NOT NULL DEFAULT '',
-  `firsttitle` tinyint(1) NOT NULL DEFAULT '0',
-  `isgood` tinyint(1) NOT NULL DEFAULT '0',
-  `ispic` tinyint(1) NOT NULL DEFAULT '0',
-  `istop` tinyint(1) NOT NULL DEFAULT '0',
-  `isqf` tinyint(1) NOT NULL DEFAULT '0',
-  `ismember` tinyint(1) NOT NULL DEFAULT '0',
-  `isurl` tinyint(1) NOT NULL DEFAULT '0',
-  `truetime` int(10) unsigned NOT NULL DEFAULT '0',
-  `lastdotime` int(10) unsigned NOT NULL DEFAULT '0',
-  `havehtml` tinyint(1) NOT NULL DEFAULT '0',
-  `groupid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `userfen` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `titlefont` varchar(14) NOT NULL DEFAULT '',
-  `titleurl` varchar(200) NOT NULL DEFAULT '',
-  `stb` tinyint(3) unsigned NOT NULL DEFAULT '1',
-  `fstb` tinyint(3) unsigned NOT NULL DEFAULT '1',
-  `restb` tinyint(3) unsigned NOT NULL DEFAULT '1',
-  `keyboard` varchar(80) NOT NULL DEFAULT '',
-  `title` varchar(100) NOT NULL DEFAULT '',
-  `newstime` int(10) unsigned NOT NULL DEFAULT '0',
-  `titlepic` varchar(120) NOT NULL DEFAULT '',
+  `id` int(10) unsigned NOT NULL auto_increment,
+  `classid` smallint(5) unsigned NOT NULL default '0',
+  `ttid` smallint(5) unsigned NOT NULL default '0',
+  `onclick` int(10) unsigned NOT NULL default '0',
+  `plnum` mediumint(8) unsigned NOT NULL default '0',
+  `totaldown` mediumint(8) unsigned NOT NULL default '0',
+  `newspath` varchar(20) NOT NULL default '',
+  `filename` varchar(36) NOT NULL default '',
+  `userid` mediumint(8) unsigned NOT NULL default '0',
+  `username` varchar(20) NOT NULL default '',
+  `firsttitle` tinyint(1) NOT NULL default '0',
+  `isgood` tinyint(1) NOT NULL default '0',
+  `ispic` tinyint(1) NOT NULL default '0',
+  `istop` tinyint(1) NOT NULL default '0',
+  `isqf` tinyint(1) NOT NULL default '0',
+  `ismember` tinyint(1) NOT NULL default '0',
+  `isurl` tinyint(1) NOT NULL default '0',
+  `truetime` int(10) unsigned NOT NULL default '0',
+  `lastdotime` int(10) unsigned NOT NULL default '0',
+  `havehtml` tinyint(1) NOT NULL default '0',
+  `groupid` smallint(5) unsigned NOT NULL default '0',
+  `userfen` smallint(5) unsigned NOT NULL default '0',
+  `titlefont` varchar(14) NOT NULL default '',
+  `titleurl` varchar(200) NOT NULL default '',
+  `stb` tinyint(3) unsigned NOT NULL default '1',
+  `fstb` tinyint(3) unsigned NOT NULL default '1',
+  `restb` tinyint(3) unsigned NOT NULL default '1',
+  `keyboard` varchar(80) NOT NULL default '',
+  `title` varchar(100) NOT NULL default '',
+  `newstime` int(10) unsigned NOT NULL default '0',
+  `titlepic` varchar(120) NOT NULL default '',
   `smalltext` text NOT NULL,
-  `myarea` varchar(30) NOT NULL DEFAULT '',
-  PRIMARY KEY (`id`),
+  `myarea` varchar(30) NOT NULL default '',
+  PRIMARY KEY  (`id`),
   KEY `classid` (`classid`),
   KEY `newstime` (`newstime`),
   KEY `ttid` (`ttid`),
@@ -1318,7 +1318,7 @@ CREATE TABLE `ziyi_ecms_info_doc` (
   KEY `isgood` (`isgood`),
   KEY `ispic` (`ispic`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_ecms_info_doc`
@@ -1334,24 +1334,24 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_ecms_info_doc_data`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_ecms_info_doc_data` (
-  `id` int(10) unsigned NOT NULL DEFAULT '0',
-  `classid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `keyid` varchar(255) NOT NULL DEFAULT '',
-  `dokey` tinyint(1) NOT NULL DEFAULT '0',
-  `newstempid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `closepl` tinyint(1) NOT NULL DEFAULT '0',
-  `haveaddfen` tinyint(1) NOT NULL DEFAULT '0',
-  `infotags` varchar(80) NOT NULL DEFAULT '',
-  `email` varchar(80) NOT NULL DEFAULT '',
-  `mycontact` varchar(255) NOT NULL DEFAULT '',
-  `address` varchar(255) NOT NULL DEFAULT '',
-  PRIMARY KEY (`id`),
+  `id` int(10) unsigned NOT NULL default '0',
+  `classid` smallint(5) unsigned NOT NULL default '0',
+  `keyid` varchar(255) NOT NULL default '',
+  `dokey` tinyint(1) NOT NULL default '0',
+  `newstempid` smallint(5) unsigned NOT NULL default '0',
+  `closepl` tinyint(1) NOT NULL default '0',
+  `haveaddfen` tinyint(1) NOT NULL default '0',
+  `infotags` varchar(80) NOT NULL default '',
+  `email` varchar(80) NOT NULL default '',
+  `mycontact` varchar(255) NOT NULL default '',
+  `address` varchar(255) NOT NULL default '',
+  PRIMARY KEY  (`id`),
   KEY `classid` (`classid`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_ecms_info_doc_data`
@@ -1367,24 +1367,24 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_ecms_info_doc_index`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_ecms_info_doc_index` (
-  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `classid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `checked` tinyint(1) NOT NULL DEFAULT '0',
-  `newstime` int(10) unsigned NOT NULL DEFAULT '0',
-  `truetime` int(10) unsigned NOT NULL DEFAULT '0',
-  `lastdotime` int(10) unsigned NOT NULL DEFAULT '0',
-  `havehtml` tinyint(1) NOT NULL DEFAULT '0',
-  PRIMARY KEY (`id`),
+  `id` int(10) unsigned NOT NULL auto_increment,
+  `classid` smallint(5) unsigned NOT NULL default '0',
+  `checked` tinyint(1) NOT NULL default '0',
+  `newstime` int(10) unsigned NOT NULL default '0',
+  `truetime` int(10) unsigned NOT NULL default '0',
+  `lastdotime` int(10) unsigned NOT NULL default '0',
+  `havehtml` tinyint(1) NOT NULL default '0',
+  PRIMARY KEY  (`id`),
   KEY `classid` (`classid`),
   KEY `checked` (`checked`),
   KEY `newstime` (`newstime`),
   KEY `truetime` (`truetime`,`id`),
   KEY `havehtml` (`classid`,`truetime`,`havehtml`,`checked`,`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_ecms_info_doc_index`
@@ -1400,24 +1400,24 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_ecms_info_index`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_ecms_info_index` (
-  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `classid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `checked` tinyint(1) NOT NULL DEFAULT '0',
-  `newstime` int(10) unsigned NOT NULL DEFAULT '0',
-  `truetime` int(10) unsigned NOT NULL DEFAULT '0',
-  `lastdotime` int(10) unsigned NOT NULL DEFAULT '0',
-  `havehtml` tinyint(1) NOT NULL DEFAULT '0',
-  PRIMARY KEY (`id`),
+  `id` int(10) unsigned NOT NULL auto_increment,
+  `classid` smallint(5) unsigned NOT NULL default '0',
+  `checked` tinyint(1) NOT NULL default '0',
+  `newstime` int(10) unsigned NOT NULL default '0',
+  `truetime` int(10) unsigned NOT NULL default '0',
+  `lastdotime` int(10) unsigned NOT NULL default '0',
+  `havehtml` tinyint(1) NOT NULL default '0',
+  PRIMARY KEY  (`id`),
   KEY `classid` (`classid`),
   KEY `checked` (`checked`),
   KEY `newstime` (`newstime`),
   KEY `truetime` (`truetime`,`id`),
   KEY `havehtml` (`classid`,`truetime`,`havehtml`,`checked`,`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_ecms_info_index`
@@ -1433,49 +1433,49 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_ecms_infoclass_article`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_ecms_infoclass_article` (
-  `classid` int(10) unsigned NOT NULL DEFAULT '0',
+  `classid` int(10) unsigned NOT NULL default '0',
   `zz_title` text NOT NULL,
-  `z_title` varchar(255) NOT NULL DEFAULT '',
-  `qz_title` varchar(255) NOT NULL DEFAULT '',
-  `save_title` varchar(10) NOT NULL DEFAULT '',
+  `z_title` varchar(255) NOT NULL default '',
+  `qz_title` varchar(255) NOT NULL default '',
+  `save_title` varchar(10) NOT NULL default '',
   `zz_titlepic` text NOT NULL,
-  `z_titlepic` varchar(255) NOT NULL DEFAULT '',
-  `qz_titlepic` varchar(255) NOT NULL DEFAULT '',
-  `save_titlepic` varchar(10) NOT NULL DEFAULT '',
+  `z_titlepic` varchar(255) NOT NULL default '',
+  `qz_titlepic` varchar(255) NOT NULL default '',
+  `save_titlepic` varchar(10) NOT NULL default '',
   `zz_newstime` text NOT NULL,
-  `z_newstime` varchar(255) NOT NULL DEFAULT '',
-  `qz_newstime` varchar(255) NOT NULL DEFAULT '',
-  `save_newstime` varchar(10) NOT NULL DEFAULT '',
+  `z_newstime` varchar(255) NOT NULL default '',
+  `qz_newstime` varchar(255) NOT NULL default '',
+  `save_newstime` varchar(10) NOT NULL default '',
   `zz_ftitle` text NOT NULL,
-  `z_ftitle` varchar(255) NOT NULL DEFAULT '',
-  `qz_ftitle` varchar(255) NOT NULL DEFAULT '',
-  `save_ftitle` varchar(10) NOT NULL DEFAULT '',
+  `z_ftitle` varchar(255) NOT NULL default '',
+  `qz_ftitle` varchar(255) NOT NULL default '',
+  `save_ftitle` varchar(10) NOT NULL default '',
   `zz_smalltext` text NOT NULL,
-  `z_smalltext` varchar(255) NOT NULL DEFAULT '',
-  `qz_smalltext` varchar(255) NOT NULL DEFAULT '',
-  `save_smalltext` varchar(10) NOT NULL DEFAULT '',
+  `z_smalltext` varchar(255) NOT NULL default '',
+  `qz_smalltext` varchar(255) NOT NULL default '',
+  `save_smalltext` varchar(10) NOT NULL default '',
   `zz_writer` text NOT NULL,
-  `z_writer` varchar(255) NOT NULL DEFAULT '',
-  `qz_writer` varchar(255) NOT NULL DEFAULT '',
-  `save_writer` varchar(10) NOT NULL DEFAULT '',
+  `z_writer` varchar(255) NOT NULL default '',
+  `qz_writer` varchar(255) NOT NULL default '',
+  `save_writer` varchar(10) NOT NULL default '',
   `zz_befrom` text NOT NULL,
-  `z_befrom` varchar(255) NOT NULL DEFAULT '',
-  `qz_befrom` varchar(255) NOT NULL DEFAULT '',
-  `save_befrom` varchar(10) NOT NULL DEFAULT '',
+  `z_befrom` varchar(255) NOT NULL default '',
+  `qz_befrom` varchar(255) NOT NULL default '',
+  `save_befrom` varchar(10) NOT NULL default '',
   `zz_newstext` text NOT NULL,
-  `z_newstext` varchar(255) NOT NULL DEFAULT '',
-  `qz_newstext` varchar(255) NOT NULL DEFAULT '',
-  `save_newstext` varchar(10) NOT NULL DEFAULT '',
+  `z_newstext` varchar(255) NOT NULL default '',
+  `qz_newstext` varchar(255) NOT NULL default '',
+  `save_newstext` varchar(10) NOT NULL default '',
   `zz_diggtop` text NOT NULL,
-  `z_diggtop` varchar(255) NOT NULL DEFAULT '',
-  `qz_diggtop` varchar(255) NOT NULL DEFAULT '',
-  `save_diggtop` varchar(10) NOT NULL DEFAULT '',
-  PRIMARY KEY (`classid`)
+  `z_diggtop` varchar(255) NOT NULL default '',
+  `qz_diggtop` varchar(255) NOT NULL default '',
+  `save_diggtop` varchar(10) NOT NULL default '',
+  PRIMARY KEY  (`classid`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_ecms_infoclass_article`
@@ -1491,73 +1491,73 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_ecms_infoclass_download`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_ecms_infoclass_download` (
-  `classid` int(10) unsigned NOT NULL DEFAULT '0',
+  `classid` int(10) unsigned NOT NULL default '0',
   `zz_title` text NOT NULL,
-  `z_title` varchar(255) NOT NULL DEFAULT '',
-  `qz_title` varchar(255) NOT NULL DEFAULT '',
-  `save_title` varchar(10) NOT NULL DEFAULT '',
+  `z_title` varchar(255) NOT NULL default '',
+  `qz_title` varchar(255) NOT NULL default '',
+  `save_title` varchar(10) NOT NULL default '',
   `zz_titlepic` text NOT NULL,
-  `z_titlepic` varchar(255) NOT NULL DEFAULT '',
-  `qz_titlepic` varchar(255) NOT NULL DEFAULT '',
-  `save_titlepic` varchar(10) NOT NULL DEFAULT '',
+  `z_titlepic` varchar(255) NOT NULL default '',
+  `qz_titlepic` varchar(255) NOT NULL default '',
+  `save_titlepic` varchar(10) NOT NULL default '',
   `zz_newstime` text NOT NULL,
-  `z_newstime` varchar(255) NOT NULL DEFAULT '',
-  `qz_newstime` varchar(255) NOT NULL DEFAULT '',
-  `save_newstime` varchar(10) NOT NULL DEFAULT '',
+  `z_newstime` varchar(255) NOT NULL default '',
+  `qz_newstime` varchar(255) NOT NULL default '',
+  `save_newstime` varchar(10) NOT NULL default '',
   `zz_softwriter` text NOT NULL,
-  `z_softwriter` varchar(255) NOT NULL DEFAULT '',
-  `qz_softwriter` varchar(255) NOT NULL DEFAULT '',
-  `save_softwriter` varchar(10) NOT NULL DEFAULT '',
+  `z_softwriter` varchar(255) NOT NULL default '',
+  `qz_softwriter` varchar(255) NOT NULL default '',
+  `save_softwriter` varchar(10) NOT NULL default '',
   `zz_homepage` text NOT NULL,
-  `z_homepage` varchar(255) NOT NULL DEFAULT '',
-  `qz_homepage` varchar(255) NOT NULL DEFAULT '',
-  `save_homepage` varchar(10) NOT NULL DEFAULT '',
+  `z_homepage` varchar(255) NOT NULL default '',
+  `qz_homepage` varchar(255) NOT NULL default '',
+  `save_homepage` varchar(10) NOT NULL default '',
   `zz_demo` text NOT NULL,
-  `z_demo` varchar(255) NOT NULL DEFAULT '',
-  `qz_demo` varchar(255) NOT NULL DEFAULT '',
-  `save_demo` varchar(10) NOT NULL DEFAULT '',
+  `z_demo` varchar(255) NOT NULL default '',
+  `qz_demo` varchar(255) NOT NULL default '',
+  `save_demo` varchar(10) NOT NULL default '',
   `zz_softfj` text NOT NULL,
-  `z_softfj` varchar(255) NOT NULL DEFAULT '',
-  `qz_softfj` varchar(255) NOT NULL DEFAULT '',
-  `save_softfj` varchar(10) NOT NULL DEFAULT '',
+  `z_softfj` varchar(255) NOT NULL default '',
+  `qz_softfj` varchar(255) NOT NULL default '',
+  `save_softfj` varchar(10) NOT NULL default '',
   `zz_language` text NOT NULL,
-  `z_language` varchar(255) NOT NULL DEFAULT '',
-  `qz_language` varchar(255) NOT NULL DEFAULT '',
-  `save_language` varchar(10) NOT NULL DEFAULT '',
+  `z_language` varchar(255) NOT NULL default '',
+  `qz_language` varchar(255) NOT NULL default '',
+  `save_language` varchar(10) NOT NULL default '',
   `zz_softtype` text NOT NULL,
-  `z_softtype` varchar(255) NOT NULL DEFAULT '',
-  `qz_softtype` varchar(255) NOT NULL DEFAULT '',
-  `save_softtype` varchar(10) NOT NULL DEFAULT '',
+  `z_softtype` varchar(255) NOT NULL default '',
+  `qz_softtype` varchar(255) NOT NULL default '',
+  `save_softtype` varchar(10) NOT NULL default '',
   `zz_softsq` text NOT NULL,
-  `z_softsq` varchar(255) NOT NULL DEFAULT '',
-  `qz_softsq` varchar(255) NOT NULL DEFAULT '',
-  `save_softsq` varchar(10) NOT NULL DEFAULT '',
+  `z_softsq` varchar(255) NOT NULL default '',
+  `qz_softsq` varchar(255) NOT NULL default '',
+  `save_softsq` varchar(10) NOT NULL default '',
   `zz_star` text NOT NULL,
-  `z_star` varchar(255) NOT NULL DEFAULT '',
-  `qz_star` varchar(255) NOT NULL DEFAULT '',
-  `save_star` varchar(10) NOT NULL DEFAULT '',
+  `z_star` varchar(255) NOT NULL default '',
+  `qz_star` varchar(255) NOT NULL default '',
+  `save_star` varchar(10) NOT NULL default '',
   `zz_filetype` text NOT NULL,
-  `z_filetype` varchar(255) NOT NULL DEFAULT '',
-  `qz_filetype` varchar(255) NOT NULL DEFAULT '',
-  `save_filetype` varchar(10) NOT NULL DEFAULT '',
+  `z_filetype` varchar(255) NOT NULL default '',
+  `qz_filetype` varchar(255) NOT NULL default '',
+  `save_filetype` varchar(10) NOT NULL default '',
   `zz_filesize` text NOT NULL,
-  `z_filesize` varchar(255) NOT NULL DEFAULT '',
-  `qz_filesize` varchar(255) NOT NULL DEFAULT '',
-  `save_filesize` varchar(10) NOT NULL DEFAULT '',
+  `z_filesize` varchar(255) NOT NULL default '',
+  `qz_filesize` varchar(255) NOT NULL default '',
+  `save_filesize` varchar(10) NOT NULL default '',
   `zz_downpath` text NOT NULL,
-  `z_downpath` varchar(255) NOT NULL DEFAULT '',
-  `qz_downpath` varchar(255) NOT NULL DEFAULT '',
-  `save_downpath` varchar(10) NOT NULL DEFAULT '',
+  `z_downpath` varchar(255) NOT NULL default '',
+  `qz_downpath` varchar(255) NOT NULL default '',
+  `save_downpath` varchar(10) NOT NULL default '',
   `zz_softsay` text NOT NULL,
-  `z_softsay` varchar(255) NOT NULL DEFAULT '',
-  `qz_softsay` varchar(255) NOT NULL DEFAULT '',
-  `save_softsay` varchar(10) NOT NULL DEFAULT '',
-  PRIMARY KEY (`classid`)
+  `z_softsay` varchar(255) NOT NULL default '',
+  `qz_softsay` varchar(255) NOT NULL default '',
+  `save_softsay` varchar(10) NOT NULL default '',
+  PRIMARY KEY  (`classid`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_ecms_infoclass_download`
@@ -1573,57 +1573,57 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_ecms_infoclass_flash`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_ecms_infoclass_flash` (
-  `classid` int(10) unsigned NOT NULL DEFAULT '0',
+  `classid` int(10) unsigned NOT NULL default '0',
   `zz_title` text NOT NULL,
-  `z_title` varchar(255) NOT NULL DEFAULT '',
-  `qz_title` varchar(255) NOT NULL DEFAULT '',
-  `save_title` varchar(10) NOT NULL DEFAULT '',
+  `z_title` varchar(255) NOT NULL default '',
+  `qz_title` varchar(255) NOT NULL default '',
+  `save_title` varchar(10) NOT NULL default '',
   `zz_titlepic` text NOT NULL,
-  `z_titlepic` varchar(255) NOT NULL DEFAULT '',
-  `qz_titlepic` varchar(255) NOT NULL DEFAULT '',
-  `save_titlepic` varchar(10) NOT NULL DEFAULT '',
+  `z_titlepic` varchar(255) NOT NULL default '',
+  `qz_titlepic` varchar(255) NOT NULL default '',
+  `save_titlepic` varchar(10) NOT NULL default '',
   `zz_newstime` text NOT NULL,
-  `z_newstime` varchar(255) NOT NULL DEFAULT '',
-  `qz_newstime` varchar(255) NOT NULL DEFAULT '',
-  `save_newstime` varchar(10) NOT NULL DEFAULT '',
+  `z_newstime` varchar(255) NOT NULL default '',
+  `qz_newstime` varchar(255) NOT NULL default '',
+  `save_newstime` varchar(10) NOT NULL default '',
   `zz_flashwriter` text NOT NULL,
-  `z_flashwriter` varchar(255) NOT NULL DEFAULT '',
-  `qz_flashwriter` varchar(255) NOT NULL DEFAULT '',
-  `save_flashwriter` varchar(10) NOT NULL DEFAULT '',
+  `z_flashwriter` varchar(255) NOT NULL default '',
+  `qz_flashwriter` varchar(255) NOT NULL default '',
+  `save_flashwriter` varchar(10) NOT NULL default '',
   `zz_email` text NOT NULL,
-  `z_email` varchar(255) NOT NULL DEFAULT '',
-  `qz_email` varchar(255) NOT NULL DEFAULT '',
-  `save_email` varchar(10) NOT NULL DEFAULT '',
+  `z_email` varchar(255) NOT NULL default '',
+  `qz_email` varchar(255) NOT NULL default '',
+  `save_email` varchar(10) NOT NULL default '',
   `zz_star` text NOT NULL,
-  `z_star` varchar(255) NOT NULL DEFAULT '',
-  `qz_star` varchar(255) NOT NULL DEFAULT '',
-  `save_star` varchar(10) NOT NULL DEFAULT '',
+  `z_star` varchar(255) NOT NULL default '',
+  `qz_star` varchar(255) NOT NULL default '',
+  `save_star` varchar(10) NOT NULL default '',
   `zz_filesize` text NOT NULL,
-  `z_filesize` varchar(255) NOT NULL DEFAULT '',
-  `qz_filesize` varchar(255) NOT NULL DEFAULT '',
-  `save_filesize` varchar(10) NOT NULL DEFAULT '',
+  `z_filesize` varchar(255) NOT NULL default '',
+  `qz_filesize` varchar(255) NOT NULL default '',
+  `save_filesize` varchar(10) NOT NULL default '',
   `zz_flashurl` text NOT NULL,
-  `z_flashurl` varchar(255) NOT NULL DEFAULT '',
-  `qz_flashurl` varchar(255) NOT NULL DEFAULT '',
-  `save_flashurl` varchar(10) NOT NULL DEFAULT '',
+  `z_flashurl` varchar(255) NOT NULL default '',
+  `qz_flashurl` varchar(255) NOT NULL default '',
+  `save_flashurl` varchar(10) NOT NULL default '',
   `zz_width` text NOT NULL,
-  `z_width` varchar(255) NOT NULL DEFAULT '',
-  `qz_width` varchar(255) NOT NULL DEFAULT '',
-  `save_width` varchar(10) NOT NULL DEFAULT '',
+  `z_width` varchar(255) NOT NULL default '',
+  `qz_width` varchar(255) NOT NULL default '',
+  `save_width` varchar(10) NOT NULL default '',
   `zz_height` text NOT NULL,
-  `z_height` varchar(255) NOT NULL DEFAULT '',
-  `qz_height` varchar(255) NOT NULL DEFAULT '',
-  `save_height` varchar(10) NOT NULL DEFAULT '',
+  `z_height` varchar(255) NOT NULL default '',
+  `qz_height` varchar(255) NOT NULL default '',
+  `save_height` varchar(10) NOT NULL default '',
   `zz_flashsay` text NOT NULL,
-  `z_flashsay` varchar(255) NOT NULL DEFAULT '',
-  `qz_flashsay` varchar(255) NOT NULL DEFAULT '',
-  `save_flashsay` varchar(10) NOT NULL DEFAULT '',
-  PRIMARY KEY (`classid`)
+  `z_flashsay` varchar(255) NOT NULL default '',
+  `qz_flashsay` varchar(255) NOT NULL default '',
+  `save_flashsay` varchar(10) NOT NULL default '',
+  PRIMARY KEY  (`classid`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_ecms_infoclass_flash`
@@ -1639,45 +1639,45 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_ecms_infoclass_info`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_ecms_infoclass_info` (
-  `classid` int(10) unsigned NOT NULL DEFAULT '0',
+  `classid` int(10) unsigned NOT NULL default '0',
   `zz_title` text NOT NULL,
-  `z_title` varchar(255) NOT NULL DEFAULT '',
-  `qz_title` varchar(255) NOT NULL DEFAULT '',
-  `save_title` varchar(10) NOT NULL DEFAULT '',
+  `z_title` varchar(255) NOT NULL default '',
+  `qz_title` varchar(255) NOT NULL default '',
+  `save_title` varchar(10) NOT NULL default '',
   `zz_titlepic` text NOT NULL,
-  `z_titlepic` varchar(255) NOT NULL DEFAULT '',
-  `qz_titlepic` varchar(255) NOT NULL DEFAULT '',
-  `save_titlepic` varchar(10) NOT NULL DEFAULT '',
+  `z_titlepic` varchar(255) NOT NULL default '',
+  `qz_titlepic` varchar(255) NOT NULL default '',
+  `save_titlepic` varchar(10) NOT NULL default '',
   `zz_newstime` text NOT NULL,
-  `z_newstime` varchar(255) NOT NULL DEFAULT '',
-  `qz_newstime` varchar(255) NOT NULL DEFAULT '',
-  `save_newstime` varchar(10) NOT NULL DEFAULT '',
+  `z_newstime` varchar(255) NOT NULL default '',
+  `qz_newstime` varchar(255) NOT NULL default '',
+  `save_newstime` varchar(10) NOT NULL default '',
   `zz_smalltext` text NOT NULL,
-  `z_smalltext` varchar(255) NOT NULL DEFAULT '',
-  `qz_smalltext` varchar(255) NOT NULL DEFAULT '',
-  `save_smalltext` varchar(10) NOT NULL DEFAULT '',
+  `z_smalltext` varchar(255) NOT NULL default '',
+  `qz_smalltext` varchar(255) NOT NULL default '',
+  `save_smalltext` varchar(10) NOT NULL default '',
   `zz_myarea` text NOT NULL,
-  `z_myarea` varchar(255) NOT NULL DEFAULT '',
-  `qz_myarea` varchar(255) NOT NULL DEFAULT '',
-  `save_myarea` varchar(10) NOT NULL DEFAULT '',
+  `z_myarea` varchar(255) NOT NULL default '',
+  `qz_myarea` varchar(255) NOT NULL default '',
+  `save_myarea` varchar(10) NOT NULL default '',
   `zz_email` text NOT NULL,
-  `z_email` varchar(255) NOT NULL DEFAULT '',
-  `qz_email` varchar(255) NOT NULL DEFAULT '',
-  `save_email` varchar(10) NOT NULL DEFAULT '',
+  `z_email` varchar(255) NOT NULL default '',
+  `qz_email` varchar(255) NOT NULL default '',
+  `save_email` varchar(10) NOT NULL default '',
   `zz_mycontact` text NOT NULL,
-  `z_mycontact` varchar(255) NOT NULL DEFAULT '',
-  `qz_mycontact` varchar(255) NOT NULL DEFAULT '',
-  `save_mycontact` varchar(10) NOT NULL DEFAULT '',
+  `z_mycontact` varchar(255) NOT NULL default '',
+  `qz_mycontact` varchar(255) NOT NULL default '',
+  `save_mycontact` varchar(10) NOT NULL default '',
   `zz_address` text NOT NULL,
-  `z_address` varchar(255) NOT NULL DEFAULT '',
-  `qz_address` varchar(255) NOT NULL DEFAULT '',
-  `save_address` varchar(10) NOT NULL DEFAULT '',
-  PRIMARY KEY (`classid`)
+  `z_address` varchar(255) NOT NULL default '',
+  `qz_address` varchar(255) NOT NULL default '',
+  `save_address` varchar(10) NOT NULL default '',
+  PRIMARY KEY  (`classid`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_ecms_infoclass_info`
@@ -1693,85 +1693,85 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_ecms_infoclass_movie`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_ecms_infoclass_movie` (
-  `classid` int(10) unsigned NOT NULL DEFAULT '0',
+  `classid` int(10) unsigned NOT NULL default '0',
   `zz_title` text NOT NULL,
-  `z_title` varchar(255) NOT NULL DEFAULT '',
-  `qz_title` varchar(255) NOT NULL DEFAULT '',
-  `save_title` varchar(10) NOT NULL DEFAULT '',
+  `z_title` varchar(255) NOT NULL default '',
+  `qz_title` varchar(255) NOT NULL default '',
+  `save_title` varchar(10) NOT NULL default '',
   `zz_titlepic` text NOT NULL,
-  `z_titlepic` varchar(255) NOT NULL DEFAULT '',
-  `qz_titlepic` varchar(255) NOT NULL DEFAULT '',
-  `save_titlepic` varchar(10) NOT NULL DEFAULT '',
+  `z_titlepic` varchar(255) NOT NULL default '',
+  `qz_titlepic` varchar(255) NOT NULL default '',
+  `save_titlepic` varchar(10) NOT NULL default '',
   `zz_newstime` text NOT NULL,
-  `z_newstime` varchar(255) NOT NULL DEFAULT '',
-  `qz_newstime` varchar(255) NOT NULL DEFAULT '',
-  `save_newstime` varchar(10) NOT NULL DEFAULT '',
+  `z_newstime` varchar(255) NOT NULL default '',
+  `qz_newstime` varchar(255) NOT NULL default '',
+  `save_newstime` varchar(10) NOT NULL default '',
   `zz_movietype` text NOT NULL,
-  `z_movietype` varchar(255) NOT NULL DEFAULT '',
-  `qz_movietype` varchar(255) NOT NULL DEFAULT '',
-  `save_movietype` varchar(10) NOT NULL DEFAULT '',
+  `z_movietype` varchar(255) NOT NULL default '',
+  `qz_movietype` varchar(255) NOT NULL default '',
+  `save_movietype` varchar(10) NOT NULL default '',
   `zz_company` text NOT NULL,
-  `z_company` varchar(255) NOT NULL DEFAULT '',
-  `qz_company` varchar(255) NOT NULL DEFAULT '',
-  `save_company` varchar(10) NOT NULL DEFAULT '',
+  `z_company` varchar(255) NOT NULL default '',
+  `qz_company` varchar(255) NOT NULL default '',
+  `save_company` varchar(10) NOT NULL default '',
   `zz_movietime` text NOT NULL,
-  `z_movietime` varchar(255) NOT NULL DEFAULT '',
-  `qz_movietime` varchar(255) NOT NULL DEFAULT '',
-  `save_movietime` varchar(10) NOT NULL DEFAULT '',
+  `z_movietime` varchar(255) NOT NULL default '',
+  `qz_movietime` varchar(255) NOT NULL default '',
+  `save_movietime` varchar(10) NOT NULL default '',
   `zz_player` text NOT NULL,
-  `z_player` varchar(255) NOT NULL DEFAULT '',
-  `qz_player` varchar(255) NOT NULL DEFAULT '',
-  `save_player` varchar(10) NOT NULL DEFAULT '',
+  `z_player` varchar(255) NOT NULL default '',
+  `qz_player` varchar(255) NOT NULL default '',
+  `save_player` varchar(10) NOT NULL default '',
   `zz_playadmin` text NOT NULL,
-  `z_playadmin` varchar(255) NOT NULL DEFAULT '',
-  `qz_playadmin` varchar(255) NOT NULL DEFAULT '',
-  `save_playadmin` varchar(10) NOT NULL DEFAULT '',
+  `z_playadmin` varchar(255) NOT NULL default '',
+  `qz_playadmin` varchar(255) NOT NULL default '',
+  `save_playadmin` varchar(10) NOT NULL default '',
   `zz_filetype` text NOT NULL,
-  `z_filetype` varchar(255) NOT NULL DEFAULT '',
-  `qz_filetype` varchar(255) NOT NULL DEFAULT '',
-  `save_filetype` varchar(10) NOT NULL DEFAULT '',
+  `z_filetype` varchar(255) NOT NULL default '',
+  `qz_filetype` varchar(255) NOT NULL default '',
+  `save_filetype` varchar(10) NOT NULL default '',
   `zz_filesize` text NOT NULL,
-  `z_filesize` varchar(255) NOT NULL DEFAULT '',
-  `qz_filesize` varchar(255) NOT NULL DEFAULT '',
-  `save_filesize` varchar(10) NOT NULL DEFAULT '',
+  `z_filesize` varchar(255) NOT NULL default '',
+  `qz_filesize` varchar(255) NOT NULL default '',
+  `save_filesize` varchar(10) NOT NULL default '',
   `zz_star` text NOT NULL,
-  `z_star` varchar(255) NOT NULL DEFAULT '',
-  `qz_star` varchar(255) NOT NULL DEFAULT '',
-  `save_star` varchar(10) NOT NULL DEFAULT '',
+  `z_star` varchar(255) NOT NULL default '',
+  `qz_star` varchar(255) NOT NULL default '',
+  `save_star` varchar(10) NOT NULL default '',
   `zz_playdk` text NOT NULL,
-  `z_playdk` varchar(255) NOT NULL DEFAULT '',
-  `qz_playdk` varchar(255) NOT NULL DEFAULT '',
-  `save_playdk` varchar(10) NOT NULL DEFAULT '',
+  `z_playdk` varchar(255) NOT NULL default '',
+  `qz_playdk` varchar(255) NOT NULL default '',
+  `save_playdk` varchar(10) NOT NULL default '',
   `zz_playtime` text NOT NULL,
-  `z_playtime` varchar(255) NOT NULL DEFAULT '',
-  `qz_playtime` varchar(255) NOT NULL DEFAULT '',
-  `save_playtime` varchar(10) NOT NULL DEFAULT '',
+  `z_playtime` varchar(255) NOT NULL default '',
+  `qz_playtime` varchar(255) NOT NULL default '',
+  `save_playtime` varchar(10) NOT NULL default '',
   `zz_moviefen` text NOT NULL,
-  `z_moviefen` varchar(255) NOT NULL DEFAULT '',
-  `qz_moviefen` varchar(255) NOT NULL DEFAULT '',
-  `save_moviefen` varchar(10) NOT NULL DEFAULT '',
+  `z_moviefen` varchar(255) NOT NULL default '',
+  `qz_moviefen` varchar(255) NOT NULL default '',
+  `save_moviefen` varchar(10) NOT NULL default '',
   `zz_downpath` text NOT NULL,
-  `z_downpath` varchar(255) NOT NULL DEFAULT '',
-  `qz_downpath` varchar(255) NOT NULL DEFAULT '',
-  `save_downpath` varchar(10) NOT NULL DEFAULT '',
+  `z_downpath` varchar(255) NOT NULL default '',
+  `qz_downpath` varchar(255) NOT NULL default '',
+  `save_downpath` varchar(10) NOT NULL default '',
   `zz_playerid` text NOT NULL,
-  `z_playerid` varchar(255) NOT NULL DEFAULT '',
-  `qz_playerid` varchar(255) NOT NULL DEFAULT '',
-  `save_playerid` varchar(10) NOT NULL DEFAULT '',
+  `z_playerid` varchar(255) NOT NULL default '',
+  `qz_playerid` varchar(255) NOT NULL default '',
+  `save_playerid` varchar(10) NOT NULL default '',
   `zz_onlinepath` text NOT NULL,
-  `z_onlinepath` varchar(255) NOT NULL DEFAULT '',
-  `qz_onlinepath` varchar(255) NOT NULL DEFAULT '',
-  `save_onlinepath` varchar(10) NOT NULL DEFAULT '',
+  `z_onlinepath` varchar(255) NOT NULL default '',
+  `qz_onlinepath` varchar(255) NOT NULL default '',
+  `save_onlinepath` varchar(10) NOT NULL default '',
   `zz_moviesay` text NOT NULL,
-  `z_moviesay` varchar(255) NOT NULL DEFAULT '',
-  `qz_moviesay` varchar(255) NOT NULL DEFAULT '',
-  `save_moviesay` varchar(10) NOT NULL DEFAULT '',
-  PRIMARY KEY (`classid`)
+  `z_moviesay` varchar(255) NOT NULL default '',
+  `qz_moviesay` varchar(255) NOT NULL default '',
+  `save_moviesay` varchar(10) NOT NULL default '',
+  PRIMARY KEY  (`classid`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_ecms_infoclass_movie`
@@ -1787,49 +1787,49 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_ecms_infoclass_news`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_ecms_infoclass_news` (
-  `classid` int(10) unsigned NOT NULL DEFAULT '0',
+  `classid` int(10) unsigned NOT NULL default '0',
   `zz_title` text NOT NULL,
-  `z_title` varchar(255) NOT NULL DEFAULT '',
-  `qz_title` varchar(255) NOT NULL DEFAULT '',
-  `save_title` varchar(10) NOT NULL DEFAULT '',
+  `z_title` varchar(255) NOT NULL default '',
+  `qz_title` varchar(255) NOT NULL default '',
+  `save_title` varchar(10) NOT NULL default '',
   `zz_titlepic` text NOT NULL,
-  `z_titlepic` varchar(255) NOT NULL DEFAULT '',
-  `qz_titlepic` varchar(255) NOT NULL DEFAULT '',
-  `save_titlepic` varchar(10) NOT NULL DEFAULT '',
+  `z_titlepic` varchar(255) NOT NULL default '',
+  `qz_titlepic` varchar(255) NOT NULL default '',
+  `save_titlepic` varchar(10) NOT NULL default '',
   `zz_newstime` text NOT NULL,
-  `z_newstime` varchar(255) NOT NULL DEFAULT '',
-  `qz_newstime` varchar(255) NOT NULL DEFAULT '',
-  `save_newstime` varchar(10) NOT NULL DEFAULT '',
+  `z_newstime` varchar(255) NOT NULL default '',
+  `qz_newstime` varchar(255) NOT NULL default '',
+  `save_newstime` varchar(10) NOT NULL default '',
   `zz_ftitle` text NOT NULL,
-  `z_ftitle` varchar(255) NOT NULL DEFAULT '',
-  `qz_ftitle` varchar(255) NOT NULL DEFAULT '',
-  `save_ftitle` varchar(10) NOT NULL DEFAULT '',
+  `z_ftitle` varchar(255) NOT NULL default '',
+  `qz_ftitle` varchar(255) NOT NULL default '',
+  `save_ftitle` varchar(10) NOT NULL default '',
   `zz_smalltext` text NOT NULL,
-  `z_smalltext` varchar(255) NOT NULL DEFAULT '',
-  `qz_smalltext` varchar(255) NOT NULL DEFAULT '',
-  `save_smalltext` varchar(10) NOT NULL DEFAULT '',
+  `z_smalltext` varchar(255) NOT NULL default '',
+  `qz_smalltext` varchar(255) NOT NULL default '',
+  `save_smalltext` varchar(10) NOT NULL default '',
   `zz_writer` text NOT NULL,
-  `z_writer` varchar(255) NOT NULL DEFAULT '',
-  `qz_writer` varchar(255) NOT NULL DEFAULT '',
-  `save_writer` varchar(10) NOT NULL DEFAULT '',
+  `z_writer` varchar(255) NOT NULL default '',
+  `qz_writer` varchar(255) NOT NULL default '',
+  `save_writer` varchar(10) NOT NULL default '',
   `zz_befrom` text NOT NULL,
-  `z_befrom` varchar(255) NOT NULL DEFAULT '',
-  `qz_befrom` varchar(255) NOT NULL DEFAULT '',
-  `save_befrom` varchar(10) NOT NULL DEFAULT '',
+  `z_befrom` varchar(255) NOT NULL default '',
+  `qz_befrom` varchar(255) NOT NULL default '',
+  `save_befrom` varchar(10) NOT NULL default '',
   `zz_newstext` text NOT NULL,
-  `z_newstext` varchar(255) NOT NULL DEFAULT '',
-  `qz_newstext` varchar(255) NOT NULL DEFAULT '',
-  `save_newstext` varchar(10) NOT NULL DEFAULT '',
+  `z_newstext` varchar(255) NOT NULL default '',
+  `qz_newstext` varchar(255) NOT NULL default '',
+  `save_newstext` varchar(10) NOT NULL default '',
   `zz_diggtop` text NOT NULL,
-  `z_diggtop` varchar(255) NOT NULL DEFAULT '',
-  `qz_diggtop` varchar(255) NOT NULL DEFAULT '',
-  `save_diggtop` varchar(10) NOT NULL DEFAULT '',
-  PRIMARY KEY (`classid`)
+  `z_diggtop` varchar(255) NOT NULL default '',
+  `qz_diggtop` varchar(255) NOT NULL default '',
+  `save_diggtop` varchar(10) NOT NULL default '',
+  PRIMARY KEY  (`classid`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_ecms_infoclass_news`
@@ -1845,65 +1845,65 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_ecms_infoclass_photo`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_ecms_infoclass_photo` (
-  `classid` int(10) unsigned NOT NULL DEFAULT '0',
+  `classid` int(10) unsigned NOT NULL default '0',
   `zz_title` text NOT NULL,
-  `z_title` varchar(255) NOT NULL DEFAULT '',
-  `qz_title` varchar(255) NOT NULL DEFAULT '',
-  `save_title` varchar(10) NOT NULL DEFAULT '',
+  `z_title` varchar(255) NOT NULL default '',
+  `qz_title` varchar(255) NOT NULL default '',
+  `save_title` varchar(10) NOT NULL default '',
   `zz_titlepic` text NOT NULL,
-  `z_titlepic` varchar(255) NOT NULL DEFAULT '',
-  `qz_titlepic` varchar(255) NOT NULL DEFAULT '',
-  `save_titlepic` varchar(10) NOT NULL DEFAULT '',
+  `z_titlepic` varchar(255) NOT NULL default '',
+  `qz_titlepic` varchar(255) NOT NULL default '',
+  `save_titlepic` varchar(10) NOT NULL default '',
   `zz_newstime` text NOT NULL,
-  `z_newstime` varchar(255) NOT NULL DEFAULT '',
-  `qz_newstime` varchar(255) NOT NULL DEFAULT '',
-  `save_newstime` varchar(10) NOT NULL DEFAULT '',
+  `z_newstime` varchar(255) NOT NULL default '',
+  `qz_newstime` varchar(255) NOT NULL default '',
+  `save_newstime` varchar(10) NOT NULL default '',
   `zz_filesize` text NOT NULL,
-  `z_filesize` varchar(255) NOT NULL DEFAULT '',
-  `qz_filesize` varchar(255) NOT NULL DEFAULT '',
-  `save_filesize` varchar(10) NOT NULL DEFAULT '',
+  `z_filesize` varchar(255) NOT NULL default '',
+  `qz_filesize` varchar(255) NOT NULL default '',
+  `save_filesize` varchar(10) NOT NULL default '',
   `zz_picsize` text NOT NULL,
-  `z_picsize` varchar(255) NOT NULL DEFAULT '',
-  `qz_picsize` varchar(255) NOT NULL DEFAULT '',
-  `save_picsize` varchar(10) NOT NULL DEFAULT '',
+  `z_picsize` varchar(255) NOT NULL default '',
+  `qz_picsize` varchar(255) NOT NULL default '',
+  `save_picsize` varchar(10) NOT NULL default '',
   `zz_picfbl` text NOT NULL,
-  `z_picfbl` varchar(255) NOT NULL DEFAULT '',
-  `qz_picfbl` varchar(255) NOT NULL DEFAULT '',
-  `save_picfbl` varchar(10) NOT NULL DEFAULT '',
+  `z_picfbl` varchar(255) NOT NULL default '',
+  `qz_picfbl` varchar(255) NOT NULL default '',
+  `save_picfbl` varchar(10) NOT NULL default '',
   `zz_picfrom` text NOT NULL,
-  `z_picfrom` varchar(255) NOT NULL DEFAULT '',
-  `qz_picfrom` varchar(255) NOT NULL DEFAULT '',
-  `save_picfrom` varchar(10) NOT NULL DEFAULT '',
+  `z_picfrom` varchar(255) NOT NULL default '',
+  `qz_picfrom` varchar(255) NOT NULL default '',
+  `save_picfrom` varchar(10) NOT NULL default '',
   `zz_picurl` text NOT NULL,
-  `z_picurl` varchar(255) NOT NULL DEFAULT '',
-  `qz_picurl` varchar(255) NOT NULL DEFAULT '',
-  `save_picurl` varchar(10) NOT NULL DEFAULT '',
+  `z_picurl` varchar(255) NOT NULL default '',
+  `qz_picurl` varchar(255) NOT NULL default '',
+  `save_picurl` varchar(10) NOT NULL default '',
   `zz_morepic` text NOT NULL,
-  `z_morepic` varchar(255) NOT NULL DEFAULT '',
-  `qz_morepic` varchar(255) NOT NULL DEFAULT '',
-  `save_morepic` varchar(10) NOT NULL DEFAULT '',
+  `z_morepic` varchar(255) NOT NULL default '',
+  `qz_morepic` varchar(255) NOT NULL default '',
+  `save_morepic` varchar(10) NOT NULL default '',
   `zz_num` text NOT NULL,
-  `z_num` varchar(255) NOT NULL DEFAULT '',
-  `qz_num` varchar(255) NOT NULL DEFAULT '',
-  `save_num` varchar(10) NOT NULL DEFAULT '',
+  `z_num` varchar(255) NOT NULL default '',
+  `qz_num` varchar(255) NOT NULL default '',
+  `save_num` varchar(10) NOT NULL default '',
   `zz_width` text NOT NULL,
-  `z_width` varchar(255) NOT NULL DEFAULT '',
-  `qz_width` varchar(255) NOT NULL DEFAULT '',
-  `save_width` varchar(10) NOT NULL DEFAULT '',
+  `z_width` varchar(255) NOT NULL default '',
+  `qz_width` varchar(255) NOT NULL default '',
+  `save_width` varchar(10) NOT NULL default '',
   `zz_height` text NOT NULL,
-  `z_height` varchar(255) NOT NULL DEFAULT '',
-  `qz_height` varchar(255) NOT NULL DEFAULT '',
-  `save_height` varchar(10) NOT NULL DEFAULT '',
+  `z_height` varchar(255) NOT NULL default '',
+  `qz_height` varchar(255) NOT NULL default '',
+  `save_height` varchar(10) NOT NULL default '',
   `zz_picsay` text NOT NULL,
-  `z_picsay` varchar(255) NOT NULL DEFAULT '',
-  `qz_picsay` varchar(255) NOT NULL DEFAULT '',
-  `save_picsay` varchar(10) NOT NULL DEFAULT '',
-  PRIMARY KEY (`classid`)
+  `z_picsay` varchar(255) NOT NULL default '',
+  `qz_picsay` varchar(255) NOT NULL default '',
+  `save_picsay` varchar(10) NOT NULL default '',
+  PRIMARY KEY  (`classid`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_ecms_infoclass_photo`
@@ -1919,73 +1919,73 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_ecms_infoclass_shop`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_ecms_infoclass_shop` (
-  `classid` int(10) unsigned NOT NULL DEFAULT '0',
+  `classid` int(10) unsigned NOT NULL default '0',
   `zz_title` text NOT NULL,
-  `z_title` varchar(255) NOT NULL DEFAULT '',
-  `qz_title` varchar(255) NOT NULL DEFAULT '',
-  `save_title` varchar(10) NOT NULL DEFAULT '',
+  `z_title` varchar(255) NOT NULL default '',
+  `qz_title` varchar(255) NOT NULL default '',
+  `save_title` varchar(10) NOT NULL default '',
   `zz_titlepic` text NOT NULL,
-  `z_titlepic` varchar(255) NOT NULL DEFAULT '',
-  `qz_titlepic` varchar(255) NOT NULL DEFAULT '',
-  `save_titlepic` varchar(10) NOT NULL DEFAULT '',
+  `z_titlepic` varchar(255) NOT NULL default '',
+  `qz_titlepic` varchar(255) NOT NULL default '',
+  `save_titlepic` varchar(10) NOT NULL default '',
   `zz_newstime` text NOT NULL,
-  `z_newstime` varchar(255) NOT NULL DEFAULT '',
-  `qz_newstime` varchar(255) NOT NULL DEFAULT '',
-  `save_newstime` varchar(10) NOT NULL DEFAULT '',
+  `z_newstime` varchar(255) NOT NULL default '',
+  `qz_newstime` varchar(255) NOT NULL default '',
+  `save_newstime` varchar(10) NOT NULL default '',
   `zz_productno` text NOT NULL,
-  `z_productno` varchar(255) NOT NULL DEFAULT '',
-  `qz_productno` varchar(255) NOT NULL DEFAULT '',
-  `save_productno` varchar(10) NOT NULL DEFAULT '',
+  `z_productno` varchar(255) NOT NULL default '',
+  `qz_productno` varchar(255) NOT NULL default '',
+  `save_productno` varchar(10) NOT NULL default '',
   `zz_pbrand` text NOT NULL,
-  `z_pbrand` varchar(255) NOT NULL DEFAULT '',
-  `qz_pbrand` varchar(255) NOT NULL DEFAULT '',
-  `save_pbrand` varchar(10) NOT NULL DEFAULT '',
+  `z_pbrand` varchar(255) NOT NULL default '',
+  `qz_pbrand` varchar(255) NOT NULL default '',
+  `save_pbrand` varchar(10) NOT NULL default '',
   `zz_intro` text NOT NULL,
-  `z_intro` varchar(255) NOT NULL DEFAULT '',
-  `qz_intro` varchar(255) NOT NULL DEFAULT '',
-  `save_intro` varchar(10) NOT NULL DEFAULT '',
+  `z_intro` varchar(255) NOT NULL default '',
+  `qz_intro` varchar(255) NOT NULL default '',
+  `save_intro` varchar(10) NOT NULL default '',
   `zz_unit` text NOT NULL,
-  `z_unit` varchar(255) NOT NULL DEFAULT '',
-  `qz_unit` varchar(255) NOT NULL DEFAULT '',
-  `save_unit` varchar(10) NOT NULL DEFAULT '',
+  `z_unit` varchar(255) NOT NULL default '',
+  `qz_unit` varchar(255) NOT NULL default '',
+  `save_unit` varchar(10) NOT NULL default '',
   `zz_weight` text NOT NULL,
-  `z_weight` varchar(255) NOT NULL DEFAULT '',
-  `qz_weight` varchar(255) NOT NULL DEFAULT '',
-  `save_weight` varchar(10) NOT NULL DEFAULT '',
+  `z_weight` varchar(255) NOT NULL default '',
+  `qz_weight` varchar(255) NOT NULL default '',
+  `save_weight` varchar(10) NOT NULL default '',
   `zz_tprice` text NOT NULL,
-  `z_tprice` varchar(255) NOT NULL DEFAULT '',
-  `qz_tprice` varchar(255) NOT NULL DEFAULT '',
-  `save_tprice` varchar(10) NOT NULL DEFAULT '',
+  `z_tprice` varchar(255) NOT NULL default '',
+  `qz_tprice` varchar(255) NOT NULL default '',
+  `save_tprice` varchar(10) NOT NULL default '',
   `zz_price` text NOT NULL,
-  `z_price` varchar(255) NOT NULL DEFAULT '',
-  `qz_price` varchar(255) NOT NULL DEFAULT '',
-  `save_price` varchar(10) NOT NULL DEFAULT '',
+  `z_price` varchar(255) NOT NULL default '',
+  `qz_price` varchar(255) NOT NULL default '',
+  `save_price` varchar(10) NOT NULL default '',
   `zz_buyfen` text NOT NULL,
-  `z_buyfen` varchar(255) NOT NULL DEFAULT '',
-  `qz_buyfen` varchar(255) NOT NULL DEFAULT '',
-  `save_buyfen` varchar(10) NOT NULL DEFAULT '',
+  `z_buyfen` varchar(255) NOT NULL default '',
+  `qz_buyfen` varchar(255) NOT NULL default '',
+  `save_buyfen` varchar(10) NOT NULL default '',
   `zz_pmaxnum` text NOT NULL,
-  `z_pmaxnum` varchar(255) NOT NULL DEFAULT '',
-  `qz_pmaxnum` varchar(255) NOT NULL DEFAULT '',
-  `save_pmaxnum` varchar(10) NOT NULL DEFAULT '',
+  `z_pmaxnum` varchar(255) NOT NULL default '',
+  `qz_pmaxnum` varchar(255) NOT NULL default '',
+  `save_pmaxnum` varchar(10) NOT NULL default '',
   `zz_productpic` text NOT NULL,
-  `z_productpic` varchar(255) NOT NULL DEFAULT '',
-  `qz_productpic` varchar(255) NOT NULL DEFAULT '',
-  `save_productpic` varchar(10) NOT NULL DEFAULT '',
+  `z_productpic` varchar(255) NOT NULL default '',
+  `qz_productpic` varchar(255) NOT NULL default '',
+  `save_productpic` varchar(10) NOT NULL default '',
   `zz_newstext` text NOT NULL,
-  `z_newstext` varchar(255) NOT NULL DEFAULT '',
-  `qz_newstext` varchar(255) NOT NULL DEFAULT '',
-  `save_newstext` varchar(10) NOT NULL DEFAULT '',
+  `z_newstext` varchar(255) NOT NULL default '',
+  `qz_newstext` varchar(255) NOT NULL default '',
+  `save_newstext` varchar(10) NOT NULL default '',
   `zz_psalenum` text NOT NULL,
-  `z_psalenum` varchar(255) NOT NULL DEFAULT '',
-  `qz_psalenum` varchar(255) NOT NULL DEFAULT '',
-  `save_psalenum` varchar(10) NOT NULL DEFAULT '',
-  PRIMARY KEY (`classid`)
+  `z_psalenum` varchar(255) NOT NULL default '',
+  `qz_psalenum` varchar(255) NOT NULL default '',
+  `save_psalenum` varchar(10) NOT NULL default '',
+  PRIMARY KEY  (`classid`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_ecms_infoclass_shop`
@@ -2001,32 +2001,32 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_ecms_infotmp_article`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_ecms_infotmp_article` (
-  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
-  `classid` int(10) unsigned NOT NULL DEFAULT '0',
-  `oldurl` varchar(200) NOT NULL DEFAULT '',
-  `checked` tinyint(1) NOT NULL DEFAULT '0',
-  `tmptime` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `userid` mediumint(8) unsigned NOT NULL DEFAULT '0',
-  `username` varchar(20) NOT NULL DEFAULT '',
-  `truetime` int(10) unsigned NOT NULL DEFAULT '0',
-  `keyboard` varchar(100) NOT NULL DEFAULT '',
-  `title` varchar(100) NOT NULL DEFAULT '',
-  `newstime` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `titlepic` varchar(120) NOT NULL DEFAULT '',
-  `ftitle` varchar(120) NOT NULL DEFAULT '',
-  `smalltext` varchar(255) NOT NULL DEFAULT '',
-  `writer` varchar(30) NOT NULL DEFAULT '',
-  `befrom` varchar(60) NOT NULL DEFAULT '',
+  `id` bigint(20) unsigned NOT NULL auto_increment,
+  `classid` int(10) unsigned NOT NULL default '0',
+  `oldurl` varchar(200) NOT NULL default '',
+  `checked` tinyint(1) NOT NULL default '0',
+  `tmptime` datetime NOT NULL default '0000-00-00 00:00:00',
+  `userid` mediumint(8) unsigned NOT NULL default '0',
+  `username` varchar(20) NOT NULL default '',
+  `truetime` int(10) unsigned NOT NULL default '0',
+  `keyboard` varchar(100) NOT NULL default '',
+  `title` varchar(100) NOT NULL default '',
+  `newstime` datetime NOT NULL default '0000-00-00 00:00:00',
+  `titlepic` varchar(120) NOT NULL default '',
+  `ftitle` varchar(120) NOT NULL default '',
+  `smalltext` varchar(255) NOT NULL default '',
+  `writer` varchar(30) NOT NULL default '',
+  `befrom` varchar(60) NOT NULL default '',
   `newstext` mediumtext NOT NULL,
-  `diggtop` int(11) NOT NULL DEFAULT '0',
-  PRIMARY KEY (`id`),
+  `diggtop` int(11) NOT NULL default '0',
+  PRIMARY KEY  (`id`),
   KEY `classid` (`classid`),
   KEY `checked` (`checked`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_ecms_infotmp_article`
@@ -2042,38 +2042,38 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_ecms_infotmp_download`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_ecms_infotmp_download` (
-  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
-  `classid` int(10) unsigned NOT NULL DEFAULT '0',
-  `oldurl` varchar(200) NOT NULL DEFAULT '',
-  `checked` tinyint(1) NOT NULL DEFAULT '0',
-  `tmptime` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `userid` mediumint(8) unsigned NOT NULL DEFAULT '0',
-  `username` varchar(20) NOT NULL DEFAULT '',
-  `truetime` int(10) unsigned NOT NULL DEFAULT '0',
-  `keyboard` varchar(100) NOT NULL DEFAULT '',
-  `title` varchar(100) NOT NULL DEFAULT '',
-  `newstime` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `titlepic` varchar(120) NOT NULL DEFAULT '',
-  `softwriter` varchar(30) NOT NULL DEFAULT '',
-  `homepage` varchar(80) NOT NULL DEFAULT '',
-  `demo` varchar(120) NOT NULL DEFAULT '',
-  `softfj` varchar(255) NOT NULL DEFAULT '',
-  `language` varchar(16) NOT NULL DEFAULT '',
-  `softtype` varchar(16) NOT NULL DEFAULT '',
-  `softsq` varchar(16) NOT NULL DEFAULT '',
-  `star` tinyint(1) NOT NULL DEFAULT '0',
-  `filetype` varchar(10) NOT NULL DEFAULT '',
-  `filesize` varchar(16) NOT NULL DEFAULT '',
+  `id` bigint(20) unsigned NOT NULL auto_increment,
+  `classid` int(10) unsigned NOT NULL default '0',
+  `oldurl` varchar(200) NOT NULL default '',
+  `checked` tinyint(1) NOT NULL default '0',
+  `tmptime` datetime NOT NULL default '0000-00-00 00:00:00',
+  `userid` mediumint(8) unsigned NOT NULL default '0',
+  `username` varchar(20) NOT NULL default '',
+  `truetime` int(10) unsigned NOT NULL default '0',
+  `keyboard` varchar(100) NOT NULL default '',
+  `title` varchar(100) NOT NULL default '',
+  `newstime` datetime NOT NULL default '0000-00-00 00:00:00',
+  `titlepic` varchar(120) NOT NULL default '',
+  `softwriter` varchar(30) NOT NULL default '',
+  `homepage` varchar(80) NOT NULL default '',
+  `demo` varchar(120) NOT NULL default '',
+  `softfj` varchar(255) NOT NULL default '',
+  `language` varchar(16) NOT NULL default '',
+  `softtype` varchar(16) NOT NULL default '',
+  `softsq` varchar(16) NOT NULL default '',
+  `star` tinyint(1) NOT NULL default '0',
+  `filetype` varchar(10) NOT NULL default '',
+  `filesize` varchar(16) NOT NULL default '',
   `downpath` mediumtext NOT NULL,
   `softsay` text NOT NULL,
-  PRIMARY KEY (`id`),
+  PRIMARY KEY  (`id`),
   KEY `classid` (`classid`),
   KEY `checked` (`checked`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_ecms_infotmp_download`
@@ -2089,34 +2089,34 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_ecms_infotmp_flash`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_ecms_infotmp_flash` (
-  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
-  `classid` int(10) unsigned NOT NULL DEFAULT '0',
-  `oldurl` varchar(200) NOT NULL DEFAULT '',
-  `checked` tinyint(1) NOT NULL DEFAULT '0',
-  `tmptime` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `userid` mediumint(8) unsigned NOT NULL DEFAULT '0',
-  `username` varchar(20) NOT NULL DEFAULT '',
-  `truetime` int(10) unsigned NOT NULL DEFAULT '0',
-  `keyboard` varchar(100) NOT NULL DEFAULT '',
-  `title` varchar(100) NOT NULL DEFAULT '',
-  `newstime` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `titlepic` varchar(120) NOT NULL DEFAULT '',
-  `flashwriter` varchar(30) NOT NULL DEFAULT '',
-  `email` varchar(80) NOT NULL DEFAULT '',
-  `star` tinyint(1) NOT NULL DEFAULT '0',
-  `filesize` varchar(16) NOT NULL DEFAULT '',
-  `flashurl` varchar(255) NOT NULL DEFAULT '',
-  `width` varchar(12) NOT NULL DEFAULT '',
-  `height` varchar(12) NOT NULL DEFAULT '',
+  `id` bigint(20) unsigned NOT NULL auto_increment,
+  `classid` int(10) unsigned NOT NULL default '0',
+  `oldurl` varchar(200) NOT NULL default '',
+  `checked` tinyint(1) NOT NULL default '0',
+  `tmptime` datetime NOT NULL default '0000-00-00 00:00:00',
+  `userid` mediumint(8) unsigned NOT NULL default '0',
+  `username` varchar(20) NOT NULL default '',
+  `truetime` int(10) unsigned NOT NULL default '0',
+  `keyboard` varchar(100) NOT NULL default '',
+  `title` varchar(100) NOT NULL default '',
+  `newstime` datetime NOT NULL default '0000-00-00 00:00:00',
+  `titlepic` varchar(120) NOT NULL default '',
+  `flashwriter` varchar(30) NOT NULL default '',
+  `email` varchar(80) NOT NULL default '',
+  `star` tinyint(1) NOT NULL default '0',
+  `filesize` varchar(16) NOT NULL default '',
+  `flashurl` varchar(255) NOT NULL default '',
+  `width` varchar(12) NOT NULL default '',
+  `height` varchar(12) NOT NULL default '',
   `flashsay` text NOT NULL,
-  PRIMARY KEY (`id`),
+  PRIMARY KEY  (`id`),
   KEY `classid` (`classid`),
   KEY `checked` (`checked`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_ecms_infotmp_flash`
@@ -2132,31 +2132,31 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_ecms_infotmp_info`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_ecms_infotmp_info` (
-  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
-  `classid` int(10) unsigned NOT NULL DEFAULT '0',
-  `oldurl` varchar(200) NOT NULL DEFAULT '',
-  `checked` tinyint(1) NOT NULL DEFAULT '0',
-  `tmptime` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `userid` mediumint(8) unsigned NOT NULL DEFAULT '0',
-  `username` varchar(20) NOT NULL DEFAULT '',
-  `truetime` int(10) unsigned NOT NULL DEFAULT '0',
-  `keyboard` varchar(100) NOT NULL DEFAULT '',
-  `title` varchar(100) NOT NULL DEFAULT '',
-  `newstime` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `titlepic` varchar(120) NOT NULL DEFAULT '',
+  `id` bigint(20) unsigned NOT NULL auto_increment,
+  `classid` int(10) unsigned NOT NULL default '0',
+  `oldurl` varchar(200) NOT NULL default '',
+  `checked` tinyint(1) NOT NULL default '0',
+  `tmptime` datetime NOT NULL default '0000-00-00 00:00:00',
+  `userid` mediumint(8) unsigned NOT NULL default '0',
+  `username` varchar(20) NOT NULL default '',
+  `truetime` int(10) unsigned NOT NULL default '0',
+  `keyboard` varchar(100) NOT NULL default '',
+  `title` varchar(100) NOT NULL default '',
+  `newstime` datetime NOT NULL default '0000-00-00 00:00:00',
+  `titlepic` varchar(120) NOT NULL default '',
   `smalltext` text NOT NULL,
-  `myarea` varchar(30) NOT NULL DEFAULT '',
-  `email` varchar(80) NOT NULL DEFAULT '',
-  `mycontact` varchar(255) NOT NULL DEFAULT '',
-  `address` varchar(255) NOT NULL DEFAULT '',
-  PRIMARY KEY (`id`),
+  `myarea` varchar(30) NOT NULL default '',
+  `email` varchar(80) NOT NULL default '',
+  `mycontact` varchar(255) NOT NULL default '',
+  `address` varchar(255) NOT NULL default '',
+  PRIMARY KEY  (`id`),
   KEY `classid` (`classid`),
   KEY `checked` (`checked`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_ecms_infotmp_info`
@@ -2172,41 +2172,41 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_ecms_infotmp_movie`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_ecms_infotmp_movie` (
-  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
-  `classid` int(10) unsigned NOT NULL DEFAULT '0',
-  `oldurl` varchar(200) NOT NULL DEFAULT '',
-  `checked` tinyint(1) NOT NULL DEFAULT '0',
-  `tmptime` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `userid` mediumint(8) unsigned NOT NULL DEFAULT '0',
-  `username` varchar(20) NOT NULL DEFAULT '',
-  `truetime` int(10) unsigned NOT NULL DEFAULT '0',
-  `keyboard` varchar(100) NOT NULL DEFAULT '',
-  `title` varchar(100) NOT NULL DEFAULT '',
-  `newstime` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `titlepic` varchar(120) NOT NULL DEFAULT '',
-  `movietype` varchar(16) NOT NULL DEFAULT '',
-  `company` varchar(200) NOT NULL DEFAULT '',
-  `movietime` varchar(20) NOT NULL DEFAULT '',
-  `player` varchar(255) NOT NULL DEFAULT '',
-  `playadmin` varchar(255) NOT NULL DEFAULT '',
-  `filetype` varchar(10) NOT NULL DEFAULT '',
-  `filesize` varchar(16) NOT NULL DEFAULT '',
-  `star` tinyint(1) NOT NULL DEFAULT '0',
-  `playdk` varchar(30) NOT NULL DEFAULT '',
-  `playtime` varchar(20) NOT NULL DEFAULT '',
-  `moviefen` int(11) NOT NULL DEFAULT '0',
+  `id` bigint(20) unsigned NOT NULL auto_increment,
+  `classid` int(10) unsigned NOT NULL default '0',
+  `oldurl` varchar(200) NOT NULL default '',
+  `checked` tinyint(1) NOT NULL default '0',
+  `tmptime` datetime NOT NULL default '0000-00-00 00:00:00',
+  `userid` mediumint(8) unsigned NOT NULL default '0',
+  `username` varchar(20) NOT NULL default '',
+  `truetime` int(10) unsigned NOT NULL default '0',
+  `keyboard` varchar(100) NOT NULL default '',
+  `title` varchar(100) NOT NULL default '',
+  `newstime` datetime NOT NULL default '0000-00-00 00:00:00',
+  `titlepic` varchar(120) NOT NULL default '',
+  `movietype` varchar(16) NOT NULL default '',
+  `company` varchar(200) NOT NULL default '',
+  `movietime` varchar(20) NOT NULL default '',
+  `player` varchar(255) NOT NULL default '',
+  `playadmin` varchar(255) NOT NULL default '',
+  `filetype` varchar(10) NOT NULL default '',
+  `filesize` varchar(16) NOT NULL default '',
+  `star` tinyint(1) NOT NULL default '0',
+  `playdk` varchar(30) NOT NULL default '',
+  `playtime` varchar(20) NOT NULL default '',
+  `moviefen` int(11) NOT NULL default '0',
   `downpath` mediumtext NOT NULL,
-  `playerid` smallint(6) NOT NULL DEFAULT '0',
+  `playerid` smallint(6) NOT NULL default '0',
   `onlinepath` mediumtext NOT NULL,
   `moviesay` text NOT NULL,
-  PRIMARY KEY (`id`),
+  PRIMARY KEY  (`id`),
   KEY `classid` (`classid`),
   KEY `checked` (`checked`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_ecms_infotmp_movie`
@@ -2222,32 +2222,32 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_ecms_infotmp_news`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_ecms_infotmp_news` (
-  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
-  `classid` int(10) unsigned NOT NULL DEFAULT '0',
-  `oldurl` varchar(200) NOT NULL DEFAULT '',
-  `checked` tinyint(1) NOT NULL DEFAULT '0',
-  `tmptime` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `userid` mediumint(8) unsigned NOT NULL DEFAULT '0',
-  `username` varchar(20) NOT NULL DEFAULT '',
-  `truetime` int(10) unsigned NOT NULL DEFAULT '0',
-  `keyboard` varchar(100) NOT NULL DEFAULT '',
-  `title` varchar(100) NOT NULL DEFAULT '',
-  `newstime` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `titlepic` varchar(120) NOT NULL DEFAULT '',
-  `ftitle` varchar(120) NOT NULL DEFAULT '',
-  `smalltext` varchar(255) NOT NULL DEFAULT '',
-  `writer` varchar(30) NOT NULL DEFAULT '',
-  `befrom` varchar(60) NOT NULL DEFAULT '',
+  `id` bigint(20) unsigned NOT NULL auto_increment,
+  `classid` int(10) unsigned NOT NULL default '0',
+  `oldurl` varchar(200) NOT NULL default '',
+  `checked` tinyint(1) NOT NULL default '0',
+  `tmptime` datetime NOT NULL default '0000-00-00 00:00:00',
+  `userid` mediumint(8) unsigned NOT NULL default '0',
+  `username` varchar(20) NOT NULL default '',
+  `truetime` int(10) unsigned NOT NULL default '0',
+  `keyboard` varchar(100) NOT NULL default '',
+  `title` varchar(100) NOT NULL default '',
+  `newstime` datetime NOT NULL default '0000-00-00 00:00:00',
+  `titlepic` varchar(120) NOT NULL default '',
+  `ftitle` varchar(120) NOT NULL default '',
+  `smalltext` varchar(255) NOT NULL default '',
+  `writer` varchar(30) NOT NULL default '',
+  `befrom` varchar(60) NOT NULL default '',
   `newstext` mediumtext NOT NULL,
-  `diggtop` int(11) NOT NULL DEFAULT '0',
-  PRIMARY KEY (`id`),
+  `diggtop` int(11) NOT NULL default '0',
+  PRIMARY KEY  (`id`),
   KEY `classid` (`classid`),
   KEY `checked` (`checked`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_ecms_infotmp_news`
@@ -2263,36 +2263,36 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_ecms_infotmp_photo`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_ecms_infotmp_photo` (
-  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
-  `classid` int(10) unsigned NOT NULL DEFAULT '0',
-  `oldurl` varchar(200) NOT NULL DEFAULT '',
-  `checked` tinyint(1) NOT NULL DEFAULT '0',
-  `tmptime` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `userid` mediumint(8) unsigned NOT NULL DEFAULT '0',
-  `username` varchar(20) NOT NULL DEFAULT '',
-  `truetime` int(10) unsigned NOT NULL DEFAULT '0',
-  `keyboard` varchar(100) NOT NULL DEFAULT '',
-  `title` varchar(100) NOT NULL DEFAULT '',
-  `newstime` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `titlepic` varchar(120) NOT NULL DEFAULT '',
-  `filesize` varchar(10) NOT NULL DEFAULT '',
-  `picsize` varchar(20) NOT NULL DEFAULT '',
-  `picfbl` varchar(20) NOT NULL DEFAULT '',
-  `picfrom` varchar(120) NOT NULL DEFAULT '',
-  `picurl` varchar(200) NOT NULL DEFAULT '',
+  `id` bigint(20) unsigned NOT NULL auto_increment,
+  `classid` int(10) unsigned NOT NULL default '0',
+  `oldurl` varchar(200) NOT NULL default '',
+  `checked` tinyint(1) NOT NULL default '0',
+  `tmptime` datetime NOT NULL default '0000-00-00 00:00:00',
+  `userid` mediumint(8) unsigned NOT NULL default '0',
+  `username` varchar(20) NOT NULL default '',
+  `truetime` int(10) unsigned NOT NULL default '0',
+  `keyboard` varchar(100) NOT NULL default '',
+  `title` varchar(100) NOT NULL default '',
+  `newstime` datetime NOT NULL default '0000-00-00 00:00:00',
+  `titlepic` varchar(120) NOT NULL default '',
+  `filesize` varchar(10) NOT NULL default '',
+  `picsize` varchar(20) NOT NULL default '',
+  `picfbl` varchar(20) NOT NULL default '',
+  `picfrom` varchar(120) NOT NULL default '',
+  `picurl` varchar(200) NOT NULL default '',
   `morepic` mediumtext NOT NULL,
-  `num` tinyint(4) NOT NULL DEFAULT '0',
-  `width` varchar(12) NOT NULL DEFAULT '',
-  `height` varchar(12) NOT NULL DEFAULT '',
+  `num` tinyint(4) NOT NULL default '0',
+  `width` varchar(12) NOT NULL default '',
+  `height` varchar(12) NOT NULL default '',
   `picsay` text NOT NULL,
-  PRIMARY KEY (`id`),
+  PRIMARY KEY  (`id`),
   KEY `classid` (`classid`),
   KEY `checked` (`checked`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_ecms_infotmp_photo`
@@ -2308,38 +2308,38 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_ecms_infotmp_shop`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_ecms_infotmp_shop` (
-  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
-  `classid` int(10) unsigned NOT NULL DEFAULT '0',
-  `oldurl` varchar(200) NOT NULL DEFAULT '',
-  `checked` tinyint(1) NOT NULL DEFAULT '0',
-  `tmptime` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `userid` mediumint(8) unsigned NOT NULL DEFAULT '0',
-  `username` varchar(20) NOT NULL DEFAULT '',
-  `truetime` int(10) unsigned NOT NULL DEFAULT '0',
-  `keyboard` varchar(100) NOT NULL DEFAULT '',
-  `title` varchar(100) NOT NULL DEFAULT '',
-  `newstime` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `titlepic` varchar(120) NOT NULL DEFAULT '',
-  `productno` varchar(30) NOT NULL DEFAULT '',
-  `pbrand` varchar(30) NOT NULL DEFAULT '',
+  `id` bigint(20) unsigned NOT NULL auto_increment,
+  `classid` int(10) unsigned NOT NULL default '0',
+  `oldurl` varchar(200) NOT NULL default '',
+  `checked` tinyint(1) NOT NULL default '0',
+  `tmptime` datetime NOT NULL default '0000-00-00 00:00:00',
+  `userid` mediumint(8) unsigned NOT NULL default '0',
+  `username` varchar(20) NOT NULL default '',
+  `truetime` int(10) unsigned NOT NULL default '0',
+  `keyboard` varchar(100) NOT NULL default '',
+  `title` varchar(100) NOT NULL default '',
+  `newstime` datetime NOT NULL default '0000-00-00 00:00:00',
+  `titlepic` varchar(120) NOT NULL default '',
+  `productno` varchar(30) NOT NULL default '',
+  `pbrand` varchar(30) NOT NULL default '',
   `intro` text NOT NULL,
-  `unit` varchar(16) NOT NULL DEFAULT '',
-  `weight` varchar(20) NOT NULL DEFAULT '',
-  `tprice` float(11,2) NOT NULL DEFAULT '0.00',
-  `price` float(11,2) NOT NULL DEFAULT '0.00',
-  `buyfen` int(11) NOT NULL DEFAULT '0',
-  `pmaxnum` int(11) NOT NULL DEFAULT '0',
-  `productpic` varchar(255) NOT NULL DEFAULT '',
+  `unit` varchar(16) NOT NULL default '',
+  `weight` varchar(20) NOT NULL default '',
+  `tprice` float(11,2) NOT NULL default '0.00',
+  `price` float(11,2) NOT NULL default '0.00',
+  `buyfen` int(11) NOT NULL default '0',
+  `pmaxnum` int(11) NOT NULL default '0',
+  `productpic` varchar(255) NOT NULL default '',
   `newstext` mediumtext NOT NULL,
-  `psalenum` int(11) NOT NULL DEFAULT '0',
-  PRIMARY KEY (`id`),
+  `psalenum` int(11) NOT NULL default '0',
+  PRIMARY KEY  (`id`),
   KEY `classid` (`classid`),
   KEY `checked` (`checked`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_ecms_infotmp_shop`
@@ -2355,51 +2355,51 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_ecms_movie`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_ecms_movie` (
-  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `classid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `ttid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `onclick` int(10) unsigned NOT NULL DEFAULT '0',
-  `plnum` mediumint(8) unsigned NOT NULL DEFAULT '0',
-  `totaldown` mediumint(8) unsigned NOT NULL DEFAULT '0',
-  `newspath` varchar(20) NOT NULL DEFAULT '',
-  `filename` varchar(36) NOT NULL DEFAULT '',
-  `userid` mediumint(8) unsigned NOT NULL DEFAULT '0',
-  `username` varchar(20) NOT NULL DEFAULT '',
-  `firsttitle` tinyint(1) NOT NULL DEFAULT '0',
-  `isgood` tinyint(1) NOT NULL DEFAULT '0',
-  `ispic` tinyint(1) NOT NULL DEFAULT '0',
-  `istop` tinyint(1) NOT NULL DEFAULT '0',
-  `isqf` tinyint(1) NOT NULL DEFAULT '0',
-  `ismember` tinyint(1) NOT NULL DEFAULT '0',
-  `isurl` tinyint(1) NOT NULL DEFAULT '0',
-  `truetime` int(10) unsigned NOT NULL DEFAULT '0',
-  `lastdotime` int(10) unsigned NOT NULL DEFAULT '0',
-  `havehtml` tinyint(1) NOT NULL DEFAULT '0',
-  `groupid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `userfen` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `titlefont` varchar(14) NOT NULL DEFAULT '',
-  `titleurl` varchar(200) NOT NULL DEFAULT '',
-  `stb` tinyint(3) unsigned NOT NULL DEFAULT '1',
-  `fstb` tinyint(3) unsigned NOT NULL DEFAULT '1',
-  `restb` tinyint(3) unsigned NOT NULL DEFAULT '1',
-  `keyboard` varchar(80) NOT NULL DEFAULT '',
-  `title` varchar(100) NOT NULL DEFAULT '',
-  `newstime` int(10) unsigned NOT NULL DEFAULT '0',
-  `titlepic` varchar(120) NOT NULL DEFAULT '',
-  `movietype` varchar(16) NOT NULL DEFAULT '',
-  `company` varchar(200) NOT NULL DEFAULT '',
-  `movietime` varchar(20) NOT NULL DEFAULT '',
-  `player` varchar(255) NOT NULL DEFAULT '',
-  `playadmin` varchar(255) NOT NULL DEFAULT '',
-  `filetype` varchar(10) NOT NULL DEFAULT '',
-  `filesize` varchar(16) NOT NULL DEFAULT '',
-  `star` tinyint(1) NOT NULL DEFAULT '0',
-  `moviefen` int(11) NOT NULL DEFAULT '0',
+  `id` int(10) unsigned NOT NULL auto_increment,
+  `classid` smallint(5) unsigned NOT NULL default '0',
+  `ttid` smallint(5) unsigned NOT NULL default '0',
+  `onclick` int(10) unsigned NOT NULL default '0',
+  `plnum` mediumint(8) unsigned NOT NULL default '0',
+  `totaldown` mediumint(8) unsigned NOT NULL default '0',
+  `newspath` varchar(20) NOT NULL default '',
+  `filename` varchar(36) NOT NULL default '',
+  `userid` mediumint(8) unsigned NOT NULL default '0',
+  `username` varchar(20) NOT NULL default '',
+  `firsttitle` tinyint(1) NOT NULL default '0',
+  `isgood` tinyint(1) NOT NULL default '0',
+  `ispic` tinyint(1) NOT NULL default '0',
+  `istop` tinyint(1) NOT NULL default '0',
+  `isqf` tinyint(1) NOT NULL default '0',
+  `ismember` tinyint(1) NOT NULL default '0',
+  `isurl` tinyint(1) NOT NULL default '0',
+  `truetime` int(10) unsigned NOT NULL default '0',
+  `lastdotime` int(10) unsigned NOT NULL default '0',
+  `havehtml` tinyint(1) NOT NULL default '0',
+  `groupid` smallint(5) unsigned NOT NULL default '0',
+  `userfen` smallint(5) unsigned NOT NULL default '0',
+  `titlefont` varchar(14) NOT NULL default '',
+  `titleurl` varchar(200) NOT NULL default '',
+  `stb` tinyint(3) unsigned NOT NULL default '1',
+  `fstb` tinyint(3) unsigned NOT NULL default '1',
+  `restb` tinyint(3) unsigned NOT NULL default '1',
+  `keyboard` varchar(80) NOT NULL default '',
+  `title` varchar(100) NOT NULL default '',
+  `newstime` int(10) unsigned NOT NULL default '0',
+  `titlepic` varchar(120) NOT NULL default '',
+  `movietype` varchar(16) NOT NULL default '',
+  `company` varchar(200) NOT NULL default '',
+  `movietime` varchar(20) NOT NULL default '',
+  `player` varchar(255) NOT NULL default '',
+  `playadmin` varchar(255) NOT NULL default '',
+  `filetype` varchar(10) NOT NULL default '',
+  `filesize` varchar(16) NOT NULL default '',
+  `star` tinyint(1) NOT NULL default '0',
+  `moviefen` int(11) NOT NULL default '0',
   `moviesay` text NOT NULL,
-  PRIMARY KEY (`id`),
+  PRIMARY KEY  (`id`),
   KEY `classid` (`classid`),
   KEY `newstime` (`newstime`),
   KEY `ttid` (`ttid`),
@@ -2407,7 +2407,7 @@ CREATE TABLE `ziyi_ecms_movie` (
   KEY `isgood` (`isgood`),
   KEY `ispic` (`ispic`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_ecms_movie`
@@ -2423,51 +2423,51 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_ecms_movie_check`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_ecms_movie_check` (
-  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `classid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `ttid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `onclick` int(10) unsigned NOT NULL DEFAULT '0',
-  `plnum` mediumint(8) unsigned NOT NULL DEFAULT '0',
-  `totaldown` mediumint(8) unsigned NOT NULL DEFAULT '0',
-  `newspath` varchar(20) NOT NULL DEFAULT '',
-  `filename` varchar(36) NOT NULL DEFAULT '',
-  `userid` mediumint(8) unsigned NOT NULL DEFAULT '0',
-  `username` varchar(20) NOT NULL DEFAULT '',
-  `firsttitle` tinyint(1) NOT NULL DEFAULT '0',
-  `isgood` tinyint(1) NOT NULL DEFAULT '0',
-  `ispic` tinyint(1) NOT NULL DEFAULT '0',
-  `istop` tinyint(1) NOT NULL DEFAULT '0',
-  `isqf` tinyint(1) NOT NULL DEFAULT '0',
-  `ismember` tinyint(1) NOT NULL DEFAULT '0',
-  `isurl` tinyint(1) NOT NULL DEFAULT '0',
-  `truetime` int(10) unsigned NOT NULL DEFAULT '0',
-  `lastdotime` int(10) unsigned NOT NULL DEFAULT '0',
-  `havehtml` tinyint(1) NOT NULL DEFAULT '0',
-  `groupid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `userfen` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `titlefont` varchar(14) NOT NULL DEFAULT '',
-  `titleurl` varchar(200) NOT NULL DEFAULT '',
-  `stb` tinyint(3) unsigned NOT NULL DEFAULT '1',
-  `fstb` tinyint(3) unsigned NOT NULL DEFAULT '1',
-  `restb` tinyint(3) unsigned NOT NULL DEFAULT '1',
-  `keyboard` varchar(80) NOT NULL DEFAULT '',
-  `title` varchar(100) NOT NULL DEFAULT '',
-  `newstime` int(10) unsigned NOT NULL DEFAULT '0',
-  `titlepic` varchar(120) NOT NULL DEFAULT '',
-  `movietype` varchar(16) NOT NULL DEFAULT '',
-  `company` varchar(200) NOT NULL DEFAULT '',
-  `movietime` varchar(20) NOT NULL DEFAULT '',
-  `player` varchar(255) NOT NULL DEFAULT '',
-  `playadmin` varchar(255) NOT NULL DEFAULT '',
-  `filetype` varchar(10) NOT NULL DEFAULT '',
-  `filesize` varchar(16) NOT NULL DEFAULT '',
-  `star` tinyint(1) NOT NULL DEFAULT '0',
-  `moviefen` int(11) NOT NULL DEFAULT '0',
+  `id` int(10) unsigned NOT NULL auto_increment,
+  `classid` smallint(5) unsigned NOT NULL default '0',
+  `ttid` smallint(5) unsigned NOT NULL default '0',
+  `onclick` int(10) unsigned NOT NULL default '0',
+  `plnum` mediumint(8) unsigned NOT NULL default '0',
+  `totaldown` mediumint(8) unsigned NOT NULL default '0',
+  `newspath` varchar(20) NOT NULL default '',
+  `filename` varchar(36) NOT NULL default '',
+  `userid` mediumint(8) unsigned NOT NULL default '0',
+  `username` varchar(20) NOT NULL default '',
+  `firsttitle` tinyint(1) NOT NULL default '0',
+  `isgood` tinyint(1) NOT NULL default '0',
+  `ispic` tinyint(1) NOT NULL default '0',
+  `istop` tinyint(1) NOT NULL default '0',
+  `isqf` tinyint(1) NOT NULL default '0',
+  `ismember` tinyint(1) NOT NULL default '0',
+  `isurl` tinyint(1) NOT NULL default '0',
+  `truetime` int(10) unsigned NOT NULL default '0',
+  `lastdotime` int(10) unsigned NOT NULL default '0',
+  `havehtml` tinyint(1) NOT NULL default '0',
+  `groupid` smallint(5) unsigned NOT NULL default '0',
+  `userfen` smallint(5) unsigned NOT NULL default '0',
+  `titlefont` varchar(14) NOT NULL default '',
+  `titleurl` varchar(200) NOT NULL default '',
+  `stb` tinyint(3) unsigned NOT NULL default '1',
+  `fstb` tinyint(3) unsigned NOT NULL default '1',
+  `restb` tinyint(3) unsigned NOT NULL default '1',
+  `keyboard` varchar(80) NOT NULL default '',
+  `title` varchar(100) NOT NULL default '',
+  `newstime` int(10) unsigned NOT NULL default '0',
+  `titlepic` varchar(120) NOT NULL default '',
+  `movietype` varchar(16) NOT NULL default '',
+  `company` varchar(200) NOT NULL default '',
+  `movietime` varchar(20) NOT NULL default '',
+  `player` varchar(255) NOT NULL default '',
+  `playadmin` varchar(255) NOT NULL default '',
+  `filetype` varchar(10) NOT NULL default '',
+  `filesize` varchar(16) NOT NULL default '',
+  `star` tinyint(1) NOT NULL default '0',
+  `moviefen` int(11) NOT NULL default '0',
   `moviesay` text NOT NULL,
-  PRIMARY KEY (`id`),
+  PRIMARY KEY  (`id`),
   KEY `classid` (`classid`),
   KEY `newstime` (`newstime`),
   KEY `ttid` (`ttid`),
@@ -2475,7 +2475,7 @@ CREATE TABLE `ziyi_ecms_movie_check` (
   KEY `isgood` (`isgood`),
   KEY `ispic` (`ispic`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_ecms_movie_check`
@@ -2491,26 +2491,26 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_ecms_movie_check_data`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_ecms_movie_check_data` (
-  `id` int(10) unsigned NOT NULL DEFAULT '0',
-  `classid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `keyid` varchar(255) NOT NULL DEFAULT '',
-  `dokey` tinyint(1) NOT NULL DEFAULT '0',
-  `newstempid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `closepl` tinyint(1) NOT NULL DEFAULT '0',
-  `haveaddfen` tinyint(1) NOT NULL DEFAULT '0',
-  `infotags` varchar(80) NOT NULL DEFAULT '',
-  `playdk` varchar(30) NOT NULL DEFAULT '',
-  `playtime` varchar(20) NOT NULL DEFAULT '',
+  `id` int(10) unsigned NOT NULL default '0',
+  `classid` smallint(5) unsigned NOT NULL default '0',
+  `keyid` varchar(255) NOT NULL default '',
+  `dokey` tinyint(1) NOT NULL default '0',
+  `newstempid` smallint(5) unsigned NOT NULL default '0',
+  `closepl` tinyint(1) NOT NULL default '0',
+  `haveaddfen` tinyint(1) NOT NULL default '0',
+  `infotags` varchar(80) NOT NULL default '',
+  `playdk` varchar(30) NOT NULL default '',
+  `playtime` varchar(20) NOT NULL default '',
   `downpath` mediumtext NOT NULL,
-  `playerid` smallint(6) NOT NULL DEFAULT '0',
+  `playerid` smallint(6) NOT NULL default '0',
   `onlinepath` mediumtext NOT NULL,
-  PRIMARY KEY (`id`),
+  PRIMARY KEY  (`id`),
   KEY `classid` (`classid`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_ecms_movie_check_data`
@@ -2526,26 +2526,26 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_ecms_movie_data_1`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_ecms_movie_data_1` (
-  `id` int(10) unsigned NOT NULL DEFAULT '0',
-  `classid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `keyid` varchar(255) NOT NULL DEFAULT '',
-  `dokey` tinyint(1) NOT NULL DEFAULT '0',
-  `newstempid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `closepl` tinyint(1) NOT NULL DEFAULT '0',
-  `haveaddfen` tinyint(1) NOT NULL DEFAULT '0',
-  `infotags` varchar(80) NOT NULL DEFAULT '',
-  `playdk` varchar(30) NOT NULL DEFAULT '',
-  `playtime` varchar(20) NOT NULL DEFAULT '',
+  `id` int(10) unsigned NOT NULL default '0',
+  `classid` smallint(5) unsigned NOT NULL default '0',
+  `keyid` varchar(255) NOT NULL default '',
+  `dokey` tinyint(1) NOT NULL default '0',
+  `newstempid` smallint(5) unsigned NOT NULL default '0',
+  `closepl` tinyint(1) NOT NULL default '0',
+  `haveaddfen` tinyint(1) NOT NULL default '0',
+  `infotags` varchar(80) NOT NULL default '',
+  `playdk` varchar(30) NOT NULL default '',
+  `playtime` varchar(20) NOT NULL default '',
   `downpath` mediumtext NOT NULL,
-  `playerid` smallint(6) NOT NULL DEFAULT '0',
+  `playerid` smallint(6) NOT NULL default '0',
   `onlinepath` mediumtext NOT NULL,
-  PRIMARY KEY (`id`),
+  PRIMARY KEY  (`id`),
   KEY `classid` (`classid`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_ecms_movie_data_1`
@@ -2561,51 +2561,51 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_ecms_movie_doc`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_ecms_movie_doc` (
-  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `classid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `ttid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `onclick` int(10) unsigned NOT NULL DEFAULT '0',
-  `plnum` mediumint(8) unsigned NOT NULL DEFAULT '0',
-  `totaldown` mediumint(8) unsigned NOT NULL DEFAULT '0',
-  `newspath` varchar(20) NOT NULL DEFAULT '',
-  `filename` varchar(36) NOT NULL DEFAULT '',
-  `userid` mediumint(8) unsigned NOT NULL DEFAULT '0',
-  `username` varchar(20) NOT NULL DEFAULT '',
-  `firsttitle` tinyint(1) NOT NULL DEFAULT '0',
-  `isgood` tinyint(1) NOT NULL DEFAULT '0',
-  `ispic` tinyint(1) NOT NULL DEFAULT '0',
-  `istop` tinyint(1) NOT NULL DEFAULT '0',
-  `isqf` tinyint(1) NOT NULL DEFAULT '0',
-  `ismember` tinyint(1) NOT NULL DEFAULT '0',
-  `isurl` tinyint(1) NOT NULL DEFAULT '0',
-  `truetime` int(10) unsigned NOT NULL DEFAULT '0',
-  `lastdotime` int(10) unsigned NOT NULL DEFAULT '0',
-  `havehtml` tinyint(1) NOT NULL DEFAULT '0',
-  `groupid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `userfen` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `titlefont` varchar(14) NOT NULL DEFAULT '',
-  `titleurl` varchar(200) NOT NULL DEFAULT '',
-  `stb` tinyint(3) unsigned NOT NULL DEFAULT '1',
-  `fstb` tinyint(3) unsigned NOT NULL DEFAULT '1',
-  `restb` tinyint(3) unsigned NOT NULL DEFAULT '1',
-  `keyboard` varchar(80) NOT NULL DEFAULT '',
-  `title` varchar(100) NOT NULL DEFAULT '',
-  `newstime` int(10) unsigned NOT NULL DEFAULT '0',
-  `titlepic` varchar(120) NOT NULL DEFAULT '',
-  `movietype` varchar(16) NOT NULL DEFAULT '',
-  `company` varchar(200) NOT NULL DEFAULT '',
-  `movietime` varchar(20) NOT NULL DEFAULT '',
-  `player` varchar(255) NOT NULL DEFAULT '',
-  `playadmin` varchar(255) NOT NULL DEFAULT '',
-  `filetype` varchar(10) NOT NULL DEFAULT '',
-  `filesize` varchar(16) NOT NULL DEFAULT '',
-  `star` tinyint(1) NOT NULL DEFAULT '0',
-  `moviefen` int(11) NOT NULL DEFAULT '0',
+  `id` int(10) unsigned NOT NULL auto_increment,
+  `classid` smallint(5) unsigned NOT NULL default '0',
+  `ttid` smallint(5) unsigned NOT NULL default '0',
+  `onclick` int(10) unsigned NOT NULL default '0',
+  `plnum` mediumint(8) unsigned NOT NULL default '0',
+  `totaldown` mediumint(8) unsigned NOT NULL default '0',
+  `newspath` varchar(20) NOT NULL default '',
+  `filename` varchar(36) NOT NULL default '',
+  `userid` mediumint(8) unsigned NOT NULL default '0',
+  `username` varchar(20) NOT NULL default '',
+  `firsttitle` tinyint(1) NOT NULL default '0',
+  `isgood` tinyint(1) NOT NULL default '0',
+  `ispic` tinyint(1) NOT NULL default '0',
+  `istop` tinyint(1) NOT NULL default '0',
+  `isqf` tinyint(1) NOT NULL default '0',
+  `ismember` tinyint(1) NOT NULL default '0',
+  `isurl` tinyint(1) NOT NULL default '0',
+  `truetime` int(10) unsigned NOT NULL default '0',
+  `lastdotime` int(10) unsigned NOT NULL default '0',
+  `havehtml` tinyint(1) NOT NULL default '0',
+  `groupid` smallint(5) unsigned NOT NULL default '0',
+  `userfen` smallint(5) unsigned NOT NULL default '0',
+  `titlefont` varchar(14) NOT NULL default '',
+  `titleurl` varchar(200) NOT NULL default '',
+  `stb` tinyint(3) unsigned NOT NULL default '1',
+  `fstb` tinyint(3) unsigned NOT NULL default '1',
+  `restb` tinyint(3) unsigned NOT NULL default '1',
+  `keyboard` varchar(80) NOT NULL default '',
+  `title` varchar(100) NOT NULL default '',
+  `newstime` int(10) unsigned NOT NULL default '0',
+  `titlepic` varchar(120) NOT NULL default '',
+  `movietype` varchar(16) NOT NULL default '',
+  `company` varchar(200) NOT NULL default '',
+  `movietime` varchar(20) NOT NULL default '',
+  `player` varchar(255) NOT NULL default '',
+  `playadmin` varchar(255) NOT NULL default '',
+  `filetype` varchar(10) NOT NULL default '',
+  `filesize` varchar(16) NOT NULL default '',
+  `star` tinyint(1) NOT NULL default '0',
+  `moviefen` int(11) NOT NULL default '0',
   `moviesay` text NOT NULL,
-  PRIMARY KEY (`id`),
+  PRIMARY KEY  (`id`),
   KEY `classid` (`classid`),
   KEY `newstime` (`newstime`),
   KEY `ttid` (`ttid`),
@@ -2613,7 +2613,7 @@ CREATE TABLE `ziyi_ecms_movie_doc` (
   KEY `isgood` (`isgood`),
   KEY `ispic` (`ispic`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_ecms_movie_doc`
@@ -2629,26 +2629,26 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_ecms_movie_doc_data`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_ecms_movie_doc_data` (
-  `id` int(10) unsigned NOT NULL DEFAULT '0',
-  `classid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `keyid` varchar(255) NOT NULL DEFAULT '',
-  `dokey` tinyint(1) NOT NULL DEFAULT '0',
-  `newstempid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `closepl` tinyint(1) NOT NULL DEFAULT '0',
-  `haveaddfen` tinyint(1) NOT NULL DEFAULT '0',
-  `infotags` varchar(80) NOT NULL DEFAULT '',
-  `playdk` varchar(30) NOT NULL DEFAULT '',
-  `playtime` varchar(20) NOT NULL DEFAULT '',
+  `id` int(10) unsigned NOT NULL default '0',
+  `classid` smallint(5) unsigned NOT NULL default '0',
+  `keyid` varchar(255) NOT NULL default '',
+  `dokey` tinyint(1) NOT NULL default '0',
+  `newstempid` smallint(5) unsigned NOT NULL default '0',
+  `closepl` tinyint(1) NOT NULL default '0',
+  `haveaddfen` tinyint(1) NOT NULL default '0',
+  `infotags` varchar(80) NOT NULL default '',
+  `playdk` varchar(30) NOT NULL default '',
+  `playtime` varchar(20) NOT NULL default '',
   `downpath` mediumtext NOT NULL,
-  `playerid` smallint(6) NOT NULL DEFAULT '0',
+  `playerid` smallint(6) NOT NULL default '0',
   `onlinepath` mediumtext NOT NULL,
-  PRIMARY KEY (`id`),
+  PRIMARY KEY  (`id`),
   KEY `classid` (`classid`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_ecms_movie_doc_data`
@@ -2664,24 +2664,24 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_ecms_movie_doc_index`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_ecms_movie_doc_index` (
-  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `classid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `checked` tinyint(1) NOT NULL DEFAULT '0',
-  `newstime` int(10) unsigned NOT NULL DEFAULT '0',
-  `truetime` int(10) unsigned NOT NULL DEFAULT '0',
-  `lastdotime` int(10) unsigned NOT NULL DEFAULT '0',
-  `havehtml` tinyint(1) NOT NULL DEFAULT '0',
-  PRIMARY KEY (`id`),
+  `id` int(10) unsigned NOT NULL auto_increment,
+  `classid` smallint(5) unsigned NOT NULL default '0',
+  `checked` tinyint(1) NOT NULL default '0',
+  `newstime` int(10) unsigned NOT NULL default '0',
+  `truetime` int(10) unsigned NOT NULL default '0',
+  `lastdotime` int(10) unsigned NOT NULL default '0',
+  `havehtml` tinyint(1) NOT NULL default '0',
+  PRIMARY KEY  (`id`),
   KEY `classid` (`classid`),
   KEY `checked` (`checked`),
   KEY `newstime` (`newstime`),
   KEY `truetime` (`truetime`,`id`),
   KEY `havehtml` (`classid`,`truetime`,`havehtml`,`checked`,`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_ecms_movie_doc_index`
@@ -2697,24 +2697,24 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_ecms_movie_index`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_ecms_movie_index` (
-  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `classid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `checked` tinyint(1) NOT NULL DEFAULT '0',
-  `newstime` int(10) unsigned NOT NULL DEFAULT '0',
-  `truetime` int(10) unsigned NOT NULL DEFAULT '0',
-  `lastdotime` int(10) unsigned NOT NULL DEFAULT '0',
-  `havehtml` tinyint(1) NOT NULL DEFAULT '0',
-  PRIMARY KEY (`id`),
+  `id` int(10) unsigned NOT NULL auto_increment,
+  `classid` smallint(5) unsigned NOT NULL default '0',
+  `checked` tinyint(1) NOT NULL default '0',
+  `newstime` int(10) unsigned NOT NULL default '0',
+  `truetime` int(10) unsigned NOT NULL default '0',
+  `lastdotime` int(10) unsigned NOT NULL default '0',
+  `havehtml` tinyint(1) NOT NULL default '0',
+  PRIMARY KEY  (`id`),
   KEY `classid` (`classid`),
   KEY `checked` (`checked`),
   KEY `newstime` (`newstime`),
   KEY `truetime` (`truetime`,`id`),
   KEY `havehtml` (`classid`,`truetime`,`havehtml`,`checked`,`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_ecms_movie_index`
@@ -2730,52 +2730,52 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_ecms_news`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_ecms_news` (
-  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `classid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `ttid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `onclick` int(10) unsigned NOT NULL DEFAULT '0',
-  `plnum` mediumint(8) unsigned NOT NULL DEFAULT '0',
-  `totaldown` mediumint(8) unsigned NOT NULL DEFAULT '0',
-  `newspath` char(20) NOT NULL DEFAULT '',
-  `filename` char(36) NOT NULL DEFAULT '',
-  `userid` mediumint(8) unsigned NOT NULL DEFAULT '0',
-  `username` char(20) NOT NULL DEFAULT '',
-  `firsttitle` tinyint(1) NOT NULL DEFAULT '0',
-  `isgood` tinyint(1) NOT NULL DEFAULT '0',
-  `ispic` tinyint(1) NOT NULL DEFAULT '0',
-  `istop` tinyint(1) NOT NULL DEFAULT '0',
-  `isqf` tinyint(1) NOT NULL DEFAULT '0',
-  `ismember` tinyint(1) NOT NULL DEFAULT '0',
-  `isurl` tinyint(1) NOT NULL DEFAULT '0',
-  `truetime` int(10) unsigned NOT NULL DEFAULT '0',
-  `lastdotime` int(10) unsigned NOT NULL DEFAULT '0',
-  `havehtml` tinyint(1) NOT NULL DEFAULT '0',
-  `groupid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `userfen` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `titlefont` char(14) NOT NULL DEFAULT '',
-  `titleurl` char(200) NOT NULL DEFAULT '',
-  `stb` tinyint(3) unsigned NOT NULL DEFAULT '1',
-  `fstb` tinyint(3) unsigned NOT NULL DEFAULT '1',
-  `restb` tinyint(3) unsigned NOT NULL DEFAULT '1',
-  `keyboard` char(80) NOT NULL DEFAULT '',
-  `title` char(100) NOT NULL DEFAULT '',
-  `newstime` int(10) unsigned NOT NULL DEFAULT '0',
-  `titlepic` char(120) NOT NULL DEFAULT '',
-  `ftitle` char(120) NOT NULL DEFAULT '',
-  `smalltext` char(255) NOT NULL DEFAULT '',
-  `diggtop` int(11) NOT NULL DEFAULT '0',
-  PRIMARY KEY (`id`),
+  `id` int(10) unsigned NOT NULL auto_increment,
+  `classid` smallint(5) unsigned NOT NULL default '0',
+  `ttid` smallint(5) unsigned NOT NULL default '0',
+  `onclick` int(10) unsigned NOT NULL default '0',
+  `plnum` mediumint(8) unsigned NOT NULL default '0',
+  `totaldown` mediumint(8) unsigned NOT NULL default '0',
+  `newspath` char(20) NOT NULL default '',
+  `filename` char(36) NOT NULL default '',
+  `userid` mediumint(8) unsigned NOT NULL default '0',
+  `username` char(20) NOT NULL default '',
+  `firsttitle` tinyint(1) NOT NULL default '0',
+  `isgood` tinyint(1) NOT NULL default '0',
+  `ispic` tinyint(1) NOT NULL default '0',
+  `istop` tinyint(1) NOT NULL default '0',
+  `isqf` tinyint(1) NOT NULL default '0',
+  `ismember` tinyint(1) NOT NULL default '0',
+  `isurl` tinyint(1) NOT NULL default '0',
+  `truetime` int(10) unsigned NOT NULL default '0',
+  `lastdotime` int(10) unsigned NOT NULL default '0',
+  `havehtml` tinyint(1) NOT NULL default '0',
+  `groupid` smallint(5) unsigned NOT NULL default '0',
+  `userfen` smallint(5) unsigned NOT NULL default '0',
+  `titlefont` char(14) NOT NULL default '',
+  `titleurl` char(200) NOT NULL default '',
+  `stb` tinyint(3) unsigned NOT NULL default '1',
+  `fstb` tinyint(3) unsigned NOT NULL default '1',
+  `restb` tinyint(3) unsigned NOT NULL default '1',
+  `keyboard` char(80) NOT NULL default '',
+  `title` char(100) NOT NULL default '',
+  `newstime` int(10) unsigned NOT NULL default '0',
+  `titlepic` char(120) NOT NULL default '',
+  `ftitle` char(120) NOT NULL default '',
+  `smalltext` char(255) NOT NULL default '',
+  `diggtop` int(11) NOT NULL default '0',
+  PRIMARY KEY  (`id`),
   KEY `classid` (`classid`),
   KEY `newstime` (`newstime`),
   KEY `ttid` (`ttid`),
   KEY `firsttitle` (`firsttitle`),
   KEY `isgood` (`isgood`),
   KEY `ispic` (`ispic`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_ecms_news`
@@ -2783,6 +2783,7 @@ CREATE TABLE `ziyi_ecms_news` (
 
 LOCK TABLES `ziyi_ecms_news` WRITE;
 /*!40000 ALTER TABLE `ziyi_ecms_news` DISABLE KEYS */;
+INSERT INTO `ziyi_ecms_news` VALUES (1,5,0,0,0,0,'2013-08-30','1',1,'assnr',0,0,1,0,0,0,0,1377875108,1377876232,1,0,0,'','/ziyi/jingdiananli/2013-08-30/1.html',1,1,1,'','afd 啊 啊',1377875076,'/ziyi/d/file/jingdiananli/2013-08-30/458c51b4931f5ddb93b3122c99b18ddf.jpg','阿杜','阿斯顿asdfasdf\r\nfdh \r\n\r\ngh阿斯顿\r\ns阿斯顿h  爱上对方 打撒\r\n十点都是\r\n asdf 发生的',0),(2,5,0,0,0,0,'2013-08-30','2',1,'assnr',0,0,1,0,0,0,0,1377875240,1377876254,1,0,0,'','/ziyi/jingdiananli/2013-08-30/2.html',1,1,1,'','(图文)22',1377875138,'/ziyi/d/file/jingdiananli/2013-08-30/8bf22c377d9162a299041110dc4cc8a5.jpg','阿杜','大师傅都是爱上对方 噶的事阿斯顿\r\nasdf \r\nasd放\r\n\r\ndas放\r\n\r\ng \r\nfg',0);
 /*!40000 ALTER TABLE `ziyi_ecms_news` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -2791,44 +2792,44 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_ecms_news_check`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_ecms_news_check` (
-  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `classid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `ttid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `onclick` int(10) unsigned NOT NULL DEFAULT '0',
-  `plnum` mediumint(8) unsigned NOT NULL DEFAULT '0',
-  `totaldown` mediumint(8) unsigned NOT NULL DEFAULT '0',
-  `newspath` char(20) NOT NULL DEFAULT '',
-  `filename` char(36) NOT NULL DEFAULT '',
-  `userid` mediumint(8) unsigned NOT NULL DEFAULT '0',
-  `username` char(20) NOT NULL DEFAULT '',
-  `firsttitle` tinyint(1) NOT NULL DEFAULT '0',
-  `isgood` tinyint(1) NOT NULL DEFAULT '0',
-  `ispic` tinyint(1) NOT NULL DEFAULT '0',
-  `istop` tinyint(1) NOT NULL DEFAULT '0',
-  `isqf` tinyint(1) NOT NULL DEFAULT '0',
-  `ismember` tinyint(1) NOT NULL DEFAULT '0',
-  `isurl` tinyint(1) NOT NULL DEFAULT '0',
-  `truetime` int(10) unsigned NOT NULL DEFAULT '0',
-  `lastdotime` int(10) unsigned NOT NULL DEFAULT '0',
-  `havehtml` tinyint(1) NOT NULL DEFAULT '0',
-  `groupid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `userfen` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `titlefont` char(14) NOT NULL DEFAULT '',
-  `titleurl` char(200) NOT NULL DEFAULT '',
-  `stb` tinyint(3) unsigned NOT NULL DEFAULT '1',
-  `fstb` tinyint(3) unsigned NOT NULL DEFAULT '1',
-  `restb` tinyint(3) unsigned NOT NULL DEFAULT '1',
-  `keyboard` char(80) NOT NULL DEFAULT '',
-  `title` char(100) NOT NULL DEFAULT '',
-  `newstime` int(10) unsigned NOT NULL DEFAULT '0',
-  `titlepic` char(120) NOT NULL DEFAULT '',
-  `ftitle` char(120) NOT NULL DEFAULT '',
-  `smalltext` char(255) NOT NULL DEFAULT '',
-  `diggtop` int(11) NOT NULL DEFAULT '0',
-  PRIMARY KEY (`id`),
+  `id` int(10) unsigned NOT NULL auto_increment,
+  `classid` smallint(5) unsigned NOT NULL default '0',
+  `ttid` smallint(5) unsigned NOT NULL default '0',
+  `onclick` int(10) unsigned NOT NULL default '0',
+  `plnum` mediumint(8) unsigned NOT NULL default '0',
+  `totaldown` mediumint(8) unsigned NOT NULL default '0',
+  `newspath` char(20) NOT NULL default '',
+  `filename` char(36) NOT NULL default '',
+  `userid` mediumint(8) unsigned NOT NULL default '0',
+  `username` char(20) NOT NULL default '',
+  `firsttitle` tinyint(1) NOT NULL default '0',
+  `isgood` tinyint(1) NOT NULL default '0',
+  `ispic` tinyint(1) NOT NULL default '0',
+  `istop` tinyint(1) NOT NULL default '0',
+  `isqf` tinyint(1) NOT NULL default '0',
+  `ismember` tinyint(1) NOT NULL default '0',
+  `isurl` tinyint(1) NOT NULL default '0',
+  `truetime` int(10) unsigned NOT NULL default '0',
+  `lastdotime` int(10) unsigned NOT NULL default '0',
+  `havehtml` tinyint(1) NOT NULL default '0',
+  `groupid` smallint(5) unsigned NOT NULL default '0',
+  `userfen` smallint(5) unsigned NOT NULL default '0',
+  `titlefont` char(14) NOT NULL default '',
+  `titleurl` char(200) NOT NULL default '',
+  `stb` tinyint(3) unsigned NOT NULL default '1',
+  `fstb` tinyint(3) unsigned NOT NULL default '1',
+  `restb` tinyint(3) unsigned NOT NULL default '1',
+  `keyboard` char(80) NOT NULL default '',
+  `title` char(100) NOT NULL default '',
+  `newstime` int(10) unsigned NOT NULL default '0',
+  `titlepic` char(120) NOT NULL default '',
+  `ftitle` char(120) NOT NULL default '',
+  `smalltext` char(255) NOT NULL default '',
+  `diggtop` int(11) NOT NULL default '0',
+  PRIMARY KEY  (`id`),
   KEY `classid` (`classid`),
   KEY `newstime` (`newstime`),
   KEY `ttid` (`ttid`),
@@ -2836,7 +2837,7 @@ CREATE TABLE `ziyi_ecms_news_check` (
   KEY `isgood` (`isgood`),
   KEY `ispic` (`ispic`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_ecms_news_check`
@@ -2852,24 +2853,24 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_ecms_news_check_data`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_ecms_news_check_data` (
-  `id` int(10) unsigned NOT NULL DEFAULT '0',
-  `classid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `keyid` varchar(255) NOT NULL DEFAULT '',
-  `dokey` tinyint(1) NOT NULL DEFAULT '0',
-  `newstempid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `closepl` tinyint(1) NOT NULL DEFAULT '0',
-  `haveaddfen` tinyint(1) NOT NULL DEFAULT '0',
-  `infotags` varchar(80) NOT NULL DEFAULT '',
-  `writer` varchar(30) NOT NULL DEFAULT '',
-  `befrom` varchar(60) NOT NULL DEFAULT '',
+  `id` int(10) unsigned NOT NULL default '0',
+  `classid` smallint(5) unsigned NOT NULL default '0',
+  `keyid` varchar(255) NOT NULL default '',
+  `dokey` tinyint(1) NOT NULL default '0',
+  `newstempid` smallint(5) unsigned NOT NULL default '0',
+  `closepl` tinyint(1) NOT NULL default '0',
+  `haveaddfen` tinyint(1) NOT NULL default '0',
+  `infotags` varchar(80) NOT NULL default '',
+  `writer` varchar(30) NOT NULL default '',
+  `befrom` varchar(60) NOT NULL default '',
   `newstext` mediumtext NOT NULL,
-  PRIMARY KEY (`id`),
+  PRIMARY KEY  (`id`),
   KEY `classid` (`classid`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_ecms_news_check_data`
@@ -2885,24 +2886,24 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_ecms_news_data_1`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_ecms_news_data_1` (
-  `id` int(10) unsigned NOT NULL DEFAULT '0',
-  `classid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `keyid` varchar(255) NOT NULL DEFAULT '',
-  `dokey` tinyint(1) NOT NULL DEFAULT '0',
-  `newstempid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `closepl` tinyint(1) NOT NULL DEFAULT '0',
-  `haveaddfen` tinyint(1) NOT NULL DEFAULT '0',
-  `infotags` varchar(80) NOT NULL DEFAULT '',
-  `writer` varchar(30) NOT NULL DEFAULT '',
-  `befrom` varchar(60) NOT NULL DEFAULT '',
+  `id` int(10) unsigned NOT NULL default '0',
+  `classid` smallint(5) unsigned NOT NULL default '0',
+  `keyid` varchar(255) NOT NULL default '',
+  `dokey` tinyint(1) NOT NULL default '0',
+  `newstempid` smallint(5) unsigned NOT NULL default '0',
+  `closepl` tinyint(1) NOT NULL default '0',
+  `haveaddfen` tinyint(1) NOT NULL default '0',
+  `infotags` varchar(80) NOT NULL default '',
+  `writer` varchar(30) NOT NULL default '',
+  `befrom` varchar(60) NOT NULL default '',
   `newstext` mediumtext NOT NULL,
-  PRIMARY KEY (`id`),
+  PRIMARY KEY  (`id`),
   KEY `classid` (`classid`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_ecms_news_data_1`
@@ -2910,6 +2911,7 @@ CREATE TABLE `ziyi_ecms_news_data_1` (
 
 LOCK TABLES `ziyi_ecms_news_data_1` WRITE;
 /*!40000 ALTER TABLE `ziyi_ecms_news_data_1` DISABLE KEYS */;
+INSERT INTO `ziyi_ecms_news_data_1` VALUES (1,5,'',1,0,0,0,'','','','<p>&nbsp; 阿斯顿 阿斯顿</p>'),(2,5,'',1,0,0,0,'','','','<p>&nbsp;部分的歌十点</p>');
 /*!40000 ALTER TABLE `ziyi_ecms_news_data_1` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -2918,44 +2920,44 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_ecms_news_doc`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_ecms_news_doc` (
-  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `classid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `ttid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `onclick` int(10) unsigned NOT NULL DEFAULT '0',
-  `plnum` mediumint(8) unsigned NOT NULL DEFAULT '0',
-  `totaldown` mediumint(8) unsigned NOT NULL DEFAULT '0',
-  `newspath` char(20) NOT NULL DEFAULT '',
-  `filename` char(36) NOT NULL DEFAULT '',
-  `userid` mediumint(8) unsigned NOT NULL DEFAULT '0',
-  `username` char(20) NOT NULL DEFAULT '',
-  `firsttitle` tinyint(1) NOT NULL DEFAULT '0',
-  `isgood` tinyint(1) NOT NULL DEFAULT '0',
-  `ispic` tinyint(1) NOT NULL DEFAULT '0',
-  `istop` tinyint(1) NOT NULL DEFAULT '0',
-  `isqf` tinyint(1) NOT NULL DEFAULT '0',
-  `ismember` tinyint(1) NOT NULL DEFAULT '0',
-  `isurl` tinyint(1) NOT NULL DEFAULT '0',
-  `truetime` int(10) unsigned NOT NULL DEFAULT '0',
-  `lastdotime` int(10) unsigned NOT NULL DEFAULT '0',
-  `havehtml` tinyint(1) NOT NULL DEFAULT '0',
-  `groupid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `userfen` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `titlefont` char(14) NOT NULL DEFAULT '',
-  `titleurl` char(200) NOT NULL DEFAULT '',
-  `stb` tinyint(3) unsigned NOT NULL DEFAULT '1',
-  `fstb` tinyint(3) unsigned NOT NULL DEFAULT '1',
-  `restb` tinyint(3) unsigned NOT NULL DEFAULT '1',
-  `keyboard` char(80) NOT NULL DEFAULT '',
-  `title` char(100) NOT NULL DEFAULT '',
-  `newstime` int(10) unsigned NOT NULL DEFAULT '0',
-  `titlepic` char(120) NOT NULL DEFAULT '',
-  `ftitle` char(120) NOT NULL DEFAULT '',
-  `smalltext` char(255) NOT NULL DEFAULT '',
-  `diggtop` int(11) NOT NULL DEFAULT '0',
-  PRIMARY KEY (`id`),
+  `id` int(10) unsigned NOT NULL auto_increment,
+  `classid` smallint(5) unsigned NOT NULL default '0',
+  `ttid` smallint(5) unsigned NOT NULL default '0',
+  `onclick` int(10) unsigned NOT NULL default '0',
+  `plnum` mediumint(8) unsigned NOT NULL default '0',
+  `totaldown` mediumint(8) unsigned NOT NULL default '0',
+  `newspath` char(20) NOT NULL default '',
+  `filename` char(36) NOT NULL default '',
+  `userid` mediumint(8) unsigned NOT NULL default '0',
+  `username` char(20) NOT NULL default '',
+  `firsttitle` tinyint(1) NOT NULL default '0',
+  `isgood` tinyint(1) NOT NULL default '0',
+  `ispic` tinyint(1) NOT NULL default '0',
+  `istop` tinyint(1) NOT NULL default '0',
+  `isqf` tinyint(1) NOT NULL default '0',
+  `ismember` tinyint(1) NOT NULL default '0',
+  `isurl` tinyint(1) NOT NULL default '0',
+  `truetime` int(10) unsigned NOT NULL default '0',
+  `lastdotime` int(10) unsigned NOT NULL default '0',
+  `havehtml` tinyint(1) NOT NULL default '0',
+  `groupid` smallint(5) unsigned NOT NULL default '0',
+  `userfen` smallint(5) unsigned NOT NULL default '0',
+  `titlefont` char(14) NOT NULL default '',
+  `titleurl` char(200) NOT NULL default '',
+  `stb` tinyint(3) unsigned NOT NULL default '1',
+  `fstb` tinyint(3) unsigned NOT NULL default '1',
+  `restb` tinyint(3) unsigned NOT NULL default '1',
+  `keyboard` char(80) NOT NULL default '',
+  `title` char(100) NOT NULL default '',
+  `newstime` int(10) unsigned NOT NULL default '0',
+  `titlepic` char(120) NOT NULL default '',
+  `ftitle` char(120) NOT NULL default '',
+  `smalltext` char(255) NOT NULL default '',
+  `diggtop` int(11) NOT NULL default '0',
+  PRIMARY KEY  (`id`),
   KEY `classid` (`classid`),
   KEY `newstime` (`newstime`),
   KEY `ttid` (`ttid`),
@@ -2963,7 +2965,7 @@ CREATE TABLE `ziyi_ecms_news_doc` (
   KEY `isgood` (`isgood`),
   KEY `ispic` (`ispic`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_ecms_news_doc`
@@ -2979,24 +2981,24 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_ecms_news_doc_data`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_ecms_news_doc_data` (
-  `id` int(10) unsigned NOT NULL DEFAULT '0',
-  `classid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `keyid` varchar(255) NOT NULL DEFAULT '',
-  `dokey` tinyint(1) NOT NULL DEFAULT '0',
-  `newstempid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `closepl` tinyint(1) NOT NULL DEFAULT '0',
-  `haveaddfen` tinyint(1) NOT NULL DEFAULT '0',
-  `infotags` varchar(80) NOT NULL DEFAULT '',
-  `writer` varchar(30) NOT NULL DEFAULT '',
-  `befrom` varchar(60) NOT NULL DEFAULT '',
+  `id` int(10) unsigned NOT NULL default '0',
+  `classid` smallint(5) unsigned NOT NULL default '0',
+  `keyid` varchar(255) NOT NULL default '',
+  `dokey` tinyint(1) NOT NULL default '0',
+  `newstempid` smallint(5) unsigned NOT NULL default '0',
+  `closepl` tinyint(1) NOT NULL default '0',
+  `haveaddfen` tinyint(1) NOT NULL default '0',
+  `infotags` varchar(80) NOT NULL default '',
+  `writer` varchar(30) NOT NULL default '',
+  `befrom` varchar(60) NOT NULL default '',
   `newstext` mediumtext NOT NULL,
-  PRIMARY KEY (`id`),
+  PRIMARY KEY  (`id`),
   KEY `classid` (`classid`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_ecms_news_doc_data`
@@ -3012,24 +3014,24 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_ecms_news_doc_index`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_ecms_news_doc_index` (
-  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `classid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `checked` tinyint(1) NOT NULL DEFAULT '0',
-  `newstime` int(10) unsigned NOT NULL DEFAULT '0',
-  `truetime` int(10) unsigned NOT NULL DEFAULT '0',
-  `lastdotime` int(10) unsigned NOT NULL DEFAULT '0',
-  `havehtml` tinyint(1) NOT NULL DEFAULT '0',
-  PRIMARY KEY (`id`),
+  `id` int(10) unsigned NOT NULL auto_increment,
+  `classid` smallint(5) unsigned NOT NULL default '0',
+  `checked` tinyint(1) NOT NULL default '0',
+  `newstime` int(10) unsigned NOT NULL default '0',
+  `truetime` int(10) unsigned NOT NULL default '0',
+  `lastdotime` int(10) unsigned NOT NULL default '0',
+  `havehtml` tinyint(1) NOT NULL default '0',
+  PRIMARY KEY  (`id`),
   KEY `classid` (`classid`),
   KEY `checked` (`checked`),
   KEY `newstime` (`newstime`),
   KEY `truetime` (`truetime`,`id`),
   KEY `havehtml` (`classid`,`truetime`,`havehtml`,`checked`,`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_ecms_news_doc_index`
@@ -3045,24 +3047,24 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_ecms_news_index`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_ecms_news_index` (
-  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `classid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `checked` tinyint(1) NOT NULL DEFAULT '0',
-  `newstime` int(10) unsigned NOT NULL DEFAULT '0',
-  `truetime` int(10) unsigned NOT NULL DEFAULT '0',
-  `lastdotime` int(10) unsigned NOT NULL DEFAULT '0',
-  `havehtml` tinyint(1) NOT NULL DEFAULT '0',
-  PRIMARY KEY (`id`),
+  `id` int(10) unsigned NOT NULL auto_increment,
+  `classid` smallint(5) unsigned NOT NULL default '0',
+  `checked` tinyint(1) NOT NULL default '0',
+  `newstime` int(10) unsigned NOT NULL default '0',
+  `truetime` int(10) unsigned NOT NULL default '0',
+  `lastdotime` int(10) unsigned NOT NULL default '0',
+  `havehtml` tinyint(1) NOT NULL default '0',
+  PRIMARY KEY  (`id`),
   KEY `classid` (`classid`),
   KEY `checked` (`checked`),
   KEY `newstime` (`newstime`),
   KEY `truetime` (`truetime`,`id`),
   KEY `havehtml` (`classid`,`truetime`,`havehtml`,`checked`,`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_ecms_news_index`
@@ -3070,6 +3072,7 @@ CREATE TABLE `ziyi_ecms_news_index` (
 
 LOCK TABLES `ziyi_ecms_news_index` WRITE;
 /*!40000 ALTER TABLE `ziyi_ecms_news_index` DISABLE KEYS */;
+INSERT INTO `ziyi_ecms_news_index` VALUES (1,5,1,1377875076,1377875108,1377876232,1),(2,5,1,1377875138,1377875240,1377876254,1);
 /*!40000 ALTER TABLE `ziyi_ecms_news_index` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -3078,43 +3081,43 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_ecms_photo`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_ecms_photo` (
-  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `classid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `ttid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `onclick` int(10) unsigned NOT NULL DEFAULT '0',
-  `plnum` mediumint(8) unsigned NOT NULL DEFAULT '0',
-  `totaldown` mediumint(8) unsigned NOT NULL DEFAULT '0',
-  `newspath` varchar(20) NOT NULL DEFAULT '',
-  `filename` varchar(36) NOT NULL DEFAULT '',
-  `userid` mediumint(8) unsigned NOT NULL DEFAULT '0',
-  `username` varchar(20) NOT NULL DEFAULT '',
-  `firsttitle` tinyint(1) NOT NULL DEFAULT '0',
-  `isgood` tinyint(1) NOT NULL DEFAULT '0',
-  `ispic` tinyint(1) NOT NULL DEFAULT '0',
-  `istop` tinyint(1) NOT NULL DEFAULT '0',
-  `isqf` tinyint(1) NOT NULL DEFAULT '0',
-  `ismember` tinyint(1) NOT NULL DEFAULT '0',
-  `isurl` tinyint(1) NOT NULL DEFAULT '0',
-  `truetime` int(10) unsigned NOT NULL DEFAULT '0',
-  `lastdotime` int(10) unsigned NOT NULL DEFAULT '0',
-  `havehtml` tinyint(1) NOT NULL DEFAULT '0',
-  `groupid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `userfen` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `titlefont` varchar(14) NOT NULL DEFAULT '',
-  `titleurl` varchar(200) NOT NULL DEFAULT '',
-  `stb` tinyint(3) unsigned NOT NULL DEFAULT '1',
-  `fstb` tinyint(3) unsigned NOT NULL DEFAULT '1',
-  `restb` tinyint(3) unsigned NOT NULL DEFAULT '1',
-  `keyboard` varchar(80) NOT NULL DEFAULT '',
-  `title` varchar(100) NOT NULL DEFAULT '',
-  `newstime` int(10) unsigned NOT NULL DEFAULT '0',
-  `titlepic` varchar(120) NOT NULL DEFAULT '',
-  `picurl` varchar(200) NOT NULL DEFAULT '',
+  `id` int(10) unsigned NOT NULL auto_increment,
+  `classid` smallint(5) unsigned NOT NULL default '0',
+  `ttid` smallint(5) unsigned NOT NULL default '0',
+  `onclick` int(10) unsigned NOT NULL default '0',
+  `plnum` mediumint(8) unsigned NOT NULL default '0',
+  `totaldown` mediumint(8) unsigned NOT NULL default '0',
+  `newspath` varchar(20) NOT NULL default '',
+  `filename` varchar(36) NOT NULL default '',
+  `userid` mediumint(8) unsigned NOT NULL default '0',
+  `username` varchar(20) NOT NULL default '',
+  `firsttitle` tinyint(1) NOT NULL default '0',
+  `isgood` tinyint(1) NOT NULL default '0',
+  `ispic` tinyint(1) NOT NULL default '0',
+  `istop` tinyint(1) NOT NULL default '0',
+  `isqf` tinyint(1) NOT NULL default '0',
+  `ismember` tinyint(1) NOT NULL default '0',
+  `isurl` tinyint(1) NOT NULL default '0',
+  `truetime` int(10) unsigned NOT NULL default '0',
+  `lastdotime` int(10) unsigned NOT NULL default '0',
+  `havehtml` tinyint(1) NOT NULL default '0',
+  `groupid` smallint(5) unsigned NOT NULL default '0',
+  `userfen` smallint(5) unsigned NOT NULL default '0',
+  `titlefont` varchar(14) NOT NULL default '',
+  `titleurl` varchar(200) NOT NULL default '',
+  `stb` tinyint(3) unsigned NOT NULL default '1',
+  `fstb` tinyint(3) unsigned NOT NULL default '1',
+  `restb` tinyint(3) unsigned NOT NULL default '1',
+  `keyboard` varchar(80) NOT NULL default '',
+  `title` varchar(100) NOT NULL default '',
+  `newstime` int(10) unsigned NOT NULL default '0',
+  `titlepic` varchar(120) NOT NULL default '',
+  `picurl` varchar(200) NOT NULL default '',
   `picsay` text NOT NULL,
-  PRIMARY KEY (`id`),
+  PRIMARY KEY  (`id`),
   KEY `classid` (`classid`),
   KEY `newstime` (`newstime`),
   KEY `ttid` (`ttid`),
@@ -3122,7 +3125,7 @@ CREATE TABLE `ziyi_ecms_photo` (
   KEY `isgood` (`isgood`),
   KEY `ispic` (`ispic`)
 ) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_ecms_photo`
@@ -3130,7 +3133,7 @@ CREATE TABLE `ziyi_ecms_photo` (
 
 LOCK TABLES `ziyi_ecms_photo` WRITE;
 /*!40000 ALTER TABLE `ziyi_ecms_photo` DISABLE KEYS */;
-INSERT INTO `ziyi_ecms_photo` VALUES (1,9,0,1,0,0,'2013-08-26','1',1,'assnr',0,0,1,0,0,0,0,1377519971,1377519971,1,0,0,'','/ziyi/shouyejiaodianqiehuan/2013-08-26/1.html',1,1,1,'','(图文)多大的',1377519916,'/ziyi/d/file/shouyejiaodianqiehuan/2013-08-26/8269ed03c7afd02278cd3daaa28cf6ea.jpg','','我们的图片轮播'),(2,9,0,1,0,0,'2013-08-26','2',1,'assnr',0,0,1,0,0,0,0,1377520018,1377677951,1,0,0,'','/ziyi/shouyejiaodianqiehuan/2013-08-26/2.html',1,1,1,'','第二大的',1377519979,'/ziyi/d/file/shouyejiaodianqiehuan/2013-08-28/d5c96617ad43718514a25307daaff5e9.jpg','','第二大的'),(3,9,0,1,0,0,'2013-08-26','3',1,'assnr',0,0,1,0,0,0,0,1377520175,1377677864,1,0,0,'','/ziyi/shouyejiaodianqiehuan/2013-08-26/3.html',1,1,1,'','第三大的',1377520089,'/ziyi/d/file/shouyejiaodianqiehuan/2013-08-28/f18c9811893a9e8e890cb41b033a0ecd.jpg','/ziyi/d/file/shouyejiaodianqiehuan/2013-08-26/43404cbcbe01a1b49d23b95c8e362931.jpg','发达 爱的色放'),(4,9,0,0,0,0,'2013-08-26','4',1,'assnr',0,0,1,0,0,0,1,1377522488,1377677628,1,0,0,'','http://www.assnr.com',1,1,1,'','(图文)等等',1377522458,'/ziyi/d/file/shouyejiaodianqiehuan/2013-08-28/411c0a67be68ba9f418d56fa1ea3e37c.jpg','','撒点粉');
+INSERT INTO `ziyi_ecms_photo` VALUES (1,9,0,2,0,0,'2013-08-26','1',1,'assnr',0,0,1,0,0,0,0,1377519971,1377519971,1,0,0,'','/ziyi/shouyejiaodianqiehuan/2013-08-26/1.html',1,1,1,'','(图文)多大的',1377519916,'/ziyi/d/file/shouyejiaodianqiehuan/2013-08-26/8269ed03c7afd02278cd3daaa28cf6ea.jpg','','我们的图片轮播'),(2,9,0,1,0,0,'2013-08-26','2',1,'assnr',0,0,1,0,0,0,0,1377520018,1377677951,1,0,0,'','/ziyi/shouyejiaodianqiehuan/2013-08-26/2.html',1,1,1,'','第二大的',1377519979,'/ziyi/d/file/shouyejiaodianqiehuan/2013-08-28/d5c96617ad43718514a25307daaff5e9.jpg','','第二大的'),(3,9,0,1,0,0,'2013-08-26','3',1,'assnr',0,0,1,0,0,0,0,1377520175,1377677864,1,0,0,'','/ziyi/shouyejiaodianqiehuan/2013-08-26/3.html',1,1,1,'','第三大的',1377520089,'/ziyi/d/file/shouyejiaodianqiehuan/2013-08-28/f18c9811893a9e8e890cb41b033a0ecd.jpg','/ziyi/d/file/shouyejiaodianqiehuan/2013-08-26/43404cbcbe01a1b49d23b95c8e362931.jpg','发达 爱的色放'),(4,9,0,0,0,0,'2013-08-26','4',1,'assnr',0,0,1,0,0,0,1,1377522488,1377677628,1,0,0,'','http://www.assnr.com',1,1,1,'','(图文)等等',1377522458,'/ziyi/d/file/shouyejiaodianqiehuan/2013-08-28/411c0a67be68ba9f418d56fa1ea3e37c.jpg','','撒点粉');
 /*!40000 ALTER TABLE `ziyi_ecms_photo` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -3139,43 +3142,43 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_ecms_photo_check`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_ecms_photo_check` (
-  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `classid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `ttid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `onclick` int(10) unsigned NOT NULL DEFAULT '0',
-  `plnum` mediumint(8) unsigned NOT NULL DEFAULT '0',
-  `totaldown` mediumint(8) unsigned NOT NULL DEFAULT '0',
-  `newspath` varchar(20) NOT NULL DEFAULT '',
-  `filename` varchar(36) NOT NULL DEFAULT '',
-  `userid` mediumint(8) unsigned NOT NULL DEFAULT '0',
-  `username` varchar(20) NOT NULL DEFAULT '',
-  `firsttitle` tinyint(1) NOT NULL DEFAULT '0',
-  `isgood` tinyint(1) NOT NULL DEFAULT '0',
-  `ispic` tinyint(1) NOT NULL DEFAULT '0',
-  `istop` tinyint(1) NOT NULL DEFAULT '0',
-  `isqf` tinyint(1) NOT NULL DEFAULT '0',
-  `ismember` tinyint(1) NOT NULL DEFAULT '0',
-  `isurl` tinyint(1) NOT NULL DEFAULT '0',
-  `truetime` int(10) unsigned NOT NULL DEFAULT '0',
-  `lastdotime` int(10) unsigned NOT NULL DEFAULT '0',
-  `havehtml` tinyint(1) NOT NULL DEFAULT '0',
-  `groupid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `userfen` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `titlefont` varchar(14) NOT NULL DEFAULT '',
-  `titleurl` varchar(200) NOT NULL DEFAULT '',
-  `stb` tinyint(3) unsigned NOT NULL DEFAULT '1',
-  `fstb` tinyint(3) unsigned NOT NULL DEFAULT '1',
-  `restb` tinyint(3) unsigned NOT NULL DEFAULT '1',
-  `keyboard` varchar(80) NOT NULL DEFAULT '',
-  `title` varchar(100) NOT NULL DEFAULT '',
-  `newstime` int(10) unsigned NOT NULL DEFAULT '0',
-  `titlepic` varchar(120) NOT NULL DEFAULT '',
-  `picurl` varchar(200) NOT NULL DEFAULT '',
+  `id` int(10) unsigned NOT NULL auto_increment,
+  `classid` smallint(5) unsigned NOT NULL default '0',
+  `ttid` smallint(5) unsigned NOT NULL default '0',
+  `onclick` int(10) unsigned NOT NULL default '0',
+  `plnum` mediumint(8) unsigned NOT NULL default '0',
+  `totaldown` mediumint(8) unsigned NOT NULL default '0',
+  `newspath` varchar(20) NOT NULL default '',
+  `filename` varchar(36) NOT NULL default '',
+  `userid` mediumint(8) unsigned NOT NULL default '0',
+  `username` varchar(20) NOT NULL default '',
+  `firsttitle` tinyint(1) NOT NULL default '0',
+  `isgood` tinyint(1) NOT NULL default '0',
+  `ispic` tinyint(1) NOT NULL default '0',
+  `istop` tinyint(1) NOT NULL default '0',
+  `isqf` tinyint(1) NOT NULL default '0',
+  `ismember` tinyint(1) NOT NULL default '0',
+  `isurl` tinyint(1) NOT NULL default '0',
+  `truetime` int(10) unsigned NOT NULL default '0',
+  `lastdotime` int(10) unsigned NOT NULL default '0',
+  `havehtml` tinyint(1) NOT NULL default '0',
+  `groupid` smallint(5) unsigned NOT NULL default '0',
+  `userfen` smallint(5) unsigned NOT NULL default '0',
+  `titlefont` varchar(14) NOT NULL default '',
+  `titleurl` varchar(200) NOT NULL default '',
+  `stb` tinyint(3) unsigned NOT NULL default '1',
+  `fstb` tinyint(3) unsigned NOT NULL default '1',
+  `restb` tinyint(3) unsigned NOT NULL default '1',
+  `keyboard` varchar(80) NOT NULL default '',
+  `title` varchar(100) NOT NULL default '',
+  `newstime` int(10) unsigned NOT NULL default '0',
+  `titlepic` varchar(120) NOT NULL default '',
+  `picurl` varchar(200) NOT NULL default '',
   `picsay` text NOT NULL,
-  PRIMARY KEY (`id`),
+  PRIMARY KEY  (`id`),
   KEY `classid` (`classid`),
   KEY `newstime` (`newstime`),
   KEY `ttid` (`ttid`),
@@ -3183,7 +3186,7 @@ CREATE TABLE `ziyi_ecms_photo_check` (
   KEY `isgood` (`isgood`),
   KEY `ispic` (`ispic`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_ecms_photo_check`
@@ -3199,29 +3202,29 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_ecms_photo_check_data`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_ecms_photo_check_data` (
-  `id` int(10) unsigned NOT NULL DEFAULT '0',
-  `classid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `keyid` varchar(255) NOT NULL DEFAULT '',
-  `dokey` tinyint(1) NOT NULL DEFAULT '0',
-  `newstempid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `closepl` tinyint(1) NOT NULL DEFAULT '0',
-  `haveaddfen` tinyint(1) NOT NULL DEFAULT '0',
-  `infotags` varchar(80) NOT NULL DEFAULT '',
-  `filesize` varchar(10) NOT NULL DEFAULT '',
-  `picsize` varchar(20) NOT NULL DEFAULT '',
-  `picfbl` varchar(20) NOT NULL DEFAULT '',
-  `picfrom` varchar(120) NOT NULL DEFAULT '',
+  `id` int(10) unsigned NOT NULL default '0',
+  `classid` smallint(5) unsigned NOT NULL default '0',
+  `keyid` varchar(255) NOT NULL default '',
+  `dokey` tinyint(1) NOT NULL default '0',
+  `newstempid` smallint(5) unsigned NOT NULL default '0',
+  `closepl` tinyint(1) NOT NULL default '0',
+  `haveaddfen` tinyint(1) NOT NULL default '0',
+  `infotags` varchar(80) NOT NULL default '',
+  `filesize` varchar(10) NOT NULL default '',
+  `picsize` varchar(20) NOT NULL default '',
+  `picfbl` varchar(20) NOT NULL default '',
+  `picfrom` varchar(120) NOT NULL default '',
   `morepic` mediumtext NOT NULL,
-  `num` tinyint(4) NOT NULL DEFAULT '0',
-  `width` varchar(12) NOT NULL DEFAULT '',
-  `height` varchar(12) NOT NULL DEFAULT '',
-  PRIMARY KEY (`id`),
+  `num` tinyint(4) NOT NULL default '0',
+  `width` varchar(12) NOT NULL default '',
+  `height` varchar(12) NOT NULL default '',
+  PRIMARY KEY  (`id`),
   KEY `classid` (`classid`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_ecms_photo_check_data`
@@ -3237,29 +3240,29 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_ecms_photo_data_1`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_ecms_photo_data_1` (
-  `id` int(10) unsigned NOT NULL DEFAULT '0',
-  `classid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `keyid` varchar(255) NOT NULL DEFAULT '',
-  `dokey` tinyint(1) NOT NULL DEFAULT '0',
-  `newstempid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `closepl` tinyint(1) NOT NULL DEFAULT '0',
-  `haveaddfen` tinyint(1) NOT NULL DEFAULT '0',
-  `infotags` varchar(80) NOT NULL DEFAULT '',
-  `filesize` varchar(10) NOT NULL DEFAULT '',
-  `picsize` varchar(20) NOT NULL DEFAULT '',
-  `picfbl` varchar(20) NOT NULL DEFAULT '',
-  `picfrom` varchar(120) NOT NULL DEFAULT '',
+  `id` int(10) unsigned NOT NULL default '0',
+  `classid` smallint(5) unsigned NOT NULL default '0',
+  `keyid` varchar(255) NOT NULL default '',
+  `dokey` tinyint(1) NOT NULL default '0',
+  `newstempid` smallint(5) unsigned NOT NULL default '0',
+  `closepl` tinyint(1) NOT NULL default '0',
+  `haveaddfen` tinyint(1) NOT NULL default '0',
+  `infotags` varchar(80) NOT NULL default '',
+  `filesize` varchar(10) NOT NULL default '',
+  `picsize` varchar(20) NOT NULL default '',
+  `picfbl` varchar(20) NOT NULL default '',
+  `picfrom` varchar(120) NOT NULL default '',
   `morepic` mediumtext NOT NULL,
-  `num` tinyint(4) NOT NULL DEFAULT '0',
-  `width` varchar(12) NOT NULL DEFAULT '',
-  `height` varchar(12) NOT NULL DEFAULT '',
-  PRIMARY KEY (`id`),
+  `num` tinyint(4) NOT NULL default '0',
+  `width` varchar(12) NOT NULL default '',
+  `height` varchar(12) NOT NULL default '',
+  PRIMARY KEY  (`id`),
   KEY `classid` (`classid`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_ecms_photo_data_1`
@@ -3276,43 +3279,43 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_ecms_photo_doc`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_ecms_photo_doc` (
-  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `classid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `ttid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `onclick` int(10) unsigned NOT NULL DEFAULT '0',
-  `plnum` mediumint(8) unsigned NOT NULL DEFAULT '0',
-  `totaldown` mediumint(8) unsigned NOT NULL DEFAULT '0',
-  `newspath` varchar(20) NOT NULL DEFAULT '',
-  `filename` varchar(36) NOT NULL DEFAULT '',
-  `userid` mediumint(8) unsigned NOT NULL DEFAULT '0',
-  `username` varchar(20) NOT NULL DEFAULT '',
-  `firsttitle` tinyint(1) NOT NULL DEFAULT '0',
-  `isgood` tinyint(1) NOT NULL DEFAULT '0',
-  `ispic` tinyint(1) NOT NULL DEFAULT '0',
-  `istop` tinyint(1) NOT NULL DEFAULT '0',
-  `isqf` tinyint(1) NOT NULL DEFAULT '0',
-  `ismember` tinyint(1) NOT NULL DEFAULT '0',
-  `isurl` tinyint(1) NOT NULL DEFAULT '0',
-  `truetime` int(10) unsigned NOT NULL DEFAULT '0',
-  `lastdotime` int(10) unsigned NOT NULL DEFAULT '0',
-  `havehtml` tinyint(1) NOT NULL DEFAULT '0',
-  `groupid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `userfen` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `titlefont` varchar(14) NOT NULL DEFAULT '',
-  `titleurl` varchar(200) NOT NULL DEFAULT '',
-  `stb` tinyint(3) unsigned NOT NULL DEFAULT '1',
-  `fstb` tinyint(3) unsigned NOT NULL DEFAULT '1',
-  `restb` tinyint(3) unsigned NOT NULL DEFAULT '1',
-  `keyboard` varchar(80) NOT NULL DEFAULT '',
-  `title` varchar(100) NOT NULL DEFAULT '',
-  `newstime` int(10) unsigned NOT NULL DEFAULT '0',
-  `titlepic` varchar(120) NOT NULL DEFAULT '',
-  `picurl` varchar(200) NOT NULL DEFAULT '',
+  `id` int(10) unsigned NOT NULL auto_increment,
+  `classid` smallint(5) unsigned NOT NULL default '0',
+  `ttid` smallint(5) unsigned NOT NULL default '0',
+  `onclick` int(10) unsigned NOT NULL default '0',
+  `plnum` mediumint(8) unsigned NOT NULL default '0',
+  `totaldown` mediumint(8) unsigned NOT NULL default '0',
+  `newspath` varchar(20) NOT NULL default '',
+  `filename` varchar(36) NOT NULL default '',
+  `userid` mediumint(8) unsigned NOT NULL default '0',
+  `username` varchar(20) NOT NULL default '',
+  `firsttitle` tinyint(1) NOT NULL default '0',
+  `isgood` tinyint(1) NOT NULL default '0',
+  `ispic` tinyint(1) NOT NULL default '0',
+  `istop` tinyint(1) NOT NULL default '0',
+  `isqf` tinyint(1) NOT NULL default '0',
+  `ismember` tinyint(1) NOT NULL default '0',
+  `isurl` tinyint(1) NOT NULL default '0',
+  `truetime` int(10) unsigned NOT NULL default '0',
+  `lastdotime` int(10) unsigned NOT NULL default '0',
+  `havehtml` tinyint(1) NOT NULL default '0',
+  `groupid` smallint(5) unsigned NOT NULL default '0',
+  `userfen` smallint(5) unsigned NOT NULL default '0',
+  `titlefont` varchar(14) NOT NULL default '',
+  `titleurl` varchar(200) NOT NULL default '',
+  `stb` tinyint(3) unsigned NOT NULL default '1',
+  `fstb` tinyint(3) unsigned NOT NULL default '1',
+  `restb` tinyint(3) unsigned NOT NULL default '1',
+  `keyboard` varchar(80) NOT NULL default '',
+  `title` varchar(100) NOT NULL default '',
+  `newstime` int(10) unsigned NOT NULL default '0',
+  `titlepic` varchar(120) NOT NULL default '',
+  `picurl` varchar(200) NOT NULL default '',
   `picsay` text NOT NULL,
-  PRIMARY KEY (`id`),
+  PRIMARY KEY  (`id`),
   KEY `classid` (`classid`),
   KEY `newstime` (`newstime`),
   KEY `ttid` (`ttid`),
@@ -3320,7 +3323,7 @@ CREATE TABLE `ziyi_ecms_photo_doc` (
   KEY `isgood` (`isgood`),
   KEY `ispic` (`ispic`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_ecms_photo_doc`
@@ -3336,29 +3339,29 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_ecms_photo_doc_data`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_ecms_photo_doc_data` (
-  `id` int(10) unsigned NOT NULL DEFAULT '0',
-  `classid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `keyid` varchar(255) NOT NULL DEFAULT '',
-  `dokey` tinyint(1) NOT NULL DEFAULT '0',
-  `newstempid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `closepl` tinyint(1) NOT NULL DEFAULT '0',
-  `haveaddfen` tinyint(1) NOT NULL DEFAULT '0',
-  `infotags` varchar(80) NOT NULL DEFAULT '',
-  `filesize` varchar(10) NOT NULL DEFAULT '',
-  `picsize` varchar(20) NOT NULL DEFAULT '',
-  `picfbl` varchar(20) NOT NULL DEFAULT '',
-  `picfrom` varchar(120) NOT NULL DEFAULT '',
+  `id` int(10) unsigned NOT NULL default '0',
+  `classid` smallint(5) unsigned NOT NULL default '0',
+  `keyid` varchar(255) NOT NULL default '',
+  `dokey` tinyint(1) NOT NULL default '0',
+  `newstempid` smallint(5) unsigned NOT NULL default '0',
+  `closepl` tinyint(1) NOT NULL default '0',
+  `haveaddfen` tinyint(1) NOT NULL default '0',
+  `infotags` varchar(80) NOT NULL default '',
+  `filesize` varchar(10) NOT NULL default '',
+  `picsize` varchar(20) NOT NULL default '',
+  `picfbl` varchar(20) NOT NULL default '',
+  `picfrom` varchar(120) NOT NULL default '',
   `morepic` mediumtext NOT NULL,
-  `num` tinyint(4) NOT NULL DEFAULT '0',
-  `width` varchar(12) NOT NULL DEFAULT '',
-  `height` varchar(12) NOT NULL DEFAULT '',
-  PRIMARY KEY (`id`),
+  `num` tinyint(4) NOT NULL default '0',
+  `width` varchar(12) NOT NULL default '',
+  `height` varchar(12) NOT NULL default '',
+  PRIMARY KEY  (`id`),
   KEY `classid` (`classid`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_ecms_photo_doc_data`
@@ -3374,24 +3377,24 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_ecms_photo_doc_index`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_ecms_photo_doc_index` (
-  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `classid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `checked` tinyint(1) NOT NULL DEFAULT '0',
-  `newstime` int(10) unsigned NOT NULL DEFAULT '0',
-  `truetime` int(10) unsigned NOT NULL DEFAULT '0',
-  `lastdotime` int(10) unsigned NOT NULL DEFAULT '0',
-  `havehtml` tinyint(1) NOT NULL DEFAULT '0',
-  PRIMARY KEY (`id`),
+  `id` int(10) unsigned NOT NULL auto_increment,
+  `classid` smallint(5) unsigned NOT NULL default '0',
+  `checked` tinyint(1) NOT NULL default '0',
+  `newstime` int(10) unsigned NOT NULL default '0',
+  `truetime` int(10) unsigned NOT NULL default '0',
+  `lastdotime` int(10) unsigned NOT NULL default '0',
+  `havehtml` tinyint(1) NOT NULL default '0',
+  PRIMARY KEY  (`id`),
   KEY `classid` (`classid`),
   KEY `checked` (`checked`),
   KEY `newstime` (`newstime`),
   KEY `truetime` (`truetime`,`id`),
   KEY `havehtml` (`classid`,`truetime`,`havehtml`,`checked`,`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_ecms_photo_doc_index`
@@ -3407,24 +3410,24 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_ecms_photo_index`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_ecms_photo_index` (
-  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `classid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `checked` tinyint(1) NOT NULL DEFAULT '0',
-  `newstime` int(10) unsigned NOT NULL DEFAULT '0',
-  `truetime` int(10) unsigned NOT NULL DEFAULT '0',
-  `lastdotime` int(10) unsigned NOT NULL DEFAULT '0',
-  `havehtml` tinyint(1) NOT NULL DEFAULT '0',
-  PRIMARY KEY (`id`),
+  `id` int(10) unsigned NOT NULL auto_increment,
+  `classid` smallint(5) unsigned NOT NULL default '0',
+  `checked` tinyint(1) NOT NULL default '0',
+  `newstime` int(10) unsigned NOT NULL default '0',
+  `truetime` int(10) unsigned NOT NULL default '0',
+  `lastdotime` int(10) unsigned NOT NULL default '0',
+  `havehtml` tinyint(1) NOT NULL default '0',
+  PRIMARY KEY  (`id`),
   KEY `classid` (`classid`),
   KEY `checked` (`checked`),
   KEY `newstime` (`newstime`),
   KEY `truetime` (`truetime`,`id`),
   KEY `havehtml` (`classid`,`truetime`,`havehtml`,`checked`,`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_ecms_photo_index`
@@ -3441,53 +3444,53 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_ecms_shop`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_ecms_shop` (
-  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `classid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `ttid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `onclick` int(10) unsigned NOT NULL DEFAULT '0',
-  `plnum` mediumint(8) unsigned NOT NULL DEFAULT '0',
-  `totaldown` mediumint(8) unsigned NOT NULL DEFAULT '0',
-  `newspath` varchar(20) NOT NULL DEFAULT '',
-  `filename` varchar(36) NOT NULL DEFAULT '',
-  `userid` mediumint(8) unsigned NOT NULL DEFAULT '0',
-  `username` varchar(20) NOT NULL DEFAULT '',
-  `firsttitle` tinyint(1) NOT NULL DEFAULT '0',
-  `isgood` tinyint(1) NOT NULL DEFAULT '0',
-  `ispic` tinyint(1) NOT NULL DEFAULT '0',
-  `istop` tinyint(1) NOT NULL DEFAULT '0',
-  `isqf` tinyint(1) NOT NULL DEFAULT '0',
-  `ismember` tinyint(1) NOT NULL DEFAULT '0',
-  `isurl` tinyint(1) NOT NULL DEFAULT '0',
-  `truetime` int(10) unsigned NOT NULL DEFAULT '0',
-  `lastdotime` int(10) unsigned NOT NULL DEFAULT '0',
-  `havehtml` tinyint(1) NOT NULL DEFAULT '0',
-  `groupid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `userfen` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `titlefont` varchar(14) NOT NULL DEFAULT '',
-  `titleurl` varchar(200) NOT NULL DEFAULT '',
-  `stb` tinyint(3) unsigned NOT NULL DEFAULT '1',
-  `fstb` tinyint(3) unsigned NOT NULL DEFAULT '1',
-  `restb` tinyint(3) unsigned NOT NULL DEFAULT '1',
-  `keyboard` varchar(80) NOT NULL DEFAULT '',
-  `title` varchar(100) NOT NULL DEFAULT '',
-  `newstime` int(10) unsigned NOT NULL DEFAULT '0',
-  `titlepic` varchar(120) NOT NULL DEFAULT '',
-  `productno` varchar(30) NOT NULL DEFAULT '',
-  `pbrand` varchar(30) NOT NULL DEFAULT '',
+  `id` int(10) unsigned NOT NULL auto_increment,
+  `classid` smallint(5) unsigned NOT NULL default '0',
+  `ttid` smallint(5) unsigned NOT NULL default '0',
+  `onclick` int(10) unsigned NOT NULL default '0',
+  `plnum` mediumint(8) unsigned NOT NULL default '0',
+  `totaldown` mediumint(8) unsigned NOT NULL default '0',
+  `newspath` varchar(20) NOT NULL default '',
+  `filename` varchar(36) NOT NULL default '',
+  `userid` mediumint(8) unsigned NOT NULL default '0',
+  `username` varchar(20) NOT NULL default '',
+  `firsttitle` tinyint(1) NOT NULL default '0',
+  `isgood` tinyint(1) NOT NULL default '0',
+  `ispic` tinyint(1) NOT NULL default '0',
+  `istop` tinyint(1) NOT NULL default '0',
+  `isqf` tinyint(1) NOT NULL default '0',
+  `ismember` tinyint(1) NOT NULL default '0',
+  `isurl` tinyint(1) NOT NULL default '0',
+  `truetime` int(10) unsigned NOT NULL default '0',
+  `lastdotime` int(10) unsigned NOT NULL default '0',
+  `havehtml` tinyint(1) NOT NULL default '0',
+  `groupid` smallint(5) unsigned NOT NULL default '0',
+  `userfen` smallint(5) unsigned NOT NULL default '0',
+  `titlefont` varchar(14) NOT NULL default '',
+  `titleurl` varchar(200) NOT NULL default '',
+  `stb` tinyint(3) unsigned NOT NULL default '1',
+  `fstb` tinyint(3) unsigned NOT NULL default '1',
+  `restb` tinyint(3) unsigned NOT NULL default '1',
+  `keyboard` varchar(80) NOT NULL default '',
+  `title` varchar(100) NOT NULL default '',
+  `newstime` int(10) unsigned NOT NULL default '0',
+  `titlepic` varchar(120) NOT NULL default '',
+  `productno` varchar(30) NOT NULL default '',
+  `pbrand` varchar(30) NOT NULL default '',
   `intro` text NOT NULL,
-  `unit` varchar(16) NOT NULL DEFAULT '',
-  `weight` varchar(20) NOT NULL DEFAULT '',
-  `tprice` float(11,2) NOT NULL DEFAULT '0.00',
-  `price` float(11,2) NOT NULL DEFAULT '0.00',
-  `buyfen` int(11) NOT NULL DEFAULT '0',
-  `pmaxnum` int(11) NOT NULL DEFAULT '0',
-  `productpic` varchar(255) NOT NULL DEFAULT '',
+  `unit` varchar(16) NOT NULL default '',
+  `weight` varchar(20) NOT NULL default '',
+  `tprice` float(11,2) NOT NULL default '0.00',
+  `price` float(11,2) NOT NULL default '0.00',
+  `buyfen` int(11) NOT NULL default '0',
+  `pmaxnum` int(11) NOT NULL default '0',
+  `productpic` varchar(255) NOT NULL default '',
   `newstext` mediumtext NOT NULL,
-  `psalenum` int(11) NOT NULL DEFAULT '0',
-  PRIMARY KEY (`id`),
+  `psalenum` int(11) NOT NULL default '0',
+  PRIMARY KEY  (`id`),
   KEY `classid` (`classid`),
   KEY `newstime` (`newstime`),
   KEY `ttid` (`ttid`),
@@ -3495,7 +3498,7 @@ CREATE TABLE `ziyi_ecms_shop` (
   KEY `isgood` (`isgood`),
   KEY `ispic` (`ispic`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_ecms_shop`
@@ -3511,53 +3514,53 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_ecms_shop_check`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_ecms_shop_check` (
-  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `classid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `ttid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `onclick` int(10) unsigned NOT NULL DEFAULT '0',
-  `plnum` mediumint(8) unsigned NOT NULL DEFAULT '0',
-  `totaldown` mediumint(8) unsigned NOT NULL DEFAULT '0',
-  `newspath` varchar(20) NOT NULL DEFAULT '',
-  `filename` varchar(36) NOT NULL DEFAULT '',
-  `userid` mediumint(8) unsigned NOT NULL DEFAULT '0',
-  `username` varchar(20) NOT NULL DEFAULT '',
-  `firsttitle` tinyint(1) NOT NULL DEFAULT '0',
-  `isgood` tinyint(1) NOT NULL DEFAULT '0',
-  `ispic` tinyint(1) NOT NULL DEFAULT '0',
-  `istop` tinyint(1) NOT NULL DEFAULT '0',
-  `isqf` tinyint(1) NOT NULL DEFAULT '0',
-  `ismember` tinyint(1) NOT NULL DEFAULT '0',
-  `isurl` tinyint(1) NOT NULL DEFAULT '0',
-  `truetime` int(10) unsigned NOT NULL DEFAULT '0',
-  `lastdotime` int(10) unsigned NOT NULL DEFAULT '0',
-  `havehtml` tinyint(1) NOT NULL DEFAULT '0',
-  `groupid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `userfen` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `titlefont` varchar(14) NOT NULL DEFAULT '',
-  `titleurl` varchar(200) NOT NULL DEFAULT '',
-  `stb` tinyint(3) unsigned NOT NULL DEFAULT '1',
-  `fstb` tinyint(3) unsigned NOT NULL DEFAULT '1',
-  `restb` tinyint(3) unsigned NOT NULL DEFAULT '1',
-  `keyboard` varchar(80) NOT NULL DEFAULT '',
-  `title` varchar(100) NOT NULL DEFAULT '',
-  `newstime` int(10) unsigned NOT NULL DEFAULT '0',
-  `titlepic` varchar(120) NOT NULL DEFAULT '',
-  `productno` varchar(30) NOT NULL DEFAULT '',
-  `pbrand` varchar(30) NOT NULL DEFAULT '',
+  `id` int(10) unsigned NOT NULL auto_increment,
+  `classid` smallint(5) unsigned NOT NULL default '0',
+  `ttid` smallint(5) unsigned NOT NULL default '0',
+  `onclick` int(10) unsigned NOT NULL default '0',
+  `plnum` mediumint(8) unsigned NOT NULL default '0',
+  `totaldown` mediumint(8) unsigned NOT NULL default '0',
+  `newspath` varchar(20) NOT NULL default '',
+  `filename` varchar(36) NOT NULL default '',
+  `userid` mediumint(8) unsigned NOT NULL default '0',
+  `username` varchar(20) NOT NULL default '',
+  `firsttitle` tinyint(1) NOT NULL default '0',
+  `isgood` tinyint(1) NOT NULL default '0',
+  `ispic` tinyint(1) NOT NULL default '0',
+  `istop` tinyint(1) NOT NULL default '0',
+  `isqf` tinyint(1) NOT NULL default '0',
+  `ismember` tinyint(1) NOT NULL default '0',
+  `isurl` tinyint(1) NOT NULL default '0',
+  `truetime` int(10) unsigned NOT NULL default '0',
+  `lastdotime` int(10) unsigned NOT NULL default '0',
+  `havehtml` tinyint(1) NOT NULL default '0',
+  `groupid` smallint(5) unsigned NOT NULL default '0',
+  `userfen` smallint(5) unsigned NOT NULL default '0',
+  `titlefont` varchar(14) NOT NULL default '',
+  `titleurl` varchar(200) NOT NULL default '',
+  `stb` tinyint(3) unsigned NOT NULL default '1',
+  `fstb` tinyint(3) unsigned NOT NULL default '1',
+  `restb` tinyint(3) unsigned NOT NULL default '1',
+  `keyboard` varchar(80) NOT NULL default '',
+  `title` varchar(100) NOT NULL default '',
+  `newstime` int(10) unsigned NOT NULL default '0',
+  `titlepic` varchar(120) NOT NULL default '',
+  `productno` varchar(30) NOT NULL default '',
+  `pbrand` varchar(30) NOT NULL default '',
   `intro` text NOT NULL,
-  `unit` varchar(16) NOT NULL DEFAULT '',
-  `weight` varchar(20) NOT NULL DEFAULT '',
-  `tprice` float(11,2) NOT NULL DEFAULT '0.00',
-  `price` float(11,2) NOT NULL DEFAULT '0.00',
-  `buyfen` int(11) NOT NULL DEFAULT '0',
-  `pmaxnum` int(11) NOT NULL DEFAULT '0',
-  `productpic` varchar(255) NOT NULL DEFAULT '',
+  `unit` varchar(16) NOT NULL default '',
+  `weight` varchar(20) NOT NULL default '',
+  `tprice` float(11,2) NOT NULL default '0.00',
+  `price` float(11,2) NOT NULL default '0.00',
+  `buyfen` int(11) NOT NULL default '0',
+  `pmaxnum` int(11) NOT NULL default '0',
+  `productpic` varchar(255) NOT NULL default '',
   `newstext` mediumtext NOT NULL,
-  `psalenum` int(11) NOT NULL DEFAULT '0',
-  PRIMARY KEY (`id`),
+  `psalenum` int(11) NOT NULL default '0',
+  PRIMARY KEY  (`id`),
   KEY `classid` (`classid`),
   KEY `newstime` (`newstime`),
   KEY `ttid` (`ttid`),
@@ -3565,7 +3568,7 @@ CREATE TABLE `ziyi_ecms_shop_check` (
   KEY `isgood` (`isgood`),
   KEY `ispic` (`ispic`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_ecms_shop_check`
@@ -3581,21 +3584,21 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_ecms_shop_check_data`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_ecms_shop_check_data` (
-  `id` int(10) unsigned NOT NULL DEFAULT '0',
-  `classid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `keyid` char(255) NOT NULL DEFAULT '',
-  `dokey` tinyint(1) NOT NULL DEFAULT '0',
-  `newstempid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `closepl` tinyint(1) NOT NULL DEFAULT '0',
-  `haveaddfen` tinyint(1) NOT NULL DEFAULT '0',
-  `infotags` char(80) NOT NULL DEFAULT '',
-  PRIMARY KEY (`id`),
+  `id` int(10) unsigned NOT NULL default '0',
+  `classid` smallint(5) unsigned NOT NULL default '0',
+  `keyid` char(255) NOT NULL default '',
+  `dokey` tinyint(1) NOT NULL default '0',
+  `newstempid` smallint(5) unsigned NOT NULL default '0',
+  `closepl` tinyint(1) NOT NULL default '0',
+  `haveaddfen` tinyint(1) NOT NULL default '0',
+  `infotags` char(80) NOT NULL default '',
+  PRIMARY KEY  (`id`),
   KEY `classid` (`classid`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_ecms_shop_check_data`
@@ -3611,21 +3614,21 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_ecms_shop_data_1`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_ecms_shop_data_1` (
-  `id` int(10) unsigned NOT NULL DEFAULT '0',
-  `classid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `keyid` char(255) NOT NULL DEFAULT '',
-  `dokey` tinyint(1) NOT NULL DEFAULT '0',
-  `newstempid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `closepl` tinyint(1) NOT NULL DEFAULT '0',
-  `haveaddfen` tinyint(1) NOT NULL DEFAULT '0',
-  `infotags` char(80) NOT NULL DEFAULT '',
-  PRIMARY KEY (`id`),
+  `id` int(10) unsigned NOT NULL default '0',
+  `classid` smallint(5) unsigned NOT NULL default '0',
+  `keyid` char(255) NOT NULL default '',
+  `dokey` tinyint(1) NOT NULL default '0',
+  `newstempid` smallint(5) unsigned NOT NULL default '0',
+  `closepl` tinyint(1) NOT NULL default '0',
+  `haveaddfen` tinyint(1) NOT NULL default '0',
+  `infotags` char(80) NOT NULL default '',
+  PRIMARY KEY  (`id`),
   KEY `classid` (`classid`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_ecms_shop_data_1`
@@ -3641,53 +3644,53 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_ecms_shop_doc`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_ecms_shop_doc` (
-  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `classid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `ttid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `onclick` int(10) unsigned NOT NULL DEFAULT '0',
-  `plnum` mediumint(8) unsigned NOT NULL DEFAULT '0',
-  `totaldown` mediumint(8) unsigned NOT NULL DEFAULT '0',
-  `newspath` varchar(20) NOT NULL DEFAULT '',
-  `filename` varchar(36) NOT NULL DEFAULT '',
-  `userid` mediumint(8) unsigned NOT NULL DEFAULT '0',
-  `username` varchar(20) NOT NULL DEFAULT '',
-  `firsttitle` tinyint(1) NOT NULL DEFAULT '0',
-  `isgood` tinyint(1) NOT NULL DEFAULT '0',
-  `ispic` tinyint(1) NOT NULL DEFAULT '0',
-  `istop` tinyint(1) NOT NULL DEFAULT '0',
-  `isqf` tinyint(1) NOT NULL DEFAULT '0',
-  `ismember` tinyint(1) NOT NULL DEFAULT '0',
-  `isurl` tinyint(1) NOT NULL DEFAULT '0',
-  `truetime` int(10) unsigned NOT NULL DEFAULT '0',
-  `lastdotime` int(10) unsigned NOT NULL DEFAULT '0',
-  `havehtml` tinyint(1) NOT NULL DEFAULT '0',
-  `groupid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `userfen` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `titlefont` varchar(14) NOT NULL DEFAULT '',
-  `titleurl` varchar(200) NOT NULL DEFAULT '',
-  `stb` tinyint(3) unsigned NOT NULL DEFAULT '1',
-  `fstb` tinyint(3) unsigned NOT NULL DEFAULT '1',
-  `restb` tinyint(3) unsigned NOT NULL DEFAULT '1',
-  `keyboard` varchar(80) NOT NULL DEFAULT '',
-  `title` varchar(100) NOT NULL DEFAULT '',
-  `newstime` int(10) unsigned NOT NULL DEFAULT '0',
-  `titlepic` varchar(120) NOT NULL DEFAULT '',
-  `productno` varchar(30) NOT NULL DEFAULT '',
-  `pbrand` varchar(30) NOT NULL DEFAULT '',
+  `id` int(10) unsigned NOT NULL auto_increment,
+  `classid` smallint(5) unsigned NOT NULL default '0',
+  `ttid` smallint(5) unsigned NOT NULL default '0',
+  `onclick` int(10) unsigned NOT NULL default '0',
+  `plnum` mediumint(8) unsigned NOT NULL default '0',
+  `totaldown` mediumint(8) unsigned NOT NULL default '0',
+  `newspath` varchar(20) NOT NULL default '',
+  `filename` varchar(36) NOT NULL default '',
+  `userid` mediumint(8) unsigned NOT NULL default '0',
+  `username` varchar(20) NOT NULL default '',
+  `firsttitle` tinyint(1) NOT NULL default '0',
+  `isgood` tinyint(1) NOT NULL default '0',
+  `ispic` tinyint(1) NOT NULL default '0',
+  `istop` tinyint(1) NOT NULL default '0',
+  `isqf` tinyint(1) NOT NULL default '0',
+  `ismember` tinyint(1) NOT NULL default '0',
+  `isurl` tinyint(1) NOT NULL default '0',
+  `truetime` int(10) unsigned NOT NULL default '0',
+  `lastdotime` int(10) unsigned NOT NULL default '0',
+  `havehtml` tinyint(1) NOT NULL default '0',
+  `groupid` smallint(5) unsigned NOT NULL default '0',
+  `userfen` smallint(5) unsigned NOT NULL default '0',
+  `titlefont` varchar(14) NOT NULL default '',
+  `titleurl` varchar(200) NOT NULL default '',
+  `stb` tinyint(3) unsigned NOT NULL default '1',
+  `fstb` tinyint(3) unsigned NOT NULL default '1',
+  `restb` tinyint(3) unsigned NOT NULL default '1',
+  `keyboard` varchar(80) NOT NULL default '',
+  `title` varchar(100) NOT NULL default '',
+  `newstime` int(10) unsigned NOT NULL default '0',
+  `titlepic` varchar(120) NOT NULL default '',
+  `productno` varchar(30) NOT NULL default '',
+  `pbrand` varchar(30) NOT NULL default '',
   `intro` text NOT NULL,
-  `unit` varchar(16) NOT NULL DEFAULT '',
-  `weight` varchar(20) NOT NULL DEFAULT '',
-  `tprice` float(11,2) NOT NULL DEFAULT '0.00',
-  `price` float(11,2) NOT NULL DEFAULT '0.00',
-  `buyfen` int(11) NOT NULL DEFAULT '0',
-  `pmaxnum` int(11) NOT NULL DEFAULT '0',
-  `productpic` varchar(255) NOT NULL DEFAULT '',
+  `unit` varchar(16) NOT NULL default '',
+  `weight` varchar(20) NOT NULL default '',
+  `tprice` float(11,2) NOT NULL default '0.00',
+  `price` float(11,2) NOT NULL default '0.00',
+  `buyfen` int(11) NOT NULL default '0',
+  `pmaxnum` int(11) NOT NULL default '0',
+  `productpic` varchar(255) NOT NULL default '',
   `newstext` mediumtext NOT NULL,
-  `psalenum` int(11) NOT NULL DEFAULT '0',
-  PRIMARY KEY (`id`),
+  `psalenum` int(11) NOT NULL default '0',
+  PRIMARY KEY  (`id`),
   KEY `classid` (`classid`),
   KEY `newstime` (`newstime`),
   KEY `ttid` (`ttid`),
@@ -3695,7 +3698,7 @@ CREATE TABLE `ziyi_ecms_shop_doc` (
   KEY `isgood` (`isgood`),
   KEY `ispic` (`ispic`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_ecms_shop_doc`
@@ -3711,21 +3714,21 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_ecms_shop_doc_data`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_ecms_shop_doc_data` (
-  `id` int(10) unsigned NOT NULL DEFAULT '0',
-  `classid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `keyid` char(255) NOT NULL DEFAULT '',
-  `dokey` tinyint(1) NOT NULL DEFAULT '0',
-  `newstempid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `closepl` tinyint(1) NOT NULL DEFAULT '0',
-  `haveaddfen` tinyint(1) NOT NULL DEFAULT '0',
-  `infotags` char(80) NOT NULL DEFAULT '',
-  PRIMARY KEY (`id`),
+  `id` int(10) unsigned NOT NULL default '0',
+  `classid` smallint(5) unsigned NOT NULL default '0',
+  `keyid` char(255) NOT NULL default '',
+  `dokey` tinyint(1) NOT NULL default '0',
+  `newstempid` smallint(5) unsigned NOT NULL default '0',
+  `closepl` tinyint(1) NOT NULL default '0',
+  `haveaddfen` tinyint(1) NOT NULL default '0',
+  `infotags` char(80) NOT NULL default '',
+  PRIMARY KEY  (`id`),
   KEY `classid` (`classid`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_ecms_shop_doc_data`
@@ -3741,24 +3744,24 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_ecms_shop_doc_index`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_ecms_shop_doc_index` (
-  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `classid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `checked` tinyint(1) NOT NULL DEFAULT '0',
-  `newstime` int(10) unsigned NOT NULL DEFAULT '0',
-  `truetime` int(10) unsigned NOT NULL DEFAULT '0',
-  `lastdotime` int(10) unsigned NOT NULL DEFAULT '0',
-  `havehtml` tinyint(1) NOT NULL DEFAULT '0',
-  PRIMARY KEY (`id`),
+  `id` int(10) unsigned NOT NULL auto_increment,
+  `classid` smallint(5) unsigned NOT NULL default '0',
+  `checked` tinyint(1) NOT NULL default '0',
+  `newstime` int(10) unsigned NOT NULL default '0',
+  `truetime` int(10) unsigned NOT NULL default '0',
+  `lastdotime` int(10) unsigned NOT NULL default '0',
+  `havehtml` tinyint(1) NOT NULL default '0',
+  PRIMARY KEY  (`id`),
   KEY `classid` (`classid`),
   KEY `checked` (`checked`),
   KEY `newstime` (`newstime`),
   KEY `truetime` (`truetime`,`id`),
   KEY `havehtml` (`classid`,`truetime`,`havehtml`,`checked`,`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_ecms_shop_doc_index`
@@ -3774,24 +3777,24 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_ecms_shop_index`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_ecms_shop_index` (
-  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `classid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `checked` tinyint(1) NOT NULL DEFAULT '0',
-  `newstime` int(10) unsigned NOT NULL DEFAULT '0',
-  `truetime` int(10) unsigned NOT NULL DEFAULT '0',
-  `lastdotime` int(10) unsigned NOT NULL DEFAULT '0',
-  `havehtml` tinyint(1) NOT NULL DEFAULT '0',
-  PRIMARY KEY (`id`),
+  `id` int(10) unsigned NOT NULL auto_increment,
+  `classid` smallint(5) unsigned NOT NULL default '0',
+  `checked` tinyint(1) NOT NULL default '0',
+  `newstime` int(10) unsigned NOT NULL default '0',
+  `truetime` int(10) unsigned NOT NULL default '0',
+  `lastdotime` int(10) unsigned NOT NULL default '0',
+  `havehtml` tinyint(1) NOT NULL default '0',
+  PRIMARY KEY  (`id`),
   KEY `classid` (`classid`),
   KEY `checked` (`checked`),
   KEY `newstime` (`newstime`),
   KEY `truetime` (`truetime`,`id`),
   KEY `havehtml` (`classid`,`truetime`,`havehtml`,`checked`,`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_ecms_shop_index`
@@ -3807,34 +3810,34 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_enewsad`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_enewsad` (
-  `adid` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `picurl` varchar(255) NOT NULL DEFAULT '',
+  `adid` int(10) unsigned NOT NULL auto_increment,
+  `picurl` varchar(255) NOT NULL default '',
   `url` text NOT NULL,
-  `pic_width` int(10) unsigned NOT NULL DEFAULT '0',
-  `pic_height` int(10) unsigned NOT NULL DEFAULT '0',
-  `onclick` int(10) unsigned NOT NULL DEFAULT '0',
-  `classid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `adtype` tinyint(3) unsigned NOT NULL DEFAULT '0',
-  `title` varchar(100) NOT NULL DEFAULT '',
-  `target` varchar(10) NOT NULL DEFAULT '',
-  `alt` varchar(120) NOT NULL DEFAULT '',
-  `starttime` date NOT NULL DEFAULT '0000-00-00',
-  `endtime` date NOT NULL DEFAULT '0000-00-00',
-  `adsay` varchar(255) NOT NULL DEFAULT '',
-  `titlefont` varchar(14) NOT NULL DEFAULT '',
-  `titlecolor` varchar(10) NOT NULL DEFAULT '',
+  `pic_width` int(10) unsigned NOT NULL default '0',
+  `pic_height` int(10) unsigned NOT NULL default '0',
+  `onclick` int(10) unsigned NOT NULL default '0',
+  `classid` smallint(5) unsigned NOT NULL default '0',
+  `adtype` tinyint(3) unsigned NOT NULL default '0',
+  `title` varchar(100) NOT NULL default '',
+  `target` varchar(10) NOT NULL default '',
+  `alt` varchar(120) NOT NULL default '',
+  `starttime` date NOT NULL default '0000-00-00',
+  `endtime` date NOT NULL default '0000-00-00',
+  `adsay` varchar(255) NOT NULL default '',
+  `titlefont` varchar(14) NOT NULL default '',
+  `titlecolor` varchar(10) NOT NULL default '',
   `htmlcode` text NOT NULL,
-  `t` tinyint(3) unsigned NOT NULL DEFAULT '0',
-  `ylink` tinyint(1) NOT NULL DEFAULT '0',
+  `t` tinyint(3) unsigned NOT NULL default '0',
+  `ylink` tinyint(1) NOT NULL default '0',
   `reptext` text NOT NULL,
-  PRIMARY KEY (`adid`),
+  PRIMARY KEY  (`adid`),
   KEY `classid` (`classid`),
   KEY `t` (`t`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_enewsad`
@@ -3850,14 +3853,14 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_enewsadclass`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_enewsadclass` (
-  `classid` smallint(5) unsigned NOT NULL AUTO_INCREMENT,
-  `classname` char(30) NOT NULL DEFAULT '',
-  PRIMARY KEY (`classid`)
+  `classid` smallint(5) unsigned NOT NULL auto_increment,
+  `classname` char(30) NOT NULL default '',
+  PRIMARY KEY  (`classid`)
 ) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_enewsadclass`
@@ -3874,16 +3877,16 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_enewsadminstyle`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_enewsadminstyle` (
-  `styleid` smallint(5) unsigned NOT NULL AUTO_INCREMENT,
-  `stylename` char(30) NOT NULL DEFAULT '',
-  `path` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `isdefault` tinyint(1) NOT NULL DEFAULT '0',
-  PRIMARY KEY (`styleid`)
+  `styleid` smallint(5) unsigned NOT NULL auto_increment,
+  `stylename` char(30) NOT NULL default '',
+  `path` smallint(5) unsigned NOT NULL default '0',
+  `isdefault` tinyint(1) NOT NULL default '0',
+  PRIMARY KEY  (`styleid`)
 ) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_enewsadminstyle`
@@ -3900,15 +3903,15 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_enewsbefrom`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_enewsbefrom` (
-  `befromid` smallint(5) unsigned NOT NULL AUTO_INCREMENT,
-  `sitename` char(60) NOT NULL DEFAULT '',
-  `siteurl` char(200) NOT NULL DEFAULT '',
-  PRIMARY KEY (`befromid`)
+  `befromid` smallint(5) unsigned NOT NULL auto_increment,
+  `sitename` char(60) NOT NULL default '',
+  `siteurl` char(200) NOT NULL default '',
+  PRIMARY KEY  (`befromid`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_enewsbefrom`
@@ -3924,25 +3927,25 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_enewsbq`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_enewsbq` (
-  `bqid` smallint(5) unsigned NOT NULL AUTO_INCREMENT,
-  `bqname` varchar(60) NOT NULL DEFAULT '',
+  `bqid` smallint(5) unsigned NOT NULL auto_increment,
+  `bqname` varchar(60) NOT NULL default '',
   `bqsay` text NOT NULL,
-  `funname` varchar(60) NOT NULL DEFAULT '',
-  `bq` varchar(60) NOT NULL DEFAULT '',
-  `issys` tinyint(1) NOT NULL DEFAULT '0',
+  `funname` varchar(60) NOT NULL default '',
+  `bq` varchar(60) NOT NULL default '',
+  `issys` tinyint(1) NOT NULL default '0',
   `bqgs` text NOT NULL,
-  `isclose` tinyint(1) NOT NULL DEFAULT '0',
-  `classid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `myorder` smallint(5) unsigned NOT NULL DEFAULT '0',
-  PRIMARY KEY (`bqid`),
+  `isclose` tinyint(1) NOT NULL default '0',
+  `classid` smallint(5) unsigned NOT NULL default '0',
+  `myorder` smallint(5) unsigned NOT NULL default '0',
+  PRIMARY KEY  (`bqid`),
   KEY `classid` (`classid`),
   KEY `isclose` (`isclose`),
   KEY `myorder` (`myorder`)
 ) ENGINE=MyISAM AUTO_INCREMENT=32 DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_enewsbq`
@@ -3959,14 +3962,14 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_enewsbqclass`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_enewsbqclass` (
-  `classid` smallint(5) unsigned NOT NULL AUTO_INCREMENT,
-  `classname` char(30) NOT NULL DEFAULT '',
-  PRIMARY KEY (`classid`)
+  `classid` smallint(5) unsigned NOT NULL auto_increment,
+  `classname` char(30) NOT NULL default '',
+  PRIMARY KEY  (`classid`)
 ) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_enewsbqclass`
@@ -3983,23 +3986,23 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_enewsbqtemp`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_enewsbqtemp` (
-  `tempid` smallint(5) unsigned NOT NULL AUTO_INCREMENT,
-  `tempname` varchar(60) NOT NULL DEFAULT '',
-  `modid` smallint(5) unsigned NOT NULL DEFAULT '0',
+  `tempid` smallint(5) unsigned NOT NULL auto_increment,
+  `tempname` varchar(60) NOT NULL default '',
+  `modid` smallint(5) unsigned NOT NULL default '0',
   `temptext` text NOT NULL,
-  `showdate` varchar(50) NOT NULL DEFAULT '',
+  `showdate` varchar(50) NOT NULL default '',
   `listvar` text NOT NULL,
-  `subnews` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `rownum` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `classid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `docode` tinyint(1) NOT NULL DEFAULT '0',
-  PRIMARY KEY (`tempid`),
+  `subnews` smallint(5) unsigned NOT NULL default '0',
+  `rownum` smallint(5) unsigned NOT NULL default '0',
+  `classid` smallint(5) unsigned NOT NULL default '0',
+  `docode` tinyint(1) NOT NULL default '0',
+  PRIMARY KEY  (`tempid`),
   KEY `classid` (`classid`)
-) ENGINE=MyISAM AUTO_INCREMENT=15 DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+) ENGINE=MyISAM AUTO_INCREMENT=16 DEFAULT CHARSET=utf8;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_enewsbqtemp`
@@ -4007,7 +4010,7 @@ CREATE TABLE `ziyi_enewsbqtemp` (
 
 LOCK TABLES `ziyi_enewsbqtemp` WRITE;
 /*!40000 ALTER TABLE `ziyi_enewsbqtemp` DISABLE KEYS */;
-INSERT INTO `ziyi_enewsbqtemp` VALUES (1,'子栏目导航标签模板',1,'| [!--empirenews.listtemp--]<!--list.var1-->[!--empirenews.listtemp--]','Y-m-d H:i:s','<a href=\\\"[!--classurl--]\\\">[!--classname--]</a> | ',0,1,0,0),(2,'标题列表模板',1,'[!--empirenews.listtemp--]<!--list.var1-->[!--empirenews.listtemp--]','Y-m-d H:i:s','<li><a href=\"[!--titleurl--]\" title=\"[!--oldtitle--]\">[!--title--]</a></li>',0,1,0,0),(3,'标题+简介',1,'[!--empirenews.listtemp--]<!--list.var1-->[!--empirenews.listtemp--]','m-d','<li><p><strong><a href=\"[!--titleurl--]\" title=\"[!--oldtitle--]\">[!--title--]</a></strong>[!--smalltext--] </p></li>',60,1,0,0),(4,'头条相关',1,'[!--empirenews.listtemp--]<!--list.var1-->　<!--list.var2-->[!--empirenews.listtemp--]','Y-m-d H:i:s','<a href=\"[!--titleurl--]\" title=\"[!--oldtitle--]\">·[!--title--]</a>',0,2,0,0),(5,'图片+标题+简介',1,'[!--empirenews.listtemp--]\r\n<!--list.var1-->\r\n[!--empirenews.listtemp--]','Y-m-d H:i:s','<table width=\\\"94%\\\" border=\\\"0\\\" align=\\\"center\\\" cellpadding=\\\"0\\\" cellspacing=\\\"6\\\" class=\\\"picText\\\">\r\n<tr valign=\\\"top\\\">\r\n<td><a href=\\\"[!--titleurl--]\\\" target=\\\"_blank\\\"><img width=\\\"70\\\" height=\\\"78\\\" src=\\\"[!--titlepic--]\\\" alt=\\\"[!--oldtitle--]\\\" /></a></td>\r\n<td><strong><a href=\\\"[!--titleurl--]\\\" title=\\\"[!--oldtitle--]\\\">[!--title--]</a></strong>[!--smalltext--]</td>\r\n</tr>\r\n</table>',56,1,0,0),(7,'循环子栏目标签',1,'<table width=\"100%\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\" class=\"title\">\r\n<tr>\r\n<td><strong>[!--the.classname--]</strong></td>\r\n<td align=\"right\"><a href=\"[!--the.classurl--]\">更多&gt;&gt;</a></td>\r\n</tr>\r\n</table>\r\n<table width=\"100%\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\" class=\"box\">\r\n<tr>\r\n<td><ul>\r\n       [!--empirenews.listtemp--]\r\n       <!--list.var1-->\r\n       [!--empirenews.listtemp--]\r\n</ul>\r\n</td>\r\n</tr>\r\n</table>','Y-m-d','<li><a href=\"[!--titleurl--]\" title=\"[!--oldtitle--]\">[!--title--]</a> <span>[!--newstime--]</span></li>',0,1,0,0),(8,'头条标题',1,'[!--empirenews.listtemp--]\r\n<!--list.var1-->\r\n[!--empirenews.listtemp--]','Y-m-d H:i:s','<strong><a href=\"[!--titleurl--]\">[!--title--]</a></strong>\r\n<p>　　[!--smalltext--]</p>',150,1,0,0),(9,'标题+软件简介',2,'[!--empirenews.listtemp--]<!--list.var1-->[!--empirenews.listtemp--]','Y-m-d H:i:s','<li><p><strong><a href=\\\"[!--titleurl--]\\\" title=\\\"[!--oldtitle--]\\\">[!--title--]</a></strong>[!--softsay--]</p></li>',50,1,0,0),(10,'排行列表',1,'[!--empirenews.listtemp--]<!--list.var1-->[!--empirenews.listtemp--]','Y-m-d H:i:s','<li class=\"no[!--no.num--]\"><a href=\"[!--titleurl--]\" title=\"[!--oldtitle--]\">[!--title--]</a></li>',0,1,0,0),(11,'图片集分页模板',1,'<script type=\\\"text/javascript\\\">\r\n        var photosr=new Array();\r\n        [!--photor--]\r\n        function GotoPhPage(page){\r\n                page=parseInt(page);\r\n                document.getElementById(\\\"showpagephoto\\\").innerHTML=photosr[page];\r\n                document.ViewPhotoForm.thisphpage.value=page;\r\n                document.ViewPhotoForm.tothephpage.options[page-1].selected=true;\r\n        }\r\n        //上一页\r\n        function PriPhPage(){\r\n                var thispage=parseInt(document.ViewPhotoForm.thisphpage.value);\r\n                var num=photosr.length;\r\n                if(thispage<=1)\r\n                {\r\n                        return false;\r\n                }\r\n                GotoPhPage(thispage-1);\r\n        }\r\n        //下一页\r\n        function NextPhPage(){\r\n                var thispage=parseInt(document.ViewPhotoForm.thisphpage.value);\r\n                var num=photosr.length;\r\n                if(thispage>=num-1)\r\n                {\r\n                        return false;\r\n                }\r\n                GotoPhPage(thispage+1);\r\n        }\r\n        function PhAutoPlay(){\r\n                var sec=parseInt(document.ViewPhotoForm.autoplaysec.value);\r\n                var i;\r\n                var num=photosr.length;\r\n                for(i=1;i<=sec;i++)\r\n                {\r\n                        if(document.ViewPhotoForm.autophstop.value==0)\r\n                        {\r\n                                window.setTimeout(\\\"PhAutoPlayExe(\\\"+i+\\\",\\\"+sec+\\\")\\\",i*1000);\r\n                        }\r\n                        else\r\n                        {\r\n                                break;\r\n                        }\r\n                }\r\n        }\r\n        function PhAutoPlayExe(num,sec){\r\n                var t;\r\n                if(document.ViewPhotoForm.autophstop.value==1)\r\n                {\r\n                        return \\\"\\\";\r\n                }\r\n                if(num==sec) \r\n                {\r\n                        t=NextPhPage();\r\n                        if(t==false)\r\n                        {\r\n                                GotoPhPage(1);\r\n                        }\r\n                        PhAutoPlay();\r\n                } \r\n        }\r\n        </script>\r\n        \r\n<table width=\\\"100%\\\" border=\\\"0\\\" align=\\\"center\\\" cellpadding=\\\"3\\\" cellspacing=\\\"1\\\">\r\n  <tr> \r\n    <td height=\\\"25\\\" id=\\\"showpagephoto\\\" align=\\\"center\\\"> \r\n      <!--list.var1-->\r\n    </td>\r\n  </tr>\r\n  <form name=\\\"ViewPhotoForm\\\" id=\\\"ViewPhotoForm\\\" method=\\\"POST\\\" action=\\\"\\\">\r\n    <tr> \r\n      <td height=\\\"25\\\"> <div align=\\\"center\\\"> \r\n          <input type=\\\"button\\\" name=\\\"Submit\\\" value=\\\"上一页\\\" onclick=\\\"PriPhPage();\\\">\r\n          &nbsp;&nbsp; \r\n          <select name=\\\"tothephpage\\\" onchange=\\\"GotoPhPage(this.options[this.selectedIndex].value)\\\">\r\n            [!--select--]\r\n          </select>\r\n          &nbsp;&nbsp; \r\n          <input type=\\\"button\\\" name=\\\"Submit2\\\" value=\\\"下一页\\\" onclick=\\\"NextPhPage();\\\">\r\n          <input name=\\\"thisphpage\\\" type=\\\"hidden\\\" value=\\\"1\\\">\r\n        </div></td>\r\n    </tr>\r\n    <tr>\r\n      <td height=\\\"25\\\"><div align=\\\"center\\\">\r\n          <select name=\\\"autoplaysec\\\">\r\n            <option value=\\\"1\\\">1秒</option>\r\n            <option value=\\\"2\\\">2秒</option>\r\n            <option value=\\\"3\\\" selected>3秒</option>\r\n            <option value=\\\"4\\\">4秒</option>\r\n            <option value=\\\"5\\\">5秒</option>\r\n            <option value=\\\"6\\\">6秒</option>\r\n            <option value=\\\"7\\\">7秒</option>\r\n            <option value=\\\"8\\\">8秒</option>\r\n            <option value=\\\"9\\\">9秒</option>\r\n            <option value=\\\"10\\\">10秒</option>\r\n          </select>\r\n                  <input name=\\\"autophstop\\\" type=\\\"hidden\\\" value=\\\"0\\\">\r\n          <input type=\\\"button\\\" name=\\\"Submit3\\\" value=\\\"自动播放\\\" onclick=\\\"document.ViewPhotoForm.autophstop.value=0;PhAutoPlay();\\\">\r\n          &nbsp;<input type=\\\"button\\\" name=\\\"Submit32\\\" value=\\\"停止播放\\\" onclick=\\\"document.ViewPhotoForm.autophstop.value=1;\\\">\r\n        </div></td>\r\n    </tr>\r\n  </form>\r\n</table>\r\n<table width=\\\"500\\\" border=\\\"0\\\" align=\\\"center\\\" cellpadding=\\\"3\\\" cellspacing=\\\"1\\\">\r\n<tr><td>\r\n<marquee  behavior=alternate ONMOUSEOUT=\\\"this.scrollDelay=1\\\" ONMOUSEOVER=\\\"this.scrollDelay=600\\\"  scrollamount=1  SCROLLDELAY=1  border=0  scrolldelay=70  width=\\\"100%\\\"  align=middle>\r\n        [!--smalldh--]\r\n</marquee>\r\n</td></tr></table>','Y-m-d H:i:s','<a href=\\\'#ecms\\\' onclick=\\\'NextPhPage();\\\' title=\\\'点击进入下一张图片\\\'><img src=\\\'[!--picurl--]\\\' alt=\\\'[!--picname--]\\\' border=1 class=\\\'photoresize\\\'></a><br><span style=\\\'line-height=18pt\\\'>[!--picname--]</span>',0,1,0,0),(12,'栏目tabs导航',1,'[!--empirenews.listtemp--]<!--list.var1-->[!--empirenews.listtemp--]','Y-m-d H:i:s','<li id=\"tabnav_btn_[!--no--]\" onmouseover=\"tabit(this)\"><a href=\"[!--classurl--]\">[!--classname--]</a></li>',0,1,0,0),(13,'ziyi首页导航',1,'[!--empirenews.listtemp--]\r\n <ul>\r\n           <!--list.var1--><!--list.var2--><!--list.var3--><!--list.var4--><!--list.var5--><!--list.var6--><!--list.var7--><!--list.var8-->\r\n          \r\n</ul>\r\n[!--empirenews.listtemp--]','Y-m-d H:i:s',' <li><a href=\\\"[!--classurl--]\\\"  title=\\\"[!--classname--]\\\">[!--classname--]</a></li>',0,8,0,0),(14,'ziyi首页焦点',3,'[!--empirenews.listtemp--] <div class=\\\"viewer\\\">\r\n            <div class=\\\"reel\\\">\r\n<!--list.var1-->\r\n               \r\n              <!--list.var2--><!--list.var3--><!--list.var4-->\r\n            </div>\r\n        </div>[!--empirenews.listtemp--]','Y-m-d H:i:s',' <div class=\\\"slide\\\"> <a class=\\\"link\\\" href=\\\"[!--titleurl--]\\\">[!--title--]</a> <img src=\\\"[!--titlepic--]\\\" alt=\\\"[!--title--]\\\" /> </div>',0,4,0,0);
+INSERT INTO `ziyi_enewsbqtemp` VALUES (1,'子栏目导航标签模板',1,'| [!--empirenews.listtemp--]<!--list.var1-->[!--empirenews.listtemp--]','Y-m-d H:i:s','<a href=\\\"[!--classurl--]\\\">[!--classname--]</a> | ',0,1,0,0),(2,'标题列表模板',1,'[!--empirenews.listtemp--]<!--list.var1-->[!--empirenews.listtemp--]','Y-m-d H:i:s','<li><a href=\"[!--titleurl--]\" title=\"[!--oldtitle--]\">[!--title--]</a></li>',0,1,0,0),(3,'标题+简介',1,'[!--empirenews.listtemp--]<!--list.var1-->[!--empirenews.listtemp--]','m-d','<li><p><strong><a href=\"[!--titleurl--]\" title=\"[!--oldtitle--]\">[!--title--]</a></strong>[!--smalltext--] </p></li>',60,1,0,0),(4,'头条相关',1,'[!--empirenews.listtemp--]<!--list.var1-->　<!--list.var2-->[!--empirenews.listtemp--]','Y-m-d H:i:s','<a href=\"[!--titleurl--]\" title=\"[!--oldtitle--]\">·[!--title--]</a>',0,2,0,0),(5,'图片+标题+简介',1,'[!--empirenews.listtemp--]\r\n<!--list.var1-->\r\n[!--empirenews.listtemp--]','Y-m-d H:i:s','<table width=\\\"94%\\\" border=\\\"0\\\" align=\\\"center\\\" cellpadding=\\\"0\\\" cellspacing=\\\"6\\\" class=\\\"picText\\\">\r\n<tr valign=\\\"top\\\">\r\n<td><a href=\\\"[!--titleurl--]\\\" target=\\\"_blank\\\"><img width=\\\"70\\\" height=\\\"78\\\" src=\\\"[!--titlepic--]\\\" alt=\\\"[!--oldtitle--]\\\" /></a></td>\r\n<td><strong><a href=\\\"[!--titleurl--]\\\" title=\\\"[!--oldtitle--]\\\">[!--title--]</a></strong>[!--smalltext--]</td>\r\n</tr>\r\n</table>',56,1,0,0),(7,'循环子栏目标签',1,'<table width=\"100%\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\" class=\"title\">\r\n<tr>\r\n<td><strong>[!--the.classname--]</strong></td>\r\n<td align=\"right\"><a href=\"[!--the.classurl--]\">更多&gt;&gt;</a></td>\r\n</tr>\r\n</table>\r\n<table width=\"100%\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\" class=\"box\">\r\n<tr>\r\n<td><ul>\r\n       [!--empirenews.listtemp--]\r\n       <!--list.var1-->\r\n       [!--empirenews.listtemp--]\r\n</ul>\r\n</td>\r\n</tr>\r\n</table>','Y-m-d','<li><a href=\"[!--titleurl--]\" title=\"[!--oldtitle--]\">[!--title--]</a> <span>[!--newstime--]</span></li>',0,1,0,0),(8,'头条标题',1,'[!--empirenews.listtemp--]\r\n<!--list.var1-->\r\n[!--empirenews.listtemp--]','Y-m-d H:i:s','<strong><a href=\"[!--titleurl--]\">[!--title--]</a></strong>\r\n<p>　　[!--smalltext--]</p>',150,1,0,0),(9,'标题+软件简介',2,'[!--empirenews.listtemp--]<!--list.var1-->[!--empirenews.listtemp--]','Y-m-d H:i:s','<li><p><strong><a href=\\\"[!--titleurl--]\\\" title=\\\"[!--oldtitle--]\\\">[!--title--]</a></strong>[!--softsay--]</p></li>',50,1,0,0),(10,'排行列表',1,'[!--empirenews.listtemp--]<!--list.var1-->[!--empirenews.listtemp--]','Y-m-d H:i:s','<li class=\"no[!--no.num--]\"><a href=\"[!--titleurl--]\" title=\"[!--oldtitle--]\">[!--title--]</a></li>',0,1,0,0),(11,'图片集分页模板',1,'<script type=\\\"text/javascript\\\">\r\n        var photosr=new Array();\r\n        [!--photor--]\r\n        function GotoPhPage(page){\r\n                page=parseInt(page);\r\n                document.getElementById(\\\"showpagephoto\\\").innerHTML=photosr[page];\r\n                document.ViewPhotoForm.thisphpage.value=page;\r\n                document.ViewPhotoForm.tothephpage.options[page-1].selected=true;\r\n        }\r\n        //上一页\r\n        function PriPhPage(){\r\n                var thispage=parseInt(document.ViewPhotoForm.thisphpage.value);\r\n                var num=photosr.length;\r\n                if(thispage<=1)\r\n                {\r\n                        return false;\r\n                }\r\n                GotoPhPage(thispage-1);\r\n        }\r\n        //下一页\r\n        function NextPhPage(){\r\n                var thispage=parseInt(document.ViewPhotoForm.thisphpage.value);\r\n                var num=photosr.length;\r\n                if(thispage>=num-1)\r\n                {\r\n                        return false;\r\n                }\r\n                GotoPhPage(thispage+1);\r\n        }\r\n        function PhAutoPlay(){\r\n                var sec=parseInt(document.ViewPhotoForm.autoplaysec.value);\r\n                var i;\r\n                var num=photosr.length;\r\n                for(i=1;i<=sec;i++)\r\n                {\r\n                        if(document.ViewPhotoForm.autophstop.value==0)\r\n                        {\r\n                                window.setTimeout(\\\"PhAutoPlayExe(\\\"+i+\\\",\\\"+sec+\\\")\\\",i*1000);\r\n                        }\r\n                        else\r\n                        {\r\n                                break;\r\n                        }\r\n                }\r\n        }\r\n        function PhAutoPlayExe(num,sec){\r\n                var t;\r\n                if(document.ViewPhotoForm.autophstop.value==1)\r\n                {\r\n                        return \\\"\\\";\r\n                }\r\n                if(num==sec) \r\n                {\r\n                        t=NextPhPage();\r\n                        if(t==false)\r\n                        {\r\n                                GotoPhPage(1);\r\n                        }\r\n                        PhAutoPlay();\r\n                } \r\n        }\r\n        </script>\r\n        \r\n<table width=\\\"100%\\\" border=\\\"0\\\" align=\\\"center\\\" cellpadding=\\\"3\\\" cellspacing=\\\"1\\\">\r\n  <tr> \r\n    <td height=\\\"25\\\" id=\\\"showpagephoto\\\" align=\\\"center\\\"> \r\n      <!--list.var1-->\r\n    </td>\r\n  </tr>\r\n  <form name=\\\"ViewPhotoForm\\\" id=\\\"ViewPhotoForm\\\" method=\\\"POST\\\" action=\\\"\\\">\r\n    <tr> \r\n      <td height=\\\"25\\\"> <div align=\\\"center\\\"> \r\n          <input type=\\\"button\\\" name=\\\"Submit\\\" value=\\\"上一页\\\" onclick=\\\"PriPhPage();\\\">\r\n          &nbsp;&nbsp; \r\n          <select name=\\\"tothephpage\\\" onchange=\\\"GotoPhPage(this.options[this.selectedIndex].value)\\\">\r\n            [!--select--]\r\n          </select>\r\n          &nbsp;&nbsp; \r\n          <input type=\\\"button\\\" name=\\\"Submit2\\\" value=\\\"下一页\\\" onclick=\\\"NextPhPage();\\\">\r\n          <input name=\\\"thisphpage\\\" type=\\\"hidden\\\" value=\\\"1\\\">\r\n        </div></td>\r\n    </tr>\r\n    <tr>\r\n      <td height=\\\"25\\\"><div align=\\\"center\\\">\r\n          <select name=\\\"autoplaysec\\\">\r\n            <option value=\\\"1\\\">1秒</option>\r\n            <option value=\\\"2\\\">2秒</option>\r\n            <option value=\\\"3\\\" selected>3秒</option>\r\n            <option value=\\\"4\\\">4秒</option>\r\n            <option value=\\\"5\\\">5秒</option>\r\n            <option value=\\\"6\\\">6秒</option>\r\n            <option value=\\\"7\\\">7秒</option>\r\n            <option value=\\\"8\\\">8秒</option>\r\n            <option value=\\\"9\\\">9秒</option>\r\n            <option value=\\\"10\\\">10秒</option>\r\n          </select>\r\n                  <input name=\\\"autophstop\\\" type=\\\"hidden\\\" value=\\\"0\\\">\r\n          <input type=\\\"button\\\" name=\\\"Submit3\\\" value=\\\"自动播放\\\" onclick=\\\"document.ViewPhotoForm.autophstop.value=0;PhAutoPlay();\\\">\r\n          &nbsp;<input type=\\\"button\\\" name=\\\"Submit32\\\" value=\\\"停止播放\\\" onclick=\\\"document.ViewPhotoForm.autophstop.value=1;\\\">\r\n        </div></td>\r\n    </tr>\r\n  </form>\r\n</table>\r\n<table width=\\\"500\\\" border=\\\"0\\\" align=\\\"center\\\" cellpadding=\\\"3\\\" cellspacing=\\\"1\\\">\r\n<tr><td>\r\n<marquee  behavior=alternate ONMOUSEOUT=\\\"this.scrollDelay=1\\\" ONMOUSEOVER=\\\"this.scrollDelay=600\\\"  scrollamount=1  SCROLLDELAY=1  border=0  scrolldelay=70  width=\\\"100%\\\"  align=middle>\r\n        [!--smalldh--]\r\n</marquee>\r\n</td></tr></table>','Y-m-d H:i:s','<a href=\\\'#ecms\\\' onclick=\\\'NextPhPage();\\\' title=\\\'点击进入下一张图片\\\'><img src=\\\'[!--picurl--]\\\' alt=\\\'[!--picname--]\\\' border=1 class=\\\'photoresize\\\'></a><br><span style=\\\'line-height=18pt\\\'>[!--picname--]</span>',0,1,0,0),(12,'栏目tabs导航',1,'[!--empirenews.listtemp--]<!--list.var1-->[!--empirenews.listtemp--]','Y-m-d H:i:s','<li id=\"tabnav_btn_[!--no--]\" onmouseover=\"tabit(this)\"><a href=\"[!--classurl--]\">[!--classname--]</a></li>',0,1,0,0),(13,'ziyi首页导航',1,'[!--empirenews.listtemp--]\r\n <ul>\r\n           <!--list.var1--><!--list.var2--><!--list.var3--><!--list.var4--><!--list.var5--><!--list.var6--><!--list.var7--><!--list.var8-->\r\n          \r\n</ul>\r\n[!--empirenews.listtemp--]','Y-m-d H:i:s',' <li><a href=\\\"[!--classurl--]\\\"  title=\\\"[!--classname--]\\\">[!--classname--]</a></li>',0,8,0,0),(14,'ziyi首页焦点',3,'[!--empirenews.listtemp--] <div class=\\\"viewer\\\">\r\n            <div class=\\\"reel\\\">\r\n<!--list.var1-->\r\n               \r\n              <!--list.var2--><!--list.var3--><!--list.var4-->\r\n            </div>\r\n        </div>[!--empirenews.listtemp--]','Y-m-d H:i:s',' <div class=\\\"slide\\\"> <a class=\\\"link\\\" href=\\\"[!--titleurl--]\\\">[!--title--]</a> <img src=\\\"[!--titlepic--]\\\" alt=\\\"[!--title--]\\\" /> </div>',0,4,0,0),(15,'ziyi首页经典案例',1,' [!--empirenews.listtemp--]\r\n<!--list.var1-->\r\n          [!--empirenews.listtemp--]','Y-m-d H:i:s','<div class=\\\"box-content\\\">\r\n        \r\n\r\n                <div style=\\\"float:left;width:320px\\\">\r\n    <div class=\\\"jindiantitle\\\"> <a href=\\\"[!--titleurl--]\\\">[!--oldtitle--]</a></div> \r\n<p class=\\\"psimple_content\\\">\r\n[!--smalltext--]\r\n</p>\r\n\r\n</div>\r\n		<div style=\\\"float:left;width:200px\\\">\r\n			\r\n<img src=\\\"[!--titlepic--]\\\"/>\r\n\r\n\r\n\r\n		</div>\r\n		<div style=\\\"clear:both\\\">\r\n		</div>  </div>',0,1,0,0);
 /*!40000 ALTER TABLE `ziyi_enewsbqtemp` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -4016,14 +4019,14 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_enewsbqtempclass`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_enewsbqtempclass` (
-  `classid` smallint(5) unsigned NOT NULL AUTO_INCREMENT,
-  `classname` char(30) NOT NULL DEFAULT '',
-  PRIMARY KEY (`classid`)
+  `classid` smallint(5) unsigned NOT NULL auto_increment,
+  `classname` char(30) NOT NULL default '',
+  PRIMARY KEY  (`classid`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_enewsbqtempclass`
@@ -4039,23 +4042,23 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_enewsbuybak`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_enewsbuybak` (
-  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `username` char(20) NOT NULL DEFAULT '',
-  `card_no` char(120) NOT NULL DEFAULT '',
-  `buytime` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `cardfen` int(10) unsigned NOT NULL DEFAULT '0',
-  `money` int(10) unsigned NOT NULL DEFAULT '0',
-  `userid` mediumint(8) unsigned NOT NULL DEFAULT '0',
-  `userdate` int(10) unsigned NOT NULL DEFAULT '0',
-  `type` tinyint(1) NOT NULL DEFAULT '0',
-  PRIMARY KEY (`id`),
+  `id` int(10) unsigned NOT NULL auto_increment,
+  `username` char(20) NOT NULL default '',
+  `card_no` char(120) NOT NULL default '',
+  `buytime` datetime NOT NULL default '0000-00-00 00:00:00',
+  `cardfen` int(10) unsigned NOT NULL default '0',
+  `money` int(10) unsigned NOT NULL default '0',
+  `userid` mediumint(8) unsigned NOT NULL default '0',
+  `userdate` int(10) unsigned NOT NULL default '0',
+  `type` tinyint(1) NOT NULL default '0',
+  PRIMARY KEY  (`id`),
   KEY `userid` (`userid`),
   KEY `type` (`type`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_enewsbuybak`
@@ -4071,22 +4074,22 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_enewsbuygroup`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_enewsbuygroup` (
-  `id` smallint(5) unsigned NOT NULL AUTO_INCREMENT,
-  `gname` varchar(255) NOT NULL DEFAULT '',
-  `gmoney` int(10) unsigned NOT NULL DEFAULT '0',
-  `gfen` int(10) unsigned NOT NULL DEFAULT '0',
-  `gdate` int(10) unsigned NOT NULL DEFAULT '0',
-  `ggroupid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `gzgroupid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `buygroupid` smallint(5) unsigned NOT NULL DEFAULT '0',
+  `id` smallint(5) unsigned NOT NULL auto_increment,
+  `gname` varchar(255) NOT NULL default '',
+  `gmoney` int(10) unsigned NOT NULL default '0',
+  `gfen` int(10) unsigned NOT NULL default '0',
+  `gdate` int(10) unsigned NOT NULL default '0',
+  `ggroupid` smallint(5) unsigned NOT NULL default '0',
+  `gzgroupid` smallint(5) unsigned NOT NULL default '0',
+  `buygroupid` smallint(5) unsigned NOT NULL default '0',
   `gsay` text NOT NULL,
-  `myorder` smallint(5) unsigned NOT NULL DEFAULT '0',
-  PRIMARY KEY (`id`)
+  `myorder` smallint(5) unsigned NOT NULL default '0',
+  PRIMARY KEY  (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_enewsbuygroup`
@@ -4102,22 +4105,22 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_enewscard`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_enewscard` (
-  `cardid` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `card_no` char(30) NOT NULL DEFAULT '',
-  `password` char(20) NOT NULL DEFAULT '',
-  `money` int(10) unsigned NOT NULL DEFAULT '0',
-  `cardfen` int(10) unsigned NOT NULL DEFAULT '0',
-  `endtime` date NOT NULL DEFAULT '0000-00-00',
-  `cardtime` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `carddate` int(10) unsigned NOT NULL DEFAULT '0',
-  `cdgroupid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `cdzgroupid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  PRIMARY KEY (`cardid`)
+  `cardid` int(10) unsigned NOT NULL auto_increment,
+  `card_no` char(30) NOT NULL default '',
+  `password` char(20) NOT NULL default '',
+  `money` int(10) unsigned NOT NULL default '0',
+  `cardfen` int(10) unsigned NOT NULL default '0',
+  `endtime` date NOT NULL default '0000-00-00',
+  `cardtime` datetime NOT NULL default '0000-00-00 00:00:00',
+  `carddate` int(10) unsigned NOT NULL default '0',
+  `cdgroupid` smallint(5) unsigned NOT NULL default '0',
+  `cdzgroupid` smallint(5) unsigned NOT NULL default '0',
+  PRIMARY KEY  (`cardid`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_enewscard`
@@ -4133,94 +4136,94 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_enewsclass`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_enewsclass` (
-  `classid` smallint(5) unsigned NOT NULL AUTO_INCREMENT,
-  `bclassid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `classname` varchar(50) NOT NULL DEFAULT '',
+  `classid` smallint(5) unsigned NOT NULL auto_increment,
+  `bclassid` smallint(5) unsigned NOT NULL default '0',
+  `classname` varchar(50) NOT NULL default '',
   `sonclass` text NOT NULL,
-  `is_zt` tinyint(1) NOT NULL DEFAULT '0',
-  `lencord` smallint(6) NOT NULL DEFAULT '0',
-  `link_num` tinyint(4) NOT NULL DEFAULT '0',
-  `newstempid` smallint(6) NOT NULL DEFAULT '0',
-  `onclick` int(11) NOT NULL DEFAULT '0',
-  `listtempid` smallint(6) NOT NULL DEFAULT '0',
+  `is_zt` tinyint(1) NOT NULL default '0',
+  `lencord` smallint(6) NOT NULL default '0',
+  `link_num` tinyint(4) NOT NULL default '0',
+  `newstempid` smallint(6) NOT NULL default '0',
+  `onclick` int(11) NOT NULL default '0',
+  `listtempid` smallint(6) NOT NULL default '0',
   `featherclass` text NOT NULL,
-  `islast` tinyint(1) NOT NULL DEFAULT '0',
+  `islast` tinyint(1) NOT NULL default '0',
   `classpath` text NOT NULL,
-  `classtype` varchar(10) NOT NULL DEFAULT '',
-  `newspath` varchar(20) NOT NULL DEFAULT '',
-  `filename` tinyint(1) NOT NULL DEFAULT '0',
-  `filetype` varchar(10) NOT NULL DEFAULT '',
-  `openpl` tinyint(1) NOT NULL DEFAULT '0',
-  `openadd` tinyint(1) NOT NULL DEFAULT '0',
-  `newline` int(11) NOT NULL DEFAULT '0',
-  `hotline` int(11) NOT NULL DEFAULT '0',
-  `goodline` int(11) NOT NULL DEFAULT '0',
-  `classurl` varchar(200) NOT NULL DEFAULT '',
-  `groupid` smallint(6) NOT NULL DEFAULT '0',
-  `myorder` smallint(6) NOT NULL DEFAULT '0',
-  `filename_qz` varchar(20) NOT NULL DEFAULT '',
-  `hotplline` tinyint(4) NOT NULL DEFAULT '0',
-  `modid` smallint(6) NOT NULL DEFAULT '0',
-  `checked` tinyint(1) NOT NULL DEFAULT '0',
-  `firstline` tinyint(4) NOT NULL DEFAULT '0',
-  `bname` varchar(50) NOT NULL DEFAULT '',
-  `islist` tinyint(1) NOT NULL DEFAULT '0',
-  `searchtempid` smallint(6) NOT NULL DEFAULT '0',
-  `tid` smallint(6) NOT NULL DEFAULT '0',
-  `tbname` varchar(60) NOT NULL DEFAULT '',
-  `maxnum` int(11) NOT NULL DEFAULT '0',
-  `checkpl` tinyint(1) NOT NULL DEFAULT '0',
-  `down_num` tinyint(4) NOT NULL DEFAULT '0',
-  `online_num` tinyint(4) NOT NULL DEFAULT '0',
-  `listorder` varchar(50) NOT NULL DEFAULT '',
-  `reorder` varchar(50) NOT NULL DEFAULT '',
+  `classtype` varchar(10) NOT NULL default '',
+  `newspath` varchar(20) NOT NULL default '',
+  `filename` tinyint(1) NOT NULL default '0',
+  `filetype` varchar(10) NOT NULL default '',
+  `openpl` tinyint(1) NOT NULL default '0',
+  `openadd` tinyint(1) NOT NULL default '0',
+  `newline` int(11) NOT NULL default '0',
+  `hotline` int(11) NOT NULL default '0',
+  `goodline` int(11) NOT NULL default '0',
+  `classurl` varchar(200) NOT NULL default '',
+  `groupid` smallint(6) NOT NULL default '0',
+  `myorder` smallint(6) NOT NULL default '0',
+  `filename_qz` varchar(20) NOT NULL default '',
+  `hotplline` tinyint(4) NOT NULL default '0',
+  `modid` smallint(6) NOT NULL default '0',
+  `checked` tinyint(1) NOT NULL default '0',
+  `firstline` tinyint(4) NOT NULL default '0',
+  `bname` varchar(50) NOT NULL default '',
+  `islist` tinyint(1) NOT NULL default '0',
+  `searchtempid` smallint(6) NOT NULL default '0',
+  `tid` smallint(6) NOT NULL default '0',
+  `tbname` varchar(60) NOT NULL default '',
+  `maxnum` int(11) NOT NULL default '0',
+  `checkpl` tinyint(1) NOT NULL default '0',
+  `down_num` tinyint(4) NOT NULL default '0',
+  `online_num` tinyint(4) NOT NULL default '0',
+  `listorder` varchar(50) NOT NULL default '',
+  `reorder` varchar(50) NOT NULL default '',
   `intro` text NOT NULL,
-  `classimg` varchar(255) NOT NULL DEFAULT '',
-  `jstempid` smallint(6) NOT NULL DEFAULT '0',
-  `addinfofen` int(11) NOT NULL DEFAULT '0',
-  `listdt` tinyint(1) NOT NULL DEFAULT '0',
-  `showclass` tinyint(1) NOT NULL DEFAULT '0',
-  `showdt` tinyint(1) NOT NULL DEFAULT '0',
-  `checkqadd` tinyint(1) NOT NULL DEFAULT '0',
-  `qaddlist` tinyint(1) NOT NULL DEFAULT '0',
+  `classimg` varchar(255) NOT NULL default '',
+  `jstempid` smallint(6) NOT NULL default '0',
+  `addinfofen` int(11) NOT NULL default '0',
+  `listdt` tinyint(1) NOT NULL default '0',
+  `showclass` tinyint(1) NOT NULL default '0',
+  `showdt` tinyint(1) NOT NULL default '0',
+  `checkqadd` tinyint(1) NOT NULL default '0',
+  `qaddlist` tinyint(1) NOT NULL default '0',
   `qaddgroupid` text NOT NULL,
-  `qaddshowkey` tinyint(1) NOT NULL DEFAULT '0',
-  `adminqinfo` tinyint(1) NOT NULL DEFAULT '0',
-  `doctime` smallint(6) NOT NULL DEFAULT '0',
-  `classpagekey` varchar(255) NOT NULL DEFAULT '',
-  `dtlisttempid` smallint(6) NOT NULL DEFAULT '0',
-  `classtempid` smallint(6) NOT NULL DEFAULT '0',
-  `nreclass` tinyint(1) NOT NULL DEFAULT '0',
-  `nreinfo` tinyint(1) NOT NULL DEFAULT '0',
-  `nrejs` tinyint(1) NOT NULL DEFAULT '0',
-  `nottobq` tinyint(1) NOT NULL DEFAULT '0',
-  `ipath` varchar(255) NOT NULL DEFAULT '',
-  `addreinfo` tinyint(1) NOT NULL DEFAULT '0',
-  `haddlist` tinyint(4) NOT NULL DEFAULT '0',
-  `sametitle` tinyint(1) NOT NULL DEFAULT '0',
-  `definfovoteid` smallint(6) NOT NULL DEFAULT '0',
-  `wburl` varchar(255) NOT NULL DEFAULT '',
-  `qeditchecked` tinyint(1) NOT NULL DEFAULT '0',
-  `wapstyleid` smallint(6) NOT NULL DEFAULT '0',
-  `repreinfo` tinyint(1) NOT NULL DEFAULT '0',
-  `pltempid` smallint(6) NOT NULL DEFAULT '0',
+  `qaddshowkey` tinyint(1) NOT NULL default '0',
+  `adminqinfo` tinyint(1) NOT NULL default '0',
+  `doctime` smallint(6) NOT NULL default '0',
+  `classpagekey` varchar(255) NOT NULL default '',
+  `dtlisttempid` smallint(6) NOT NULL default '0',
+  `classtempid` smallint(6) NOT NULL default '0',
+  `nreclass` tinyint(1) NOT NULL default '0',
+  `nreinfo` tinyint(1) NOT NULL default '0',
+  `nrejs` tinyint(1) NOT NULL default '0',
+  `nottobq` tinyint(1) NOT NULL default '0',
+  `ipath` varchar(255) NOT NULL default '',
+  `addreinfo` tinyint(1) NOT NULL default '0',
+  `haddlist` tinyint(4) NOT NULL default '0',
+  `sametitle` tinyint(1) NOT NULL default '0',
+  `definfovoteid` smallint(6) NOT NULL default '0',
+  `wburl` varchar(255) NOT NULL default '',
+  `qeditchecked` tinyint(1) NOT NULL default '0',
+  `wapstyleid` smallint(6) NOT NULL default '0',
+  `repreinfo` tinyint(1) NOT NULL default '0',
+  `pltempid` smallint(6) NOT NULL default '0',
   `cgroupid` text NOT NULL,
-  `yhid` smallint(6) NOT NULL DEFAULT '0',
-  `wfid` smallint(6) NOT NULL DEFAULT '0',
-  `cgtoinfo` tinyint(1) NOT NULL DEFAULT '0',
-  `bdinfoid` varchar(25) NOT NULL DEFAULT '',
-  `repagenum` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `keycid` smallint(6) NOT NULL DEFAULT '0',
-  `allinfos` int(10) unsigned NOT NULL DEFAULT '0',
-  `infos` int(10) unsigned NOT NULL DEFAULT '0',
-  `addtime` int(10) unsigned NOT NULL DEFAULT '0',
-  PRIMARY KEY (`classid`),
+  `yhid` smallint(6) NOT NULL default '0',
+  `wfid` smallint(6) NOT NULL default '0',
+  `cgtoinfo` tinyint(1) NOT NULL default '0',
+  `bdinfoid` varchar(25) NOT NULL default '',
+  `repagenum` smallint(5) unsigned NOT NULL default '0',
+  `keycid` smallint(6) NOT NULL default '0',
+  `allinfos` int(10) unsigned NOT NULL default '0',
+  `infos` int(10) unsigned NOT NULL default '0',
+  `addtime` int(10) unsigned NOT NULL default '0',
+  PRIMARY KEY  (`classid`),
   KEY `bclassid` (`bclassid`)
 ) ENGINE=MyISAM AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_enewsclass`
@@ -4228,7 +4231,7 @@ CREATE TABLE `ziyi_enewsclass` (
 
 LOCK TABLES `ziyi_enewsclass` WRITE;
 /*!40000 ALTER TABLE `ziyi_enewsclass` DISABLE KEYS */;
-INSERT INTO `ziyi_enewsclass` VALUES (1,0,'首页','|',0,25,10,0,0,0,'',0,'shouye','.html','Y-m-d',0,'.html',0,0,10,10,10,'',0,0,'',10,1,1,10,'首页',0,0,1,'news',0,0,2,2,'id DESC','newstime DESC','首页','',1,0,0,0,0,0,0,'',0,0,0,'',0,1,0,0,0,0,'',1,0,0,0,'',0,0,0,0,'',0,0,0,'',0,0,0,0,1376630884),(2,0,' 关于我们 ','|',0,25,10,0,0,0,'',0,'guanyuwomen','.html','Y-m-d',0,'.html',0,0,10,10,10,'',0,0,'',10,1,1,10,' 关于我们 ',0,0,1,'news',0,0,2,2,'id DESC','newstime DESC',' 关于我们 ','',1,0,0,0,0,0,0,'',0,0,0,'',0,1,0,0,0,0,'',1,0,0,0,'',0,0,0,0,'',0,0,0,'',0,0,0,0,1376630972),(3,0,'服务项目  ','|',0,25,10,0,0,0,'',0,'fuwuxiangmu','.html','Y-m-d',0,'.html',0,0,10,10,10,'',0,0,'',10,1,1,10,'服务项目  ',0,0,1,'news',0,0,2,2,'id DESC','newstime DESC','服务项目  ','',1,0,0,0,0,0,0,'',0,0,0,'',0,1,0,0,0,0,'',1,0,0,0,'',0,0,0,0,'',0,0,0,'',0,0,0,0,1376631035),(4,0,'新闻动态 ','|',0,25,10,0,0,0,'',0,'xinwendongtai','.html','Y-m-d',0,'.html',0,0,10,10,10,'',0,0,'',10,1,1,10,'新闻动态 ',0,0,1,'news',0,0,2,2,'id DESC','newstime DESC','新闻动态 ','',1,0,0,0,0,0,0,'',0,0,0,'',0,1,0,0,0,0,'',1,0,0,0,'',0,0,0,0,'',0,0,0,'',0,0,0,0,1376631062),(5,0,'经典案例   ','|',0,25,10,0,0,0,'',0,'jingdiananli','.html','Y-m-d',0,'.html',0,0,10,10,10,'',0,0,'',10,1,1,10,'经典案例   ',0,0,1,'news',0,0,2,2,'id DESC','newstime DESC','经典案例   ','',1,0,0,0,0,0,0,'',0,0,0,'',0,1,0,0,0,0,'',1,0,0,0,'',0,0,0,0,'',0,0,0,'',0,0,0,0,1376631075),(6,0,'招贤纳士   ','|',0,25,10,0,0,0,'',0,'zhaoxiannashi','.html','Y-m-d',0,'.html',0,0,10,10,10,'',0,0,'',10,1,1,10,'招贤纳士   ',0,0,1,'news',0,0,2,2,'id DESC','newstime DESC','招贤纳士   ','',1,0,0,0,0,0,0,'',0,0,0,'',0,1,0,0,0,0,'',1,0,0,0,'',0,0,0,0,'',0,0,0,'',0,0,0,0,1376631093),(7,0,'联系我们   ','|',0,25,10,0,0,0,'',0,'lianxiwomen','.html','Y-m-d',0,'.html',0,0,10,10,10,'',0,0,'',10,1,1,10,'联系我们   ',0,0,1,'news',0,0,2,2,'id DESC','newstime DESC','联系我们   ','',1,0,0,0,0,0,0,'',0,0,0,'',0,1,0,0,0,0,'',1,0,0,0,'',0,0,0,0,'',0,0,0,'',0,0,0,0,1376631109),(8,0,' 留言反馈 ','|',0,25,10,0,0,0,'',0,'liuyanfankui','.html','Y-m-d',0,'.html',0,0,10,10,10,'',0,0,'',10,1,1,10,' 留言反馈 ',0,0,1,'news',0,0,2,2,'id DESC','newstime DESC',' 留言反馈 ','',1,0,0,0,0,0,0,'',0,0,0,'',0,1,0,0,0,0,'',1,0,0,0,'',0,0,0,0,'',0,0,0,'',0,0,0,0,1376631140),(9,0,'首页焦点切换 ','',0,25,10,3,0,3,'',1,'shouyejiaodianqiehuan','.html','Y-m-d',0,'.html',0,0,10,10,10,'',0,0,'',10,3,1,10,'首页焦点切换 ',0,0,3,'photo',0,0,2,2,'id DESC','newstime DESC','首页焦点切换 ','',1,0,0,0,0,0,0,'',0,0,0,'',3,1,0,0,0,0,'',1,0,0,0,'',0,0,0,0,'',0,0,0,'',0,0,4,4,1377519903);
+INSERT INTO `ziyi_enewsclass` VALUES (1,0,'首页','|',0,25,10,0,0,0,'',0,'shouye','.html','Y-m-d',0,'.html',0,0,10,10,10,'',0,0,'',10,1,1,10,'首页',0,0,1,'news',0,0,2,2,'id DESC','newstime DESC','首页','',1,0,0,0,0,0,0,'',0,0,0,'',0,1,0,0,0,0,'',1,0,0,0,'',0,0,0,0,'',0,0,0,'',0,0,0,0,1376630884),(2,0,' 关于我们 ','|',0,25,10,0,0,0,'',0,'guanyuwomen','.html','Y-m-d',0,'.html',0,0,10,10,10,'',0,0,'',10,1,1,10,' 关于我们 ',0,0,1,'news',0,0,2,2,'id DESC','newstime DESC',' 关于我们 ','',1,0,0,0,0,0,0,'',0,0,0,'',0,1,0,0,0,0,'',1,0,0,0,'',0,0,0,0,'',0,0,0,'',0,0,0,0,1376630972),(3,0,'服务项目  ','|',0,25,10,0,0,0,'',0,'fuwuxiangmu','.html','Y-m-d',0,'.html',0,0,10,10,10,'',0,0,'',10,1,1,10,'服务项目  ',0,0,1,'news',0,0,2,2,'id DESC','newstime DESC','服务项目  ','',1,0,0,0,0,0,0,'',0,0,0,'',0,1,0,0,0,0,'',1,0,0,0,'',0,0,0,0,'',0,0,0,'',0,0,0,0,1376631035),(4,0,'新闻动态 ','|',0,25,10,0,0,0,'',0,'xinwendongtai','.html','Y-m-d',0,'.html',0,0,10,10,10,'',0,0,'',10,1,1,10,'新闻动态 ',0,0,1,'news',0,0,2,2,'id DESC','newstime DESC','新闻动态 ','',1,0,0,0,0,0,0,'',0,0,0,'',0,1,0,0,0,0,'',1,0,0,0,'',0,0,0,0,'',0,0,0,'',0,0,0,0,1376631062),(5,0,'经典案例   ','|',0,25,10,0,0,0,'',1,'jingdiananli','.html','Y-m-d',0,'.html',0,0,10,10,10,'',0,0,'',10,1,1,10,'经典案例   ',0,0,1,'news',0,0,2,2,'id DESC','newstime DESC','经典案例   ','',1,0,0,0,0,0,0,'',0,0,0,'',0,1,0,0,0,0,'',1,0,0,0,'',0,0,0,0,'',0,0,0,'',0,0,2,2,1376631075),(6,0,'招贤纳士   ','|',0,25,10,0,0,0,'',0,'zhaoxiannashi','.html','Y-m-d',0,'.html',0,0,10,10,10,'',0,0,'',10,1,1,10,'招贤纳士   ',0,0,1,'news',0,0,2,2,'id DESC','newstime DESC','招贤纳士   ','',1,0,0,0,0,0,0,'',0,0,0,'',0,1,0,0,0,0,'',1,0,0,0,'',0,0,0,0,'',0,0,0,'',0,0,0,0,1376631093),(7,0,'联系我们   ','|',0,25,10,0,0,0,'',0,'lianxiwomen','.html','Y-m-d',0,'.html',0,0,10,10,10,'',0,0,'',10,1,1,10,'联系我们   ',0,0,1,'news',0,0,2,2,'id DESC','newstime DESC','联系我们   ','',1,0,0,0,0,0,0,'',0,0,0,'',0,1,0,0,0,0,'',1,0,0,0,'',0,0,0,0,'',0,0,0,'',0,0,0,0,1376631109),(8,0,' 留言反馈 ','|',0,25,10,0,0,0,'',0,'liuyanfankui','.html','Y-m-d',0,'.html',0,0,10,10,10,'',0,0,'',10,1,1,10,' 留言反馈 ',0,0,1,'news',0,0,2,2,'id DESC','newstime DESC',' 留言反馈 ','',1,0,0,0,0,0,0,'',0,0,0,'',0,1,0,0,0,0,'',1,0,0,0,'',0,0,0,0,'',0,0,0,'',0,0,0,0,1376631140),(9,0,'首页焦点切换 ','',0,25,10,3,0,3,'',1,'shouyejiaodianqiehuan','.html','Y-m-d',0,'.html',0,0,10,10,10,'',0,0,'',10,3,1,10,'首页焦点切换 ',0,0,3,'photo',0,0,2,2,'id DESC','newstime DESC','首页焦点切换 ','',1,0,0,0,0,0,0,'',0,0,0,'',3,1,0,0,0,0,'',1,0,0,0,'',0,0,0,0,'',0,0,0,'',0,0,4,4,1377519903);
 /*!40000 ALTER TABLE `ziyi_enewsclass` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -4237,30 +4240,30 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_enewsclass_stats`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_enewsclass_stats` (
-  `classid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `uptime` int(10) unsigned NOT NULL DEFAULT '0',
-  `pvall` int(10) unsigned NOT NULL DEFAULT '0',
-  `pvyear` int(10) unsigned NOT NULL DEFAULT '0',
-  `pvhalfyear` int(10) unsigned NOT NULL DEFAULT '0',
-  `pvquarter` int(10) unsigned NOT NULL DEFAULT '0',
-  `pvmonth` int(10) unsigned NOT NULL DEFAULT '0',
-  `pvweek` int(10) unsigned NOT NULL DEFAULT '0',
-  `pvday` int(10) unsigned NOT NULL DEFAULT '0',
-  `pvyesterday` int(10) unsigned NOT NULL DEFAULT '0',
-  `ipall` int(10) unsigned NOT NULL DEFAULT '0',
-  `ipyear` int(10) unsigned NOT NULL DEFAULT '0',
-  `iphalfyear` int(10) unsigned NOT NULL DEFAULT '0',
-  `ipquarter` int(10) unsigned NOT NULL DEFAULT '0',
-  `ipmonth` int(10) unsigned NOT NULL DEFAULT '0',
-  `ipweek` int(10) unsigned NOT NULL DEFAULT '0',
-  `ipday` int(10) unsigned NOT NULL DEFAULT '0',
-  `ipyesterday` int(10) unsigned NOT NULL DEFAULT '0',
-  PRIMARY KEY (`classid`)
+  `classid` smallint(5) unsigned NOT NULL default '0',
+  `uptime` int(10) unsigned NOT NULL default '0',
+  `pvall` int(10) unsigned NOT NULL default '0',
+  `pvyear` int(10) unsigned NOT NULL default '0',
+  `pvhalfyear` int(10) unsigned NOT NULL default '0',
+  `pvquarter` int(10) unsigned NOT NULL default '0',
+  `pvmonth` int(10) unsigned NOT NULL default '0',
+  `pvweek` int(10) unsigned NOT NULL default '0',
+  `pvday` int(10) unsigned NOT NULL default '0',
+  `pvyesterday` int(10) unsigned NOT NULL default '0',
+  `ipall` int(10) unsigned NOT NULL default '0',
+  `ipyear` int(10) unsigned NOT NULL default '0',
+  `iphalfyear` int(10) unsigned NOT NULL default '0',
+  `ipquarter` int(10) unsigned NOT NULL default '0',
+  `ipmonth` int(10) unsigned NOT NULL default '0',
+  `ipweek` int(10) unsigned NOT NULL default '0',
+  `ipday` int(10) unsigned NOT NULL default '0',
+  `ipyesterday` int(10) unsigned NOT NULL default '0',
+  PRIMARY KEY  (`classid`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_enewsclass_stats`
@@ -4277,13 +4280,13 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_enewsclass_stats_ip`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_enewsclass_stats_ip` (
-  `ip` char(21) NOT NULL DEFAULT '',
-  PRIMARY KEY (`ip`)
+  `ip` char(21) NOT NULL default '',
+  PRIMARY KEY  (`ip`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_enewsclass_stats_ip`
@@ -4299,15 +4302,15 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_enewsclass_stats_set`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_enewsclass_stats_set` (
-  `openstats` tinyint(1) NOT NULL DEFAULT '0',
-  `pvtime` int(10) unsigned NOT NULL DEFAULT '0',
-  `statsdate` int(10) unsigned NOT NULL DEFAULT '0',
-  `changedate` int(10) unsigned NOT NULL DEFAULT '0'
+  `openstats` tinyint(1) NOT NULL default '0',
+  `pvtime` int(10) unsigned NOT NULL default '0',
+  `statsdate` int(10) unsigned NOT NULL default '0',
+  `changedate` int(10) unsigned NOT NULL default '0'
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_enewsclass_stats_set`
@@ -4324,15 +4327,15 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_enewsclassadd`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_enewsclassadd` (
-  `classid` smallint(5) unsigned NOT NULL DEFAULT '0',
+  `classid` smallint(5) unsigned NOT NULL default '0',
   `classtext` mediumtext NOT NULL,
   `ttids` text NOT NULL,
-  PRIMARY KEY (`classid`)
+  PRIMARY KEY  (`classid`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_enewsclassadd`
@@ -4349,23 +4352,23 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_enewsclassf`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_enewsclassf` (
-  `fid` smallint(5) unsigned NOT NULL AUTO_INCREMENT,
-  `f` varchar(30) NOT NULL DEFAULT '',
-  `fname` varchar(30) NOT NULL DEFAULT '',
-  `fform` varchar(20) NOT NULL DEFAULT '',
+  `fid` smallint(5) unsigned NOT NULL auto_increment,
+  `f` varchar(30) NOT NULL default '',
+  `fname` varchar(30) NOT NULL default '',
+  `fform` varchar(20) NOT NULL default '',
   `fhtml` mediumtext NOT NULL,
-  `fzs` varchar(255) NOT NULL DEFAULT '',
-  `myorder` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `ftype` varchar(30) NOT NULL DEFAULT '',
-  `flen` varchar(20) NOT NULL DEFAULT '',
+  `fzs` varchar(255) NOT NULL default '',
+  `myorder` smallint(5) unsigned NOT NULL default '0',
+  `ftype` varchar(30) NOT NULL default '',
+  `flen` varchar(20) NOT NULL default '',
   `fvalue` text NOT NULL,
-  `fformsize` varchar(12) NOT NULL DEFAULT '',
-  PRIMARY KEY (`fid`)
+  `fformsize` varchar(12) NOT NULL default '',
+  PRIMARY KEY  (`fid`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_enewsclassf`
@@ -4381,15 +4384,15 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_enewsclassnavcache`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_enewsclassnavcache` (
-  `navtype` char(16) NOT NULL DEFAULT '',
-  `userid` int(10) unsigned NOT NULL DEFAULT '0',
-  `modid` smallint(5) unsigned NOT NULL DEFAULT '0',
+  `navtype` char(16) NOT NULL default '',
+  `userid` int(10) unsigned NOT NULL default '0',
+  `modid` smallint(5) unsigned NOT NULL default '0',
   KEY `navtype` (`navtype`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_enewsclassnavcache`
@@ -4397,7 +4400,7 @@ CREATE TABLE `ziyi_enewsclassnavcache` (
 
 LOCK TABLES `ziyi_enewsclassnavcache` WRITE;
 /*!40000 ALTER TABLE `ziyi_enewsclassnavcache` DISABLE KEYS */;
-INSERT INTO `ziyi_enewsclassnavcache` VALUES ('jsclass',0,0),('listenews',0,0),('listclass',0,0),('modclass',0,3);
+INSERT INTO `ziyi_enewsclassnavcache` VALUES ('jsclass',0,0),('listenews',0,0),('listclass',0,0),('modclass',0,3),('modclass',0,1);
 /*!40000 ALTER TABLE `ziyi_enewsclassnavcache` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -4406,16 +4409,16 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_enewsclasstemp`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_enewsclasstemp` (
-  `tempid` smallint(5) unsigned NOT NULL AUTO_INCREMENT,
-  `tempname` varchar(30) NOT NULL DEFAULT '',
+  `tempid` smallint(5) unsigned NOT NULL auto_increment,
+  `tempname` varchar(30) NOT NULL default '',
   `temptext` mediumtext NOT NULL,
-  `classid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  PRIMARY KEY (`tempid`)
+  `classid` smallint(5) unsigned NOT NULL default '0',
+  PRIMARY KEY  (`tempid`)
 ) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_enewsclasstemp`
@@ -4432,14 +4435,14 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_enewsclasstempclass`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_enewsclasstempclass` (
-  `classid` smallint(5) unsigned NOT NULL AUTO_INCREMENT,
-  `classname` char(30) NOT NULL DEFAULT '',
-  PRIMARY KEY (`classid`)
+  `classid` smallint(5) unsigned NOT NULL auto_increment,
+  `classname` char(30) NOT NULL default '',
+  PRIMARY KEY  (`classid`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_enewsclasstempclass`
@@ -4455,15 +4458,15 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_enewsdiggips`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_enewsdiggips` (
-  `classid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `id` int(11) NOT NULL DEFAULT '0',
+  `classid` smallint(5) unsigned NOT NULL default '0',
+  `id` int(11) NOT NULL default '0',
   `ips` mediumtext NOT NULL,
   KEY `classid` (`classid`,`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_enewsdiggips`
@@ -4479,19 +4482,19 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_enewsdo`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_enewsdo` (
-  `doid` smallint(5) unsigned NOT NULL AUTO_INCREMENT,
-  `doname` varchar(60) NOT NULL DEFAULT '',
-  `dotime` smallint(6) NOT NULL DEFAULT '0',
-  `isopen` tinyint(1) NOT NULL DEFAULT '0',
-  `doing` tinyint(4) NOT NULL DEFAULT '0',
+  `doid` smallint(5) unsigned NOT NULL auto_increment,
+  `doname` varchar(60) NOT NULL default '',
+  `dotime` smallint(6) NOT NULL default '0',
+  `isopen` tinyint(1) NOT NULL default '0',
+  `doing` tinyint(4) NOT NULL default '0',
   `classid` text NOT NULL,
-  `lasttime` int(10) unsigned NOT NULL DEFAULT '0',
-  PRIMARY KEY (`doid`)
+  `lasttime` int(10) unsigned NOT NULL default '0',
+  PRIMARY KEY  (`doid`)
 ) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_enewsdo`
@@ -4508,20 +4511,20 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_enewsdolog`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_enewsdolog` (
-  `logid` bigint(20) NOT NULL AUTO_INCREMENT,
-  `logip` varchar(20) NOT NULL DEFAULT '',
-  `logtime` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `username` varchar(30) NOT NULL DEFAULT '',
-  `enews` varchar(30) NOT NULL DEFAULT '',
-  `doing` varchar(255) NOT NULL DEFAULT '',
-  `pubid` bigint(16) unsigned NOT NULL DEFAULT '0',
-  PRIMARY KEY (`logid`),
+  `logid` bigint(20) NOT NULL auto_increment,
+  `logip` varchar(20) NOT NULL default '',
+  `logtime` datetime NOT NULL default '0000-00-00 00:00:00',
+  `username` varchar(30) NOT NULL default '',
+  `enews` varchar(30) NOT NULL default '',
+  `doing` varchar(255) NOT NULL default '',
+  `pubid` bigint(16) unsigned NOT NULL default '0',
+  PRIMARY KEY  (`logid`),
   KEY `pubid` (`pubid`)
-) ENGINE=MyISAM AUTO_INCREMENT=83 DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+) ENGINE=MyISAM AUTO_INCREMENT=101 DEFAULT CHARSET=utf8;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_enewsdolog`
@@ -4529,7 +4532,7 @@ CREATE TABLE `ziyi_enewsdolog` (
 
 LOCK TABLES `ziyi_enewsdolog` WRITE;
 /*!40000 ALTER TABLE `ziyi_enewsdolog` DISABLE KEYS */;
-INSERT INTO `ziyi_enewsdolog` VALUES (1,'127.0.0.1','2013-08-16 10:46:40','assnr','login','---',0),(2,'127.0.0.1','2013-08-16 10:47:38','assnr','EditPublicTemp','gid=1',0),(3,'127.0.0.1','2013-08-16 10:47:43','assnr','ReIndex','---',0),(4,'127.0.0.1','2013-08-16 13:11:29','assnr','login','---',0),(5,'127.0.0.1','2013-08-16 13:28:04','assnr','AddClass','classid=1<br>classname=首页',0),(6,'127.0.0.1','2013-08-16 13:29:32','assnr','AddClass','classid=2<br>classname= 关于我们 ',0),(7,'127.0.0.1','2013-08-16 13:30:35','assnr','AddClass','classid=3<br>classname=服务项目  ',0),(8,'127.0.0.1','2013-08-16 13:31:02','assnr','AddClass','classid=4<br>classname=新闻动态 ',0),(9,'127.0.0.1','2013-08-16 13:31:15','assnr','AddClass','classid=5<br>classname=经典案例   ',0),(10,'127.0.0.1','2013-08-16 13:31:33','assnr','AddClass','classid=6<br>classname=招贤纳士   ',0),(11,'127.0.0.1','2013-08-16 13:31:49','assnr','AddClass','classid=7<br>classname=联系我们   ',0),(12,'127.0.0.1','2013-08-16 13:32:20','assnr','AddClass','classid=8<br>classname= 留言反馈 ',0),(13,'127.0.0.1','2013-08-16 14:08:13','assnr','AddBqtemp','tempid=13<br>tempname=ziyi首页导航&gid=1',0),(14,'127.0.0.1','2013-08-16 14:10:47','assnr','EditPublicTemp','gid=1',0),(15,'127.0.0.1','2013-08-16 14:11:09','assnr','ReIndex','---',0),(16,'127.0.0.1','2013-08-16 17:01:23','assnr','EditBqtemp','tempid=13<br>tempname=ziyi首页导航&gid=1',0),(17,'127.0.0.1','2013-08-16 17:01:26','assnr','ReIndex','---',0),(18,'127.0.0.1','2013-08-16 17:02:09','assnr','EditBqtemp','tempid=13<br>tempname=ziyi首页导航&gid=1',0),(19,'127.0.0.1','2013-08-16 17:02:18','assnr','ReIndex','---',0),(20,'127.0.0.1','2013-08-16 17:20:28','assnr','EditBqtemp','tempid=13<br>tempname=ziyi首页导航&gid=1',0),(21,'127.0.0.1','2013-08-16 17:21:17','assnr','EditPublicTemp','gid=1',0),(22,'127.0.0.1','2013-08-16 17:21:22','assnr','ReIndex','---',0),(23,'127.0.0.1','2013-08-16 17:25:13','assnr','EditPublicTemp','gid=1',0),(24,'127.0.0.1','2013-08-16 17:25:17','assnr','ReIndex','---',0),(25,'127.0.0.1','2013-08-16 17:26:04','assnr','EditPublicTemp','gid=1',0),(26,'127.0.0.1','2013-08-16 17:26:09','assnr','ReIndex','---',0),(27,'127.0.0.1','2013-08-16 17:59:29','assnr','login','---',0),(28,'127.0.0.1','2013-08-16 18:00:06','assnr','EditPublicTemp','gid=1',0),(29,'127.0.0.1','2013-08-16 18:00:11','assnr','ReIndex','---',0),(30,'127.0.0.1','2013-08-16 21:38:33','assnr','login','---',0),(31,'127.0.0.1','2013-08-16 21:38:41','assnr','ReIndex','---',0),(32,'127.0.0.1','2013-08-16 21:40:50','assnr','ReIndex','---',0),(33,'127.0.0.1','2013-08-16 21:41:07','assnr','ReIndex','---',0),(34,'127.0.0.1','2013-08-25 21:38:27','assnr','login','---',0),(35,'127.0.0.1','2013-08-25 21:38:36','assnr','ReIndex','---',0),(36,'127.0.0.1','2013-08-25 22:18:57','assnr','login','---',0),(37,'127.0.0.1','2013-08-25 22:20:07','assnr','ReIndex','---',0),(38,'127.0.0.1','2013-08-26 20:14:23','assnr','login','---',0),(39,'127.0.0.1','2013-08-26 20:15:32','assnr','ReClassPath','---',0),(40,'127.0.0.1','2013-08-26 20:15:34','assnr','DelFcListClass','---',0),(41,'127.0.0.1','2013-08-26 20:15:37','assnr','ChangeEnewsData','---',0),(42,'127.0.0.1','2013-08-26 20:15:43','assnr','UpdateClassInfosAll','---',0),(43,'127.0.0.1','2013-08-26 20:18:44','assnr','login','---',0),(44,'127.0.0.1','2013-08-26 20:25:03','assnr','AddClass','classid=9<br>classname=首页焦点切换 ',0),(45,'127.0.0.1','2013-08-26 20:26:12','assnr','AddNews','classid=9<br>id=1<br>title=(图文)多大的',1000030000000001),(46,'127.0.0.1','2013-08-26 20:26:58','assnr','AddNews','classid=9<br>id=2<br>title=第二大的',1000030000000002),(47,'127.0.0.1','2013-08-26 20:28:05','assnr','EditNews','classid=9<br>id=2<br>title=第二大的',1000030000000002),(48,'127.0.0.1','2013-08-26 20:29:36','assnr','AddNews','classid=9<br>id=3<br>title=第三大的',1000030000000003),(49,'127.0.0.1','2013-08-26 20:31:23','assnr','ReIndex','---',0),(50,'127.0.0.1','2013-08-26 20:33:06','assnr','EditPublicTemp','gid=1',0),(51,'127.0.0.1','2013-08-26 20:33:10','assnr','ReIndex','---',0),(52,'127.0.0.1','2013-08-26 20:48:01','assnr','AddBqtemp','tempid=14<br>tempname=ziyi首页焦点&gid=1',0),(53,'127.0.0.1','2013-08-26 21:01:29','assnr','EditPublicTemp','gid=1',0),(54,'127.0.0.1','2013-08-26 21:01:33','assnr','ReIndex','---',0),(55,'127.0.0.1','2013-08-26 21:03:39','assnr','EditPublicTemp','gid=1',0),(56,'127.0.0.1','2013-08-26 21:03:45','assnr','ReIndex','---',0),(57,'127.0.0.1','2013-08-26 21:04:30','assnr','EditPublicTemp','gid=1',0),(58,'127.0.0.1','2013-08-26 21:04:35','assnr','ReIndex','---',0),(59,'127.0.0.1','2013-08-26 21:05:45','assnr','EditBqtemp','tempid=14<br>tempname=ziyi首页焦点&gid=1',0),(60,'127.0.0.1','2013-08-26 21:05:53','assnr','ReIndex','---',0),(61,'127.0.0.1','2013-08-26 21:08:08','assnr','AddNews','classid=9<br>id=4<br>title=(图文)等等',1000030000000004),(62,'127.0.0.1','2013-08-26 21:08:20','assnr','ReIndex','---',0),(63,'127.0.0.1','2013-08-26 21:12:55','assnr','EditBqtemp','tempid=14<br>tempname=ziyi首页焦点&gid=1',0),(64,'127.0.0.1','2013-08-26 21:13:03','assnr','ReIndex','---',0),(65,'127.0.0.1','2013-08-26 21:14:51','assnr','EditNews','classid=9<br>id=4<br>title=(图文)等等',1000030000000004),(66,'127.0.0.1','2013-08-26 21:14:59','assnr','ReIndex','---',0),(67,'127.0.0.1','2013-08-26 21:15:20','assnr','EditNews','classid=9<br>id=4<br>title=(图文)等等',1000030000000004),(68,'127.0.0.1','2013-08-26 21:15:26','assnr','ReIndex','---',0),(69,'127.0.0.1','2013-08-27 20:40:32','assnr','login','---',0),(70,'127.0.0.1','2013-08-27 20:42:45','assnr','EditPublicTemp','gid=1',0),(71,'127.0.0.1','2013-08-27 20:42:53','assnr','ReIndex','---',0),(72,'127.0.0.1','2013-08-28 15:26:41','assnr','login','---',0),(73,'127.0.0.1','2013-08-28 15:27:02','assnr','ReIndex','---',0),(74,'127.0.0.1','2013-08-28 15:41:41','assnr','login','---',0),(75,'127.0.0.1','2013-08-28 15:43:24','assnr','EditPublicTemp','gid=1',0),(76,'127.0.0.1','2013-08-28 15:43:30','assnr','ReIndex','---',0),(77,'127.0.0.1','2013-08-28 16:12:42','assnr','login','---',0),(78,'127.0.0.1','2013-08-28 16:13:48','assnr','EditNews','classid=9<br>id=4<br>title=(图文)等等',1000030000000004),(79,'127.0.0.1','2013-08-28 16:13:52','assnr','ReIndex','---',0),(80,'127.0.0.1','2013-08-28 16:17:44','assnr','EditNews','classid=9<br>id=3<br>title=第三大的',1000030000000003),(81,'127.0.0.1','2013-08-28 16:19:11','assnr','EditNews','classid=9<br>id=2<br>title=第二大的',1000030000000002),(82,'127.0.0.1','2013-08-28 16:19:17','assnr','ReIndex','---',0);
+INSERT INTO `ziyi_enewsdolog` VALUES (1,'127.0.0.1','2013-08-16 10:46:40','assnr','login','---',0),(2,'127.0.0.1','2013-08-16 10:47:38','assnr','EditPublicTemp','gid=1',0),(3,'127.0.0.1','2013-08-16 10:47:43','assnr','ReIndex','---',0),(4,'127.0.0.1','2013-08-16 13:11:29','assnr','login','---',0),(5,'127.0.0.1','2013-08-16 13:28:04','assnr','AddClass','classid=1<br>classname=首页',0),(6,'127.0.0.1','2013-08-16 13:29:32','assnr','AddClass','classid=2<br>classname= 关于我们 ',0),(7,'127.0.0.1','2013-08-16 13:30:35','assnr','AddClass','classid=3<br>classname=服务项目  ',0),(8,'127.0.0.1','2013-08-16 13:31:02','assnr','AddClass','classid=4<br>classname=新闻动态 ',0),(9,'127.0.0.1','2013-08-16 13:31:15','assnr','AddClass','classid=5<br>classname=经典案例   ',0),(10,'127.0.0.1','2013-08-16 13:31:33','assnr','AddClass','classid=6<br>classname=招贤纳士   ',0),(11,'127.0.0.1','2013-08-16 13:31:49','assnr','AddClass','classid=7<br>classname=联系我们   ',0),(12,'127.0.0.1','2013-08-16 13:32:20','assnr','AddClass','classid=8<br>classname= 留言反馈 ',0),(13,'127.0.0.1','2013-08-16 14:08:13','assnr','AddBqtemp','tempid=13<br>tempname=ziyi首页导航&gid=1',0),(14,'127.0.0.1','2013-08-16 14:10:47','assnr','EditPublicTemp','gid=1',0),(15,'127.0.0.1','2013-08-16 14:11:09','assnr','ReIndex','---',0),(16,'127.0.0.1','2013-08-16 17:01:23','assnr','EditBqtemp','tempid=13<br>tempname=ziyi首页导航&gid=1',0),(17,'127.0.0.1','2013-08-16 17:01:26','assnr','ReIndex','---',0),(18,'127.0.0.1','2013-08-16 17:02:09','assnr','EditBqtemp','tempid=13<br>tempname=ziyi首页导航&gid=1',0),(19,'127.0.0.1','2013-08-16 17:02:18','assnr','ReIndex','---',0),(20,'127.0.0.1','2013-08-16 17:20:28','assnr','EditBqtemp','tempid=13<br>tempname=ziyi首页导航&gid=1',0),(21,'127.0.0.1','2013-08-16 17:21:17','assnr','EditPublicTemp','gid=1',0),(22,'127.0.0.1','2013-08-16 17:21:22','assnr','ReIndex','---',0),(23,'127.0.0.1','2013-08-16 17:25:13','assnr','EditPublicTemp','gid=1',0),(24,'127.0.0.1','2013-08-16 17:25:17','assnr','ReIndex','---',0),(25,'127.0.0.1','2013-08-16 17:26:04','assnr','EditPublicTemp','gid=1',0),(26,'127.0.0.1','2013-08-16 17:26:09','assnr','ReIndex','---',0),(27,'127.0.0.1','2013-08-16 17:59:29','assnr','login','---',0),(28,'127.0.0.1','2013-08-16 18:00:06','assnr','EditPublicTemp','gid=1',0),(29,'127.0.0.1','2013-08-16 18:00:11','assnr','ReIndex','---',0),(30,'127.0.0.1','2013-08-16 21:38:33','assnr','login','---',0),(31,'127.0.0.1','2013-08-16 21:38:41','assnr','ReIndex','---',0),(32,'127.0.0.1','2013-08-16 21:40:50','assnr','ReIndex','---',0),(33,'127.0.0.1','2013-08-16 21:41:07','assnr','ReIndex','---',0),(34,'127.0.0.1','2013-08-25 21:38:27','assnr','login','---',0),(35,'127.0.0.1','2013-08-25 21:38:36','assnr','ReIndex','---',0),(36,'127.0.0.1','2013-08-25 22:18:57','assnr','login','---',0),(37,'127.0.0.1','2013-08-25 22:20:07','assnr','ReIndex','---',0),(38,'127.0.0.1','2013-08-26 20:14:23','assnr','login','---',0),(39,'127.0.0.1','2013-08-26 20:15:32','assnr','ReClassPath','---',0),(40,'127.0.0.1','2013-08-26 20:15:34','assnr','DelFcListClass','---',0),(41,'127.0.0.1','2013-08-26 20:15:37','assnr','ChangeEnewsData','---',0),(42,'127.0.0.1','2013-08-26 20:15:43','assnr','UpdateClassInfosAll','---',0),(43,'127.0.0.1','2013-08-26 20:18:44','assnr','login','---',0),(44,'127.0.0.1','2013-08-26 20:25:03','assnr','AddClass','classid=9<br>classname=首页焦点切换 ',0),(45,'127.0.0.1','2013-08-26 20:26:12','assnr','AddNews','classid=9<br>id=1<br>title=(图文)多大的',1000030000000001),(46,'127.0.0.1','2013-08-26 20:26:58','assnr','AddNews','classid=9<br>id=2<br>title=第二大的',1000030000000002),(47,'127.0.0.1','2013-08-26 20:28:05','assnr','EditNews','classid=9<br>id=2<br>title=第二大的',1000030000000002),(48,'127.0.0.1','2013-08-26 20:29:36','assnr','AddNews','classid=9<br>id=3<br>title=第三大的',1000030000000003),(49,'127.0.0.1','2013-08-26 20:31:23','assnr','ReIndex','---',0),(50,'127.0.0.1','2013-08-26 20:33:06','assnr','EditPublicTemp','gid=1',0),(51,'127.0.0.1','2013-08-26 20:33:10','assnr','ReIndex','---',0),(52,'127.0.0.1','2013-08-26 20:48:01','assnr','AddBqtemp','tempid=14<br>tempname=ziyi首页焦点&gid=1',0),(53,'127.0.0.1','2013-08-26 21:01:29','assnr','EditPublicTemp','gid=1',0),(54,'127.0.0.1','2013-08-26 21:01:33','assnr','ReIndex','---',0),(55,'127.0.0.1','2013-08-26 21:03:39','assnr','EditPublicTemp','gid=1',0),(56,'127.0.0.1','2013-08-26 21:03:45','assnr','ReIndex','---',0),(57,'127.0.0.1','2013-08-26 21:04:30','assnr','EditPublicTemp','gid=1',0),(58,'127.0.0.1','2013-08-26 21:04:35','assnr','ReIndex','---',0),(59,'127.0.0.1','2013-08-26 21:05:45','assnr','EditBqtemp','tempid=14<br>tempname=ziyi首页焦点&gid=1',0),(60,'127.0.0.1','2013-08-26 21:05:53','assnr','ReIndex','---',0),(61,'127.0.0.1','2013-08-26 21:08:08','assnr','AddNews','classid=9<br>id=4<br>title=(图文)等等',1000030000000004),(62,'127.0.0.1','2013-08-26 21:08:20','assnr','ReIndex','---',0),(63,'127.0.0.1','2013-08-26 21:12:55','assnr','EditBqtemp','tempid=14<br>tempname=ziyi首页焦点&gid=1',0),(64,'127.0.0.1','2013-08-26 21:13:03','assnr','ReIndex','---',0),(65,'127.0.0.1','2013-08-26 21:14:51','assnr','EditNews','classid=9<br>id=4<br>title=(图文)等等',1000030000000004),(66,'127.0.0.1','2013-08-26 21:14:59','assnr','ReIndex','---',0),(67,'127.0.0.1','2013-08-26 21:15:20','assnr','EditNews','classid=9<br>id=4<br>title=(图文)等等',1000030000000004),(68,'127.0.0.1','2013-08-26 21:15:26','assnr','ReIndex','---',0),(69,'127.0.0.1','2013-08-27 20:40:32','assnr','login','---',0),(70,'127.0.0.1','2013-08-27 20:42:45','assnr','EditPublicTemp','gid=1',0),(71,'127.0.0.1','2013-08-27 20:42:53','assnr','ReIndex','---',0),(72,'127.0.0.1','2013-08-28 15:26:41','assnr','login','---',0),(73,'127.0.0.1','2013-08-28 15:27:02','assnr','ReIndex','---',0),(74,'127.0.0.1','2013-08-28 15:41:41','assnr','login','---',0),(75,'127.0.0.1','2013-08-28 15:43:24','assnr','EditPublicTemp','gid=1',0),(76,'127.0.0.1','2013-08-28 15:43:30','assnr','ReIndex','---',0),(77,'127.0.0.1','2013-08-28 16:12:42','assnr','login','---',0),(78,'127.0.0.1','2013-08-28 16:13:48','assnr','EditNews','classid=9<br>id=4<br>title=(图文)等等',1000030000000004),(79,'127.0.0.1','2013-08-28 16:13:52','assnr','ReIndex','---',0),(80,'127.0.0.1','2013-08-28 16:17:44','assnr','EditNews','classid=9<br>id=3<br>title=第三大的',1000030000000003),(81,'127.0.0.1','2013-08-28 16:19:11','assnr','EditNews','classid=9<br>id=2<br>title=第二大的',1000030000000002),(82,'127.0.0.1','2013-08-28 16:19:17','assnr','ReIndex','---',0),(83,'127.0.0.1','2013-08-28 20:09:31','assnr','login','---',0),(84,'127.0.0.1','2013-08-28 20:09:39','assnr','ReIndex','---',0),(85,'127.0.0.1','2013-08-30 22:58:55','assnr','login','---',0),(86,'127.0.0.1','2013-08-30 23:00:51','assnr','EditPublicTemp','gid=1',0),(87,'127.0.0.1','2013-08-30 23:00:55','assnr','ReIndex','---',0),(88,'127.0.0.1','2013-08-30 23:04:24','assnr','ChangeClassIslast','classid=5<br>classname=经典案例   ',0),(89,'127.0.0.1','2013-08-30 23:05:08','assnr','AddNews','classid=5<br>id=1<br>title=afd 啊 啊',1000010000000001),(90,'127.0.0.1','2013-08-30 23:07:20','assnr','AddNews','classid=5<br>id=2<br>title=(图文)22',1000010000000002),(91,'127.0.0.1','2013-08-30 23:17:25','assnr','AddBqtemp','tempid=15<br>tempname=ziyi首页经典案例&gid=1',0),(92,'127.0.0.1','2013-08-30 23:18:20','assnr','EditPublicTemp','gid=1',0),(93,'127.0.0.1','2013-08-30 23:18:26','assnr','ReIndex','---',0),(94,'127.0.0.1','2013-08-30 23:21:25','assnr','EditBqtemp','tempid=15<br>tempname=ziyi首页经典案例&gid=1',0),(95,'127.0.0.1','2013-08-30 23:21:31','assnr','ReIndex','---',0),(96,'127.0.0.1','2013-08-30 23:23:15','assnr','EditBqtemp','tempid=15<br>tempname=ziyi首页经典案例&gid=1',0),(97,'127.0.0.1','2013-08-30 23:23:21','assnr','ReIndex','---',0),(98,'127.0.0.1','2013-08-30 23:23:52','assnr','EditNews','classid=5<br>id=1<br>title=afd 啊 啊',1000010000000001),(99,'127.0.0.1','2013-08-30 23:24:14','assnr','EditNews','classid=5<br>id=2<br>title=(图文)22',1000010000000002),(100,'127.0.0.1','2013-08-30 23:24:17','assnr','ReIndex','---',0);
 /*!40000 ALTER TABLE `ziyi_enewsdolog` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -4538,20 +4541,20 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_enewsdownerror`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_enewsdownerror` (
-  `errorid` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `id` int(10) unsigned NOT NULL DEFAULT '0',
-  `errortext` varchar(255) NOT NULL DEFAULT '',
-  `errortime` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `errorip` varchar(20) NOT NULL DEFAULT '',
-  `email` varchar(80) NOT NULL DEFAULT '',
-  `classid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `cid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  PRIMARY KEY (`errorid`)
+  `errorid` int(10) unsigned NOT NULL auto_increment,
+  `id` int(10) unsigned NOT NULL default '0',
+  `errortext` varchar(255) NOT NULL default '',
+  `errortime` datetime NOT NULL default '0000-00-00 00:00:00',
+  `errorip` varchar(20) NOT NULL default '',
+  `email` varchar(80) NOT NULL default '',
+  `classid` smallint(5) unsigned NOT NULL default '0',
+  `cid` smallint(5) unsigned NOT NULL default '0',
+  PRIMARY KEY  (`errorid`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_enewsdownerror`
@@ -4567,22 +4570,22 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_enewsdownrecord`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_enewsdownrecord` (
-  `id` int(11) NOT NULL DEFAULT '0',
-  `pathid` int(11) NOT NULL DEFAULT '0',
-  `userid` int(11) NOT NULL DEFAULT '0',
-  `username` varchar(30) NOT NULL DEFAULT '',
-  `title` varchar(120) NOT NULL DEFAULT '',
-  `cardfen` int(11) NOT NULL DEFAULT '0',
-  `truetime` int(11) NOT NULL DEFAULT '0',
-  `classid` smallint(6) NOT NULL DEFAULT '0',
-  `online` tinyint(1) NOT NULL DEFAULT '0',
+  `id` int(11) NOT NULL default '0',
+  `pathid` int(11) NOT NULL default '0',
+  `userid` int(11) NOT NULL default '0',
+  `username` varchar(30) NOT NULL default '',
+  `title` varchar(120) NOT NULL default '',
+  `cardfen` int(11) NOT NULL default '0',
+  `truetime` int(11) NOT NULL default '0',
+  `classid` smallint(6) NOT NULL default '0',
+  `online` tinyint(1) NOT NULL default '0',
   KEY `userid` (`userid`),
   KEY `truetime` (`truetime`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_enewsdownrecord`
@@ -4598,16 +4601,16 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_enewsdownurlqz`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_enewsdownurlqz` (
-  `urlid` smallint(5) unsigned NOT NULL AUTO_INCREMENT,
-  `urlname` varchar(30) NOT NULL DEFAULT '',
-  `url` varchar(255) NOT NULL DEFAULT '',
-  `downtype` tinyint(1) NOT NULL DEFAULT '0',
-  PRIMARY KEY (`urlid`)
+  `urlid` smallint(5) unsigned NOT NULL auto_increment,
+  `urlname` varchar(30) NOT NULL default '',
+  `url` varchar(255) NOT NULL default '',
+  `downtype` tinyint(1) NOT NULL default '0',
+  PRIMARY KEY  (`urlid`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_enewsdownurlqz`
@@ -4623,14 +4626,14 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_enewserrorclass`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_enewserrorclass` (
-  `classid` smallint(5) unsigned NOT NULL AUTO_INCREMENT,
-  `classname` varchar(30) NOT NULL DEFAULT '',
-  PRIMARY KEY (`classid`)
+  `classid` smallint(5) unsigned NOT NULL auto_increment,
+  `classname` varchar(30) NOT NULL default '',
+  PRIMARY KEY  (`classid`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_enewserrorclass`
@@ -4646,50 +4649,50 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_enewsf`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_enewsf` (
-  `fid` smallint(5) unsigned NOT NULL AUTO_INCREMENT,
-  `f` varchar(30) NOT NULL DEFAULT '',
-  `fname` varchar(30) NOT NULL DEFAULT '',
-  `fform` varchar(20) NOT NULL DEFAULT '',
+  `fid` smallint(5) unsigned NOT NULL auto_increment,
+  `f` varchar(30) NOT NULL default '',
+  `fname` varchar(30) NOT NULL default '',
+  `fform` varchar(20) NOT NULL default '',
   `fhtml` mediumtext NOT NULL,
-  `fzs` varchar(255) NOT NULL DEFAULT '',
-  `isadd` tinyint(1) NOT NULL DEFAULT '0',
-  `isshow` tinyint(1) NOT NULL DEFAULT '0',
-  `iscj` tinyint(1) NOT NULL DEFAULT '0',
+  `fzs` varchar(255) NOT NULL default '',
+  `isadd` tinyint(1) NOT NULL default '0',
+  `isshow` tinyint(1) NOT NULL default '0',
+  `iscj` tinyint(1) NOT NULL default '0',
   `cjhtml` mediumtext NOT NULL,
-  `myorder` smallint(6) NOT NULL DEFAULT '0',
-  `ftype` varchar(30) NOT NULL DEFAULT '',
-  `flen` varchar(20) NOT NULL DEFAULT '',
-  `dotemp` tinyint(1) NOT NULL DEFAULT '0',
-  `tid` smallint(6) NOT NULL DEFAULT '0',
-  `tbname` varchar(60) NOT NULL DEFAULT '',
-  `savetxt` tinyint(1) NOT NULL DEFAULT '0',
+  `myorder` smallint(6) NOT NULL default '0',
+  `ftype` varchar(30) NOT NULL default '',
+  `flen` varchar(20) NOT NULL default '',
+  `dotemp` tinyint(1) NOT NULL default '0',
+  `tid` smallint(6) NOT NULL default '0',
+  `tbname` varchar(60) NOT NULL default '',
+  `savetxt` tinyint(1) NOT NULL default '0',
   `fvalue` text NOT NULL,
-  `iskey` tinyint(1) NOT NULL DEFAULT '0',
-  `tobr` tinyint(1) NOT NULL DEFAULT '0',
-  `dohtml` tinyint(1) NOT NULL DEFAULT '0',
+  `iskey` tinyint(1) NOT NULL default '0',
+  `tobr` tinyint(1) NOT NULL default '0',
+  `dohtml` tinyint(1) NOT NULL default '0',
   `qfhtml` mediumtext NOT NULL,
-  `isonly` tinyint(1) NOT NULL DEFAULT '0',
-  `linkfieldval` varchar(30) NOT NULL DEFAULT '',
-  `samedata` tinyint(1) NOT NULL DEFAULT '0',
-  `fformsize` varchar(12) NOT NULL DEFAULT '',
-  `tbdataf` tinyint(1) NOT NULL DEFAULT '0',
-  `ispage` tinyint(1) NOT NULL DEFAULT '0',
-  `adddofun` varchar(255) NOT NULL DEFAULT '',
-  `editdofun` varchar(255) NOT NULL DEFAULT '',
-  `qadddofun` varchar(255) NOT NULL DEFAULT '',
-  `qeditdofun` varchar(255) NOT NULL DEFAULT '',
-  `linkfieldtb` varchar(60) NOT NULL DEFAULT '',
-  `linkfieldshow` varchar(30) NOT NULL DEFAULT '',
-  `editorys` tinyint(1) NOT NULL DEFAULT '0',
-  `issmalltext` tinyint(1) NOT NULL DEFAULT '0',
-  `fmvnum` varchar(30) NOT NULL DEFAULT '',
-  PRIMARY KEY (`fid`),
+  `isonly` tinyint(1) NOT NULL default '0',
+  `linkfieldval` varchar(30) NOT NULL default '',
+  `samedata` tinyint(1) NOT NULL default '0',
+  `fformsize` varchar(12) NOT NULL default '',
+  `tbdataf` tinyint(1) NOT NULL default '0',
+  `ispage` tinyint(1) NOT NULL default '0',
+  `adddofun` varchar(255) NOT NULL default '',
+  `editdofun` varchar(255) NOT NULL default '',
+  `qadddofun` varchar(255) NOT NULL default '',
+  `qeditdofun` varchar(255) NOT NULL default '',
+  `linkfieldtb` varchar(60) NOT NULL default '',
+  `linkfieldshow` varchar(30) NOT NULL default '',
+  `editorys` tinyint(1) NOT NULL default '0',
+  `issmalltext` tinyint(1) NOT NULL default '0',
+  `fmvnum` varchar(30) NOT NULL default '',
+  PRIMARY KEY  (`fid`),
   KEY `tid` (`tid`)
 ) ENGINE=MyISAM AUTO_INCREMENT=107 DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_enewsf`
@@ -4706,21 +4709,21 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_enewsfava`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_enewsfava` (
-  `favaid` bigint(20) NOT NULL AUTO_INCREMENT,
-  `id` int(11) NOT NULL DEFAULT '0',
-  `favatime` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `userid` int(11) NOT NULL DEFAULT '0',
-  `username` varchar(30) NOT NULL DEFAULT '',
-  `classid` smallint(6) NOT NULL DEFAULT '0',
-  `cid` int(11) NOT NULL DEFAULT '0',
-  PRIMARY KEY (`favaid`),
+  `favaid` bigint(20) NOT NULL auto_increment,
+  `id` int(11) NOT NULL default '0',
+  `favatime` datetime NOT NULL default '0000-00-00 00:00:00',
+  `userid` int(11) NOT NULL default '0',
+  `username` varchar(30) NOT NULL default '',
+  `classid` smallint(6) NOT NULL default '0',
+  `cid` int(11) NOT NULL default '0',
+  PRIMARY KEY  (`favaid`),
   KEY `userid` (`userid`),
   KEY `cid` (`cid`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_enewsfava`
@@ -4736,16 +4739,16 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_enewsfavaclass`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_enewsfavaclass` (
-  `cid` int(11) NOT NULL AUTO_INCREMENT,
-  `cname` varchar(30) NOT NULL DEFAULT '',
-  `userid` int(11) NOT NULL DEFAULT '0',
-  PRIMARY KEY (`cid`),
+  `cid` int(11) NOT NULL auto_increment,
+  `cname` varchar(30) NOT NULL default '',
+  `userid` int(11) NOT NULL default '0',
+  PRIMARY KEY  (`cid`),
   KEY `userid` (`userid`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_enewsfavaclass`
@@ -4761,32 +4764,32 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_enewsfeedback`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_enewsfeedback` (
-  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `bid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `title` varchar(120) NOT NULL DEFAULT '',
+  `id` int(10) unsigned NOT NULL auto_increment,
+  `bid` smallint(5) unsigned NOT NULL default '0',
+  `title` varchar(120) NOT NULL default '',
   `saytext` text NOT NULL,
-  `name` varchar(30) NOT NULL DEFAULT '',
-  `email` varchar(80) NOT NULL DEFAULT '',
-  `mycall` varchar(30) NOT NULL DEFAULT '',
-  `homepage` varchar(160) NOT NULL DEFAULT '',
-  `company` varchar(80) NOT NULL DEFAULT '',
-  `address` varchar(255) NOT NULL DEFAULT '',
-  `saytime` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `job` varchar(36) NOT NULL DEFAULT '',
-  `ip` varchar(20) NOT NULL DEFAULT '',
-  `filepath` varchar(20) NOT NULL DEFAULT '',
+  `name` varchar(30) NOT NULL default '',
+  `email` varchar(80) NOT NULL default '',
+  `mycall` varchar(30) NOT NULL default '',
+  `homepage` varchar(160) NOT NULL default '',
+  `company` varchar(80) NOT NULL default '',
+  `address` varchar(255) NOT NULL default '',
+  `saytime` datetime NOT NULL default '0000-00-00 00:00:00',
+  `job` varchar(36) NOT NULL default '',
+  `ip` varchar(20) NOT NULL default '',
+  `filepath` varchar(20) NOT NULL default '',
   `filename` text NOT NULL,
-  `userid` mediumint(8) unsigned NOT NULL DEFAULT '0',
-  `username` varchar(20) NOT NULL DEFAULT '',
-  `haveread` tinyint(1) NOT NULL DEFAULT '0',
-  PRIMARY KEY (`id`),
+  `userid` mediumint(8) unsigned NOT NULL default '0',
+  `username` varchar(20) NOT NULL default '',
+  `haveread` tinyint(1) NOT NULL default '0',
+  PRIMARY KEY  (`id`),
   KEY `bid` (`bid`),
   KEY `haveread` (`haveread`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_enewsfeedback`
@@ -4802,22 +4805,22 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_enewsfeedbackclass`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_enewsfeedbackclass` (
-  `bid` smallint(5) unsigned NOT NULL AUTO_INCREMENT,
-  `bname` varchar(60) NOT NULL DEFAULT '',
+  `bid` smallint(5) unsigned NOT NULL auto_increment,
+  `bname` varchar(60) NOT NULL default '',
   `btemp` mediumtext NOT NULL,
-  `bzs` varchar(255) NOT NULL DEFAULT '',
+  `bzs` varchar(255) NOT NULL default '',
   `enter` text NOT NULL,
   `mustenter` text NOT NULL,
-  `filef` varchar(255) NOT NULL DEFAULT '',
-  `groupid` smallint(6) NOT NULL DEFAULT '0',
+  `filef` varchar(255) NOT NULL default '',
+  `groupid` smallint(6) NOT NULL default '0',
   `checkboxf` text NOT NULL,
   `usernames` text NOT NULL,
-  PRIMARY KEY (`bid`)
+  PRIMARY KEY  (`bid`)
 ) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_enewsfeedbackclass`
@@ -4834,22 +4837,22 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_enewsfeedbackf`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_enewsfeedbackf` (
-  `fid` smallint(5) unsigned NOT NULL AUTO_INCREMENT,
-  `f` varchar(30) NOT NULL DEFAULT '',
-  `fname` varchar(30) NOT NULL DEFAULT '',
-  `fform` varchar(20) NOT NULL DEFAULT '',
-  `fzs` varchar(255) NOT NULL DEFAULT '',
-  `myorder` smallint(6) NOT NULL DEFAULT '0',
-  `ftype` varchar(30) NOT NULL DEFAULT '',
-  `flen` varchar(20) NOT NULL DEFAULT '',
-  `fformsize` varchar(12) NOT NULL DEFAULT '',
+  `fid` smallint(5) unsigned NOT NULL auto_increment,
+  `f` varchar(30) NOT NULL default '',
+  `fname` varchar(30) NOT NULL default '',
+  `fform` varchar(20) NOT NULL default '',
+  `fzs` varchar(255) NOT NULL default '',
+  `myorder` smallint(6) NOT NULL default '0',
+  `ftype` varchar(30) NOT NULL default '',
+  `flen` varchar(20) NOT NULL default '',
+  `fformsize` varchar(12) NOT NULL default '',
   `fvalue` text NOT NULL,
-  PRIMARY KEY (`fid`)
+  PRIMARY KEY  (`fid`)
 ) ENGINE=MyISAM AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_enewsfeedbackf`
@@ -4866,31 +4869,31 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_enewsfile_1`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_enewsfile_1` (
-  `fileid` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `pubid` bigint(16) unsigned NOT NULL DEFAULT '0',
-  `filename` char(60) NOT NULL DEFAULT '',
-  `filesize` int(10) unsigned NOT NULL DEFAULT '0',
-  `path` char(20) NOT NULL DEFAULT '',
-  `adduser` char(30) NOT NULL DEFAULT '',
-  `filetime` int(10) unsigned NOT NULL DEFAULT '0',
-  `classid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `no` char(60) NOT NULL DEFAULT '',
-  `type` tinyint(1) unsigned NOT NULL DEFAULT '0',
-  `onclick` mediumint(8) unsigned NOT NULL DEFAULT '0',
-  `id` int(10) unsigned NOT NULL DEFAULT '0',
-  `cjid` int(10) unsigned NOT NULL DEFAULT '0',
-  `fpath` tinyint(1) NOT NULL DEFAULT '0',
-  `modtype` tinyint(1) NOT NULL DEFAULT '0',
-  PRIMARY KEY (`fileid`),
+  `fileid` int(10) unsigned NOT NULL auto_increment,
+  `pubid` bigint(16) unsigned NOT NULL default '0',
+  `filename` char(60) NOT NULL default '',
+  `filesize` int(10) unsigned NOT NULL default '0',
+  `path` char(20) NOT NULL default '',
+  `adduser` char(30) NOT NULL default '',
+  `filetime` int(10) unsigned NOT NULL default '0',
+  `classid` smallint(5) unsigned NOT NULL default '0',
+  `no` char(60) NOT NULL default '',
+  `type` tinyint(1) unsigned NOT NULL default '0',
+  `onclick` mediumint(8) unsigned NOT NULL default '0',
+  `id` int(10) unsigned NOT NULL default '0',
+  `cjid` int(10) unsigned NOT NULL default '0',
+  `fpath` tinyint(1) NOT NULL default '0',
+  `modtype` tinyint(1) NOT NULL default '0',
+  PRIMARY KEY  (`fileid`),
   KEY `id` (`id`),
   KEY `type` (`type`),
   KEY `classid` (`classid`),
   KEY `pubid` (`pubid`)
-) ENGINE=MyISAM AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+) ENGINE=MyISAM AUTO_INCREMENT=13 DEFAULT CHARSET=utf8;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_enewsfile_1`
@@ -4898,7 +4901,7 @@ CREATE TABLE `ziyi_enewsfile_1` (
 
 LOCK TABLES `ziyi_enewsfile_1` WRITE;
 /*!40000 ALTER TABLE `ziyi_enewsfile_1` DISABLE KEYS */;
-INSERT INTO `ziyi_enewsfile_1` VALUES (1,1000030000000001,'8269ed03c7afd02278cd3daaa28cf6ea.jpg',35596,'2013-08-26','assnr',1377519947,9,'20121212132714-390585236.jpg',1,0,1,0,0,0),(2,1000030000000002,'2b37fd1e3b83c67c512a2c9a901b2529.jpg',15208,'2013-08-26','assnr',1377520006,9,'20121210rk09f.jpg',1,0,2,0,0,0),(3,1000030000000003,'43404cbcbe01a1b49d23b95c8e362931.jpg',26725,'2013-08-26','assnr',1377520122,9,'2012122222212yqsjidan.jpg',1,0,3,0,0,0),(4,1000030000000003,'910b7dce5aae50cb170be0aa3faa9197.jpg',60533,'2013-08-26','assnr',1377520175,9,'910b7dce5aae50cb170be0aa3faa9197.jpg',1,0,3,0,0,0),(5,1000030000000003,'50fc938f7a245d49099135c2d20e54f6.jpg',15208,'2013-08-26','assnr',1377520175,9,'50fc938f7a245d49099135c2d20e54f6.jpg',1,0,3,0,0,0),(6,1000030000000003,'404a0231ab3aee353fb20b5a68e45136.jpg',27000,'2013-08-26','assnr',1377520175,9,'404a0231ab3aee353fb20b5a68e45136.jpg',1,0,3,0,0,0),(7,1000030000000004,'cce72a3e7855fc27952c9f0616ae0765.jpg',15269,'2013-08-26','assnr',1377522474,9,'20121029143016-1970481071.jpg',1,0,4,0,0,0),(8,1000030000000004,'411c0a67be68ba9f418d56fa1ea3e37c.jpg',97665,'2013-08-28','assnr',1377677616,9,'20130316_114154.jpg',1,0,4,0,0,0),(9,1000030000000003,'f18c9811893a9e8e890cb41b033a0ecd.jpg',141156,'2013-08-28','assnr',1377677860,9,'weerwe.jpg',1,0,3,0,0,0),(10,1000030000000002,'d5c96617ad43718514a25307daaff5e9.jpg',128363,'2013-08-28','assnr',1377677938,9,'weerwe.jpg',1,0,2,0,0,0);
+INSERT INTO `ziyi_enewsfile_1` VALUES (1,1000030000000001,'8269ed03c7afd02278cd3daaa28cf6ea.jpg',35596,'2013-08-26','assnr',1377519947,9,'20121212132714-390585236.jpg',1,0,1,0,0,0),(2,1000030000000002,'2b37fd1e3b83c67c512a2c9a901b2529.jpg',15208,'2013-08-26','assnr',1377520006,9,'20121210rk09f.jpg',1,0,2,0,0,0),(3,1000030000000003,'43404cbcbe01a1b49d23b95c8e362931.jpg',26725,'2013-08-26','assnr',1377520122,9,'2012122222212yqsjidan.jpg',1,0,3,0,0,0),(4,1000030000000003,'910b7dce5aae50cb170be0aa3faa9197.jpg',60533,'2013-08-26','assnr',1377520175,9,'910b7dce5aae50cb170be0aa3faa9197.jpg',1,0,3,0,0,0),(5,1000030000000003,'50fc938f7a245d49099135c2d20e54f6.jpg',15208,'2013-08-26','assnr',1377520175,9,'50fc938f7a245d49099135c2d20e54f6.jpg',1,0,3,0,0,0),(6,1000030000000003,'404a0231ab3aee353fb20b5a68e45136.jpg',27000,'2013-08-26','assnr',1377520175,9,'404a0231ab3aee353fb20b5a68e45136.jpg',1,0,3,0,0,0),(7,1000030000000004,'cce72a3e7855fc27952c9f0616ae0765.jpg',15269,'2013-08-26','assnr',1377522474,9,'20121029143016-1970481071.jpg',1,0,4,0,0,0),(8,1000030000000004,'411c0a67be68ba9f418d56fa1ea3e37c.jpg',97665,'2013-08-28','assnr',1377677616,9,'20130316_114154.jpg',1,0,4,0,0,0),(9,1000030000000003,'f18c9811893a9e8e890cb41b033a0ecd.jpg',141156,'2013-08-28','assnr',1377677860,9,'weerwe.jpg',1,0,3,0,0,0),(10,1000030000000002,'d5c96617ad43718514a25307daaff5e9.jpg',128363,'2013-08-28','assnr',1377677938,9,'weerwe.jpg',1,0,2,0,0,0),(11,1000010000000001,'458c51b4931f5ddb93b3122c99b18ddf.jpg',60373,'2013-08-30','assnr',1377875088,5,'20121210yqsfanhoufei.jpg',1,0,1,0,0,0),(12,1000010000000002,'8bf22c377d9162a299041110dc4cc8a5.jpg',36160,'2013-08-30','assnr',1377875230,5,'20121212yqsxizao.jpg',1,0,2,0,0,0);
 /*!40000 ALTER TABLE `ziyi_enewsfile_1` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -4907,29 +4910,29 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_enewsfile_member`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_enewsfile_member` (
-  `fileid` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `pubid` tinyint(1) NOT NULL DEFAULT '0',
-  `filename` char(60) NOT NULL DEFAULT '',
-  `filesize` int(10) unsigned NOT NULL DEFAULT '0',
-  `path` char(20) NOT NULL DEFAULT '',
-  `adduser` char(30) NOT NULL DEFAULT '',
-  `filetime` int(10) unsigned NOT NULL DEFAULT '0',
-  `classid` tinyint(1) NOT NULL DEFAULT '0',
-  `no` char(60) NOT NULL DEFAULT '',
-  `type` tinyint(1) unsigned NOT NULL DEFAULT '0',
-  `onclick` mediumint(8) unsigned NOT NULL DEFAULT '0',
-  `id` int(10) unsigned NOT NULL DEFAULT '0',
-  `cjid` int(10) unsigned NOT NULL DEFAULT '0',
-  `fpath` tinyint(1) NOT NULL DEFAULT '0',
-  `modtype` tinyint(1) NOT NULL DEFAULT '0',
-  PRIMARY KEY (`fileid`),
+  `fileid` int(10) unsigned NOT NULL auto_increment,
+  `pubid` tinyint(1) NOT NULL default '0',
+  `filename` char(60) NOT NULL default '',
+  `filesize` int(10) unsigned NOT NULL default '0',
+  `path` char(20) NOT NULL default '',
+  `adduser` char(30) NOT NULL default '',
+  `filetime` int(10) unsigned NOT NULL default '0',
+  `classid` tinyint(1) NOT NULL default '0',
+  `no` char(60) NOT NULL default '',
+  `type` tinyint(1) unsigned NOT NULL default '0',
+  `onclick` mediumint(8) unsigned NOT NULL default '0',
+  `id` int(10) unsigned NOT NULL default '0',
+  `cjid` int(10) unsigned NOT NULL default '0',
+  `fpath` tinyint(1) NOT NULL default '0',
+  `modtype` tinyint(1) NOT NULL default '0',
+  PRIMARY KEY  (`fileid`),
   KEY `id` (`id`),
   KEY `type` (`type`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_enewsfile_member`
@@ -4945,30 +4948,30 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_enewsfile_other`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_enewsfile_other` (
-  `fileid` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `pubid` tinyint(1) NOT NULL DEFAULT '0',
-  `filename` char(60) NOT NULL DEFAULT '',
-  `filesize` int(10) unsigned NOT NULL DEFAULT '0',
-  `path` char(20) NOT NULL DEFAULT '',
-  `adduser` char(30) NOT NULL DEFAULT '',
-  `filetime` int(10) unsigned NOT NULL DEFAULT '0',
-  `classid` tinyint(1) NOT NULL DEFAULT '0',
-  `no` char(60) NOT NULL DEFAULT '',
-  `type` tinyint(1) unsigned NOT NULL DEFAULT '0',
-  `onclick` mediumint(8) unsigned NOT NULL DEFAULT '0',
-  `id` int(10) unsigned NOT NULL DEFAULT '0',
-  `cjid` int(10) unsigned NOT NULL DEFAULT '0',
-  `fpath` tinyint(1) NOT NULL DEFAULT '0',
-  `modtype` tinyint(3) unsigned NOT NULL DEFAULT '0',
-  PRIMARY KEY (`fileid`),
+  `fileid` int(10) unsigned NOT NULL auto_increment,
+  `pubid` tinyint(1) NOT NULL default '0',
+  `filename` char(60) NOT NULL default '',
+  `filesize` int(10) unsigned NOT NULL default '0',
+  `path` char(20) NOT NULL default '',
+  `adduser` char(30) NOT NULL default '',
+  `filetime` int(10) unsigned NOT NULL default '0',
+  `classid` tinyint(1) NOT NULL default '0',
+  `no` char(60) NOT NULL default '',
+  `type` tinyint(1) unsigned NOT NULL default '0',
+  `onclick` mediumint(8) unsigned NOT NULL default '0',
+  `id` int(10) unsigned NOT NULL default '0',
+  `cjid` int(10) unsigned NOT NULL default '0',
+  `fpath` tinyint(1) NOT NULL default '0',
+  `modtype` tinyint(3) unsigned NOT NULL default '0',
+  PRIMARY KEY  (`fileid`),
   KEY `id` (`id`),
   KEY `type` (`type`),
   KEY `modtype` (`modtype`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_enewsfile_other`
@@ -4984,30 +4987,30 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_enewsfile_public`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_enewsfile_public` (
-  `fileid` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `pubid` tinyint(1) NOT NULL DEFAULT '0',
-  `filename` char(60) NOT NULL DEFAULT '',
-  `filesize` int(10) unsigned NOT NULL DEFAULT '0',
-  `path` char(20) NOT NULL DEFAULT '',
-  `adduser` char(30) NOT NULL DEFAULT '',
-  `filetime` int(10) unsigned NOT NULL DEFAULT '0',
-  `classid` tinyint(1) NOT NULL DEFAULT '0',
-  `no` char(60) NOT NULL DEFAULT '',
-  `type` tinyint(1) unsigned NOT NULL DEFAULT '0',
-  `onclick` mediumint(8) unsigned NOT NULL DEFAULT '0',
-  `id` int(10) unsigned NOT NULL DEFAULT '0',
-  `cjid` int(10) unsigned NOT NULL DEFAULT '0',
-  `fpath` tinyint(1) NOT NULL DEFAULT '0',
-  `modtype` tinyint(3) unsigned NOT NULL DEFAULT '0',
-  PRIMARY KEY (`fileid`),
+  `fileid` int(10) unsigned NOT NULL auto_increment,
+  `pubid` tinyint(1) NOT NULL default '0',
+  `filename` char(60) NOT NULL default '',
+  `filesize` int(10) unsigned NOT NULL default '0',
+  `path` char(20) NOT NULL default '',
+  `adduser` char(30) NOT NULL default '',
+  `filetime` int(10) unsigned NOT NULL default '0',
+  `classid` tinyint(1) NOT NULL default '0',
+  `no` char(60) NOT NULL default '',
+  `type` tinyint(1) unsigned NOT NULL default '0',
+  `onclick` mediumint(8) unsigned NOT NULL default '0',
+  `id` int(10) unsigned NOT NULL default '0',
+  `cjid` int(10) unsigned NOT NULL default '0',
+  `fpath` tinyint(1) NOT NULL default '0',
+  `modtype` tinyint(3) unsigned NOT NULL default '0',
+  PRIMARY KEY  (`fileid`),
   KEY `id` (`id`),
   KEY `type` (`type`),
   KEY `modtype` (`modtype`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_enewsfile_public`
@@ -5023,25 +5026,25 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_enewsgbook`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_enewsgbook` (
-  `lyid` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `name` varchar(30) NOT NULL DEFAULT '',
-  `email` varchar(80) NOT NULL DEFAULT '',
-  `mycall` varchar(30) NOT NULL DEFAULT '',
-  `lytime` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `lyid` int(10) unsigned NOT NULL auto_increment,
+  `name` varchar(30) NOT NULL default '',
+  `email` varchar(80) NOT NULL default '',
+  `mycall` varchar(30) NOT NULL default '',
+  `lytime` datetime NOT NULL default '0000-00-00 00:00:00',
   `lytext` text NOT NULL,
   `retext` text NOT NULL,
-  `bid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `ip` varchar(20) NOT NULL DEFAULT '',
-  `checked` tinyint(1) NOT NULL DEFAULT '0',
-  `userid` mediumint(8) unsigned NOT NULL DEFAULT '0',
-  `username` varchar(20) NOT NULL DEFAULT '',
-  PRIMARY KEY (`lyid`),
+  `bid` smallint(5) unsigned NOT NULL default '0',
+  `ip` varchar(20) NOT NULL default '',
+  `checked` tinyint(1) NOT NULL default '0',
+  `userid` mediumint(8) unsigned NOT NULL default '0',
+  `username` varchar(20) NOT NULL default '',
+  PRIMARY KEY  (`lyid`),
   KEY `bid` (`bid`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_enewsgbook`
@@ -5057,16 +5060,16 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_enewsgbookclass`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_enewsgbookclass` (
-  `bid` smallint(5) unsigned NOT NULL AUTO_INCREMENT,
-  `bname` varchar(60) NOT NULL DEFAULT '',
-  `checked` tinyint(1) NOT NULL DEFAULT '0',
-  `groupid` smallint(6) NOT NULL DEFAULT '0',
-  PRIMARY KEY (`bid`)
+  `bid` smallint(5) unsigned NOT NULL auto_increment,
+  `bname` varchar(60) NOT NULL default '',
+  `checked` tinyint(1) NOT NULL default '0',
+  `groupid` smallint(6) NOT NULL default '0',
+  PRIMARY KEY  (`bid`)
 ) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_enewsgbookclass`
@@ -5083,14 +5086,14 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_enewsgfenip`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_enewsgfenip` (
-  `ip` varchar(20) NOT NULL DEFAULT '',
-  `addtime` int(11) NOT NULL DEFAULT '0',
+  `ip` varchar(20) NOT NULL default '',
+  `addtime` int(11) NOT NULL default '0',
   UNIQUE KEY `ip` (`ip`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_enewsgfenip`
@@ -5106,111 +5109,111 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_enewsgroup`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_enewsgroup` (
-  `groupid` smallint(6) NOT NULL AUTO_INCREMENT,
-  `groupname` varchar(50) NOT NULL DEFAULT '',
-  `dopublic` tinyint(1) NOT NULL DEFAULT '0',
-  `doclass` tinyint(1) NOT NULL DEFAULT '0',
-  `dotemplate` tinyint(1) NOT NULL DEFAULT '0',
-  `dopicnews` tinyint(1) NOT NULL DEFAULT '0',
-  `dofile` tinyint(1) NOT NULL DEFAULT '0',
-  `douser` tinyint(1) NOT NULL DEFAULT '0',
-  `dolog` tinyint(1) NOT NULL DEFAULT '0',
-  `domember` tinyint(1) NOT NULL DEFAULT '0',
-  `dobefrom` tinyint(1) NOT NULL DEFAULT '0',
-  `doword` tinyint(1) NOT NULL DEFAULT '0',
-  `dokey` tinyint(1) NOT NULL DEFAULT '0',
-  `doad` tinyint(1) NOT NULL DEFAULT '0',
-  `dovote` tinyint(1) NOT NULL DEFAULT '0',
-  `dogroup` tinyint(1) NOT NULL DEFAULT '0',
-  `doall` tinyint(1) NOT NULL DEFAULT '0',
-  `docj` tinyint(1) NOT NULL DEFAULT '0',
-  `dobq` tinyint(1) NOT NULL DEFAULT '0',
-  `domovenews` tinyint(1) NOT NULL DEFAULT '0',
-  `dopostdata` tinyint(1) NOT NULL DEFAULT '0',
-  `dochangedata` tinyint(1) NOT NULL DEFAULT '0',
-  `dopl` tinyint(1) NOT NULL DEFAULT '0',
-  `dof` tinyint(1) NOT NULL DEFAULT '0',
-  `dom` tinyint(1) NOT NULL DEFAULT '0',
-  `dodo` tinyint(1) NOT NULL DEFAULT '0',
-  `dodbdata` tinyint(1) NOT NULL DEFAULT '0',
-  `dorepnewstext` tinyint(1) NOT NULL DEFAULT '0',
-  `dotempvar` tinyint(1) NOT NULL DEFAULT '0',
-  `dostats` tinyint(1) NOT NULL DEFAULT '0',
-  `dowriter` tinyint(1) NOT NULL DEFAULT '0',
-  `dototaldata` tinyint(1) NOT NULL DEFAULT '0',
-  `dosearchkey` tinyint(1) NOT NULL DEFAULT '0',
-  `dozt` tinyint(1) NOT NULL DEFAULT '0',
-  `docard` tinyint(1) NOT NULL DEFAULT '0',
-  `dolink` tinyint(1) NOT NULL DEFAULT '0',
-  `doselfinfo` tinyint(1) NOT NULL DEFAULT '0',
-  `doexecsql` tinyint(1) NOT NULL DEFAULT '0',
-  `dotable` tinyint(1) NOT NULL DEFAULT '0',
-  `dodownurl` tinyint(1) NOT NULL DEFAULT '0',
-  `dodeldownrecord` tinyint(1) NOT NULL DEFAULT '0',
-  `doshoppayfs` tinyint(1) NOT NULL DEFAULT '0',
-  `doshopps` tinyint(1) NOT NULL DEFAULT '0',
-  `doshopdd` tinyint(1) NOT NULL DEFAULT '0',
-  `dogbook` tinyint(1) NOT NULL DEFAULT '0',
-  `dofeedback` tinyint(1) NOT NULL DEFAULT '0',
-  `douserpage` tinyint(1) NOT NULL DEFAULT '0',
-  `donotcj` tinyint(1) NOT NULL DEFAULT '0',
-  `dodownerror` tinyint(1) NOT NULL DEFAULT '0',
-  `dodelinfodata` tinyint(1) NOT NULL DEFAULT '0',
-  `doaddinfo` tinyint(1) NOT NULL DEFAULT '0',
-  `doeditinfo` tinyint(1) NOT NULL DEFAULT '0',
-  `dodelinfo` tinyint(1) NOT NULL DEFAULT '0',
-  `doadminstyle` tinyint(1) NOT NULL DEFAULT '0',
-  `dorepdownpath` tinyint(1) NOT NULL DEFAULT '0',
-  `douserjs` tinyint(1) NOT NULL DEFAULT '0',
-  `douserlist` tinyint(1) NOT NULL DEFAULT '0',
-  `domsg` tinyint(1) NOT NULL DEFAULT '0',
-  `dosendemail` tinyint(1) NOT NULL DEFAULT '0',
-  `dosetmclass` tinyint(1) NOT NULL DEFAULT '0',
-  `doinfodoc` tinyint(1) NOT NULL DEFAULT '0',
-  `dotempgroup` tinyint(1) NOT NULL DEFAULT '0',
-  `dofeedbackf` tinyint(1) NOT NULL DEFAULT '0',
-  `dotask` tinyint(1) NOT NULL DEFAULT '0',
-  `domemberf` tinyint(1) NOT NULL DEFAULT '0',
-  `dospacestyle` tinyint(1) NOT NULL DEFAULT '0',
-  `dospacedata` tinyint(1) NOT NULL DEFAULT '0',
-  `dovotemod` tinyint(1) NOT NULL DEFAULT '0',
-  `doplayer` tinyint(1) NOT NULL DEFAULT '0',
-  `dowap` tinyint(1) NOT NULL DEFAULT '0',
-  `dopay` tinyint(1) NOT NULL DEFAULT '0',
-  `dobuygroup` tinyint(1) NOT NULL DEFAULT '0',
-  `dosearchall` tinyint(1) NOT NULL DEFAULT '0',
-  `doinfotype` tinyint(1) NOT NULL DEFAULT '0',
-  `doplf` tinyint(1) NOT NULL DEFAULT '0',
-  `dopltable` tinyint(1) NOT NULL DEFAULT '0',
-  `dochadminstyle` tinyint(1) NOT NULL DEFAULT '0',
-  `dotags` tinyint(1) NOT NULL DEFAULT '0',
-  `dosp` tinyint(1) NOT NULL DEFAULT '0',
-  `doyh` tinyint(1) NOT NULL DEFAULT '0',
-  `dofirewall` tinyint(1) NOT NULL DEFAULT '0',
-  `dosetsafe` tinyint(1) NOT NULL DEFAULT '0',
-  `douserclass` tinyint(1) NOT NULL DEFAULT '0',
-  `doworkflow` tinyint(1) NOT NULL DEFAULT '0',
-  `domenu` tinyint(1) NOT NULL DEFAULT '0',
-  `dopubvar` tinyint(1) NOT NULL DEFAULT '0',
-  `doclassf` tinyint(1) NOT NULL DEFAULT '0',
-  `doztf` tinyint(1) NOT NULL DEFAULT '0',
-  `dofiletable` tinyint(1) NOT NULL DEFAULT '0',
-  `docheckinfo` tinyint(1) NOT NULL DEFAULT '0',
-  `dogoodinfo` tinyint(1) NOT NULL DEFAULT '0',
-  `dodocinfo` tinyint(1) NOT NULL DEFAULT '0',
-  `domoveinfo` tinyint(1) NOT NULL DEFAULT '0',
-  `dodttemp` tinyint(1) NOT NULL DEFAULT '0',
-  `doloadcj` tinyint(1) NOT NULL DEFAULT '0',
-  `domustcheck` tinyint(1) NOT NULL DEFAULT '0',
-  `docheckedit` tinyint(1) NOT NULL DEFAULT '0',
-  `domemberconnect` tinyint(1) NOT NULL DEFAULT '0',
-  `doprecode` tinyint(1) NOT NULL DEFAULT '0',
-  PRIMARY KEY (`groupid`)
+  `groupid` smallint(6) NOT NULL auto_increment,
+  `groupname` varchar(50) NOT NULL default '',
+  `dopublic` tinyint(1) NOT NULL default '0',
+  `doclass` tinyint(1) NOT NULL default '0',
+  `dotemplate` tinyint(1) NOT NULL default '0',
+  `dopicnews` tinyint(1) NOT NULL default '0',
+  `dofile` tinyint(1) NOT NULL default '0',
+  `douser` tinyint(1) NOT NULL default '0',
+  `dolog` tinyint(1) NOT NULL default '0',
+  `domember` tinyint(1) NOT NULL default '0',
+  `dobefrom` tinyint(1) NOT NULL default '0',
+  `doword` tinyint(1) NOT NULL default '0',
+  `dokey` tinyint(1) NOT NULL default '0',
+  `doad` tinyint(1) NOT NULL default '0',
+  `dovote` tinyint(1) NOT NULL default '0',
+  `dogroup` tinyint(1) NOT NULL default '0',
+  `doall` tinyint(1) NOT NULL default '0',
+  `docj` tinyint(1) NOT NULL default '0',
+  `dobq` tinyint(1) NOT NULL default '0',
+  `domovenews` tinyint(1) NOT NULL default '0',
+  `dopostdata` tinyint(1) NOT NULL default '0',
+  `dochangedata` tinyint(1) NOT NULL default '0',
+  `dopl` tinyint(1) NOT NULL default '0',
+  `dof` tinyint(1) NOT NULL default '0',
+  `dom` tinyint(1) NOT NULL default '0',
+  `dodo` tinyint(1) NOT NULL default '0',
+  `dodbdata` tinyint(1) NOT NULL default '0',
+  `dorepnewstext` tinyint(1) NOT NULL default '0',
+  `dotempvar` tinyint(1) NOT NULL default '0',
+  `dostats` tinyint(1) NOT NULL default '0',
+  `dowriter` tinyint(1) NOT NULL default '0',
+  `dototaldata` tinyint(1) NOT NULL default '0',
+  `dosearchkey` tinyint(1) NOT NULL default '0',
+  `dozt` tinyint(1) NOT NULL default '0',
+  `docard` tinyint(1) NOT NULL default '0',
+  `dolink` tinyint(1) NOT NULL default '0',
+  `doselfinfo` tinyint(1) NOT NULL default '0',
+  `doexecsql` tinyint(1) NOT NULL default '0',
+  `dotable` tinyint(1) NOT NULL default '0',
+  `dodownurl` tinyint(1) NOT NULL default '0',
+  `dodeldownrecord` tinyint(1) NOT NULL default '0',
+  `doshoppayfs` tinyint(1) NOT NULL default '0',
+  `doshopps` tinyint(1) NOT NULL default '0',
+  `doshopdd` tinyint(1) NOT NULL default '0',
+  `dogbook` tinyint(1) NOT NULL default '0',
+  `dofeedback` tinyint(1) NOT NULL default '0',
+  `douserpage` tinyint(1) NOT NULL default '0',
+  `donotcj` tinyint(1) NOT NULL default '0',
+  `dodownerror` tinyint(1) NOT NULL default '0',
+  `dodelinfodata` tinyint(1) NOT NULL default '0',
+  `doaddinfo` tinyint(1) NOT NULL default '0',
+  `doeditinfo` tinyint(1) NOT NULL default '0',
+  `dodelinfo` tinyint(1) NOT NULL default '0',
+  `doadminstyle` tinyint(1) NOT NULL default '0',
+  `dorepdownpath` tinyint(1) NOT NULL default '0',
+  `douserjs` tinyint(1) NOT NULL default '0',
+  `douserlist` tinyint(1) NOT NULL default '0',
+  `domsg` tinyint(1) NOT NULL default '0',
+  `dosendemail` tinyint(1) NOT NULL default '0',
+  `dosetmclass` tinyint(1) NOT NULL default '0',
+  `doinfodoc` tinyint(1) NOT NULL default '0',
+  `dotempgroup` tinyint(1) NOT NULL default '0',
+  `dofeedbackf` tinyint(1) NOT NULL default '0',
+  `dotask` tinyint(1) NOT NULL default '0',
+  `domemberf` tinyint(1) NOT NULL default '0',
+  `dospacestyle` tinyint(1) NOT NULL default '0',
+  `dospacedata` tinyint(1) NOT NULL default '0',
+  `dovotemod` tinyint(1) NOT NULL default '0',
+  `doplayer` tinyint(1) NOT NULL default '0',
+  `dowap` tinyint(1) NOT NULL default '0',
+  `dopay` tinyint(1) NOT NULL default '0',
+  `dobuygroup` tinyint(1) NOT NULL default '0',
+  `dosearchall` tinyint(1) NOT NULL default '0',
+  `doinfotype` tinyint(1) NOT NULL default '0',
+  `doplf` tinyint(1) NOT NULL default '0',
+  `dopltable` tinyint(1) NOT NULL default '0',
+  `dochadminstyle` tinyint(1) NOT NULL default '0',
+  `dotags` tinyint(1) NOT NULL default '0',
+  `dosp` tinyint(1) NOT NULL default '0',
+  `doyh` tinyint(1) NOT NULL default '0',
+  `dofirewall` tinyint(1) NOT NULL default '0',
+  `dosetsafe` tinyint(1) NOT NULL default '0',
+  `douserclass` tinyint(1) NOT NULL default '0',
+  `doworkflow` tinyint(1) NOT NULL default '0',
+  `domenu` tinyint(1) NOT NULL default '0',
+  `dopubvar` tinyint(1) NOT NULL default '0',
+  `doclassf` tinyint(1) NOT NULL default '0',
+  `doztf` tinyint(1) NOT NULL default '0',
+  `dofiletable` tinyint(1) NOT NULL default '0',
+  `docheckinfo` tinyint(1) NOT NULL default '0',
+  `dogoodinfo` tinyint(1) NOT NULL default '0',
+  `dodocinfo` tinyint(1) NOT NULL default '0',
+  `domoveinfo` tinyint(1) NOT NULL default '0',
+  `dodttemp` tinyint(1) NOT NULL default '0',
+  `doloadcj` tinyint(1) NOT NULL default '0',
+  `domustcheck` tinyint(1) NOT NULL default '0',
+  `docheckedit` tinyint(1) NOT NULL default '0',
+  `domemberconnect` tinyint(1) NOT NULL default '0',
+  `doprecode` tinyint(1) NOT NULL default '0',
+  PRIMARY KEY  (`groupid`)
 ) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_enewsgroup`
@@ -5227,23 +5230,23 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_enewshmsg`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_enewshmsg` (
-  `mid` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `title` varchar(80) NOT NULL DEFAULT '',
+  `mid` int(10) unsigned NOT NULL auto_increment,
+  `title` varchar(80) NOT NULL default '',
   `msgtext` text NOT NULL,
-  `haveread` tinyint(1) NOT NULL DEFAULT '0',
-  `msgtime` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `to_username` varchar(30) NOT NULL DEFAULT '',
-  `from_userid` int(10) unsigned NOT NULL DEFAULT '0',
-  `from_username` varchar(30) NOT NULL DEFAULT '',
-  `isadmin` tinyint(1) NOT NULL DEFAULT '0',
-  `issys` tinyint(1) NOT NULL DEFAULT '0',
-  PRIMARY KEY (`mid`),
+  `haveread` tinyint(1) NOT NULL default '0',
+  `msgtime` datetime NOT NULL default '0000-00-00 00:00:00',
+  `to_username` varchar(30) NOT NULL default '',
+  `from_userid` int(10) unsigned NOT NULL default '0',
+  `from_username` varchar(30) NOT NULL default '',
+  `isadmin` tinyint(1) NOT NULL default '0',
+  `issys` tinyint(1) NOT NULL default '0',
+  PRIMARY KEY  (`mid`),
   KEY `to_username` (`to_username`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_enewshmsg`
@@ -5259,21 +5262,21 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_enewshnotice`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_enewshnotice` (
-  `mid` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `title` varchar(80) NOT NULL DEFAULT '',
+  `mid` int(10) unsigned NOT NULL auto_increment,
+  `title` varchar(80) NOT NULL default '',
   `msgtext` text NOT NULL,
-  `haveread` tinyint(1) NOT NULL DEFAULT '0',
-  `msgtime` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `to_username` varchar(30) NOT NULL DEFAULT '',
-  `from_userid` int(10) unsigned NOT NULL DEFAULT '0',
-  `from_username` varchar(30) NOT NULL DEFAULT '',
-  PRIMARY KEY (`mid`),
+  `haveread` tinyint(1) NOT NULL default '0',
+  `msgtime` datetime NOT NULL default '0000-00-00 00:00:00',
+  `to_username` varchar(30) NOT NULL default '',
+  `from_userid` int(10) unsigned NOT NULL default '0',
+  `from_username` varchar(30) NOT NULL default '',
+  PRIMARY KEY  (`mid`),
   KEY `to_username` (`to_username`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_enewshnotice`
@@ -5289,19 +5292,19 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_enewshy`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_enewshy` (
-  `fid` bigint(20) NOT NULL AUTO_INCREMENT,
-  `userid` int(11) NOT NULL DEFAULT '0',
-  `fname` varchar(30) NOT NULL DEFAULT '',
-  `cid` int(11) NOT NULL DEFAULT '0',
-  `fsay` varchar(255) NOT NULL DEFAULT '',
-  PRIMARY KEY (`fid`),
+  `fid` bigint(20) NOT NULL auto_increment,
+  `userid` int(11) NOT NULL default '0',
+  `fname` varchar(30) NOT NULL default '',
+  `cid` int(11) NOT NULL default '0',
+  `fsay` varchar(255) NOT NULL default '',
+  PRIMARY KEY  (`fid`),
   KEY `userid` (`userid`),
   KEY `cid` (`cid`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_enewshy`
@@ -5317,16 +5320,16 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_enewshyclass`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_enewshyclass` (
-  `cid` int(11) NOT NULL AUTO_INCREMENT,
-  `cname` varchar(30) NOT NULL DEFAULT '',
-  `userid` int(11) NOT NULL DEFAULT '0',
-  PRIMARY KEY (`cid`),
+  `cid` int(11) NOT NULL auto_increment,
+  `cname` varchar(30) NOT NULL default '',
+  `userid` int(11) NOT NULL default '0',
+  PRIMARY KEY  (`cid`),
   KEY `userid` (`userid`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_enewshyclass`
@@ -5342,15 +5345,15 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_enewsindexpage`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_enewsindexpage` (
-  `tempid` smallint(5) unsigned NOT NULL AUTO_INCREMENT,
-  `tempname` varchar(30) NOT NULL DEFAULT '',
+  `tempid` smallint(5) unsigned NOT NULL auto_increment,
+  `tempname` varchar(30) NOT NULL default '',
   `temptext` mediumtext NOT NULL,
-  PRIMARY KEY (`tempid`)
+  PRIMARY KEY  (`tempid`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_enewsindexpage`
@@ -5366,70 +5369,70 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_enewsinfoclass`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_enewsinfoclass` (
-  `classid` int(11) NOT NULL AUTO_INCREMENT,
-  `bclassid` int(11) NOT NULL DEFAULT '0',
-  `classname` varchar(100) NOT NULL DEFAULT '',
+  `classid` int(11) NOT NULL auto_increment,
+  `bclassid` int(11) NOT NULL default '0',
+  `classname` varchar(100) NOT NULL default '',
   `infourl` mediumtext NOT NULL,
-  `newsclassid` smallint(6) NOT NULL DEFAULT '0',
-  `startday` date NOT NULL DEFAULT '0000-00-00',
-  `endday` date NOT NULL DEFAULT '0000-00-00',
+  `newsclassid` smallint(6) NOT NULL default '0',
+  `startday` date NOT NULL default '0000-00-00',
+  `endday` date NOT NULL default '0000-00-00',
   `bz` text NOT NULL,
-  `num` smallint(6) NOT NULL DEFAULT '0',
-  `copyimg` tinyint(1) NOT NULL DEFAULT '0',
-  `renum` smallint(6) NOT NULL DEFAULT '0',
+  `num` smallint(6) NOT NULL default '0',
+  `copyimg` tinyint(1) NOT NULL default '0',
+  `renum` smallint(6) NOT NULL default '0',
   `keyboard` text NOT NULL,
   `oldword` text NOT NULL,
   `newword` text NOT NULL,
-  `titlelen` smallint(6) NOT NULL DEFAULT '0',
-  `retitlewriter` tinyint(1) NOT NULL DEFAULT '0',
-  `smalltextlen` smallint(6) NOT NULL DEFAULT '0',
+  `titlelen` smallint(6) NOT NULL default '0',
+  `retitlewriter` tinyint(1) NOT NULL default '0',
+  `smalltextlen` smallint(6) NOT NULL default '0',
   `zz_smallurl` text NOT NULL,
   `zz_newsurl` text NOT NULL,
-  `httpurl` varchar(255) NOT NULL DEFAULT '',
+  `httpurl` varchar(255) NOT NULL default '',
   `repad` text NOT NULL,
-  `imgurl` varchar(255) NOT NULL DEFAULT '',
-  `relistnum` smallint(6) NOT NULL DEFAULT '0',
+  `imgurl` varchar(255) NOT NULL default '',
+  `relistnum` smallint(6) NOT NULL default '0',
   `zz_titlepicl` text NOT NULL,
-  `z_titlepicl` varchar(255) NOT NULL DEFAULT '',
-  `qz_titlepicl` varchar(255) NOT NULL DEFAULT '',
-  `save_titlepicl` varchar(10) NOT NULL DEFAULT '',
-  `keynum` tinyint(4) NOT NULL DEFAULT '0',
-  `insertnum` smallint(6) NOT NULL DEFAULT '0',
-  `copyflash` tinyint(1) NOT NULL DEFAULT '0',
-  `tid` smallint(6) NOT NULL DEFAULT '0',
-  `tbname` varchar(60) NOT NULL DEFAULT '',
-  `pagetype` tinyint(1) NOT NULL DEFAULT '0',
+  `z_titlepicl` varchar(255) NOT NULL default '',
+  `qz_titlepicl` varchar(255) NOT NULL default '',
+  `save_titlepicl` varchar(10) NOT NULL default '',
+  `keynum` tinyint(4) NOT NULL default '0',
+  `insertnum` smallint(6) NOT NULL default '0',
+  `copyflash` tinyint(1) NOT NULL default '0',
+  `tid` smallint(6) NOT NULL default '0',
+  `tbname` varchar(60) NOT NULL default '',
+  `pagetype` tinyint(1) NOT NULL default '0',
   `smallpagezz` text NOT NULL,
   `pagezz` text NOT NULL,
   `smallpageallzz` text NOT NULL,
   `pageallzz` text NOT NULL,
-  `mark` tinyint(1) NOT NULL DEFAULT '0',
-  `enpagecode` tinyint(1) NOT NULL DEFAULT '0',
-  `recjtheurl` tinyint(1) NOT NULL DEFAULT '0',
-  `hiddenload` tinyint(1) NOT NULL DEFAULT '0',
-  `justloadin` tinyint(1) NOT NULL DEFAULT '0',
-  `justloadcheck` tinyint(1) NOT NULL DEFAULT '0',
-  `delloadinfo` tinyint(1) NOT NULL DEFAULT '0',
+  `mark` tinyint(1) NOT NULL default '0',
+  `enpagecode` tinyint(1) NOT NULL default '0',
+  `recjtheurl` tinyint(1) NOT NULL default '0',
+  `hiddenload` tinyint(1) NOT NULL default '0',
+  `justloadin` tinyint(1) NOT NULL default '0',
+  `justloadcheck` tinyint(1) NOT NULL default '0',
+  `delloadinfo` tinyint(1) NOT NULL default '0',
   `pagerepad` mediumtext NOT NULL,
   `newsztid` text NOT NULL,
-  `getfirstpic` tinyint(4) NOT NULL DEFAULT '0',
+  `getfirstpic` tinyint(4) NOT NULL default '0',
   `oldpagerep` text NOT NULL,
   `newpagerep` text NOT NULL,
-  `keeptime` smallint(6) NOT NULL DEFAULT '0',
-  `lasttime` int(11) NOT NULL DEFAULT '0',
-  `newstextisnull` tinyint(1) NOT NULL DEFAULT '0',
-  `getfirstspic` tinyint(1) NOT NULL DEFAULT '0',
-  `getfirstspicw` smallint(6) NOT NULL DEFAULT '0',
-  `getfirstspich` smallint(6) NOT NULL DEFAULT '0',
-  `doaddtextpage` tinyint(1) NOT NULL DEFAULT '0',
-  `infourlispage` tinyint(1) NOT NULL DEFAULT '0',
-  PRIMARY KEY (`classid`),
+  `keeptime` smallint(6) NOT NULL default '0',
+  `lasttime` int(11) NOT NULL default '0',
+  `newstextisnull` tinyint(1) NOT NULL default '0',
+  `getfirstspic` tinyint(1) NOT NULL default '0',
+  `getfirstspicw` smallint(6) NOT NULL default '0',
+  `getfirstspich` smallint(6) NOT NULL default '0',
+  `doaddtextpage` tinyint(1) NOT NULL default '0',
+  `infourlispage` tinyint(1) NOT NULL default '0',
+  PRIMARY KEY  (`classid`),
   KEY `newsclassid` (`newsclassid`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_enewsinfoclass`
@@ -5445,39 +5448,39 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_enewsinfotype`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_enewsinfotype` (
-  `typeid` smallint(5) unsigned NOT NULL AUTO_INCREMENT,
-  `tname` varchar(30) NOT NULL DEFAULT '',
-  `mid` smallint(6) NOT NULL DEFAULT '0',
-  `myorder` smallint(6) NOT NULL DEFAULT '0',
-  `yhid` smallint(6) NOT NULL DEFAULT '0',
-  `tnum` tinyint(3) unsigned NOT NULL DEFAULT '0',
-  `listtempid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `tpath` varchar(100) NOT NULL DEFAULT '',
-  `ttype` varchar(10) NOT NULL DEFAULT '',
-  `maxnum` int(10) unsigned NOT NULL DEFAULT '0',
-  `reorder` varchar(50) NOT NULL DEFAULT '',
-  `tid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `tbname` varchar(60) NOT NULL DEFAULT '',
-  `timg` varchar(200) NOT NULL DEFAULT '',
-  `intro` varchar(255) NOT NULL DEFAULT '',
-  `pagekey` varchar(255) NOT NULL DEFAULT '',
-  `newline` tinyint(3) unsigned NOT NULL DEFAULT '0',
-  `hotline` tinyint(3) unsigned NOT NULL DEFAULT '0',
-  `goodline` tinyint(3) unsigned NOT NULL DEFAULT '0',
-  `hotplline` tinyint(3) unsigned NOT NULL DEFAULT '0',
-  `firstline` tinyint(3) unsigned NOT NULL DEFAULT '0',
-  `jstempid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `nrejs` tinyint(1) NOT NULL DEFAULT '0',
-  `listdt` tinyint(1) NOT NULL DEFAULT '0',
-  `repagenum` smallint(5) unsigned NOT NULL DEFAULT '0',
-  PRIMARY KEY (`typeid`),
+  `typeid` smallint(5) unsigned NOT NULL auto_increment,
+  `tname` varchar(30) NOT NULL default '',
+  `mid` smallint(6) NOT NULL default '0',
+  `myorder` smallint(6) NOT NULL default '0',
+  `yhid` smallint(6) NOT NULL default '0',
+  `tnum` tinyint(3) unsigned NOT NULL default '0',
+  `listtempid` smallint(5) unsigned NOT NULL default '0',
+  `tpath` varchar(100) NOT NULL default '',
+  `ttype` varchar(10) NOT NULL default '',
+  `maxnum` int(10) unsigned NOT NULL default '0',
+  `reorder` varchar(50) NOT NULL default '',
+  `tid` smallint(5) unsigned NOT NULL default '0',
+  `tbname` varchar(60) NOT NULL default '',
+  `timg` varchar(200) NOT NULL default '',
+  `intro` varchar(255) NOT NULL default '',
+  `pagekey` varchar(255) NOT NULL default '',
+  `newline` tinyint(3) unsigned NOT NULL default '0',
+  `hotline` tinyint(3) unsigned NOT NULL default '0',
+  `goodline` tinyint(3) unsigned NOT NULL default '0',
+  `hotplline` tinyint(3) unsigned NOT NULL default '0',
+  `firstline` tinyint(3) unsigned NOT NULL default '0',
+  `jstempid` smallint(5) unsigned NOT NULL default '0',
+  `nrejs` tinyint(1) NOT NULL default '0',
+  `listdt` tinyint(1) NOT NULL default '0',
+  `repagenum` smallint(5) unsigned NOT NULL default '0',
+  PRIMARY KEY  (`typeid`),
   KEY `mid` (`mid`),
   KEY `myorder` (`myorder`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_enewsinfotype`
@@ -5493,30 +5496,30 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_enewsinfovote`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_enewsinfovote` (
-  `pubid` bigint(16) unsigned NOT NULL DEFAULT '0',
-  `id` int(10) unsigned NOT NULL DEFAULT '0',
-  `classid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `title` varchar(120) NOT NULL DEFAULT '',
-  `votenum` int(10) unsigned NOT NULL DEFAULT '0',
+  `pubid` bigint(16) unsigned NOT NULL default '0',
+  `id` int(10) unsigned NOT NULL default '0',
+  `classid` smallint(5) unsigned NOT NULL default '0',
+  `title` varchar(120) NOT NULL default '',
+  `votenum` int(10) unsigned NOT NULL default '0',
   `voteip` mediumtext NOT NULL,
   `votetext` text NOT NULL,
-  `voteclass` tinyint(1) NOT NULL DEFAULT '0',
-  `doip` tinyint(1) NOT NULL DEFAULT '0',
-  `dotime` date NOT NULL DEFAULT '0000-00-00',
-  `tempid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `width` int(10) unsigned NOT NULL DEFAULT '0',
-  `height` int(10) unsigned NOT NULL DEFAULT '0',
-  `diyotherlink` tinyint(1) NOT NULL DEFAULT '0',
-  `infouptime` int(10) unsigned NOT NULL DEFAULT '0',
-  `infodowntime` int(10) unsigned NOT NULL DEFAULT '0',
-  `copyids` varchar(255) NOT NULL DEFAULT '',
-  PRIMARY KEY (`pubid`),
+  `voteclass` tinyint(1) NOT NULL default '0',
+  `doip` tinyint(1) NOT NULL default '0',
+  `dotime` date NOT NULL default '0000-00-00',
+  `tempid` smallint(5) unsigned NOT NULL default '0',
+  `width` int(10) unsigned NOT NULL default '0',
+  `height` int(10) unsigned NOT NULL default '0',
+  `diyotherlink` tinyint(1) NOT NULL default '0',
+  `infouptime` int(10) unsigned NOT NULL default '0',
+  `infodowntime` int(10) unsigned NOT NULL default '0',
+  `copyids` varchar(255) NOT NULL default '',
+  PRIMARY KEY  (`pubid`),
   KEY `id` (`id`,`classid`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_enewsinfovote`
@@ -5532,22 +5535,22 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_enewsjstemp`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_enewsjstemp` (
-  `tempid` smallint(5) unsigned NOT NULL AUTO_INCREMENT,
-  `tempname` varchar(30) NOT NULL DEFAULT '',
+  `tempid` smallint(5) unsigned NOT NULL auto_increment,
+  `tempname` varchar(30) NOT NULL default '',
   `temptext` mediumtext NOT NULL,
-  `classid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `isdefault` tinyint(1) NOT NULL DEFAULT '0',
-  `showdate` varchar(20) NOT NULL DEFAULT '',
-  `modid` smallint(6) NOT NULL DEFAULT '0',
-  `subnews` smallint(6) NOT NULL DEFAULT '0',
-  `subtitle` smallint(6) NOT NULL DEFAULT '0',
-  PRIMARY KEY (`tempid`),
+  `classid` smallint(5) unsigned NOT NULL default '0',
+  `isdefault` tinyint(1) NOT NULL default '0',
+  `showdate` varchar(20) NOT NULL default '',
+  `modid` smallint(6) NOT NULL default '0',
+  `subnews` smallint(6) NOT NULL default '0',
+  `subtitle` smallint(6) NOT NULL default '0',
+  PRIMARY KEY  (`tempid`),
   KEY `classid` (`classid`)
 ) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_enewsjstemp`
@@ -5564,14 +5567,14 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_enewsjstempclass`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_enewsjstempclass` (
-  `classid` smallint(5) unsigned NOT NULL AUTO_INCREMENT,
-  `classname` varchar(30) NOT NULL DEFAULT '',
-  PRIMARY KEY (`classid`)
+  `classid` smallint(5) unsigned NOT NULL auto_increment,
+  `classname` varchar(30) NOT NULL default '',
+  PRIMARY KEY  (`classid`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_enewsjstempclass`
@@ -5587,17 +5590,17 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_enewskey`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_enewskey` (
-  `keyid` smallint(5) unsigned NOT NULL AUTO_INCREMENT,
-  `keyname` char(50) NOT NULL DEFAULT '',
-  `keyurl` char(200) NOT NULL DEFAULT '',
-  `cid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  PRIMARY KEY (`keyid`),
+  `keyid` smallint(5) unsigned NOT NULL auto_increment,
+  `keyname` char(50) NOT NULL default '',
+  `keyurl` char(200) NOT NULL default '',
+  `cid` smallint(5) unsigned NOT NULL default '0',
+  PRIMARY KEY  (`keyid`),
   KEY `cid` (`cid`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_enewskey`
@@ -5613,14 +5616,14 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_enewskeyclass`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_enewskeyclass` (
-  `classid` smallint(5) unsigned NOT NULL AUTO_INCREMENT,
-  `classname` char(30) NOT NULL DEFAULT '',
-  PRIMARY KEY (`classid`)
+  `classid` smallint(5) unsigned NOT NULL auto_increment,
+  `classname` char(30) NOT NULL default '',
+  PRIMARY KEY  (`classid`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_enewskeyclass`
@@ -5636,28 +5639,28 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_enewslink`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_enewslink` (
-  `lid` smallint(5) unsigned NOT NULL AUTO_INCREMENT,
-  `lname` varchar(100) NOT NULL DEFAULT '',
-  `lpic` varchar(255) NOT NULL DEFAULT '',
-  `lurl` varchar(255) NOT NULL DEFAULT '',
-  `ltime` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `onclick` int(11) NOT NULL DEFAULT '0',
-  `width` varchar(10) NOT NULL DEFAULT '',
-  `height` varchar(10) NOT NULL DEFAULT '',
-  `target` varchar(10) NOT NULL DEFAULT '',
-  `myorder` tinyint(4) NOT NULL DEFAULT '0',
-  `email` varchar(60) NOT NULL DEFAULT '',
+  `lid` smallint(5) unsigned NOT NULL auto_increment,
+  `lname` varchar(100) NOT NULL default '',
+  `lpic` varchar(255) NOT NULL default '',
+  `lurl` varchar(255) NOT NULL default '',
+  `ltime` datetime NOT NULL default '0000-00-00 00:00:00',
+  `onclick` int(11) NOT NULL default '0',
+  `width` varchar(10) NOT NULL default '',
+  `height` varchar(10) NOT NULL default '',
+  `target` varchar(10) NOT NULL default '',
+  `myorder` tinyint(4) NOT NULL default '0',
+  `email` varchar(60) NOT NULL default '',
   `lsay` text NOT NULL,
-  `checked` tinyint(1) NOT NULL DEFAULT '0',
-  `ltype` smallint(6) NOT NULL DEFAULT '0',
-  `classid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  PRIMARY KEY (`lid`),
+  `checked` tinyint(1) NOT NULL default '0',
+  `ltype` smallint(6) NOT NULL default '0',
+  `classid` smallint(5) unsigned NOT NULL default '0',
+  PRIMARY KEY  (`lid`),
   KEY `classid` (`classid`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_enewslink`
@@ -5673,14 +5676,14 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_enewslinkclass`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_enewslinkclass` (
-  `classid` smallint(5) unsigned NOT NULL AUTO_INCREMENT,
-  `classname` varchar(30) NOT NULL DEFAULT '',
-  PRIMARY KEY (`classid`)
+  `classid` smallint(5) unsigned NOT NULL auto_increment,
+  `classname` varchar(30) NOT NULL default '',
+  PRIMARY KEY  (`classid`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_enewslinkclass`
@@ -5696,17 +5699,17 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_enewslinktmp`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_enewslinktmp` (
-  `newsurl` varchar(255) NOT NULL DEFAULT '',
-  `checkrnd` varchar(50) NOT NULL DEFAULT '',
-  `linkid` bigint(20) NOT NULL AUTO_INCREMENT,
-  `titlepic` varchar(255) NOT NULL DEFAULT '',
-  PRIMARY KEY (`linkid`),
+  `newsurl` varchar(255) NOT NULL default '',
+  `checkrnd` varchar(50) NOT NULL default '',
+  `linkid` bigint(20) NOT NULL auto_increment,
+  `titlepic` varchar(255) NOT NULL default '',
+  PRIMARY KEY  (`linkid`),
   KEY `checkrnd` (`checkrnd`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_enewslinktmp`
@@ -5722,25 +5725,25 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_enewslisttemp`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_enewslisttemp` (
-  `tempid` smallint(5) unsigned NOT NULL AUTO_INCREMENT,
-  `tempname` varchar(60) NOT NULL DEFAULT '',
+  `tempid` smallint(5) unsigned NOT NULL auto_increment,
+  `tempname` varchar(60) NOT NULL default '',
   `temptext` mediumtext NOT NULL,
-  `subnews` smallint(6) NOT NULL DEFAULT '0',
-  `isdefault` tinyint(1) NOT NULL DEFAULT '0',
+  `subnews` smallint(6) NOT NULL default '0',
+  `isdefault` tinyint(1) NOT NULL default '0',
   `listvar` text NOT NULL,
-  `rownum` smallint(6) NOT NULL DEFAULT '0',
-  `modid` smallint(6) NOT NULL DEFAULT '0',
-  `showdate` varchar(50) NOT NULL DEFAULT '',
-  `subtitle` smallint(6) NOT NULL DEFAULT '0',
-  `classid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `docode` tinyint(1) NOT NULL DEFAULT '0',
-  PRIMARY KEY (`tempid`),
+  `rownum` smallint(6) NOT NULL default '0',
+  `modid` smallint(6) NOT NULL default '0',
+  `showdate` varchar(50) NOT NULL default '',
+  `subtitle` smallint(6) NOT NULL default '0',
+  `classid` smallint(5) unsigned NOT NULL default '0',
+  `docode` tinyint(1) NOT NULL default '0',
+  PRIMARY KEY  (`tempid`),
   KEY `classid` (`classid`)
 ) ENGINE=MyISAM AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_enewslisttemp`
@@ -5757,14 +5760,14 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_enewslisttempclass`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_enewslisttempclass` (
-  `classid` smallint(5) unsigned NOT NULL AUTO_INCREMENT,
-  `classname` varchar(30) NOT NULL DEFAULT '',
-  PRIMARY KEY (`classid`)
+  `classid` smallint(5) unsigned NOT NULL auto_increment,
+  `classname` varchar(30) NOT NULL default '',
+  PRIMARY KEY  (`classid`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_enewslisttempclass`
@@ -5780,20 +5783,20 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_enewslog`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_enewslog` (
-  `loginid` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `username` varchar(30) NOT NULL DEFAULT '',
-  `logintime` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `loginip` varchar(20) NOT NULL DEFAULT '',
-  `status` tinyint(1) NOT NULL DEFAULT '0',
-  `password` varchar(30) NOT NULL DEFAULT '',
-  `loginauth` tinyint(1) NOT NULL DEFAULT '0',
-  PRIMARY KEY (`loginid`),
+  `loginid` int(10) unsigned NOT NULL auto_increment,
+  `username` varchar(30) NOT NULL default '',
+  `logintime` datetime NOT NULL default '0000-00-00 00:00:00',
+  `loginip` varchar(20) NOT NULL default '',
+  `status` tinyint(1) NOT NULL default '0',
+  `password` varchar(30) NOT NULL default '',
+  `loginauth` tinyint(1) NOT NULL default '0',
+  PRIMARY KEY  (`loginid`),
   KEY `status` (`status`)
-) ENGINE=MyISAM AUTO_INCREMENT=14 DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+) ENGINE=MyISAM AUTO_INCREMENT=16 DEFAULT CHARSET=utf8;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_enewslog`
@@ -5801,7 +5804,7 @@ CREATE TABLE `ziyi_enewslog` (
 
 LOCK TABLES `ziyi_enewslog` WRITE;
 /*!40000 ALTER TABLE `ziyi_enewslog` DISABLE KEYS */;
-INSERT INTO `ziyi_enewslog` VALUES (1,'assnr','2013-08-16 10:46:40','127.0.0.1',1,'',0),(2,'assnr','2013-08-16 13:11:29','127.0.0.1',1,'',0),(3,'assnr','2013-08-16 17:59:29','127.0.0.1',1,'',0),(4,'assnr','2013-08-16 21:38:33','127.0.0.1',1,'',0),(5,'assnr','2013-08-25 21:38:27','127.0.0.1',1,'',0),(6,'assnr','2013-08-25 22:18:57','127.0.0.1',1,'',0),(7,'assnr','2013-08-26 20:14:23','127.0.0.1',1,'',0),(8,'assnr','2013-08-26 20:18:44','127.0.0.1',1,'',0),(9,'assnr','2013-08-27 20:40:31','127.0.0.1',1,'',0),(10,'assnr','2013-08-28 15:26:33','127.0.0.1',0,'',0),(11,'assnr','2013-08-28 15:26:41','127.0.0.1',1,'',0),(12,'assnr','2013-08-28 15:41:41','127.0.0.1',1,'',0),(13,'assnr','2013-08-28 16:12:42','127.0.0.1',1,'',0);
+INSERT INTO `ziyi_enewslog` VALUES (1,'assnr','2013-08-16 10:46:40','127.0.0.1',1,'',0),(2,'assnr','2013-08-16 13:11:29','127.0.0.1',1,'',0),(3,'assnr','2013-08-16 17:59:29','127.0.0.1',1,'',0),(4,'assnr','2013-08-16 21:38:33','127.0.0.1',1,'',0),(5,'assnr','2013-08-25 21:38:27','127.0.0.1',1,'',0),(6,'assnr','2013-08-25 22:18:57','127.0.0.1',1,'',0),(7,'assnr','2013-08-26 20:14:23','127.0.0.1',1,'',0),(8,'assnr','2013-08-26 20:18:44','127.0.0.1',1,'',0),(9,'assnr','2013-08-27 20:40:31','127.0.0.1',1,'',0),(10,'assnr','2013-08-28 15:26:33','127.0.0.1',0,'',0),(11,'assnr','2013-08-28 15:26:41','127.0.0.1',1,'',0),(12,'assnr','2013-08-28 15:41:41','127.0.0.1',1,'',0),(13,'assnr','2013-08-28 16:12:42','127.0.0.1',1,'',0),(14,'assnr','2013-08-28 20:09:31','127.0.0.1',1,'',0),(15,'assnr','2013-08-30 22:58:55','127.0.0.1',1,'',0);
 /*!40000 ALTER TABLE `ziyi_enewslog` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -5810,15 +5813,15 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_enewsloginfail`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_enewsloginfail` (
-  `ip` varchar(20) NOT NULL DEFAULT '',
-  `num` tinyint(4) NOT NULL DEFAULT '0',
-  `lasttime` int(11) NOT NULL DEFAULT '0',
-  PRIMARY KEY (`ip`)
+  `ip` varchar(20) NOT NULL default '',
+  `num` tinyint(4) NOT NULL default '0',
+  `lasttime` int(11) NOT NULL default '0',
+  PRIMARY KEY  (`ip`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_enewsloginfail`
@@ -5835,29 +5838,29 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_enewsmember`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_enewsmember` (
-  `userid` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `username` char(20) NOT NULL DEFAULT '',
-  `password` char(32) NOT NULL DEFAULT '',
-  `rnd` char(20) NOT NULL DEFAULT '',
-  `email` char(50) NOT NULL DEFAULT '',
-  `registertime` int(10) unsigned NOT NULL DEFAULT '0',
-  `groupid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `userfen` mediumint(8) unsigned NOT NULL DEFAULT '0',
-  `userdate` int(10) unsigned NOT NULL DEFAULT '0',
-  `money` float(11,2) NOT NULL DEFAULT '0.00',
-  `zgroupid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `havemsg` tinyint(1) NOT NULL DEFAULT '0',
-  `checked` tinyint(1) NOT NULL DEFAULT '0',
-  `salt` char(8) NOT NULL DEFAULT '',
-  `userkey` char(12) NOT NULL DEFAULT '',
-  PRIMARY KEY (`userid`),
+  `userid` int(10) unsigned NOT NULL auto_increment,
+  `username` char(20) NOT NULL default '',
+  `password` char(32) NOT NULL default '',
+  `rnd` char(20) NOT NULL default '',
+  `email` char(50) NOT NULL default '',
+  `registertime` int(10) unsigned NOT NULL default '0',
+  `groupid` smallint(5) unsigned NOT NULL default '0',
+  `userfen` mediumint(8) unsigned NOT NULL default '0',
+  `userdate` int(10) unsigned NOT NULL default '0',
+  `money` float(11,2) NOT NULL default '0.00',
+  `zgroupid` smallint(5) unsigned NOT NULL default '0',
+  `havemsg` tinyint(1) NOT NULL default '0',
+  `checked` tinyint(1) NOT NULL default '0',
+  `salt` char(8) NOT NULL default '',
+  `userkey` char(12) NOT NULL default '',
+  PRIMARY KEY  (`userid`),
   UNIQUE KEY `username` (`username`),
   KEY `groupid` (`groupid`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_enewsmember`
@@ -5873,22 +5876,22 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_enewsmember_connect`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_enewsmember_connect` (
-  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `userid` mediumint(8) unsigned NOT NULL DEFAULT '0',
-  `apptype` char(20) NOT NULL DEFAULT '',
-  `bindkey` char(32) NOT NULL DEFAULT '',
-  `bindtime` int(10) unsigned NOT NULL DEFAULT '0',
-  `loginnum` int(10) unsigned NOT NULL DEFAULT '0',
-  `lasttime` int(10) unsigned NOT NULL DEFAULT '0',
-  PRIMARY KEY (`id`),
+  `id` int(10) unsigned NOT NULL auto_increment,
+  `userid` mediumint(8) unsigned NOT NULL default '0',
+  `apptype` char(20) NOT NULL default '',
+  `bindkey` char(32) NOT NULL default '',
+  `bindtime` int(10) unsigned NOT NULL default '0',
+  `loginnum` int(10) unsigned NOT NULL default '0',
+  `lasttime` int(10) unsigned NOT NULL default '0',
+  PRIMARY KEY  (`id`),
   KEY `userid` (`userid`),
   KEY `bindkey` (`bindkey`),
   KEY `apptype` (`apptype`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_enewsmember_connect`
@@ -5904,24 +5907,24 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_enewsmember_connect_app`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_enewsmember_connect_app` (
-  `id` smallint(5) unsigned NOT NULL AUTO_INCREMENT,
-  `apptype` char(20) NOT NULL DEFAULT '',
-  `appname` char(30) NOT NULL DEFAULT '',
-  `appid` char(60) NOT NULL DEFAULT '',
-  `appkey` char(120) NOT NULL DEFAULT '',
-  `isclose` tinyint(1) NOT NULL DEFAULT '0',
-  `myorder` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `qappname` char(30) NOT NULL DEFAULT '',
-  `appsay` char(255) NOT NULL DEFAULT '',
-  PRIMARY KEY (`id`),
+  `id` smallint(5) unsigned NOT NULL auto_increment,
+  `apptype` char(20) NOT NULL default '',
+  `appname` char(30) NOT NULL default '',
+  `appid` char(60) NOT NULL default '',
+  `appkey` char(120) NOT NULL default '',
+  `isclose` tinyint(1) NOT NULL default '0',
+  `myorder` smallint(5) unsigned NOT NULL default '0',
+  `qappname` char(30) NOT NULL default '',
+  `appsay` char(255) NOT NULL default '',
+  PRIMARY KEY  (`id`),
   UNIQUE KEY `apptype` (`apptype`),
   KEY `isclose` (`isclose`),
   KEY `myorder` (`myorder`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_enewsmember_connect_app`
@@ -5937,33 +5940,33 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_enewsmemberadd`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_enewsmemberadd` (
-  `userid` int(10) unsigned NOT NULL DEFAULT '0',
-  `truename` varchar(20) NOT NULL DEFAULT '',
-  `oicq` varchar(25) NOT NULL DEFAULT '',
-  `msn` varchar(120) NOT NULL DEFAULT '',
-  `mycall` varchar(30) NOT NULL DEFAULT '',
-  `phone` varchar(30) NOT NULL DEFAULT '',
-  `address` varchar(255) NOT NULL DEFAULT '',
-  `zip` varchar(8) NOT NULL DEFAULT '',
-  `spacestyleid` smallint(6) NOT NULL DEFAULT '0',
-  `homepage` varchar(200) NOT NULL DEFAULT '',
+  `userid` int(10) unsigned NOT NULL default '0',
+  `truename` varchar(20) NOT NULL default '',
+  `oicq` varchar(25) NOT NULL default '',
+  `msn` varchar(120) NOT NULL default '',
+  `mycall` varchar(30) NOT NULL default '',
+  `phone` varchar(30) NOT NULL default '',
+  `address` varchar(255) NOT NULL default '',
+  `zip` varchar(8) NOT NULL default '',
+  `spacestyleid` smallint(6) NOT NULL default '0',
+  `homepage` varchar(200) NOT NULL default '',
   `saytext` text NOT NULL,
-  `company` varchar(255) NOT NULL DEFAULT '',
-  `fax` varchar(30) NOT NULL DEFAULT '',
-  `userpic` varchar(200) NOT NULL DEFAULT '',
-  `spacename` varchar(255) NOT NULL DEFAULT '',
+  `company` varchar(255) NOT NULL default '',
+  `fax` varchar(30) NOT NULL default '',
+  `userpic` varchar(200) NOT NULL default '',
+  `spacename` varchar(255) NOT NULL default '',
   `spacegg` text NOT NULL,
-  `viewstats` int(11) NOT NULL DEFAULT '0',
-  `regip` varchar(20) NOT NULL DEFAULT '',
-  `lasttime` int(10) unsigned NOT NULL DEFAULT '0',
-  `lastip` varchar(20) NOT NULL DEFAULT '',
-  `loginnum` int(10) unsigned NOT NULL DEFAULT '0',
-  PRIMARY KEY (`userid`)
+  `viewstats` int(11) NOT NULL default '0',
+  `regip` varchar(20) NOT NULL default '',
+  `lasttime` int(10) unsigned NOT NULL default '0',
+  `lastip` varchar(20) NOT NULL default '',
+  `loginnum` int(10) unsigned NOT NULL default '0',
+  PRIMARY KEY  (`userid`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_enewsmemberadd`
@@ -5979,23 +5982,23 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_enewsmemberf`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_enewsmemberf` (
-  `fid` smallint(5) unsigned NOT NULL AUTO_INCREMENT,
-  `f` varchar(30) NOT NULL DEFAULT '',
-  `fname` varchar(30) NOT NULL DEFAULT '',
-  `fform` varchar(20) NOT NULL DEFAULT '',
+  `fid` smallint(5) unsigned NOT NULL auto_increment,
+  `f` varchar(30) NOT NULL default '',
+  `fname` varchar(30) NOT NULL default '',
+  `fform` varchar(20) NOT NULL default '',
   `fhtml` mediumtext NOT NULL,
-  `fzs` varchar(255) NOT NULL DEFAULT '',
-  `myorder` smallint(6) NOT NULL DEFAULT '0',
-  `ftype` varchar(30) NOT NULL DEFAULT '',
-  `flen` varchar(20) NOT NULL DEFAULT '',
+  `fzs` varchar(255) NOT NULL default '',
+  `myorder` smallint(6) NOT NULL default '0',
+  `ftype` varchar(30) NOT NULL default '',
+  `flen` varchar(20) NOT NULL default '',
   `fvalue` text NOT NULL,
-  `fformsize` varchar(12) NOT NULL DEFAULT '',
-  PRIMARY KEY (`fid`)
+  `fformsize` varchar(12) NOT NULL default '',
+  PRIMARY KEY  (`fid`)
 ) ENGINE=MyISAM AUTO_INCREMENT=14 DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_enewsmemberf`
@@ -6012,28 +6015,28 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_enewsmemberfeedback`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_enewsmemberfeedback` (
-  `fid` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `name` varchar(12) NOT NULL DEFAULT '',
-  `company` varchar(80) NOT NULL DEFAULT '',
-  `phone` varchar(30) NOT NULL DEFAULT '',
-  `fax` varchar(20) NOT NULL DEFAULT '',
-  `email` varchar(80) NOT NULL DEFAULT '',
-  `address` varchar(255) NOT NULL DEFAULT '',
-  `zip` varchar(8) NOT NULL DEFAULT '',
-  `title` varchar(120) NOT NULL DEFAULT '',
+  `fid` int(10) unsigned NOT NULL auto_increment,
+  `name` varchar(12) NOT NULL default '',
+  `company` varchar(80) NOT NULL default '',
+  `phone` varchar(30) NOT NULL default '',
+  `fax` varchar(20) NOT NULL default '',
+  `email` varchar(80) NOT NULL default '',
+  `address` varchar(255) NOT NULL default '',
+  `zip` varchar(8) NOT NULL default '',
+  `title` varchar(120) NOT NULL default '',
   `ftext` text NOT NULL,
-  `userid` mediumint(8) unsigned NOT NULL DEFAULT '0',
-  `ip` varchar(15) NOT NULL DEFAULT '',
-  `uid` mediumint(8) unsigned NOT NULL DEFAULT '0',
-  `uname` varchar(20) NOT NULL DEFAULT '',
-  `addtime` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
-  PRIMARY KEY (`fid`),
+  `userid` mediumint(8) unsigned NOT NULL default '0',
+  `ip` varchar(15) NOT NULL default '',
+  `uid` mediumint(8) unsigned NOT NULL default '0',
+  `uname` varchar(20) NOT NULL default '',
+  `addtime` datetime NOT NULL default '0000-00-00 00:00:00',
+  PRIMARY KEY  (`fid`),
   KEY `userid` (`userid`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_enewsmemberfeedback`
@@ -6049,26 +6052,26 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_enewsmemberform`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_enewsmemberform` (
-  `fid` smallint(5) unsigned NOT NULL AUTO_INCREMENT,
-  `fname` varchar(60) NOT NULL DEFAULT '',
+  `fid` smallint(5) unsigned NOT NULL auto_increment,
+  `fname` varchar(60) NOT NULL default '',
   `ftemp` mediumtext NOT NULL,
-  `fzs` varchar(255) NOT NULL DEFAULT '',
+  `fzs` varchar(255) NOT NULL default '',
   `enter` text NOT NULL,
   `mustenter` text NOT NULL,
-  `filef` varchar(255) NOT NULL DEFAULT '',
-  `imgf` varchar(255) NOT NULL DEFAULT '0',
+  `filef` varchar(255) NOT NULL default '',
+  `imgf` varchar(255) NOT NULL default '0',
   `tobrf` text NOT NULL,
   `viewenter` text NOT NULL,
-  `searchvar` varchar(255) NOT NULL DEFAULT '',
+  `searchvar` varchar(255) NOT NULL default '',
   `canaddf` text NOT NULL,
   `caneditf` text NOT NULL,
   `checkboxf` text NOT NULL,
-  PRIMARY KEY (`fid`)
+  PRIMARY KEY  (`fid`)
 ) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_enewsmemberform`
@@ -6085,23 +6088,23 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_enewsmembergbook`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_enewsmembergbook` (
-  `gid` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `userid` mediumint(8) unsigned NOT NULL DEFAULT '0',
-  `isprivate` tinyint(1) NOT NULL DEFAULT '0',
-  `uid` mediumint(8) unsigned NOT NULL DEFAULT '0',
-  `uname` varchar(20) NOT NULL DEFAULT '',
-  `ip` varchar(15) NOT NULL DEFAULT '',
-  `addtime` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `gid` int(10) unsigned NOT NULL auto_increment,
+  `userid` mediumint(8) unsigned NOT NULL default '0',
+  `isprivate` tinyint(1) NOT NULL default '0',
+  `uid` mediumint(8) unsigned NOT NULL default '0',
+  `uname` varchar(20) NOT NULL default '',
+  `ip` varchar(15) NOT NULL default '',
+  `addtime` datetime NOT NULL default '0000-00-00 00:00:00',
   `gbtext` text NOT NULL,
   `retext` text NOT NULL,
-  `checked` tinyint(1) NOT NULL DEFAULT '0',
-  PRIMARY KEY (`gid`),
+  `checked` tinyint(1) NOT NULL default '0',
+  PRIMARY KEY  (`gid`),
   KEY `userid` (`userid`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_enewsmembergbook`
@@ -6117,27 +6120,27 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_enewsmembergroup`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_enewsmembergroup` (
-  `groupid` smallint(6) NOT NULL AUTO_INCREMENT,
-  `groupname` varchar(60) NOT NULL DEFAULT '',
-  `level` smallint(6) NOT NULL DEFAULT '0',
-  `checked` tinyint(1) NOT NULL DEFAULT '0',
-  `favanum` smallint(6) NOT NULL DEFAULT '0',
-  `daydown` int(11) NOT NULL DEFAULT '0',
-  `msglen` int(11) NOT NULL DEFAULT '0',
-  `msgnum` int(11) NOT NULL DEFAULT '0',
-  `canreg` tinyint(1) NOT NULL DEFAULT '0',
-  `formid` smallint(6) NOT NULL DEFAULT '0',
-  `regchecked` tinyint(1) NOT NULL DEFAULT '0',
-  `spacestyleid` smallint(6) NOT NULL DEFAULT '0',
-  `dayaddinfo` smallint(6) NOT NULL DEFAULT '0',
-  `infochecked` tinyint(1) NOT NULL DEFAULT '0',
-  `plchecked` tinyint(1) NOT NULL DEFAULT '0',
-  PRIMARY KEY (`groupid`)
+  `groupid` smallint(6) NOT NULL auto_increment,
+  `groupname` varchar(60) NOT NULL default '',
+  `level` smallint(6) NOT NULL default '0',
+  `checked` tinyint(1) NOT NULL default '0',
+  `favanum` smallint(6) NOT NULL default '0',
+  `daydown` int(11) NOT NULL default '0',
+  `msglen` int(11) NOT NULL default '0',
+  `msgnum` int(11) NOT NULL default '0',
+  `canreg` tinyint(1) NOT NULL default '0',
+  `formid` smallint(6) NOT NULL default '0',
+  `regchecked` tinyint(1) NOT NULL default '0',
+  `spacestyleid` smallint(6) NOT NULL default '0',
+  `dayaddinfo` smallint(6) NOT NULL default '0',
+  `infochecked` tinyint(1) NOT NULL default '0',
+  `plchecked` tinyint(1) NOT NULL default '0',
+  PRIMARY KEY  (`groupid`)
 ) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_enewsmembergroup`
@@ -6154,18 +6157,18 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_enewsmemberpub`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_enewsmemberpub` (
-  `userid` mediumint(8) unsigned NOT NULL AUTO_INCREMENT,
-  `todayinfodate` char(10) NOT NULL DEFAULT '',
-  `todayaddinfo` mediumint(8) unsigned NOT NULL DEFAULT '0',
-  `todaydate` char(10) NOT NULL DEFAULT '',
-  `todaydown` mediumint(8) unsigned NOT NULL DEFAULT '0',
-  `authstr` char(30) NOT NULL DEFAULT '',
-  PRIMARY KEY (`userid`)
+  `userid` mediumint(8) unsigned NOT NULL auto_increment,
+  `todayinfodate` char(10) NOT NULL default '',
+  `todayaddinfo` mediumint(8) unsigned NOT NULL default '0',
+  `todaydate` char(10) NOT NULL default '',
+  `todaydown` mediumint(8) unsigned NOT NULL default '0',
+  `authstr` char(30) NOT NULL default '',
+  PRIMARY KEY  (`userid`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_enewsmemberpub`
@@ -6181,19 +6184,19 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_enewsmenu`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_enewsmenu` (
-  `menuid` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `menuname` varchar(60) NOT NULL DEFAULT '',
-  `menuurl` varchar(255) NOT NULL DEFAULT '',
-  `myorder` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `classid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  PRIMARY KEY (`menuid`),
+  `menuid` int(10) unsigned NOT NULL auto_increment,
+  `menuname` varchar(60) NOT NULL default '',
+  `menuurl` varchar(255) NOT NULL default '',
+  `myorder` smallint(5) unsigned NOT NULL default '0',
+  `classid` smallint(5) unsigned NOT NULL default '0',
+  PRIMARY KEY  (`menuid`),
   KEY `myorder` (`myorder`),
   KEY `classid` (`classid`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_enewsmenu`
@@ -6209,19 +6212,19 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_enewsmenuclass`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_enewsmenuclass` (
-  `classid` smallint(5) unsigned NOT NULL AUTO_INCREMENT,
-  `classname` varchar(60) NOT NULL DEFAULT '',
-  `issys` tinyint(1) NOT NULL DEFAULT '0',
-  `myorder` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `classtype` tinyint(1) NOT NULL DEFAULT '0',
-  PRIMARY KEY (`classid`),
+  `classid` smallint(5) unsigned NOT NULL auto_increment,
+  `classname` varchar(60) NOT NULL default '',
+  `issys` tinyint(1) NOT NULL default '0',
+  `myorder` smallint(5) unsigned NOT NULL default '0',
+  `classtype` tinyint(1) NOT NULL default '0',
+  PRIMARY KEY  (`classid`),
   KEY `myorder` (`myorder`),
   KEY `classtype` (`classtype`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_enewsmenuclass`
@@ -6237,41 +6240,41 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_enewsmod`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_enewsmod` (
-  `mid` smallint(5) unsigned NOT NULL AUTO_INCREMENT,
-  `mname` varchar(100) NOT NULL DEFAULT '',
+  `mid` smallint(5) unsigned NOT NULL auto_increment,
+  `mname` varchar(100) NOT NULL default '',
   `mtemp` mediumtext NOT NULL,
-  `mzs` varchar(255) NOT NULL DEFAULT '',
+  `mzs` varchar(255) NOT NULL default '',
   `cj` mediumtext NOT NULL,
   `enter` mediumtext NOT NULL,
   `tempvar` mediumtext NOT NULL,
   `sonclass` text NOT NULL,
-  `searchvar` varchar(255) NOT NULL DEFAULT '',
-  `tid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `tbname` varchar(60) NOT NULL DEFAULT '',
+  `searchvar` varchar(255) NOT NULL default '',
+  `tid` smallint(5) unsigned NOT NULL default '0',
+  `tbname` varchar(60) NOT NULL default '',
   `qenter` mediumtext NOT NULL,
   `mustqenterf` text NOT NULL,
   `qmtemp` mediumtext NOT NULL,
   `listandf` text NOT NULL,
-  `setandf` tinyint(1) NOT NULL DEFAULT '0',
+  `setandf` tinyint(1) NOT NULL default '0',
   `listtempvar` mediumtext NOT NULL,
-  `qmname` varchar(30) NOT NULL DEFAULT '',
+  `qmname` varchar(30) NOT NULL default '',
   `canaddf` text NOT NULL,
   `caneditf` text NOT NULL,
-  `definfovoteid` smallint(6) NOT NULL DEFAULT '0',
-  `showmod` tinyint(1) NOT NULL DEFAULT '0',
-  `usemod` tinyint(1) NOT NULL DEFAULT '0',
-  `myorder` smallint(6) NOT NULL DEFAULT '0',
+  `definfovoteid` smallint(6) NOT NULL default '0',
+  `showmod` tinyint(1) NOT NULL default '0',
+  `usemod` tinyint(1) NOT NULL default '0',
+  `myorder` smallint(6) NOT NULL default '0',
   `orderf` text NOT NULL,
-  `isdefault` tinyint(1) NOT NULL DEFAULT '0',
-  `listfile` varchar(30) NOT NULL DEFAULT '',
-  `printtempid` smallint(6) NOT NULL DEFAULT '0',
-  PRIMARY KEY (`mid`),
+  `isdefault` tinyint(1) NOT NULL default '0',
+  `listfile` varchar(30) NOT NULL default '',
+  `printtempid` smallint(6) NOT NULL default '0',
+  PRIMARY KEY  (`mid`),
   KEY `tid` (`tid`)
 ) ENGINE=MyISAM AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_enewsmod`
@@ -6279,7 +6282,7 @@ CREATE TABLE `ziyi_enewsmod` (
 
 LOCK TABLES `ziyi_enewsmod` WRITE;
 /*!40000 ALTER TABLE `ziyi_enewsmod` DISABLE KEYS */;
-INSERT INTO `ziyi_enewsmod` VALUES (1,'新闻系统模型','<table width=\\\'100%\\\' align=center cellpadding=3 cellspacing=1 class=\\\"tableborder\\\"><tr><td width=\\\'16%\\\' height=25 bgcolor=\\\'ffffff\\\'>标题(*)</td><td bgcolor=\\\'ffffff\\\'>[!--title--]</td></tr><tr><td width=\\\'16%\\\' height=25 bgcolor=\\\'ffffff\\\'>副标题</td><td bgcolor=\\\'ffffff\\\'>[!--ftitle--]</td></tr><tr><td width=\\\'16%\\\' height=25 bgcolor=\\\'ffffff\\\'>特殊属性</td><td bgcolor=\\\'ffffff\\\'>[!--special.field--]</td></tr><tr><td width=\\\'16%\\\' height=25 bgcolor=\\\'ffffff\\\'>发布时间</td><td bgcolor=\\\'ffffff\\\'>[!--newstime--]</td></tr><tr><td width=\\\'16%\\\' height=25 bgcolor=\\\'ffffff\\\'>标题图片</td><td bgcolor=\\\'ffffff\\\'>[!--titlepic--]</td></tr><tr><td width=\\\'16%\\\' height=25 bgcolor=\\\'ffffff\\\'>内容简介</td><td bgcolor=\\\'ffffff\\\'>[!--smalltext--]</td></tr><tr><td width=\\\'16%\\\' height=25 bgcolor=\\\'ffffff\\\'>作者</td><td bgcolor=\\\'ffffff\\\'>[!--writer--]</td></tr><tr><td width=\\\'16%\\\' height=25 bgcolor=\\\'ffffff\\\'>信息来源</td><td bgcolor=\\\'ffffff\\\'>[!--befrom--]</td></tr><tr><td height=25 colspan=2 bgcolor=\\\'ffffff\\\'><div align=left>新闻正文(*)</div></td></tr></table><div style=\\\"background-color:#D0D0D0\\\">[!--newstext--]</div>','新闻系统模型','标题<!--field--->title<!--record-->副标题<!--field--->ftitle<!--record-->发布时间<!--field--->newstime<!--record-->标题图片<!--field--->titlepic<!--record-->内容简介<!--field--->smalltext<!--record-->作者<!--field--->writer<!--record-->信息来源<!--field--->befrom<!--record-->新闻正文<!--field--->newstext<!--record-->','标题<!--field--->title<!--record-->副标题<!--field--->ftitle<!--record-->特殊属性<!--field--->special.field<!--record-->发布时间<!--field--->newstime<!--record-->标题图片<!--field--->titlepic<!--record-->内容简介<!--field--->smalltext<!--record-->作者<!--field--->writer<!--record-->信息来源<!--field--->befrom<!--record-->新闻正文<!--field--->newstext<!--record-->','标题<!--field--->title<!--record-->副标题<!--field--->ftitle<!--record-->发布时间<!--field--->newstime<!--record-->标题图片<!--field--->titlepic<!--record-->内容简介<!--field--->smalltext<!--record-->作者<!--field--->writer<!--record-->信息来源<!--field--->befrom<!--record-->新闻正文<!--field--->newstext<!--record-->顶<!--field--->diggtop<!--record-->','|34|35|36|37|',',title,smalltext,',1,'news','标题<!--field--->title<!--record-->副标题<!--field--->ftitle<!--record-->特殊属性<!--field--->special.field<!--record-->标题图片<!--field--->titlepic<!--record-->内容简介<!--field--->smalltext<!--record-->作者<!--field--->writer<!--record-->信息来源<!--field--->befrom<!--record-->新闻正文<!--field--->newstext<!--record-->',',title,newstext,','<table width=100% align=center cellpadding=3 cellspacing=1 class=\\\"tableborder\\\"><tr><td width=\\\'16%\\\' height=25 bgcolor=\\\'ffffff\\\'>标题(*)</td><td bgcolor=\\\'ffffff\\\'>[!--title--]</td></tr><tr><td width=\\\'16%\\\' height=25 bgcolor=\\\'ffffff\\\'>副标题</td><td bgcolor=\\\'ffffff\\\'>[!--ftitle--]</td></tr><tr><td width=\\\'16%\\\' height=25 bgcolor=\\\'ffffff\\\'>关键字</td><td bgcolor=\\\'ffffff\\\'>[!--special.field--]</td></tr><tr><td width=\\\'16%\\\' height=25 bgcolor=\\\'ffffff\\\'>标题图片</td><td bgcolor=\\\'ffffff\\\'>[!--titlepic--]</td></tr><tr><td width=\\\'16%\\\' height=25 bgcolor=\\\'ffffff\\\'>内容简介</td><td bgcolor=\\\'ffffff\\\'>[!--smalltext--]</td></tr><tr><td width=\\\'16%\\\' height=25 bgcolor=\\\'ffffff\\\'>作者</td><td bgcolor=\\\'ffffff\\\'>[!--writer--]</td></tr><tr><td width=\\\'16%\\\' height=25 bgcolor=\\\'ffffff\\\'>信息来源</td><td bgcolor=\\\'ffffff\\\'>[!--befrom--]</td></tr><tr><td height=25 colspan=2 bgcolor=\\\'ffffff\\\'><div align=left>新闻正文(*)</div></td></tr></table><div style=\\\"background-color:#D0D0D0\\\">[!--newstext--]</div>','',0,'标题<!--field--->title<!--record-->副标题<!--field--->ftitle<!--record-->发布时间<!--field--->newstime<!--record-->标题图片<!--field--->titlepic<!--record-->内容简介<!--field--->smalltext<!--record-->顶<!--field--->diggtop<!--record-->','新闻',',title,ftitle,newstime,titlepic,smalltext,writer,befrom,newstext,',',title,ftitle,newstime,titlepic,smalltext,writer,befrom,newstext,',0,0,0,0,'',1,'',0),(2,'下载系统模型','<script>\r\nfunction AddFj(str)\r\n{var r;\r\nvar a;\r\na=document.add.softfj.value;\r\nr=a.split(str);\r\nif(r.length!=1)\r\n{return true;}\r\ndocument.add.softfj.value+=\\\"/\\\"+str;\r\n}\r\nfunction DelFj(str)\r\n{\r\nvar a;\r\na=document.add.softfj.value;\r\ndocument.add.softfj.value=a.replace(\\\"/\\\"+str,\\\"\\\");\r\n}\r\n</script>\r\n<table width=100% align=center cellpadding=3 cellspacing=1 class=\\\"tableborder\\\">\r\n  <tr> \r\n    <td width=16% height=25 bgcolor=ffffff>软件名称(*)</td>\r\n    <td bgcolor=ffffff>[!--title--]</td>\r\n  </tr>\r\n  <tr>\r\n    <td width=\\\'16%\\\' height=25 bgcolor=\\\'ffffff\\\'>特殊属性</td>\r\n    <td bgcolor=\\\'ffffff\\\'>[!--special.field--]</td>\r\n  </tr>\r\n  <tr> \r\n    <td width=16% height=25 bgcolor=ffffff>发布时间</td>\r\n    <td bgcolor=ffffff>[!--newstime--]</td>\r\n  </tr>\r\n  <tr> \r\n    <td width=16% height=25 bgcolor=ffffff>软件预览图</td>\r\n    <td bgcolor=ffffff>[!--titlepic--]</td>\r\n  </tr>\r\n  <tr> \r\n    <td width=16% height=25 bgcolor=ffffff>软件作者</td>\r\n    <td bgcolor=ffffff>[!--softwriter--]</td>\r\n  </tr>\r\n  <tr> \r\n    <td width=16% height=25 bgcolor=ffffff>厂商主页</td>\r\n    <td bgcolor=ffffff>[!--homepage--]</td>\r\n  </tr>\r\n  <tr> \r\n    <td width=16% height=25 bgcolor=ffffff>系统演示</td>\r\n    <td bgcolor=ffffff>[!--demo--]</td>\r\n  </tr>\r\n  <tr> \r\n    <td width=16% height=25 bgcolor=ffffff>运行环境</td>\r\n    <td bgcolor=ffffff>[!--softfj--]</td>\r\n  </tr>\r\n  <tr> \r\n    <td height=25 bgcolor=ffffff>&nbsp;</td>\r\n    <td bgcolor=ffffff><input type=checkbox name=check value=\\\'Win9X/Me\\\' onclick=\\\"if(this.checked){AddFj(this.value);}else{DelFj(this.value);}\\\">\r\n      Win9X/Me&nbsp; <input type=checkbox name=check value=\\\'WinNT/2000/XP\\\' onclick=\\\"if(this.checked){AddFj(this.value);}else{DelFj(this.value);}\\\">\r\n      WinNT/2000/XP&nbsp; <input type=checkbox name=check value=\\\'Unix\\\' onclick=\\\"if(this.checked){AddFj(this.value);}else{DelFj(this.value);}\\\">\r\n      Unix&nbsp; <input type=checkbox name=check value=\\\'Linux\\\' onclick=\\\"if(this.checked){AddFj(this.value);}else{DelFj(this.value);}\\\">\r\n      Linux&nbsp; <input type=checkbox name=check value=\\\'DOS\\\' onclick=\\\"if(this.checked){AddFj(this.value);}else{DelFj(this.value);}\\\">\r\n      DOS&nbsp; <input type=checkbox name=check value=\\\'MAC OS\\\' onclick=\\\"if(this.checked){AddFj(this.value);}else{DelFj(this.value);}\\\">\r\n      MAC OS&nbsp; <input type=checkbox name=check value=\\\'Other\\\' onclick=\\\"if(this.checked){AddFj(this.value);}else{DelFj(this.value);}\\\">\r\n      Other</td>\r\n  </tr>\r\n  <tr> \r\n    <td width=16% height=25 bgcolor=ffffff>软件属性</td>\r\n    <td bgcolor=ffffff>软件语言：[!--language--]，软件类型：[!--softtype--]，授权形式：[!--softsq--]，软件评价：[!--star--]</td>\r\n  </tr>\r\n  <tr> \r\n    <td width=16% height=25 bgcolor=ffffff>文件</td>\r\n    <td bgcolor=ffffff>文件类型：[!--filetype--]，文件大小：[!--filesize--]</td>\r\n  </tr>\r\n  <tr> \r\n    <td width=16% height=25 bgcolor=ffffff>下载地址(*)</td>\r\n    <td bgcolor=ffffff>[!--downpath--]</td>\r\n  </tr>\r\n  <tr> \r\n    <td width=16% height=25 bgcolor=ffffff>软件简介(*)</td>\r\n    <td bgcolor=ffffff>[!--softsay--]</td>\r\n  </tr>\r\n</table>','','软件名称<!--field--->title<!--record-->发布时间<!--field--->newstime<!--record-->软件预览图<!--field--->titlepic<!--record-->软件作者<!--field--->softwriter<!--record-->厂商主页<!--field--->homepage<!--record-->系统演示<!--field--->demo<!--record-->运行环境<!--field--->softfj<!--record-->软件语言<!--field--->language<!--record-->软件类型<!--field--->softtype<!--record-->授权形式<!--field--->softsq<!--record-->软件评价<!--field--->star<!--record-->文件类型<!--field--->filetype<!--record-->文件大小<!--field--->filesize<!--record-->下载地址<!--field--->downpath<!--record-->软件简介<!--field--->softsay<!--record-->','软件名称<!--field--->title<!--record-->特殊属性<!--field--->special.field<!--record-->发布时间<!--field--->newstime<!--record-->软件预览图<!--field--->titlepic<!--record-->软件作者<!--field--->softwriter<!--record-->厂商主页<!--field--->homepage<!--record-->系统演示<!--field--->demo<!--record-->运行环境<!--field--->softfj<!--record-->软件语言<!--field--->language<!--record-->软件类型<!--field--->softtype<!--record-->授权形式<!--field--->softsq<!--record-->软件评价<!--field--->star<!--record-->文件类型<!--field--->filetype<!--record-->文件大小<!--field--->filesize<!--record-->下载地址<!--field--->downpath<!--record-->软件简介<!--field--->softsay<!--record-->','软件名称<!--field--->title<!--record-->发布时间<!--field--->newstime<!--record-->软件预览图<!--field--->titlepic<!--record-->软件作者<!--field--->softwriter<!--record-->厂商主页<!--field--->homepage<!--record-->系统演示<!--field--->demo<!--record-->运行环境<!--field--->softfj<!--record-->软件语言<!--field--->language<!--record-->软件类型<!--field--->softtype<!--record-->授权形式<!--field--->softsq<!--record-->软件评价<!--field--->star<!--record-->文件类型<!--field--->filetype<!--record-->文件大小<!--field--->filesize<!--record-->下载地址<!--field--->downpath<!--record-->软件简介<!--field--->softsay<!--record-->','|38|39|40|41|',',title,softsay,',2,'download','软件名称<!--field--->title<!--record-->特殊属性<!--field--->special.field<!--record-->软件预览图<!--field--->titlepic<!--record-->软件作者<!--field--->softwriter<!--record-->厂商主页<!--field--->homepage<!--record-->系统演示<!--field--->demo<!--record-->运行环境<!--field--->softfj<!--record-->软件语言<!--field--->language<!--record-->软件类型<!--field--->softtype<!--record-->授权形式<!--field--->softsq<!--record-->文件类型<!--field--->filetype<!--record-->文件大小<!--field--->filesize<!--record-->下载地址<!--field--->downpath<!--record-->软件简介<!--field--->softsay<!--record-->',',title,downpath,softsay,','<script>\r\nfunction AddFj(str)\r\n{var r;\r\nvar a;\r\na=document.add.softfj.value;\r\nr=a.split(str);\r\nif(r.length!=1)\r\n{return true;}\r\ndocument.add.softfj.value+=\\\"/\\\"+str;\r\n}\r\nfunction DelFj(str)\r\n{\r\nvar a;\r\na=document.add.softfj.value;\r\ndocument.add.softfj.value=a.replace(\\\"/\\\"+str,\\\"\\\");\r\n}\r\n</script>\r\n<table width=100% align=center cellpadding=3 cellspacing=1 class=\\\"tableborder\\\">\r\n  <tr> \r\n    <td width=16% height=25 bgcolor=ffffff>软件名称(*)</td>\r\n    <td bgcolor=ffffff>[!--title--]</td>\r\n  </tr>\r\n  <tr>\r\n    <td width=\\\'16%\\\' height=25 bgcolor=\\\'ffffff\\\'>关键字</td>\r\n    <td bgcolor=\\\'ffffff\\\'>[!--special.field--]</td>\r\n  </tr>\r\n  <tr> \r\n    <td width=16% height=25 bgcolor=ffffff>软件预览图</td>\r\n    <td bgcolor=ffffff>[!--titlepic--]</td>\r\n  </tr>\r\n  <tr> \r\n    <td width=16% height=25 bgcolor=ffffff>软件作者</td>\r\n    <td bgcolor=ffffff>[!--softwriter--]</td>\r\n  </tr>\r\n  <tr> \r\n    <td width=16% height=25 bgcolor=ffffff>厂商主页</td>\r\n    <td bgcolor=ffffff>[!--homepage--]</td>\r\n  </tr>\r\n  <tr> \r\n    <td width=16% height=25 bgcolor=ffffff>系统演示</td>\r\n    <td bgcolor=ffffff>[!--demo--]</td>\r\n  </tr>\r\n  <tr> \r\n    <td width=16% height=25 bgcolor=ffffff>运行环境</td>\r\n    <td bgcolor=ffffff>[!--softfj--]</td>\r\n  </tr>\r\n  <tr> \r\n    <td height=25 bgcolor=ffffff>&nbsp;</td>\r\n    <td bgcolor=ffffff><input type=checkbox name=check value=\\\'Win9X/Me\\\' onclick=\\\"if(this.checked){AddFj(this.value);}else{DelFj(this.value);}\\\">\r\n      Win9X/Me&nbsp; <input type=checkbox name=check value=\\\'WinNT/2000/XP\\\' onclick=\\\"if(this.checked){AddFj(this.value);}else{DelFj(this.value);}\\\">\r\n      WinNT/2000/XP&nbsp; <input type=checkbox name=check value=\\\'Unix\\\' onclick=\\\"if(this.checked){AddFj(this.value);}else{DelFj(this.value);}\\\">\r\n      Unix&nbsp; <input type=checkbox name=check value=\\\'Linux\\\' onclick=\\\"if(this.checked){AddFj(this.value);}else{DelFj(this.value);}\\\">\r\n      Linux&nbsp; <input type=checkbox name=check value=\\\'DOS\\\' onclick=\\\"if(this.checked){AddFj(this.value);}else{DelFj(this.value);}\\\">\r\n      DOS&nbsp; <input type=checkbox name=check value=\\\'MAC OS\\\' onclick=\\\"if(this.checked){AddFj(this.value);}else{DelFj(this.value);}\\\">\r\n      MAC OS&nbsp; <input type=checkbox name=check value=\\\'Other\\\' onclick=\\\"if(this.checked){AddFj(this.value);}else{DelFj(this.value);}\\\">\r\n      Other</td>\r\n  </tr>\r\n  <tr> \r\n    <td width=16% height=25 bgcolor=ffffff>软件属性</td>\r\n    <td bgcolor=ffffff>软件语言：[!--language--]，软件类型：[!--softtype--]，授权形式：[!--softsq--]</td>\r\n  </tr>\r\n  <tr> \r\n    <td width=16% height=25 bgcolor=ffffff>文件</td>\r\n    <td bgcolor=ffffff>文件类型：[!--filetype--]，文件大小：[!--filesize--]</td>\r\n  </tr>\r\n  <tr> \r\n    <td width=16% height=25 bgcolor=ffffff>上传软件(*)</td>\r\n    <td bgcolor=ffffff>[!--downpath--]</td>\r\n  </tr>\r\n  <tr> \r\n    <td width=16% height=25 bgcolor=ffffff>软件简介(*)</td>\r\n    <td bgcolor=ffffff>[!--softsay--]</td>\r\n  </tr>\r\n</table>','',0,'软件名称<!--field--->title<!--record-->发布时间<!--field--->newstime<!--record-->软件预览图<!--field--->titlepic<!--record-->运行环境<!--field--->softfj<!--record-->软件语言<!--field--->language<!--record-->软件类型<!--field--->softtype<!--record-->授权形式<!--field--->softsq<!--record-->软件评价<!--field--->star<!--record-->文件类型<!--field--->filetype<!--record-->文件大小<!--field--->filesize<!--record-->软件简介<!--field--->softsay<!--record-->','软件',',title,newstime,titlepic,softwriter,homepage,demo,softfj,language,softtype,softsq,star,filetype,filesize,downpath,softsay,',',title,newstime,titlepic,softwriter,homepage,demo,softfj,language,softtype,softsq,star,filetype,filesize,downpath,softsay,',0,0,0,0,'',1,'',0),(3,'图片系统模型','<table width=100% align=center cellpadding=3 cellspacing=1 class=tableborder>\r\n  <tr> \r\n    <td width=16% height=25 bgcolor=ffffff>图片名称(*)</td>\r\n    <td bgcolor=ffffff>[!--title--]</td>\r\n  </tr>\r\n  <tr>\r\n    <td width=\\\'16%\\\' height=25 bgcolor=\\\'ffffff\\\'>特殊属性</td>\r\n    <td bgcolor=\\\'ffffff\\\'>[!--special.field--]</td>\r\n  </tr>\r\n  <tr> \r\n    <td width=16% height=25 bgcolor=ffffff>发布时间</td>\r\n    <td bgcolor=ffffff>[!--newstime--]</td>\r\n  </tr>\r\n  <tr> \r\n    <td width=16% height=25 bgcolor=ffffff>文件大小</td>\r\n    <td bgcolor=ffffff>[!--filesize--]</td>\r\n  </tr>\r\n  <tr> \r\n    <td width=16% height=25 bgcolor=ffffff>单图属性</td>\r\n    <td bgcolor=ffffff>图片尺寸：[!--picsize--]，图片分辨率：[!--picfbl--]</td>\r\n  </tr>\r\n  <tr> \r\n    <td width=16% height=25 bgcolor=ffffff>来源</td>\r\n    <td bgcolor=ffffff>[!--picfrom--]</td>\r\n  </tr>\r\n  <tr> \r\n    <td width=16% height=25 bgcolor=ffffff>图片小图</td>\r\n    <td bgcolor=ffffff>[!--titlepic--]</td>\r\n  </tr>\r\n  <tr> \r\n    <td width=16% height=25 bgcolor=ffffff>图片大图</td>\r\n    <td bgcolor=ffffff>[!--picurl--]</td>\r\n  </tr>\r\n  <tr> \r\n    <td width=16% height=25 bgcolor=ffffff>图片集</td>\r\n    <td bgcolor=ffffff>[!--morepic--]</td>\r\n  </tr>\r\n  <tr> \r\n    <td width=16% height=25 bgcolor=ffffff>图集属性</td>\r\n    <td bgcolor=ffffff>每行显示条数：[!--num--]，缩图大小：[!--width--]*[!--height--]<font color=\\\"#666666\\\">(宽*高)</font></td>\r\n  </tr>\r\n  <tr> \r\n    <td width=16% height=25 bgcolor=ffffff>图片简介(*)</td>\r\n    <td bgcolor=ffffff>[!--picsay--]</td>\r\n  </tr>\r\n</table>','','图片名称<!--field--->title<!--record-->发布时间<!--field--->newstime<!--record-->文件大小<!--field--->filesize<!--record-->图片尺寸<!--field--->picsize<!--record-->图片分辨率<!--field--->picfbl<!--record-->来源<!--field--->picfrom<!--record-->图片小图<!--field--->titlepic<!--record-->图片大图<!--field--->picurl<!--record-->图片集<!--field--->morepic<!--record-->每行显示条数<!--field--->num<!--record-->缩图宽度<!--field--->width<!--record-->缩图高度<!--field--->height<!--record-->图片简介<!--field--->picsay<!--record-->','图片名称<!--field--->title<!--record-->特殊属性<!--field--->special.field<!--record-->发布时间<!--field--->newstime<!--record-->文件大小<!--field--->filesize<!--record-->图片尺寸<!--field--->picsize<!--record-->图片分辨率<!--field--->picfbl<!--record-->来源<!--field--->picfrom<!--record-->图片小图<!--field--->titlepic<!--record-->图片大图<!--field--->picurl<!--record-->图片集<!--field--->morepic<!--record-->每行显示条数<!--field--->num<!--record-->缩图宽度<!--field--->width<!--record-->缩图高度<!--field--->height<!--record-->图片简介<!--field--->picsay<!--record-->','图片名称<!--field--->title<!--record-->发布时间<!--field--->newstime<!--record-->文件大小<!--field--->filesize<!--record-->图片尺寸<!--field--->picsize<!--record-->图片分辨率<!--field--->picfbl<!--record-->来源<!--field--->picfrom<!--record-->图片小图<!--field--->titlepic<!--record-->图片大图<!--field--->picurl<!--record-->图片集<!--field--->morepic<!--record-->每行显示条数<!--field--->num<!--record-->缩图宽度<!--field--->width<!--record-->缩图高度<!--field--->height<!--record-->图片简介<!--field--->picsay<!--record-->','|9|',',title,picsay,',3,'photo','图片名称<!--field--->title<!--record-->特殊属性<!--field--->special.field<!--record-->文件大小<!--field--->filesize<!--record-->图片尺寸<!--field--->picsize<!--record-->图片分辨率<!--field--->picfbl<!--record-->来源<!--field--->picfrom<!--record-->图片小图<!--field--->titlepic<!--record-->图片大图<!--field--->picurl<!--record-->图片简介<!--field--->picsay<!--record-->',',title,picsay,','<table width=100% align=center cellpadding=3 cellspacing=1 class=tableborder><tr><td width=16% height=25 bgcolor=ffffff>图片名称</td><td bgcolor=ffffff>[!--title--]</td></tr>\r\n  <tr>\r\n    <td width=\\\'16%\\\' height=25 bgcolor=\\\'ffffff\\\'>关键字</td>\r\n    <td bgcolor=\\\'ffffff\\\'>[!--special.field--]</td>\r\n  </tr>\r\n<tr><td width=16% height=25 bgcolor=ffffff>文件大小</td><td bgcolor=ffffff>[!--filesize--]</td></tr><tr><td width=16% height=25 bgcolor=ffffff>图片尺寸</td><td bgcolor=ffffff>[!--picsize--]</td></tr><tr><td width=16% height=25 bgcolor=ffffff>图片分辨率</td><td bgcolor=ffffff>[!--picfbl--]</td></tr><tr><td width=16% height=25 bgcolor=ffffff>来源</td><td bgcolor=ffffff>[!--picfrom--]</td></tr><tr><td width=16% height=25 bgcolor=ffffff>图片小图</td><td bgcolor=ffffff>[!--titlepic--]</td></tr><tr><td width=16% height=25 bgcolor=ffffff>图片大图</td><td bgcolor=ffffff>[!--picurl--]</td></tr><tr><td width=16% height=25 bgcolor=ffffff>图片简介</td><td bgcolor=ffffff>[!--picsay--]</td></tr></table>','',0,'图片名称<!--field--->title<!--record-->发布时间<!--field--->newstime<!--record-->图片小图<!--field--->titlepic<!--record-->图片大图<!--field--->picurl<!--record-->图片简介<!--field--->picsay<!--record-->','图片',',title,newstime,filesize,picsize,picfbl,picfrom,titlepic,picurl,morepic,num,width,height,picsay,',',title,newstime,filesize,picsize,picfbl,picfrom,titlepic,picurl,morepic,num,width,height,picsay,',0,0,0,0,'',1,'',0),(4,'FLASH系统模型','<table width=100% align=center cellpadding=3 cellspacing=1 class=tableborder>\r\n  <tr> \r\n    <td width=16% height=25 bgcolor=ffffff>作品名(*)</td>\r\n    <td bgcolor=ffffff>[!--title--]</td>\r\n  </tr>\r\n  <tr>\r\n    <td width=\\\'16%\\\' height=25 bgcolor=\\\'ffffff\\\'>特殊属性</td>\r\n    <td bgcolor=\\\'ffffff\\\'>[!--special.field--]</td>\r\n  </tr>\r\n  <tr> \r\n    <td width=16% height=25 bgcolor=ffffff>发布时间</td>\r\n    <td bgcolor=ffffff>[!--newstime--]</td>\r\n  </tr>\r\n  <tr> \r\n    <td width=16% height=25 bgcolor=ffffff>作品预览图</td>\r\n    <td bgcolor=ffffff>[!--titlepic--]</td>\r\n  </tr>\r\n  <tr> \r\n    <td width=16% height=25 bgcolor=ffffff>作者</td>\r\n    <td bgcolor=ffffff>[!--flashwriter--]</td>\r\n  </tr>\r\n  <tr> \r\n    <td width=16% height=25 bgcolor=ffffff>作者邮箱</td>\r\n    <td bgcolor=ffffff>[!--email--]</td>\r\n  </tr>\r\n  <tr> \r\n    <td width=16% height=25 bgcolor=ffffff>作品评价</td>\r\n    <td bgcolor=ffffff>[!--star--]</td>\r\n  </tr>\r\n  <tr> \r\n    <td width=16% height=25 bgcolor=ffffff>文件大小</td>\r\n    <td bgcolor=ffffff>[!--filesize--]</td>\r\n  </tr>\r\n  <tr> \r\n    <td width=16% height=25 bgcolor=ffffff>Flash地址(*)</td>\r\n    <td bgcolor=ffffff>[!--flashurl--]</td>\r\n  </tr>\r\n  <tr> \r\n    <td width=16% height=25 bgcolor=ffffff>Flash规格</td>\r\n    <td bgcolor=ffffff>[!--width--]*[!--height--]<font color=\\\"#666666\\\">(宽度*高度)</font></td>\r\n  </tr>\r\n  <tr> \r\n    <td width=16% height=25 bgcolor=ffffff>作品简介(*)</td>\r\n    <td bgcolor=ffffff>[!--flashsay--]</td>\r\n  </tr>\r\n</table>','','作品名<!--field--->title<!--record-->发布时间<!--field--->newstime<!--record-->作品预览图<!--field--->titlepic<!--record-->作者<!--field--->flashwriter<!--record-->作者邮箱<!--field--->email<!--record-->作品评价<!--field--->star<!--record-->文件大小<!--field--->filesize<!--record-->Flash地址<!--field--->flashurl<!--record-->Flash宽度<!--field--->width<!--record-->Flash高度<!--field--->height<!--record-->作品简介<!--field--->flashsay<!--record-->','作品名<!--field--->title<!--record-->特殊属性<!--field--->special.field<!--record-->发布时间<!--field--->newstime<!--record-->作品预览图<!--field--->titlepic<!--record-->作者<!--field--->flashwriter<!--record-->作者邮箱<!--field--->email<!--record-->作品评价<!--field--->star<!--record-->文件大小<!--field--->filesize<!--record-->Flash地址<!--field--->flashurl<!--record-->Flash宽度<!--field--->width<!--record-->Flash高度<!--field--->height<!--record-->作品简介<!--field--->flashsay<!--record-->','作品名<!--field--->title<!--record-->发布时间<!--field--->newstime<!--record-->作品预览图<!--field--->titlepic<!--record-->作者<!--field--->flashwriter<!--record-->作者邮箱<!--field--->email<!--record-->作品评价<!--field--->star<!--record-->文件大小<!--field--->filesize<!--record-->Flash地址<!--field--->flashurl<!--record-->Flash宽度<!--field--->width<!--record-->Flash高度<!--field--->height<!--record-->作品简介<!--field--->flashsay<!--record-->','|50|51|',',title,flashwriter,flashsay,',4,'flash','作品名<!--field--->title<!--record-->特殊属性<!--field--->special.field<!--record-->作品预览图<!--field--->titlepic<!--record-->作者<!--field--->flashwriter<!--record-->作者邮箱<!--field--->email<!--record-->文件大小<!--field--->filesize<!--record-->Flash地址<!--field--->flashurl<!--record-->Flash宽度<!--field--->width<!--record-->Flash高度<!--field--->height<!--record-->作品简介<!--field--->flashsay<!--record-->',',title,flashurl,flashsay,','<table width=\\\'100%\\\' align=center cellpadding=3 cellspacing=1 class=tableborder>\r\n  <tr>\r\n    <td width=16% height=25 bgcolor=ffffff>作品名(*)</td>\r\n    <td bgcolor=ffffff>[!--title--]</td>\r\n  </tr>\r\n  <tr> \r\n    <td width=\\\'16%\\\' height=25 bgcolor=\\\'ffffff\\\'>关键字</td>\r\n    <td bgcolor=\\\'ffffff\\\'>[!--special.field--]</td>\r\n  </tr>\r\n  <tr>\r\n    <td width=16% height=25 bgcolor=ffffff>作品预览图</td>\r\n    <td bgcolor=ffffff>[!--titlepic--]</td>\r\n  </tr>\r\n  <tr>\r\n    <td width=16% height=25 bgcolor=ffffff>作者</td>\r\n    <td bgcolor=ffffff>[!--flashwriter--]</td>\r\n  </tr>\r\n  <tr>\r\n    <td width=16% height=25 bgcolor=ffffff>作者邮箱</td>\r\n    <td bgcolor=ffffff>[!--email--]</td>\r\n  </tr>\r\n  <tr>\r\n    <td width=16% height=25 bgcolor=ffffff>文件大小</td>\r\n    <td bgcolor=ffffff>[!--filesize--]</td>\r\n  </tr>\r\n  <tr>\r\n    <td width=16% height=25 bgcolor=ffffff>上传Flash(*)</td>\r\n    <td bgcolor=ffffff>[!--flashurl--]</td>\r\n  </tr>\r\n  <tr> \r\n    <td width=16% height=25 bgcolor=ffffff>Flash规格</td>\r\n    <td bgcolor=ffffff>[!--width--]*[!--height--]<font color=\\\"#666666\\\">(宽度*高度)</font></td>\r\n  </tr>\r\n  <tr>\r\n    <td width=16% height=25 bgcolor=ffffff>作品简介(*)</td>\r\n    <td bgcolor=ffffff>[!--flashsay--]</td>\r\n  </tr>\r\n</table>\r\n','',0,'作品名<!--field--->title<!--record-->发布时间<!--field--->newstime<!--record-->作品预览图<!--field--->titlepic<!--record-->作者<!--field--->flashwriter<!--record-->作品评价<!--field--->star<!--record-->文件大小<!--field--->filesize<!--record-->Flash地址<!--field--->flashurl<!--record-->作品简介<!--field--->flashsay<!--record-->','FLASH',',title,newstime,titlepic,flashwriter,email,star,filesize,flashurl,width,height,flashsay,',',title,newstime,titlepic,flashwriter,email,star,filesize,flashurl,width,height,flashsay,',0,0,0,0,'',1,'',0),(5,'电影系统模型','<table width=100% align=center cellpadding=3 cellspacing=1 class=tableborder>\r\n  <tr> \r\n    <td width=16% height=25 bgcolor=ffffff>影片名(*)</td>\r\n    <td bgcolor=ffffff>[!--title--]</td>\r\n  </tr>\r\n  <tr> \r\n    <td width=\\\'16%\\\' height=25 bgcolor=\\\'ffffff\\\'>特殊属性</td>\r\n    <td bgcolor=\\\'ffffff\\\'>[!--special.field--]</td>\r\n  </tr>\r\n  <tr> \r\n    <td width=16% height=25 bgcolor=ffffff>发布时间</td>\r\n    <td bgcolor=ffffff>[!--newstime--]</td>\r\n  </tr>\r\n  <tr> \r\n    <td width=16% height=25 bgcolor=ffffff>影片缩略图</td>\r\n    <td bgcolor=ffffff>[!--titlepic--]</td>\r\n  </tr>\r\n  <tr> \r\n    <td width=16% height=25 bgcolor=ffffff>影片类型</td>\r\n    <td bgcolor=ffffff>[!--movietype--]，推荐等级：[!--star--]，扣除点数：[!--moviefen--]</td>\r\n  </tr>\r\n  <tr> \r\n    <td width=16% height=25 bgcolor=ffffff>出品公司</td>\r\n    <td bgcolor=ffffff>[!--company--]，出品时间：[!--movietime--]</td>\r\n  </tr>\r\n  <tr> \r\n    <td width=16% height=25 bgcolor=ffffff>主演</td>\r\n    <td bgcolor=ffffff>[!--player--]，导演&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;：[!--playadmin--]</td>\r\n  </tr>\r\n  <tr> \r\n    <td width=16% height=25 bgcolor=ffffff>影片文件</td>\r\n    <td bgcolor=ffffff>影片格式：[!--filetype--]，影片大小：[!--filesize--]</td>\r\n  </tr>\r\n  <tr> \r\n    <td width=16% height=25 bgcolor=ffffff>影片属性</td>\r\n    <td bgcolor=ffffff>带宽要求：[!--playdk--]，片长：[!--playtime--]</td>\r\n  </tr>\r\n  <tr> \r\n    <td width=16% height=25 bgcolor=ffffff>下载地址</td>\r\n    <td bgcolor=ffffff>[!--downpath--]</td>\r\n  </tr>\r\n  <tr> \r\n    <td width=16% height=25 bgcolor=ffffff>在线观看播放器</td>\r\n    <td bgcolor=ffffff>[!--playerid--]</td>\r\n  </tr>\r\n  <tr> \r\n    <td width=16% height=25 bgcolor=ffffff>在线观看地址</td>\r\n    <td bgcolor=ffffff>[!--onlinepath--]</td>\r\n  </tr>\r\n  <tr> \r\n    <td width=16% height=25 bgcolor=ffffff>影片简介(*)</td>\r\n    <td bgcolor=ffffff>[!--moviesay--]</td>\r\n  </tr>\r\n</table>\r\n','','影片名<!--field--->title<!--record-->发布时间<!--field--->newstime<!--record-->影片缩略图<!--field--->titlepic<!--record-->影片类型<!--field--->movietype<!--record-->出品公司<!--field--->company<!--record-->出品时间<!--field--->movietime<!--record-->主演<!--field--->player<!--record-->导演<!--field--->playadmin<!--record-->影片格式<!--field--->filetype<!--record-->影片大小<!--field--->filesize<!--record-->推荐等级<!--field--->star<!--record-->带宽要求<!--field--->playdk<!--record-->片长<!--field--->playtime<!--record-->扣除点数<!--field--->moviefen<!--record-->下载地址<!--field--->downpath<!--record-->播放器<!--field--->playerid<!--record-->在线观看地址<!--field--->onlinepath<!--record-->影片简介<!--field--->moviesay<!--record-->','影片名<!--field--->title<!--record-->特殊属性<!--field--->special.field<!--record-->发布时间<!--field--->newstime<!--record-->影片缩略图<!--field--->titlepic<!--record-->影片类型<!--field--->movietype<!--record-->出品公司<!--field--->company<!--record-->出品时间<!--field--->movietime<!--record-->主演<!--field--->player<!--record-->导演<!--field--->playadmin<!--record-->影片格式<!--field--->filetype<!--record-->影片大小<!--field--->filesize<!--record-->推荐等级<!--field--->star<!--record-->带宽要求<!--field--->playdk<!--record-->片长<!--field--->playtime<!--record-->扣除点数<!--field--->moviefen<!--record-->下载地址<!--field--->downpath<!--record-->播放器<!--field--->playerid<!--record-->在线观看地址<!--field--->onlinepath<!--record-->影片简介<!--field--->moviesay<!--record-->','影片名<!--field--->title<!--record-->发布时间<!--field--->newstime<!--record-->影片缩略图<!--field--->titlepic<!--record-->影片类型<!--field--->movietype<!--record-->出品公司<!--field--->company<!--record-->出品时间<!--field--->movietime<!--record-->主演<!--field--->player<!--record-->导演<!--field--->playadmin<!--record-->影片格式<!--field--->filetype<!--record-->影片大小<!--field--->filesize<!--record-->推荐等级<!--field--->star<!--record-->带宽要求<!--field--->playdk<!--record-->片长<!--field--->playtime<!--record-->扣除点数<!--field--->moviefen<!--record-->下载地址<!--field--->downpath<!--record-->播放器<!--field--->playerid<!--record-->在线观看地址<!--field--->onlinepath<!--record-->影片简介<!--field--->moviesay<!--record-->','|42|43|44|45|',',title,movietype,company,player,playadmin,moviesay,',5,'movie','',',title,moviesay,','<table width=100% align=center cellpadding=3 cellspacing=1 bgcolor=#DBEAF5></table>','',0,'影片名<!--field--->title<!--record-->发布时间<!--field--->newstime<!--record-->影片缩略图<!--field--->titlepic<!--record-->影片类型<!--field--->movietype<!--record-->出品公司<!--field--->company<!--record-->出品时间<!--field--->movietime<!--record-->主演<!--field--->player<!--record-->导演<!--field--->playadmin<!--record-->影片格式<!--field--->filetype<!--record-->影片大小<!--field--->filesize<!--record-->推荐等级<!--field--->star<!--record-->扣除点数<!--field--->moviefen<!--record-->影片简介<!--field--->moviesay<!--record-->','电影',',title,newstime,titlepic,movietype,company,movietime,player,playadmin,filetype,filesize,star,playdk,playtime,moviefen,downpath,playerid,onlinepath,moviesay,',',title,newstime,titlepic,movietype,company,movietime,player,playadmin,filetype,filesize,star,playdk,playtime,moviefen,downpath,playerid,onlinepath,moviesay,',0,0,0,0,'',1,'',0),(6,'商城系统模型','<table width=100% align=center cellpadding=3 cellspacing=1 class=tableborder>\r\n  <tr>\r\n    <td width=16% height=25 bgcolor=ffffff>商品名称(*)</td>\r\n    <td bgcolor=ffffff>[!--title--]</td>\r\n  </tr>\r\n  <tr><td width=\\\'16%\\\' height=25 bgcolor=\\\'ffffff\\\'>特殊属性</td><td bgcolor=\\\'ffffff\\\'>[!--special.field--]</td></tr>\r\n  <tr>\r\n    <td width=16% height=25 bgcolor=ffffff>发布时间</td>\r\n    <td bgcolor=ffffff>[!--newstime--]</td>\r\n  </tr>\r\n  <tr>\r\n    <td width=16% height=25 bgcolor=ffffff>商品编号</td>\r\n    <td bgcolor=ffffff>[!--productno--]</td>\r\n  </tr>\r\n  <tr>\r\n    <td width=16% height=25 bgcolor=ffffff>品牌</td>\r\n    <td bgcolor=ffffff>[!--pbrand--]</td>\r\n  </tr>\r\n  <tr>\r\n    <td width=16% height=25 bgcolor=ffffff>简单描述</td>\r\n    <td bgcolor=ffffff>[!--intro--]</td>\r\n  </tr>\r\n  <tr>\r\n    <td width=16% height=25 bgcolor=ffffff>计量单位</td>\r\n    <td bgcolor=ffffff>[!--unit--]</td>\r\n  </tr>\r\n  <tr>\r\n    <td width=16% height=25 bgcolor=ffffff>单位重量</td>\r\n    <td bgcolor=ffffff>[!--weight--]</td>\r\n  </tr>\r\n  <tr>\r\n    <td width=16% height=25 bgcolor=ffffff>市场价格</td>\r\n    <td bgcolor=ffffff>[!--tprice--]元</td>\r\n  </tr>\r\n  <tr>\r\n    <td width=16% height=25 bgcolor=ffffff>购买价格</td>\r\n    <td bgcolor=ffffff>[!--price--]元</td>\r\n  </tr>\r\n  <tr>\r\n    <td width=16% height=25 bgcolor=ffffff>积分购买</td>\r\n    <td bgcolor=ffffff>[!--buyfen--]点</td>\r\n  </tr>\r\n  <tr>\r\n    <td width=16% height=25 bgcolor=ffffff>库存</td>\r\n    <td bgcolor=ffffff>[!--pmaxnum--]</td>\r\n  </tr>\r\n  <tr>\r\n    <td width=16% height=25 bgcolor=ffffff>商品缩略片</td>\r\n    <td bgcolor=ffffff>[!--titlepic--]</td>\r\n  </tr>\r\n  <tr>\r\n    <td width=16% height=25 bgcolor=ffffff>商品大图</td>\r\n    <td bgcolor=ffffff>[!--productpic--]</td>\r\n  </tr>\r\n  <tr>\r\n    <td height=25 colspan=2 bgcolor=ffffff><div align=left>商品介绍(*)</div></td>\r\n  </tr>\r\n</table>\r\n<div style=\\\"background-color:#D0D0D0\\\">[!--newstext--]</div>','','商品名称<!--field--->title<!--record-->发布时间<!--field--->newstime<!--record-->商品编号<!--field--->productno<!--record-->品牌<!--field--->pbrand<!--record-->简单描述<!--field--->intro<!--record-->计量单位<!--field--->unit<!--record-->单位重量<!--field--->weight<!--record-->市场价格<!--field--->tprice<!--record-->购买价格<!--field--->price<!--record-->积分购买<!--field--->buyfen<!--record-->库存<!--field--->pmaxnum<!--record-->商品缩略片<!--field--->titlepic<!--record-->商品大图<!--field--->productpic<!--record-->商品介绍<!--field--->newstext<!--record-->','商品名称<!--field--->title<!--record-->特殊属性<!--field--->special.field<!--record-->发布时间<!--field--->newstime<!--record-->商品编号<!--field--->productno<!--record-->品牌<!--field--->pbrand<!--record-->简单描述<!--field--->intro<!--record-->计量单位<!--field--->unit<!--record-->单位重量<!--field--->weight<!--record-->市场价格<!--field--->tprice<!--record-->购买价格<!--field--->price<!--record-->积分购买<!--field--->buyfen<!--record-->库存<!--field--->pmaxnum<!--record-->商品缩略片<!--field--->titlepic<!--record-->商品大图<!--field--->productpic<!--record-->商品介绍<!--field--->newstext<!--record-->','商品名称<!--field--->title<!--record-->发布时间<!--field--->newstime<!--record-->商品编号<!--field--->productno<!--record-->品牌<!--field--->pbrand<!--record-->简单描述<!--field--->intro<!--record-->计量单位<!--field--->unit<!--record-->单位重量<!--field--->weight<!--record-->市场价格<!--field--->tprice<!--record-->购买价格<!--field--->price<!--record-->积分购买<!--field--->buyfen<!--record-->库存<!--field--->pmaxnum<!--record-->商品缩略片<!--field--->titlepic<!--record-->商品大图<!--field--->productpic<!--record-->商品介绍<!--field--->newstext<!--record-->销售量<!--field--->psalenum<!--record-->','|46|47|48|49|',',title,productno,pbrand,intro,price,newstext,',6,'shop','',',title,newstext,','<table width=100% align=center cellpadding=3 cellspacing=1 bgcolor=#DBEAF5></table>','',0,'商品名称<!--field--->title<!--record-->发布时间<!--field--->newstime<!--record-->商品编号<!--field--->productno<!--record-->品牌<!--field--->pbrand<!--record-->简单描述<!--field--->intro<!--record-->计量单位<!--field--->unit<!--record-->单位重量<!--field--->weight<!--record-->市场价格<!--field--->tprice<!--record-->购买价格<!--field--->price<!--record-->积分购买<!--field--->buyfen<!--record-->库存<!--field--->pmaxnum<!--record-->商品缩略片<!--field--->titlepic<!--record-->商品大图<!--field--->productpic<!--record-->商品介绍<!--field--->newstext<!--record-->销售量<!--field--->psalenum<!--record-->','商品',',title,newstime,productno,pbrand,intro,unit,weight,tprice,price,buyfen,pmaxnum,titlepic,productpic,newstext,',',title,newstime,productno,pbrand,intro,unit,weight,tprice,price,buyfen,pmaxnum,titlepic,productpic,newstext,',0,0,0,0,'',1,'',0),(7,'文章系统模型','<table width=\\\'100%\\\' align=center cellpadding=3 cellspacing=1 class=\\\"tableborder\\\"><tr><td width=\\\'16%\\\' height=25 bgcolor=\\\'ffffff\\\'>标题(*)</td><td bgcolor=\\\'ffffff\\\'>[!--title--]</td></tr><tr><td width=\\\'16%\\\' height=25 bgcolor=\\\'ffffff\\\'>副标题</td><td bgcolor=\\\'ffffff\\\'>[!--ftitle--]</td></tr><tr><td width=\\\'16%\\\' height=25 bgcolor=\\\'ffffff\\\'>特殊属性</td><td bgcolor=\\\'ffffff\\\'>[!--special.field--]</td></tr><tr><td width=\\\'16%\\\' height=25 bgcolor=\\\'ffffff\\\'>发布时间</td><td bgcolor=\\\'ffffff\\\'>[!--newstime--]</td></tr><tr><td width=\\\'16%\\\' height=25 bgcolor=\\\'ffffff\\\'>标题图片</td><td bgcolor=\\\'ffffff\\\'>[!--titlepic--]</td></tr><tr><td width=\\\'16%\\\' height=25 bgcolor=\\\'ffffff\\\'>内容简介</td><td bgcolor=\\\'ffffff\\\'>[!--smalltext--]</td></tr><tr><td width=\\\'16%\\\' height=25 bgcolor=\\\'ffffff\\\'>作者</td><td bgcolor=\\\'ffffff\\\'>[!--writer--]</td></tr><tr><td width=\\\'16%\\\' height=25 bgcolor=\\\'ffffff\\\'>信息来源</td><td bgcolor=\\\'ffffff\\\'>[!--befrom--]</td></tr><tr><td height=25 colspan=2 bgcolor=\\\'ffffff\\\'><div align=left>新闻正文(*)</div></td></tr></table><div style=\\\"background-color:#D0D0D0\\\">[!--newstext--]</div>','','标题<!--field--->title<!--record-->副标题<!--field--->ftitle<!--record-->发布时间<!--field--->newstime<!--record-->标题图片<!--field--->titlepic<!--record-->内容简介<!--field--->smalltext<!--record-->作者<!--field--->writer<!--record-->信息来源<!--field--->befrom<!--record-->新闻正文<!--field--->newstext<!--record-->','标题<!--field--->title<!--record-->副标题<!--field--->ftitle<!--record-->特殊属性<!--field--->special.field<!--record-->发布时间<!--field--->newstime<!--record-->标题图片<!--field--->titlepic<!--record-->内容简介<!--field--->smalltext<!--record-->作者<!--field--->writer<!--record-->信息来源<!--field--->befrom<!--record-->新闻正文<!--field--->newstext<!--record-->','标题<!--field--->title<!--record-->副标题<!--field--->ftitle<!--record-->发布时间<!--field--->newstime<!--record-->标题图片<!--field--->titlepic<!--record-->内容简介<!--field--->smalltext<!--record-->作者<!--field--->writer<!--record-->信息来源<!--field--->befrom<!--record-->新闻正文<!--field--->newstext<!--record-->顶<!--field--->diggtop<!--record-->','|55|56|57|',',title,smalltext,',7,'article','标题<!--field--->title<!--record-->副标题<!--field--->ftitle<!--record-->特殊属性<!--field--->special.field<!--record-->标题图片<!--field--->titlepic<!--record-->内容简介<!--field--->smalltext<!--record-->作者<!--field--->writer<!--record-->信息来源<!--field--->befrom<!--record-->新闻正文<!--field--->newstext<!--record-->',',title,newstext,','<table width=100% align=center cellpadding=3 cellspacing=1 class=\\\"tableborder\\\"><tr><td width=\\\'16%\\\' height=25 bgcolor=\\\'ffffff\\\'>标题(*)</td><td bgcolor=\\\'ffffff\\\'>[!--title--]</td></tr><tr><td width=\\\'16%\\\' height=25 bgcolor=\\\'ffffff\\\'>副标题</td><td bgcolor=\\\'ffffff\\\'>[!--ftitle--]</td></tr><tr><td width=\\\'16%\\\' height=25 bgcolor=\\\'ffffff\\\'>关键字</td><td bgcolor=\\\'ffffff\\\'>[!--special.field--]</td></tr><tr><td width=\\\'16%\\\' height=25 bgcolor=\\\'ffffff\\\'>标题图片</td><td bgcolor=\\\'ffffff\\\'>[!--titlepic--]</td></tr><tr><td width=\\\'16%\\\' height=25 bgcolor=\\\'ffffff\\\'>内容简介</td><td bgcolor=\\\'ffffff\\\'>[!--smalltext--]</td></tr><tr><td width=\\\'16%\\\' height=25 bgcolor=\\\'ffffff\\\'>作者</td><td bgcolor=\\\'ffffff\\\'>[!--writer--]</td></tr><tr><td width=\\\'16%\\\' height=25 bgcolor=\\\'ffffff\\\'>信息来源</td><td bgcolor=\\\'ffffff\\\'>[!--befrom--]</td></tr><tr><td height=25 colspan=2 bgcolor=\\\'ffffff\\\'><div align=left>新闻正文(*)</div></td></tr></table><div style=\\\"background-color:#D0D0D0\\\">[!--newstext--]</div>','',0,'标题<!--field--->title<!--record-->副标题<!--field--->ftitle<!--record-->发布时间<!--field--->newstime<!--record-->标题图片<!--field--->titlepic<!--record-->内容简介<!--field--->smalltext<!--record-->顶<!--field--->diggtop<!--record-->','文章',',title,ftitle,newstime,titlepic,smalltext,writer,befrom,newstext,',',title,ftitle,newstime,titlepic,smalltext,writer,befrom,newstext,',0,0,0,0,'',1,'',0),(8,'分类信息系统模型','<table width=100% align=center cellpadding=3 cellspacing=1 class=\\\"tableborder\\\"><tr><td width=16% height=25 bgcolor=ffffff>标题</td><td bgcolor=ffffff>[!--title--]</td></tr><tr><td width=16% height=25 bgcolor=ffffff>特殊属性</td><td bgcolor=ffffff>[!--special.field--]</td></tr><tr><td width=16% height=25 bgcolor=ffffff>发布时间</td><td bgcolor=ffffff>[!--newstime--]</td></tr><tr><td width=16% height=25 bgcolor=ffffff>信息内容</td><td bgcolor=ffffff>[!--smalltext--]</td></tr><tr><td width=16% height=25 bgcolor=ffffff>图片</td><td bgcolor=ffffff>[!--titlepic--]</td></tr><tr><td width=16% height=25 bgcolor=ffffff>所在地</td><td bgcolor=ffffff>[!--myarea--]</td></tr><tr><td width=16% height=25 bgcolor=ffffff>联系邮箱</td><td bgcolor=ffffff>[!--email--]</td></tr><tr><td width=16% height=25 bgcolor=ffffff>联系方式</td><td bgcolor=ffffff>[!--mycontact--]</td></tr><tr><td width=16% height=25 bgcolor=ffffff>联系地址</td><td bgcolor=ffffff>[!--address--]</td></tr></table>','','标题<!--field--->title<!--record-->发布时间<!--field--->newstime<!--record-->信息内容<!--field--->smalltext<!--record-->图片<!--field--->titlepic<!--record-->所在地<!--field--->myarea<!--record-->联系邮箱<!--field--->email<!--record-->联系方式<!--field--->mycontact<!--record-->联系地址<!--field--->address<!--record-->','标题<!--field--->title<!--record-->特殊属性<!--field--->special.field<!--record-->发布时间<!--field--->newstime<!--record-->信息内容<!--field--->smalltext<!--record-->图片<!--field--->titlepic<!--record-->所在地<!--field--->myarea<!--record-->联系邮箱<!--field--->email<!--record-->联系方式<!--field--->mycontact<!--record-->联系地址<!--field--->address<!--record-->','标题<!--field--->title<!--record-->发布时间<!--field--->newstime<!--record-->信息内容<!--field--->smalltext<!--record-->图片<!--field--->titlepic<!--record-->所在地<!--field--->myarea<!--record-->联系邮箱<!--field--->email<!--record-->联系方式<!--field--->mycontact<!--record-->联系地址<!--field--->address<!--record-->','|11|12|13|14|15|16|18|19|20|21|23|24|25|26|28|29|30|31|',',title,smalltext,myarea,',8,'info','标题<!--field--->title<!--record-->信息内容<!--field--->smalltext<!--record-->图片<!--field--->titlepic<!--record-->所在地<!--field--->myarea<!--record-->联系邮箱<!--field--->email<!--record-->联系方式<!--field--->mycontact<!--record-->联系地址<!--field--->address<!--record-->',',title,smalltext,myarea,email,','<table width=100% align=center cellpadding=3 cellspacing=1 class=\\\"tableborder\\\"><tr>\r\n    <td width=16% height=25 bgcolor=ffffff>信息标题(*)</td>\r\n    <td bgcolor=ffffff>[!--title--]</td></tr><tr>\r\n    <td width=16% height=25 bgcolor=ffffff>信息内容(*)</td>\r\n    <td bgcolor=ffffff>[!--smalltext--]</td></tr><tr><td width=16% height=25 bgcolor=ffffff>图片</td><td bgcolor=ffffff>[!--titlepic--]</td></tr><tr>\r\n    <td width=16% height=25 bgcolor=ffffff>所在地(*)</td>\r\n    <td bgcolor=ffffff>[!--myarea--]</td></tr><tr>\r\n    <td width=16% height=25 bgcolor=ffffff>联系邮箱(*)</td>\r\n    <td bgcolor=ffffff>[!--email--]</td></tr><tr><td width=16% height=25 bgcolor=ffffff>联系方式</td><td bgcolor=ffffff>[!--mycontact--]</td></tr><tr><td width=16% height=25 bgcolor=ffffff>联系地址</td><td bgcolor=ffffff>[!--address--]</td></tr></table>',',myarea,',0,'标题<!--field--->title<!--record-->发布时间<!--field--->newstime<!--record-->信息内容<!--field--->smalltext<!--record-->图片<!--field--->titlepic<!--record-->所在地<!--field--->myarea<!--record-->','分类信息',',title,newstime,smalltext,titlepic,myarea,email,mycontact,address,',',title,newstime,smalltext,titlepic,myarea,email,mycontact,address,',0,0,0,0,'',1,'',0);
+INSERT INTO `ziyi_enewsmod` VALUES (1,'新闻系统模型','<table width=\\\'100%\\\' align=center cellpadding=3 cellspacing=1 class=\\\"tableborder\\\"><tr><td width=\\\'16%\\\' height=25 bgcolor=\\\'ffffff\\\'>标题(*)</td><td bgcolor=\\\'ffffff\\\'>[!--title--]</td></tr><tr><td width=\\\'16%\\\' height=25 bgcolor=\\\'ffffff\\\'>副标题</td><td bgcolor=\\\'ffffff\\\'>[!--ftitle--]</td></tr><tr><td width=\\\'16%\\\' height=25 bgcolor=\\\'ffffff\\\'>特殊属性</td><td bgcolor=\\\'ffffff\\\'>[!--special.field--]</td></tr><tr><td width=\\\'16%\\\' height=25 bgcolor=\\\'ffffff\\\'>发布时间</td><td bgcolor=\\\'ffffff\\\'>[!--newstime--]</td></tr><tr><td width=\\\'16%\\\' height=25 bgcolor=\\\'ffffff\\\'>标题图片</td><td bgcolor=\\\'ffffff\\\'>[!--titlepic--]</td></tr><tr><td width=\\\'16%\\\' height=25 bgcolor=\\\'ffffff\\\'>内容简介</td><td bgcolor=\\\'ffffff\\\'>[!--smalltext--]</td></tr><tr><td width=\\\'16%\\\' height=25 bgcolor=\\\'ffffff\\\'>作者</td><td bgcolor=\\\'ffffff\\\'>[!--writer--]</td></tr><tr><td width=\\\'16%\\\' height=25 bgcolor=\\\'ffffff\\\'>信息来源</td><td bgcolor=\\\'ffffff\\\'>[!--befrom--]</td></tr><tr><td height=25 colspan=2 bgcolor=\\\'ffffff\\\'><div align=left>新闻正文(*)</div></td></tr></table><div style=\\\"background-color:#D0D0D0\\\">[!--newstext--]</div>','新闻系统模型','标题<!--field--->title<!--record-->副标题<!--field--->ftitle<!--record-->发布时间<!--field--->newstime<!--record-->标题图片<!--field--->titlepic<!--record-->内容简介<!--field--->smalltext<!--record-->作者<!--field--->writer<!--record-->信息来源<!--field--->befrom<!--record-->新闻正文<!--field--->newstext<!--record-->','标题<!--field--->title<!--record-->副标题<!--field--->ftitle<!--record-->特殊属性<!--field--->special.field<!--record-->发布时间<!--field--->newstime<!--record-->标题图片<!--field--->titlepic<!--record-->内容简介<!--field--->smalltext<!--record-->作者<!--field--->writer<!--record-->信息来源<!--field--->befrom<!--record-->新闻正文<!--field--->newstext<!--record-->','标题<!--field--->title<!--record-->副标题<!--field--->ftitle<!--record-->发布时间<!--field--->newstime<!--record-->标题图片<!--field--->titlepic<!--record-->内容简介<!--field--->smalltext<!--record-->作者<!--field--->writer<!--record-->信息来源<!--field--->befrom<!--record-->新闻正文<!--field--->newstext<!--record-->顶<!--field--->diggtop<!--record-->','|5|',',title,smalltext,',1,'news','标题<!--field--->title<!--record-->副标题<!--field--->ftitle<!--record-->特殊属性<!--field--->special.field<!--record-->标题图片<!--field--->titlepic<!--record-->内容简介<!--field--->smalltext<!--record-->作者<!--field--->writer<!--record-->信息来源<!--field--->befrom<!--record-->新闻正文<!--field--->newstext<!--record-->',',title,newstext,','<table width=100% align=center cellpadding=3 cellspacing=1 class=\\\"tableborder\\\"><tr><td width=\\\'16%\\\' height=25 bgcolor=\\\'ffffff\\\'>标题(*)</td><td bgcolor=\\\'ffffff\\\'>[!--title--]</td></tr><tr><td width=\\\'16%\\\' height=25 bgcolor=\\\'ffffff\\\'>副标题</td><td bgcolor=\\\'ffffff\\\'>[!--ftitle--]</td></tr><tr><td width=\\\'16%\\\' height=25 bgcolor=\\\'ffffff\\\'>关键字</td><td bgcolor=\\\'ffffff\\\'>[!--special.field--]</td></tr><tr><td width=\\\'16%\\\' height=25 bgcolor=\\\'ffffff\\\'>标题图片</td><td bgcolor=\\\'ffffff\\\'>[!--titlepic--]</td></tr><tr><td width=\\\'16%\\\' height=25 bgcolor=\\\'ffffff\\\'>内容简介</td><td bgcolor=\\\'ffffff\\\'>[!--smalltext--]</td></tr><tr><td width=\\\'16%\\\' height=25 bgcolor=\\\'ffffff\\\'>作者</td><td bgcolor=\\\'ffffff\\\'>[!--writer--]</td></tr><tr><td width=\\\'16%\\\' height=25 bgcolor=\\\'ffffff\\\'>信息来源</td><td bgcolor=\\\'ffffff\\\'>[!--befrom--]</td></tr><tr><td height=25 colspan=2 bgcolor=\\\'ffffff\\\'><div align=left>新闻正文(*)</div></td></tr></table><div style=\\\"background-color:#D0D0D0\\\">[!--newstext--]</div>','',0,'标题<!--field--->title<!--record-->副标题<!--field--->ftitle<!--record-->发布时间<!--field--->newstime<!--record-->标题图片<!--field--->titlepic<!--record-->内容简介<!--field--->smalltext<!--record-->顶<!--field--->diggtop<!--record-->','新闻',',title,ftitle,newstime,titlepic,smalltext,writer,befrom,newstext,',',title,ftitle,newstime,titlepic,smalltext,writer,befrom,newstext,',0,0,0,0,'',1,'',0),(2,'下载系统模型','<script>\r\nfunction AddFj(str)\r\n{var r;\r\nvar a;\r\na=document.add.softfj.value;\r\nr=a.split(str);\r\nif(r.length!=1)\r\n{return true;}\r\ndocument.add.softfj.value+=\\\"/\\\"+str;\r\n}\r\nfunction DelFj(str)\r\n{\r\nvar a;\r\na=document.add.softfj.value;\r\ndocument.add.softfj.value=a.replace(\\\"/\\\"+str,\\\"\\\");\r\n}\r\n</script>\r\n<table width=100% align=center cellpadding=3 cellspacing=1 class=\\\"tableborder\\\">\r\n  <tr> \r\n    <td width=16% height=25 bgcolor=ffffff>软件名称(*)</td>\r\n    <td bgcolor=ffffff>[!--title--]</td>\r\n  </tr>\r\n  <tr>\r\n    <td width=\\\'16%\\\' height=25 bgcolor=\\\'ffffff\\\'>特殊属性</td>\r\n    <td bgcolor=\\\'ffffff\\\'>[!--special.field--]</td>\r\n  </tr>\r\n  <tr> \r\n    <td width=16% height=25 bgcolor=ffffff>发布时间</td>\r\n    <td bgcolor=ffffff>[!--newstime--]</td>\r\n  </tr>\r\n  <tr> \r\n    <td width=16% height=25 bgcolor=ffffff>软件预览图</td>\r\n    <td bgcolor=ffffff>[!--titlepic--]</td>\r\n  </tr>\r\n  <tr> \r\n    <td width=16% height=25 bgcolor=ffffff>软件作者</td>\r\n    <td bgcolor=ffffff>[!--softwriter--]</td>\r\n  </tr>\r\n  <tr> \r\n    <td width=16% height=25 bgcolor=ffffff>厂商主页</td>\r\n    <td bgcolor=ffffff>[!--homepage--]</td>\r\n  </tr>\r\n  <tr> \r\n    <td width=16% height=25 bgcolor=ffffff>系统演示</td>\r\n    <td bgcolor=ffffff>[!--demo--]</td>\r\n  </tr>\r\n  <tr> \r\n    <td width=16% height=25 bgcolor=ffffff>运行环境</td>\r\n    <td bgcolor=ffffff>[!--softfj--]</td>\r\n  </tr>\r\n  <tr> \r\n    <td height=25 bgcolor=ffffff>&nbsp;</td>\r\n    <td bgcolor=ffffff><input type=checkbox name=check value=\\\'Win9X/Me\\\' onclick=\\\"if(this.checked){AddFj(this.value);}else{DelFj(this.value);}\\\">\r\n      Win9X/Me&nbsp; <input type=checkbox name=check value=\\\'WinNT/2000/XP\\\' onclick=\\\"if(this.checked){AddFj(this.value);}else{DelFj(this.value);}\\\">\r\n      WinNT/2000/XP&nbsp; <input type=checkbox name=check value=\\\'Unix\\\' onclick=\\\"if(this.checked){AddFj(this.value);}else{DelFj(this.value);}\\\">\r\n      Unix&nbsp; <input type=checkbox name=check value=\\\'Linux\\\' onclick=\\\"if(this.checked){AddFj(this.value);}else{DelFj(this.value);}\\\">\r\n      Linux&nbsp; <input type=checkbox name=check value=\\\'DOS\\\' onclick=\\\"if(this.checked){AddFj(this.value);}else{DelFj(this.value);}\\\">\r\n      DOS&nbsp; <input type=checkbox name=check value=\\\'MAC OS\\\' onclick=\\\"if(this.checked){AddFj(this.value);}else{DelFj(this.value);}\\\">\r\n      MAC OS&nbsp; <input type=checkbox name=check value=\\\'Other\\\' onclick=\\\"if(this.checked){AddFj(this.value);}else{DelFj(this.value);}\\\">\r\n      Other</td>\r\n  </tr>\r\n  <tr> \r\n    <td width=16% height=25 bgcolor=ffffff>软件属性</td>\r\n    <td bgcolor=ffffff>软件语言：[!--language--]，软件类型：[!--softtype--]，授权形式：[!--softsq--]，软件评价：[!--star--]</td>\r\n  </tr>\r\n  <tr> \r\n    <td width=16% height=25 bgcolor=ffffff>文件</td>\r\n    <td bgcolor=ffffff>文件类型：[!--filetype--]，文件大小：[!--filesize--]</td>\r\n  </tr>\r\n  <tr> \r\n    <td width=16% height=25 bgcolor=ffffff>下载地址(*)</td>\r\n    <td bgcolor=ffffff>[!--downpath--]</td>\r\n  </tr>\r\n  <tr> \r\n    <td width=16% height=25 bgcolor=ffffff>软件简介(*)</td>\r\n    <td bgcolor=ffffff>[!--softsay--]</td>\r\n  </tr>\r\n</table>','','软件名称<!--field--->title<!--record-->发布时间<!--field--->newstime<!--record-->软件预览图<!--field--->titlepic<!--record-->软件作者<!--field--->softwriter<!--record-->厂商主页<!--field--->homepage<!--record-->系统演示<!--field--->demo<!--record-->运行环境<!--field--->softfj<!--record-->软件语言<!--field--->language<!--record-->软件类型<!--field--->softtype<!--record-->授权形式<!--field--->softsq<!--record-->软件评价<!--field--->star<!--record-->文件类型<!--field--->filetype<!--record-->文件大小<!--field--->filesize<!--record-->下载地址<!--field--->downpath<!--record-->软件简介<!--field--->softsay<!--record-->','软件名称<!--field--->title<!--record-->特殊属性<!--field--->special.field<!--record-->发布时间<!--field--->newstime<!--record-->软件预览图<!--field--->titlepic<!--record-->软件作者<!--field--->softwriter<!--record-->厂商主页<!--field--->homepage<!--record-->系统演示<!--field--->demo<!--record-->运行环境<!--field--->softfj<!--record-->软件语言<!--field--->language<!--record-->软件类型<!--field--->softtype<!--record-->授权形式<!--field--->softsq<!--record-->软件评价<!--field--->star<!--record-->文件类型<!--field--->filetype<!--record-->文件大小<!--field--->filesize<!--record-->下载地址<!--field--->downpath<!--record-->软件简介<!--field--->softsay<!--record-->','软件名称<!--field--->title<!--record-->发布时间<!--field--->newstime<!--record-->软件预览图<!--field--->titlepic<!--record-->软件作者<!--field--->softwriter<!--record-->厂商主页<!--field--->homepage<!--record-->系统演示<!--field--->demo<!--record-->运行环境<!--field--->softfj<!--record-->软件语言<!--field--->language<!--record-->软件类型<!--field--->softtype<!--record-->授权形式<!--field--->softsq<!--record-->软件评价<!--field--->star<!--record-->文件类型<!--field--->filetype<!--record-->文件大小<!--field--->filesize<!--record-->下载地址<!--field--->downpath<!--record-->软件简介<!--field--->softsay<!--record-->','|38|39|40|41|',',title,softsay,',2,'download','软件名称<!--field--->title<!--record-->特殊属性<!--field--->special.field<!--record-->软件预览图<!--field--->titlepic<!--record-->软件作者<!--field--->softwriter<!--record-->厂商主页<!--field--->homepage<!--record-->系统演示<!--field--->demo<!--record-->运行环境<!--field--->softfj<!--record-->软件语言<!--field--->language<!--record-->软件类型<!--field--->softtype<!--record-->授权形式<!--field--->softsq<!--record-->文件类型<!--field--->filetype<!--record-->文件大小<!--field--->filesize<!--record-->下载地址<!--field--->downpath<!--record-->软件简介<!--field--->softsay<!--record-->',',title,downpath,softsay,','<script>\r\nfunction AddFj(str)\r\n{var r;\r\nvar a;\r\na=document.add.softfj.value;\r\nr=a.split(str);\r\nif(r.length!=1)\r\n{return true;}\r\ndocument.add.softfj.value+=\\\"/\\\"+str;\r\n}\r\nfunction DelFj(str)\r\n{\r\nvar a;\r\na=document.add.softfj.value;\r\ndocument.add.softfj.value=a.replace(\\\"/\\\"+str,\\\"\\\");\r\n}\r\n</script>\r\n<table width=100% align=center cellpadding=3 cellspacing=1 class=\\\"tableborder\\\">\r\n  <tr> \r\n    <td width=16% height=25 bgcolor=ffffff>软件名称(*)</td>\r\n    <td bgcolor=ffffff>[!--title--]</td>\r\n  </tr>\r\n  <tr>\r\n    <td width=\\\'16%\\\' height=25 bgcolor=\\\'ffffff\\\'>关键字</td>\r\n    <td bgcolor=\\\'ffffff\\\'>[!--special.field--]</td>\r\n  </tr>\r\n  <tr> \r\n    <td width=16% height=25 bgcolor=ffffff>软件预览图</td>\r\n    <td bgcolor=ffffff>[!--titlepic--]</td>\r\n  </tr>\r\n  <tr> \r\n    <td width=16% height=25 bgcolor=ffffff>软件作者</td>\r\n    <td bgcolor=ffffff>[!--softwriter--]</td>\r\n  </tr>\r\n  <tr> \r\n    <td width=16% height=25 bgcolor=ffffff>厂商主页</td>\r\n    <td bgcolor=ffffff>[!--homepage--]</td>\r\n  </tr>\r\n  <tr> \r\n    <td width=16% height=25 bgcolor=ffffff>系统演示</td>\r\n    <td bgcolor=ffffff>[!--demo--]</td>\r\n  </tr>\r\n  <tr> \r\n    <td width=16% height=25 bgcolor=ffffff>运行环境</td>\r\n    <td bgcolor=ffffff>[!--softfj--]</td>\r\n  </tr>\r\n  <tr> \r\n    <td height=25 bgcolor=ffffff>&nbsp;</td>\r\n    <td bgcolor=ffffff><input type=checkbox name=check value=\\\'Win9X/Me\\\' onclick=\\\"if(this.checked){AddFj(this.value);}else{DelFj(this.value);}\\\">\r\n      Win9X/Me&nbsp; <input type=checkbox name=check value=\\\'WinNT/2000/XP\\\' onclick=\\\"if(this.checked){AddFj(this.value);}else{DelFj(this.value);}\\\">\r\n      WinNT/2000/XP&nbsp; <input type=checkbox name=check value=\\\'Unix\\\' onclick=\\\"if(this.checked){AddFj(this.value);}else{DelFj(this.value);}\\\">\r\n      Unix&nbsp; <input type=checkbox name=check value=\\\'Linux\\\' onclick=\\\"if(this.checked){AddFj(this.value);}else{DelFj(this.value);}\\\">\r\n      Linux&nbsp; <input type=checkbox name=check value=\\\'DOS\\\' onclick=\\\"if(this.checked){AddFj(this.value);}else{DelFj(this.value);}\\\">\r\n      DOS&nbsp; <input type=checkbox name=check value=\\\'MAC OS\\\' onclick=\\\"if(this.checked){AddFj(this.value);}else{DelFj(this.value);}\\\">\r\n      MAC OS&nbsp; <input type=checkbox name=check value=\\\'Other\\\' onclick=\\\"if(this.checked){AddFj(this.value);}else{DelFj(this.value);}\\\">\r\n      Other</td>\r\n  </tr>\r\n  <tr> \r\n    <td width=16% height=25 bgcolor=ffffff>软件属性</td>\r\n    <td bgcolor=ffffff>软件语言：[!--language--]，软件类型：[!--softtype--]，授权形式：[!--softsq--]</td>\r\n  </tr>\r\n  <tr> \r\n    <td width=16% height=25 bgcolor=ffffff>文件</td>\r\n    <td bgcolor=ffffff>文件类型：[!--filetype--]，文件大小：[!--filesize--]</td>\r\n  </tr>\r\n  <tr> \r\n    <td width=16% height=25 bgcolor=ffffff>上传软件(*)</td>\r\n    <td bgcolor=ffffff>[!--downpath--]</td>\r\n  </tr>\r\n  <tr> \r\n    <td width=16% height=25 bgcolor=ffffff>软件简介(*)</td>\r\n    <td bgcolor=ffffff>[!--softsay--]</td>\r\n  </tr>\r\n</table>','',0,'软件名称<!--field--->title<!--record-->发布时间<!--field--->newstime<!--record-->软件预览图<!--field--->titlepic<!--record-->运行环境<!--field--->softfj<!--record-->软件语言<!--field--->language<!--record-->软件类型<!--field--->softtype<!--record-->授权形式<!--field--->softsq<!--record-->软件评价<!--field--->star<!--record-->文件类型<!--field--->filetype<!--record-->文件大小<!--field--->filesize<!--record-->软件简介<!--field--->softsay<!--record-->','软件',',title,newstime,titlepic,softwriter,homepage,demo,softfj,language,softtype,softsq,star,filetype,filesize,downpath,softsay,',',title,newstime,titlepic,softwriter,homepage,demo,softfj,language,softtype,softsq,star,filetype,filesize,downpath,softsay,',0,0,0,0,'',1,'',0),(3,'图片系统模型','<table width=100% align=center cellpadding=3 cellspacing=1 class=tableborder>\r\n  <tr> \r\n    <td width=16% height=25 bgcolor=ffffff>图片名称(*)</td>\r\n    <td bgcolor=ffffff>[!--title--]</td>\r\n  </tr>\r\n  <tr>\r\n    <td width=\\\'16%\\\' height=25 bgcolor=\\\'ffffff\\\'>特殊属性</td>\r\n    <td bgcolor=\\\'ffffff\\\'>[!--special.field--]</td>\r\n  </tr>\r\n  <tr> \r\n    <td width=16% height=25 bgcolor=ffffff>发布时间</td>\r\n    <td bgcolor=ffffff>[!--newstime--]</td>\r\n  </tr>\r\n  <tr> \r\n    <td width=16% height=25 bgcolor=ffffff>文件大小</td>\r\n    <td bgcolor=ffffff>[!--filesize--]</td>\r\n  </tr>\r\n  <tr> \r\n    <td width=16% height=25 bgcolor=ffffff>单图属性</td>\r\n    <td bgcolor=ffffff>图片尺寸：[!--picsize--]，图片分辨率：[!--picfbl--]</td>\r\n  </tr>\r\n  <tr> \r\n    <td width=16% height=25 bgcolor=ffffff>来源</td>\r\n    <td bgcolor=ffffff>[!--picfrom--]</td>\r\n  </tr>\r\n  <tr> \r\n    <td width=16% height=25 bgcolor=ffffff>图片小图</td>\r\n    <td bgcolor=ffffff>[!--titlepic--]</td>\r\n  </tr>\r\n  <tr> \r\n    <td width=16% height=25 bgcolor=ffffff>图片大图</td>\r\n    <td bgcolor=ffffff>[!--picurl--]</td>\r\n  </tr>\r\n  <tr> \r\n    <td width=16% height=25 bgcolor=ffffff>图片集</td>\r\n    <td bgcolor=ffffff>[!--morepic--]</td>\r\n  </tr>\r\n  <tr> \r\n    <td width=16% height=25 bgcolor=ffffff>图集属性</td>\r\n    <td bgcolor=ffffff>每行显示条数：[!--num--]，缩图大小：[!--width--]*[!--height--]<font color=\\\"#666666\\\">(宽*高)</font></td>\r\n  </tr>\r\n  <tr> \r\n    <td width=16% height=25 bgcolor=ffffff>图片简介(*)</td>\r\n    <td bgcolor=ffffff>[!--picsay--]</td>\r\n  </tr>\r\n</table>','','图片名称<!--field--->title<!--record-->发布时间<!--field--->newstime<!--record-->文件大小<!--field--->filesize<!--record-->图片尺寸<!--field--->picsize<!--record-->图片分辨率<!--field--->picfbl<!--record-->来源<!--field--->picfrom<!--record-->图片小图<!--field--->titlepic<!--record-->图片大图<!--field--->picurl<!--record-->图片集<!--field--->morepic<!--record-->每行显示条数<!--field--->num<!--record-->缩图宽度<!--field--->width<!--record-->缩图高度<!--field--->height<!--record-->图片简介<!--field--->picsay<!--record-->','图片名称<!--field--->title<!--record-->特殊属性<!--field--->special.field<!--record-->发布时间<!--field--->newstime<!--record-->文件大小<!--field--->filesize<!--record-->图片尺寸<!--field--->picsize<!--record-->图片分辨率<!--field--->picfbl<!--record-->来源<!--field--->picfrom<!--record-->图片小图<!--field--->titlepic<!--record-->图片大图<!--field--->picurl<!--record-->图片集<!--field--->morepic<!--record-->每行显示条数<!--field--->num<!--record-->缩图宽度<!--field--->width<!--record-->缩图高度<!--field--->height<!--record-->图片简介<!--field--->picsay<!--record-->','图片名称<!--field--->title<!--record-->发布时间<!--field--->newstime<!--record-->文件大小<!--field--->filesize<!--record-->图片尺寸<!--field--->picsize<!--record-->图片分辨率<!--field--->picfbl<!--record-->来源<!--field--->picfrom<!--record-->图片小图<!--field--->titlepic<!--record-->图片大图<!--field--->picurl<!--record-->图片集<!--field--->morepic<!--record-->每行显示条数<!--field--->num<!--record-->缩图宽度<!--field--->width<!--record-->缩图高度<!--field--->height<!--record-->图片简介<!--field--->picsay<!--record-->','|9|',',title,picsay,',3,'photo','图片名称<!--field--->title<!--record-->特殊属性<!--field--->special.field<!--record-->文件大小<!--field--->filesize<!--record-->图片尺寸<!--field--->picsize<!--record-->图片分辨率<!--field--->picfbl<!--record-->来源<!--field--->picfrom<!--record-->图片小图<!--field--->titlepic<!--record-->图片大图<!--field--->picurl<!--record-->图片简介<!--field--->picsay<!--record-->',',title,picsay,','<table width=100% align=center cellpadding=3 cellspacing=1 class=tableborder><tr><td width=16% height=25 bgcolor=ffffff>图片名称</td><td bgcolor=ffffff>[!--title--]</td></tr>\r\n  <tr>\r\n    <td width=\\\'16%\\\' height=25 bgcolor=\\\'ffffff\\\'>关键字</td>\r\n    <td bgcolor=\\\'ffffff\\\'>[!--special.field--]</td>\r\n  </tr>\r\n<tr><td width=16% height=25 bgcolor=ffffff>文件大小</td><td bgcolor=ffffff>[!--filesize--]</td></tr><tr><td width=16% height=25 bgcolor=ffffff>图片尺寸</td><td bgcolor=ffffff>[!--picsize--]</td></tr><tr><td width=16% height=25 bgcolor=ffffff>图片分辨率</td><td bgcolor=ffffff>[!--picfbl--]</td></tr><tr><td width=16% height=25 bgcolor=ffffff>来源</td><td bgcolor=ffffff>[!--picfrom--]</td></tr><tr><td width=16% height=25 bgcolor=ffffff>图片小图</td><td bgcolor=ffffff>[!--titlepic--]</td></tr><tr><td width=16% height=25 bgcolor=ffffff>图片大图</td><td bgcolor=ffffff>[!--picurl--]</td></tr><tr><td width=16% height=25 bgcolor=ffffff>图片简介</td><td bgcolor=ffffff>[!--picsay--]</td></tr></table>','',0,'图片名称<!--field--->title<!--record-->发布时间<!--field--->newstime<!--record-->图片小图<!--field--->titlepic<!--record-->图片大图<!--field--->picurl<!--record-->图片简介<!--field--->picsay<!--record-->','图片',',title,newstime,filesize,picsize,picfbl,picfrom,titlepic,picurl,morepic,num,width,height,picsay,',',title,newstime,filesize,picsize,picfbl,picfrom,titlepic,picurl,morepic,num,width,height,picsay,',0,0,0,0,'',1,'',0),(4,'FLASH系统模型','<table width=100% align=center cellpadding=3 cellspacing=1 class=tableborder>\r\n  <tr> \r\n    <td width=16% height=25 bgcolor=ffffff>作品名(*)</td>\r\n    <td bgcolor=ffffff>[!--title--]</td>\r\n  </tr>\r\n  <tr>\r\n    <td width=\\\'16%\\\' height=25 bgcolor=\\\'ffffff\\\'>特殊属性</td>\r\n    <td bgcolor=\\\'ffffff\\\'>[!--special.field--]</td>\r\n  </tr>\r\n  <tr> \r\n    <td width=16% height=25 bgcolor=ffffff>发布时间</td>\r\n    <td bgcolor=ffffff>[!--newstime--]</td>\r\n  </tr>\r\n  <tr> \r\n    <td width=16% height=25 bgcolor=ffffff>作品预览图</td>\r\n    <td bgcolor=ffffff>[!--titlepic--]</td>\r\n  </tr>\r\n  <tr> \r\n    <td width=16% height=25 bgcolor=ffffff>作者</td>\r\n    <td bgcolor=ffffff>[!--flashwriter--]</td>\r\n  </tr>\r\n  <tr> \r\n    <td width=16% height=25 bgcolor=ffffff>作者邮箱</td>\r\n    <td bgcolor=ffffff>[!--email--]</td>\r\n  </tr>\r\n  <tr> \r\n    <td width=16% height=25 bgcolor=ffffff>作品评价</td>\r\n    <td bgcolor=ffffff>[!--star--]</td>\r\n  </tr>\r\n  <tr> \r\n    <td width=16% height=25 bgcolor=ffffff>文件大小</td>\r\n    <td bgcolor=ffffff>[!--filesize--]</td>\r\n  </tr>\r\n  <tr> \r\n    <td width=16% height=25 bgcolor=ffffff>Flash地址(*)</td>\r\n    <td bgcolor=ffffff>[!--flashurl--]</td>\r\n  </tr>\r\n  <tr> \r\n    <td width=16% height=25 bgcolor=ffffff>Flash规格</td>\r\n    <td bgcolor=ffffff>[!--width--]*[!--height--]<font color=\\\"#666666\\\">(宽度*高度)</font></td>\r\n  </tr>\r\n  <tr> \r\n    <td width=16% height=25 bgcolor=ffffff>作品简介(*)</td>\r\n    <td bgcolor=ffffff>[!--flashsay--]</td>\r\n  </tr>\r\n</table>','','作品名<!--field--->title<!--record-->发布时间<!--field--->newstime<!--record-->作品预览图<!--field--->titlepic<!--record-->作者<!--field--->flashwriter<!--record-->作者邮箱<!--field--->email<!--record-->作品评价<!--field--->star<!--record-->文件大小<!--field--->filesize<!--record-->Flash地址<!--field--->flashurl<!--record-->Flash宽度<!--field--->width<!--record-->Flash高度<!--field--->height<!--record-->作品简介<!--field--->flashsay<!--record-->','作品名<!--field--->title<!--record-->特殊属性<!--field--->special.field<!--record-->发布时间<!--field--->newstime<!--record-->作品预览图<!--field--->titlepic<!--record-->作者<!--field--->flashwriter<!--record-->作者邮箱<!--field--->email<!--record-->作品评价<!--field--->star<!--record-->文件大小<!--field--->filesize<!--record-->Flash地址<!--field--->flashurl<!--record-->Flash宽度<!--field--->width<!--record-->Flash高度<!--field--->height<!--record-->作品简介<!--field--->flashsay<!--record-->','作品名<!--field--->title<!--record-->发布时间<!--field--->newstime<!--record-->作品预览图<!--field--->titlepic<!--record-->作者<!--field--->flashwriter<!--record-->作者邮箱<!--field--->email<!--record-->作品评价<!--field--->star<!--record-->文件大小<!--field--->filesize<!--record-->Flash地址<!--field--->flashurl<!--record-->Flash宽度<!--field--->width<!--record-->Flash高度<!--field--->height<!--record-->作品简介<!--field--->flashsay<!--record-->','|50|51|',',title,flashwriter,flashsay,',4,'flash','作品名<!--field--->title<!--record-->特殊属性<!--field--->special.field<!--record-->作品预览图<!--field--->titlepic<!--record-->作者<!--field--->flashwriter<!--record-->作者邮箱<!--field--->email<!--record-->文件大小<!--field--->filesize<!--record-->Flash地址<!--field--->flashurl<!--record-->Flash宽度<!--field--->width<!--record-->Flash高度<!--field--->height<!--record-->作品简介<!--field--->flashsay<!--record-->',',title,flashurl,flashsay,','<table width=\\\'100%\\\' align=center cellpadding=3 cellspacing=1 class=tableborder>\r\n  <tr>\r\n    <td width=16% height=25 bgcolor=ffffff>作品名(*)</td>\r\n    <td bgcolor=ffffff>[!--title--]</td>\r\n  </tr>\r\n  <tr> \r\n    <td width=\\\'16%\\\' height=25 bgcolor=\\\'ffffff\\\'>关键字</td>\r\n    <td bgcolor=\\\'ffffff\\\'>[!--special.field--]</td>\r\n  </tr>\r\n  <tr>\r\n    <td width=16% height=25 bgcolor=ffffff>作品预览图</td>\r\n    <td bgcolor=ffffff>[!--titlepic--]</td>\r\n  </tr>\r\n  <tr>\r\n    <td width=16% height=25 bgcolor=ffffff>作者</td>\r\n    <td bgcolor=ffffff>[!--flashwriter--]</td>\r\n  </tr>\r\n  <tr>\r\n    <td width=16% height=25 bgcolor=ffffff>作者邮箱</td>\r\n    <td bgcolor=ffffff>[!--email--]</td>\r\n  </tr>\r\n  <tr>\r\n    <td width=16% height=25 bgcolor=ffffff>文件大小</td>\r\n    <td bgcolor=ffffff>[!--filesize--]</td>\r\n  </tr>\r\n  <tr>\r\n    <td width=16% height=25 bgcolor=ffffff>上传Flash(*)</td>\r\n    <td bgcolor=ffffff>[!--flashurl--]</td>\r\n  </tr>\r\n  <tr> \r\n    <td width=16% height=25 bgcolor=ffffff>Flash规格</td>\r\n    <td bgcolor=ffffff>[!--width--]*[!--height--]<font color=\\\"#666666\\\">(宽度*高度)</font></td>\r\n  </tr>\r\n  <tr>\r\n    <td width=16% height=25 bgcolor=ffffff>作品简介(*)</td>\r\n    <td bgcolor=ffffff>[!--flashsay--]</td>\r\n  </tr>\r\n</table>\r\n','',0,'作品名<!--field--->title<!--record-->发布时间<!--field--->newstime<!--record-->作品预览图<!--field--->titlepic<!--record-->作者<!--field--->flashwriter<!--record-->作品评价<!--field--->star<!--record-->文件大小<!--field--->filesize<!--record-->Flash地址<!--field--->flashurl<!--record-->作品简介<!--field--->flashsay<!--record-->','FLASH',',title,newstime,titlepic,flashwriter,email,star,filesize,flashurl,width,height,flashsay,',',title,newstime,titlepic,flashwriter,email,star,filesize,flashurl,width,height,flashsay,',0,0,0,0,'',1,'',0),(5,'电影系统模型','<table width=100% align=center cellpadding=3 cellspacing=1 class=tableborder>\r\n  <tr> \r\n    <td width=16% height=25 bgcolor=ffffff>影片名(*)</td>\r\n    <td bgcolor=ffffff>[!--title--]</td>\r\n  </tr>\r\n  <tr> \r\n    <td width=\\\'16%\\\' height=25 bgcolor=\\\'ffffff\\\'>特殊属性</td>\r\n    <td bgcolor=\\\'ffffff\\\'>[!--special.field--]</td>\r\n  </tr>\r\n  <tr> \r\n    <td width=16% height=25 bgcolor=ffffff>发布时间</td>\r\n    <td bgcolor=ffffff>[!--newstime--]</td>\r\n  </tr>\r\n  <tr> \r\n    <td width=16% height=25 bgcolor=ffffff>影片缩略图</td>\r\n    <td bgcolor=ffffff>[!--titlepic--]</td>\r\n  </tr>\r\n  <tr> \r\n    <td width=16% height=25 bgcolor=ffffff>影片类型</td>\r\n    <td bgcolor=ffffff>[!--movietype--]，推荐等级：[!--star--]，扣除点数：[!--moviefen--]</td>\r\n  </tr>\r\n  <tr> \r\n    <td width=16% height=25 bgcolor=ffffff>出品公司</td>\r\n    <td bgcolor=ffffff>[!--company--]，出品时间：[!--movietime--]</td>\r\n  </tr>\r\n  <tr> \r\n    <td width=16% height=25 bgcolor=ffffff>主演</td>\r\n    <td bgcolor=ffffff>[!--player--]，导演&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;：[!--playadmin--]</td>\r\n  </tr>\r\n  <tr> \r\n    <td width=16% height=25 bgcolor=ffffff>影片文件</td>\r\n    <td bgcolor=ffffff>影片格式：[!--filetype--]，影片大小：[!--filesize--]</td>\r\n  </tr>\r\n  <tr> \r\n    <td width=16% height=25 bgcolor=ffffff>影片属性</td>\r\n    <td bgcolor=ffffff>带宽要求：[!--playdk--]，片长：[!--playtime--]</td>\r\n  </tr>\r\n  <tr> \r\n    <td width=16% height=25 bgcolor=ffffff>下载地址</td>\r\n    <td bgcolor=ffffff>[!--downpath--]</td>\r\n  </tr>\r\n  <tr> \r\n    <td width=16% height=25 bgcolor=ffffff>在线观看播放器</td>\r\n    <td bgcolor=ffffff>[!--playerid--]</td>\r\n  </tr>\r\n  <tr> \r\n    <td width=16% height=25 bgcolor=ffffff>在线观看地址</td>\r\n    <td bgcolor=ffffff>[!--onlinepath--]</td>\r\n  </tr>\r\n  <tr> \r\n    <td width=16% height=25 bgcolor=ffffff>影片简介(*)</td>\r\n    <td bgcolor=ffffff>[!--moviesay--]</td>\r\n  </tr>\r\n</table>\r\n','','影片名<!--field--->title<!--record-->发布时间<!--field--->newstime<!--record-->影片缩略图<!--field--->titlepic<!--record-->影片类型<!--field--->movietype<!--record-->出品公司<!--field--->company<!--record-->出品时间<!--field--->movietime<!--record-->主演<!--field--->player<!--record-->导演<!--field--->playadmin<!--record-->影片格式<!--field--->filetype<!--record-->影片大小<!--field--->filesize<!--record-->推荐等级<!--field--->star<!--record-->带宽要求<!--field--->playdk<!--record-->片长<!--field--->playtime<!--record-->扣除点数<!--field--->moviefen<!--record-->下载地址<!--field--->downpath<!--record-->播放器<!--field--->playerid<!--record-->在线观看地址<!--field--->onlinepath<!--record-->影片简介<!--field--->moviesay<!--record-->','影片名<!--field--->title<!--record-->特殊属性<!--field--->special.field<!--record-->发布时间<!--field--->newstime<!--record-->影片缩略图<!--field--->titlepic<!--record-->影片类型<!--field--->movietype<!--record-->出品公司<!--field--->company<!--record-->出品时间<!--field--->movietime<!--record-->主演<!--field--->player<!--record-->导演<!--field--->playadmin<!--record-->影片格式<!--field--->filetype<!--record-->影片大小<!--field--->filesize<!--record-->推荐等级<!--field--->star<!--record-->带宽要求<!--field--->playdk<!--record-->片长<!--field--->playtime<!--record-->扣除点数<!--field--->moviefen<!--record-->下载地址<!--field--->downpath<!--record-->播放器<!--field--->playerid<!--record-->在线观看地址<!--field--->onlinepath<!--record-->影片简介<!--field--->moviesay<!--record-->','影片名<!--field--->title<!--record-->发布时间<!--field--->newstime<!--record-->影片缩略图<!--field--->titlepic<!--record-->影片类型<!--field--->movietype<!--record-->出品公司<!--field--->company<!--record-->出品时间<!--field--->movietime<!--record-->主演<!--field--->player<!--record-->导演<!--field--->playadmin<!--record-->影片格式<!--field--->filetype<!--record-->影片大小<!--field--->filesize<!--record-->推荐等级<!--field--->star<!--record-->带宽要求<!--field--->playdk<!--record-->片长<!--field--->playtime<!--record-->扣除点数<!--field--->moviefen<!--record-->下载地址<!--field--->downpath<!--record-->播放器<!--field--->playerid<!--record-->在线观看地址<!--field--->onlinepath<!--record-->影片简介<!--field--->moviesay<!--record-->','|42|43|44|45|',',title,movietype,company,player,playadmin,moviesay,',5,'movie','',',title,moviesay,','<table width=100% align=center cellpadding=3 cellspacing=1 bgcolor=#DBEAF5></table>','',0,'影片名<!--field--->title<!--record-->发布时间<!--field--->newstime<!--record-->影片缩略图<!--field--->titlepic<!--record-->影片类型<!--field--->movietype<!--record-->出品公司<!--field--->company<!--record-->出品时间<!--field--->movietime<!--record-->主演<!--field--->player<!--record-->导演<!--field--->playadmin<!--record-->影片格式<!--field--->filetype<!--record-->影片大小<!--field--->filesize<!--record-->推荐等级<!--field--->star<!--record-->扣除点数<!--field--->moviefen<!--record-->影片简介<!--field--->moviesay<!--record-->','电影',',title,newstime,titlepic,movietype,company,movietime,player,playadmin,filetype,filesize,star,playdk,playtime,moviefen,downpath,playerid,onlinepath,moviesay,',',title,newstime,titlepic,movietype,company,movietime,player,playadmin,filetype,filesize,star,playdk,playtime,moviefen,downpath,playerid,onlinepath,moviesay,',0,0,0,0,'',1,'',0),(6,'商城系统模型','<table width=100% align=center cellpadding=3 cellspacing=1 class=tableborder>\r\n  <tr>\r\n    <td width=16% height=25 bgcolor=ffffff>商品名称(*)</td>\r\n    <td bgcolor=ffffff>[!--title--]</td>\r\n  </tr>\r\n  <tr><td width=\\\'16%\\\' height=25 bgcolor=\\\'ffffff\\\'>特殊属性</td><td bgcolor=\\\'ffffff\\\'>[!--special.field--]</td></tr>\r\n  <tr>\r\n    <td width=16% height=25 bgcolor=ffffff>发布时间</td>\r\n    <td bgcolor=ffffff>[!--newstime--]</td>\r\n  </tr>\r\n  <tr>\r\n    <td width=16% height=25 bgcolor=ffffff>商品编号</td>\r\n    <td bgcolor=ffffff>[!--productno--]</td>\r\n  </tr>\r\n  <tr>\r\n    <td width=16% height=25 bgcolor=ffffff>品牌</td>\r\n    <td bgcolor=ffffff>[!--pbrand--]</td>\r\n  </tr>\r\n  <tr>\r\n    <td width=16% height=25 bgcolor=ffffff>简单描述</td>\r\n    <td bgcolor=ffffff>[!--intro--]</td>\r\n  </tr>\r\n  <tr>\r\n    <td width=16% height=25 bgcolor=ffffff>计量单位</td>\r\n    <td bgcolor=ffffff>[!--unit--]</td>\r\n  </tr>\r\n  <tr>\r\n    <td width=16% height=25 bgcolor=ffffff>单位重量</td>\r\n    <td bgcolor=ffffff>[!--weight--]</td>\r\n  </tr>\r\n  <tr>\r\n    <td width=16% height=25 bgcolor=ffffff>市场价格</td>\r\n    <td bgcolor=ffffff>[!--tprice--]元</td>\r\n  </tr>\r\n  <tr>\r\n    <td width=16% height=25 bgcolor=ffffff>购买价格</td>\r\n    <td bgcolor=ffffff>[!--price--]元</td>\r\n  </tr>\r\n  <tr>\r\n    <td width=16% height=25 bgcolor=ffffff>积分购买</td>\r\n    <td bgcolor=ffffff>[!--buyfen--]点</td>\r\n  </tr>\r\n  <tr>\r\n    <td width=16% height=25 bgcolor=ffffff>库存</td>\r\n    <td bgcolor=ffffff>[!--pmaxnum--]</td>\r\n  </tr>\r\n  <tr>\r\n    <td width=16% height=25 bgcolor=ffffff>商品缩略片</td>\r\n    <td bgcolor=ffffff>[!--titlepic--]</td>\r\n  </tr>\r\n  <tr>\r\n    <td width=16% height=25 bgcolor=ffffff>商品大图</td>\r\n    <td bgcolor=ffffff>[!--productpic--]</td>\r\n  </tr>\r\n  <tr>\r\n    <td height=25 colspan=2 bgcolor=ffffff><div align=left>商品介绍(*)</div></td>\r\n  </tr>\r\n</table>\r\n<div style=\\\"background-color:#D0D0D0\\\">[!--newstext--]</div>','','商品名称<!--field--->title<!--record-->发布时间<!--field--->newstime<!--record-->商品编号<!--field--->productno<!--record-->品牌<!--field--->pbrand<!--record-->简单描述<!--field--->intro<!--record-->计量单位<!--field--->unit<!--record-->单位重量<!--field--->weight<!--record-->市场价格<!--field--->tprice<!--record-->购买价格<!--field--->price<!--record-->积分购买<!--field--->buyfen<!--record-->库存<!--field--->pmaxnum<!--record-->商品缩略片<!--field--->titlepic<!--record-->商品大图<!--field--->productpic<!--record-->商品介绍<!--field--->newstext<!--record-->','商品名称<!--field--->title<!--record-->特殊属性<!--field--->special.field<!--record-->发布时间<!--field--->newstime<!--record-->商品编号<!--field--->productno<!--record-->品牌<!--field--->pbrand<!--record-->简单描述<!--field--->intro<!--record-->计量单位<!--field--->unit<!--record-->单位重量<!--field--->weight<!--record-->市场价格<!--field--->tprice<!--record-->购买价格<!--field--->price<!--record-->积分购买<!--field--->buyfen<!--record-->库存<!--field--->pmaxnum<!--record-->商品缩略片<!--field--->titlepic<!--record-->商品大图<!--field--->productpic<!--record-->商品介绍<!--field--->newstext<!--record-->','商品名称<!--field--->title<!--record-->发布时间<!--field--->newstime<!--record-->商品编号<!--field--->productno<!--record-->品牌<!--field--->pbrand<!--record-->简单描述<!--field--->intro<!--record-->计量单位<!--field--->unit<!--record-->单位重量<!--field--->weight<!--record-->市场价格<!--field--->tprice<!--record-->购买价格<!--field--->price<!--record-->积分购买<!--field--->buyfen<!--record-->库存<!--field--->pmaxnum<!--record-->商品缩略片<!--field--->titlepic<!--record-->商品大图<!--field--->productpic<!--record-->商品介绍<!--field--->newstext<!--record-->销售量<!--field--->psalenum<!--record-->','|46|47|48|49|',',title,productno,pbrand,intro,price,newstext,',6,'shop','',',title,newstext,','<table width=100% align=center cellpadding=3 cellspacing=1 bgcolor=#DBEAF5></table>','',0,'商品名称<!--field--->title<!--record-->发布时间<!--field--->newstime<!--record-->商品编号<!--field--->productno<!--record-->品牌<!--field--->pbrand<!--record-->简单描述<!--field--->intro<!--record-->计量单位<!--field--->unit<!--record-->单位重量<!--field--->weight<!--record-->市场价格<!--field--->tprice<!--record-->购买价格<!--field--->price<!--record-->积分购买<!--field--->buyfen<!--record-->库存<!--field--->pmaxnum<!--record-->商品缩略片<!--field--->titlepic<!--record-->商品大图<!--field--->productpic<!--record-->商品介绍<!--field--->newstext<!--record-->销售量<!--field--->psalenum<!--record-->','商品',',title,newstime,productno,pbrand,intro,unit,weight,tprice,price,buyfen,pmaxnum,titlepic,productpic,newstext,',',title,newstime,productno,pbrand,intro,unit,weight,tprice,price,buyfen,pmaxnum,titlepic,productpic,newstext,',0,0,0,0,'',1,'',0),(7,'文章系统模型','<table width=\\\'100%\\\' align=center cellpadding=3 cellspacing=1 class=\\\"tableborder\\\"><tr><td width=\\\'16%\\\' height=25 bgcolor=\\\'ffffff\\\'>标题(*)</td><td bgcolor=\\\'ffffff\\\'>[!--title--]</td></tr><tr><td width=\\\'16%\\\' height=25 bgcolor=\\\'ffffff\\\'>副标题</td><td bgcolor=\\\'ffffff\\\'>[!--ftitle--]</td></tr><tr><td width=\\\'16%\\\' height=25 bgcolor=\\\'ffffff\\\'>特殊属性</td><td bgcolor=\\\'ffffff\\\'>[!--special.field--]</td></tr><tr><td width=\\\'16%\\\' height=25 bgcolor=\\\'ffffff\\\'>发布时间</td><td bgcolor=\\\'ffffff\\\'>[!--newstime--]</td></tr><tr><td width=\\\'16%\\\' height=25 bgcolor=\\\'ffffff\\\'>标题图片</td><td bgcolor=\\\'ffffff\\\'>[!--titlepic--]</td></tr><tr><td width=\\\'16%\\\' height=25 bgcolor=\\\'ffffff\\\'>内容简介</td><td bgcolor=\\\'ffffff\\\'>[!--smalltext--]</td></tr><tr><td width=\\\'16%\\\' height=25 bgcolor=\\\'ffffff\\\'>作者</td><td bgcolor=\\\'ffffff\\\'>[!--writer--]</td></tr><tr><td width=\\\'16%\\\' height=25 bgcolor=\\\'ffffff\\\'>信息来源</td><td bgcolor=\\\'ffffff\\\'>[!--befrom--]</td></tr><tr><td height=25 colspan=2 bgcolor=\\\'ffffff\\\'><div align=left>新闻正文(*)</div></td></tr></table><div style=\\\"background-color:#D0D0D0\\\">[!--newstext--]</div>','','标题<!--field--->title<!--record-->副标题<!--field--->ftitle<!--record-->发布时间<!--field--->newstime<!--record-->标题图片<!--field--->titlepic<!--record-->内容简介<!--field--->smalltext<!--record-->作者<!--field--->writer<!--record-->信息来源<!--field--->befrom<!--record-->新闻正文<!--field--->newstext<!--record-->','标题<!--field--->title<!--record-->副标题<!--field--->ftitle<!--record-->特殊属性<!--field--->special.field<!--record-->发布时间<!--field--->newstime<!--record-->标题图片<!--field--->titlepic<!--record-->内容简介<!--field--->smalltext<!--record-->作者<!--field--->writer<!--record-->信息来源<!--field--->befrom<!--record-->新闻正文<!--field--->newstext<!--record-->','标题<!--field--->title<!--record-->副标题<!--field--->ftitle<!--record-->发布时间<!--field--->newstime<!--record-->标题图片<!--field--->titlepic<!--record-->内容简介<!--field--->smalltext<!--record-->作者<!--field--->writer<!--record-->信息来源<!--field--->befrom<!--record-->新闻正文<!--field--->newstext<!--record-->顶<!--field--->diggtop<!--record-->','|55|56|57|',',title,smalltext,',7,'article','标题<!--field--->title<!--record-->副标题<!--field--->ftitle<!--record-->特殊属性<!--field--->special.field<!--record-->标题图片<!--field--->titlepic<!--record-->内容简介<!--field--->smalltext<!--record-->作者<!--field--->writer<!--record-->信息来源<!--field--->befrom<!--record-->新闻正文<!--field--->newstext<!--record-->',',title,newstext,','<table width=100% align=center cellpadding=3 cellspacing=1 class=\\\"tableborder\\\"><tr><td width=\\\'16%\\\' height=25 bgcolor=\\\'ffffff\\\'>标题(*)</td><td bgcolor=\\\'ffffff\\\'>[!--title--]</td></tr><tr><td width=\\\'16%\\\' height=25 bgcolor=\\\'ffffff\\\'>副标题</td><td bgcolor=\\\'ffffff\\\'>[!--ftitle--]</td></tr><tr><td width=\\\'16%\\\' height=25 bgcolor=\\\'ffffff\\\'>关键字</td><td bgcolor=\\\'ffffff\\\'>[!--special.field--]</td></tr><tr><td width=\\\'16%\\\' height=25 bgcolor=\\\'ffffff\\\'>标题图片</td><td bgcolor=\\\'ffffff\\\'>[!--titlepic--]</td></tr><tr><td width=\\\'16%\\\' height=25 bgcolor=\\\'ffffff\\\'>内容简介</td><td bgcolor=\\\'ffffff\\\'>[!--smalltext--]</td></tr><tr><td width=\\\'16%\\\' height=25 bgcolor=\\\'ffffff\\\'>作者</td><td bgcolor=\\\'ffffff\\\'>[!--writer--]</td></tr><tr><td width=\\\'16%\\\' height=25 bgcolor=\\\'ffffff\\\'>信息来源</td><td bgcolor=\\\'ffffff\\\'>[!--befrom--]</td></tr><tr><td height=25 colspan=2 bgcolor=\\\'ffffff\\\'><div align=left>新闻正文(*)</div></td></tr></table><div style=\\\"background-color:#D0D0D0\\\">[!--newstext--]</div>','',0,'标题<!--field--->title<!--record-->副标题<!--field--->ftitle<!--record-->发布时间<!--field--->newstime<!--record-->标题图片<!--field--->titlepic<!--record-->内容简介<!--field--->smalltext<!--record-->顶<!--field--->diggtop<!--record-->','文章',',title,ftitle,newstime,titlepic,smalltext,writer,befrom,newstext,',',title,ftitle,newstime,titlepic,smalltext,writer,befrom,newstext,',0,0,0,0,'',1,'',0),(8,'分类信息系统模型','<table width=100% align=center cellpadding=3 cellspacing=1 class=\\\"tableborder\\\"><tr><td width=16% height=25 bgcolor=ffffff>标题</td><td bgcolor=ffffff>[!--title--]</td></tr><tr><td width=16% height=25 bgcolor=ffffff>特殊属性</td><td bgcolor=ffffff>[!--special.field--]</td></tr><tr><td width=16% height=25 bgcolor=ffffff>发布时间</td><td bgcolor=ffffff>[!--newstime--]</td></tr><tr><td width=16% height=25 bgcolor=ffffff>信息内容</td><td bgcolor=ffffff>[!--smalltext--]</td></tr><tr><td width=16% height=25 bgcolor=ffffff>图片</td><td bgcolor=ffffff>[!--titlepic--]</td></tr><tr><td width=16% height=25 bgcolor=ffffff>所在地</td><td bgcolor=ffffff>[!--myarea--]</td></tr><tr><td width=16% height=25 bgcolor=ffffff>联系邮箱</td><td bgcolor=ffffff>[!--email--]</td></tr><tr><td width=16% height=25 bgcolor=ffffff>联系方式</td><td bgcolor=ffffff>[!--mycontact--]</td></tr><tr><td width=16% height=25 bgcolor=ffffff>联系地址</td><td bgcolor=ffffff>[!--address--]</td></tr></table>','','标题<!--field--->title<!--record-->发布时间<!--field--->newstime<!--record-->信息内容<!--field--->smalltext<!--record-->图片<!--field--->titlepic<!--record-->所在地<!--field--->myarea<!--record-->联系邮箱<!--field--->email<!--record-->联系方式<!--field--->mycontact<!--record-->联系地址<!--field--->address<!--record-->','标题<!--field--->title<!--record-->特殊属性<!--field--->special.field<!--record-->发布时间<!--field--->newstime<!--record-->信息内容<!--field--->smalltext<!--record-->图片<!--field--->titlepic<!--record-->所在地<!--field--->myarea<!--record-->联系邮箱<!--field--->email<!--record-->联系方式<!--field--->mycontact<!--record-->联系地址<!--field--->address<!--record-->','标题<!--field--->title<!--record-->发布时间<!--field--->newstime<!--record-->信息内容<!--field--->smalltext<!--record-->图片<!--field--->titlepic<!--record-->所在地<!--field--->myarea<!--record-->联系邮箱<!--field--->email<!--record-->联系方式<!--field--->mycontact<!--record-->联系地址<!--field--->address<!--record-->','|11|12|13|14|15|16|18|19|20|21|23|24|25|26|28|29|30|31|',',title,smalltext,myarea,',8,'info','标题<!--field--->title<!--record-->信息内容<!--field--->smalltext<!--record-->图片<!--field--->titlepic<!--record-->所在地<!--field--->myarea<!--record-->联系邮箱<!--field--->email<!--record-->联系方式<!--field--->mycontact<!--record-->联系地址<!--field--->address<!--record-->',',title,smalltext,myarea,email,','<table width=100% align=center cellpadding=3 cellspacing=1 class=\\\"tableborder\\\"><tr>\r\n    <td width=16% height=25 bgcolor=ffffff>信息标题(*)</td>\r\n    <td bgcolor=ffffff>[!--title--]</td></tr><tr>\r\n    <td width=16% height=25 bgcolor=ffffff>信息内容(*)</td>\r\n    <td bgcolor=ffffff>[!--smalltext--]</td></tr><tr><td width=16% height=25 bgcolor=ffffff>图片</td><td bgcolor=ffffff>[!--titlepic--]</td></tr><tr>\r\n    <td width=16% height=25 bgcolor=ffffff>所在地(*)</td>\r\n    <td bgcolor=ffffff>[!--myarea--]</td></tr><tr>\r\n    <td width=16% height=25 bgcolor=ffffff>联系邮箱(*)</td>\r\n    <td bgcolor=ffffff>[!--email--]</td></tr><tr><td width=16% height=25 bgcolor=ffffff>联系方式</td><td bgcolor=ffffff>[!--mycontact--]</td></tr><tr><td width=16% height=25 bgcolor=ffffff>联系地址</td><td bgcolor=ffffff>[!--address--]</td></tr></table>',',myarea,',0,'标题<!--field--->title<!--record-->发布时间<!--field--->newstime<!--record-->信息内容<!--field--->smalltext<!--record-->图片<!--field--->titlepic<!--record-->所在地<!--field--->myarea<!--record-->','分类信息',',title,newstime,smalltext,titlepic,myarea,email,mycontact,address,',',title,newstime,smalltext,titlepic,myarea,email,mycontact,address,',0,0,0,0,'',1,'',0);
 /*!40000 ALTER TABLE `ziyi_enewsmod` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -6288,20 +6291,20 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_enewsnewstemp`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_enewsnewstemp` (
-  `tempid` smallint(5) unsigned NOT NULL AUTO_INCREMENT,
-  `tempname` varchar(60) NOT NULL DEFAULT '',
-  `isdefault` tinyint(1) NOT NULL DEFAULT '0',
+  `tempid` smallint(5) unsigned NOT NULL auto_increment,
+  `tempname` varchar(60) NOT NULL default '',
+  `isdefault` tinyint(1) NOT NULL default '0',
   `temptext` mediumtext NOT NULL,
-  `showdate` varchar(50) NOT NULL DEFAULT '',
-  `modid` smallint(6) NOT NULL DEFAULT '0',
-  `classid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  PRIMARY KEY (`tempid`),
+  `showdate` varchar(50) NOT NULL default '',
+  `modid` smallint(6) NOT NULL default '0',
+  `classid` smallint(5) unsigned NOT NULL default '0',
+  PRIMARY KEY  (`tempid`),
   KEY `classid` (`classid`)
 ) ENGINE=MyISAM AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_enewsnewstemp`
@@ -6318,14 +6321,14 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_enewsnewstempclass`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_enewsnewstempclass` (
-  `classid` smallint(5) unsigned NOT NULL AUTO_INCREMENT,
-  `classname` varchar(30) NOT NULL DEFAULT '',
-  PRIMARY KEY (`classid`)
+  `classid` smallint(5) unsigned NOT NULL auto_increment,
+  `classname` varchar(30) NOT NULL default '',
+  PRIMARY KEY  (`classid`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_enewsnewstempclass`
@@ -6341,14 +6344,14 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_enewsnotcj`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_enewsnotcj` (
-  `id` smallint(5) unsigned NOT NULL AUTO_INCREMENT,
+  `id` smallint(5) unsigned NOT NULL auto_increment,
   `word` text NOT NULL,
-  PRIMARY KEY (`id`)
+  PRIMARY KEY  (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_enewsnotcj`
@@ -6365,21 +6368,21 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_enewsnotice`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_enewsnotice` (
-  `mid` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `title` varchar(80) NOT NULL DEFAULT '',
+  `mid` int(10) unsigned NOT NULL auto_increment,
+  `title` varchar(80) NOT NULL default '',
   `msgtext` text NOT NULL,
-  `haveread` tinyint(1) NOT NULL DEFAULT '0',
-  `msgtime` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `to_username` varchar(30) NOT NULL DEFAULT '',
-  `from_userid` int(10) unsigned NOT NULL DEFAULT '0',
-  `from_username` varchar(30) NOT NULL DEFAULT '',
-  PRIMARY KEY (`mid`),
+  `haveread` tinyint(1) NOT NULL default '0',
+  `msgtime` datetime NOT NULL default '0000-00-00 00:00:00',
+  `to_username` varchar(30) NOT NULL default '',
+  `from_userid` int(10) unsigned NOT NULL default '0',
+  `from_username` varchar(30) NOT NULL default '',
+  PRIMARY KEY  (`mid`),
   KEY `to_username` (`to_username`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_enewsnotice`
@@ -6395,22 +6398,22 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_enewspage`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_enewspage` (
-  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `title` varchar(120) NOT NULL DEFAULT '',
+  `id` int(10) unsigned NOT NULL auto_increment,
+  `title` varchar(120) NOT NULL default '',
   `pagetext` mediumtext NOT NULL,
-  `path` varchar(255) NOT NULL DEFAULT '',
-  `classid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `pagetitle` varchar(120) NOT NULL DEFAULT '',
-  `pagekeywords` varchar(255) NOT NULL DEFAULT '',
-  `pagedescription` varchar(255) NOT NULL DEFAULT '',
-  `tempid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  PRIMARY KEY (`id`),
+  `path` varchar(255) NOT NULL default '',
+  `classid` smallint(5) unsigned NOT NULL default '0',
+  `pagetitle` varchar(120) NOT NULL default '',
+  `pagekeywords` varchar(255) NOT NULL default '',
+  `pagedescription` varchar(255) NOT NULL default '',
+  `tempid` smallint(5) unsigned NOT NULL default '0',
+  PRIMARY KEY  (`id`),
   KEY `classid` (`classid`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_enewspage`
@@ -6426,14 +6429,14 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_enewspageclass`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_enewspageclass` (
-  `classid` smallint(5) unsigned NOT NULL AUTO_INCREMENT,
-  `classname` varchar(30) NOT NULL DEFAULT '',
-  PRIMARY KEY (`classid`)
+  `classid` smallint(5) unsigned NOT NULL auto_increment,
+  `classname` varchar(30) NOT NULL default '',
+  PRIMARY KEY  (`classid`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_enewspageclass`
@@ -6449,15 +6452,15 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_enewspagetemp`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_enewspagetemp` (
-  `tempid` smallint(5) unsigned NOT NULL AUTO_INCREMENT,
-  `tempname` varchar(30) NOT NULL DEFAULT '',
+  `tempid` smallint(5) unsigned NOT NULL auto_increment,
+  `tempname` varchar(30) NOT NULL default '',
   `temptext` mediumtext NOT NULL,
-  PRIMARY KEY (`tempid`)
+  PRIMARY KEY  (`tempid`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_enewspagetemp`
@@ -6473,26 +6476,26 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_enewspayapi`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_enewspayapi` (
-  `payid` smallint(5) unsigned NOT NULL AUTO_INCREMENT,
-  `paytype` varchar(20) NOT NULL DEFAULT '',
-  `myorder` tinyint(4) NOT NULL DEFAULT '0',
-  `payfee` varchar(10) NOT NULL DEFAULT '',
-  `payuser` varchar(60) NOT NULL DEFAULT '',
-  `partner` varchar(60) NOT NULL DEFAULT '',
-  `paykey` varchar(120) NOT NULL DEFAULT '',
-  `paylogo` varchar(200) NOT NULL DEFAULT '',
+  `payid` smallint(5) unsigned NOT NULL auto_increment,
+  `paytype` varchar(20) NOT NULL default '',
+  `myorder` tinyint(4) NOT NULL default '0',
+  `payfee` varchar(10) NOT NULL default '',
+  `payuser` varchar(60) NOT NULL default '',
+  `partner` varchar(60) NOT NULL default '',
+  `paykey` varchar(120) NOT NULL default '',
+  `paylogo` varchar(200) NOT NULL default '',
   `paysay` text NOT NULL,
-  `payname` varchar(120) NOT NULL DEFAULT '',
-  `isclose` tinyint(1) NOT NULL DEFAULT '0',
-  `payemail` varchar(120) NOT NULL DEFAULT '',
-  `paymethod` tinyint(1) NOT NULL DEFAULT '0',
-  PRIMARY KEY (`payid`),
+  `payname` varchar(120) NOT NULL default '',
+  `isclose` tinyint(1) NOT NULL default '0',
+  `payemail` varchar(120) NOT NULL default '',
+  `paymethod` tinyint(1) NOT NULL default '0',
+  PRIMARY KEY  (`payid`),
   UNIQUE KEY `paytype` (`paytype`)
 ) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_enewspayapi`
@@ -6509,22 +6512,22 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_enewspayrecord`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_enewspayrecord` (
-  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `userid` int(10) unsigned NOT NULL DEFAULT '0',
-  `username` varchar(30) NOT NULL DEFAULT '',
-  `orderid` varchar(50) NOT NULL DEFAULT '',
-  `money` varchar(20) NOT NULL DEFAULT '',
-  `posttime` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `paybz` varchar(255) NOT NULL DEFAULT '',
-  `type` varchar(12) NOT NULL DEFAULT '',
-  `payip` varchar(20) NOT NULL DEFAULT '',
-  PRIMARY KEY (`id`),
+  `id` int(10) unsigned NOT NULL auto_increment,
+  `userid` int(10) unsigned NOT NULL default '0',
+  `username` varchar(30) NOT NULL default '',
+  `orderid` varchar(50) NOT NULL default '',
+  `money` varchar(20) NOT NULL default '',
+  `posttime` datetime NOT NULL default '0000-00-00 00:00:00',
+  `paybz` varchar(255) NOT NULL default '',
+  `type` varchar(12) NOT NULL default '',
+  `payip` varchar(20) NOT NULL default '',
+  PRIMARY KEY  (`id`),
   KEY `userid` (`userid`,`orderid`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_enewspayrecord`
@@ -6540,23 +6543,23 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_enewspic`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_enewspic` (
-  `picid` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `title` varchar(120) NOT NULL DEFAULT '',
-  `pic_url` varchar(200) NOT NULL DEFAULT '',
-  `url` varchar(200) NOT NULL DEFAULT '',
-  `pic_width` varchar(20) NOT NULL DEFAULT '',
-  `pic_height` varchar(20) NOT NULL DEFAULT '',
-  `open_pic` varchar(20) NOT NULL DEFAULT '',
-  `border` tinyint(1) NOT NULL DEFAULT '0',
+  `picid` int(10) unsigned NOT NULL auto_increment,
+  `title` varchar(120) NOT NULL default '',
+  `pic_url` varchar(200) NOT NULL default '',
+  `url` varchar(200) NOT NULL default '',
+  `pic_width` varchar(20) NOT NULL default '',
+  `pic_height` varchar(20) NOT NULL default '',
+  `open_pic` varchar(20) NOT NULL default '',
+  `border` tinyint(1) NOT NULL default '0',
   `pictext` text NOT NULL,
-  `classid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  PRIMARY KEY (`picid`),
+  `classid` smallint(5) unsigned NOT NULL default '0',
+  PRIMARY KEY  (`picid`),
   KEY `classid` (`classid`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_enewspic`
@@ -6572,14 +6575,14 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_enewspicclass`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_enewspicclass` (
-  `classid` smallint(5) unsigned NOT NULL AUTO_INCREMENT,
-  `classname` varchar(60) NOT NULL DEFAULT '',
-  PRIMARY KEY (`classid`)
+  `classid` smallint(5) unsigned NOT NULL auto_increment,
+  `classname` varchar(60) NOT NULL default '',
+  PRIMARY KEY  (`classid`)
 ) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_enewspicclass`
@@ -6596,28 +6599,28 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_enewspl_1`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_enewspl_1` (
-  `plid` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `pubid` bigint(16) NOT NULL DEFAULT '0',
-  `username` varchar(20) NOT NULL DEFAULT '',
-  `sayip` varchar(20) NOT NULL DEFAULT '',
-  `saytime` int(10) unsigned NOT NULL DEFAULT '0',
-  `id` int(10) unsigned NOT NULL DEFAULT '0',
-  `checked` tinyint(1) NOT NULL DEFAULT '0',
-  `classid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `zcnum` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `fdnum` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `userid` mediumint(8) unsigned NOT NULL DEFAULT '0',
-  `isgood` tinyint(1) NOT NULL DEFAULT '0',
+  `plid` int(10) unsigned NOT NULL auto_increment,
+  `pubid` bigint(16) NOT NULL default '0',
+  `username` varchar(20) NOT NULL default '',
+  `sayip` varchar(20) NOT NULL default '',
+  `saytime` int(10) unsigned NOT NULL default '0',
+  `id` int(10) unsigned NOT NULL default '0',
+  `checked` tinyint(1) NOT NULL default '0',
+  `classid` smallint(5) unsigned NOT NULL default '0',
+  `zcnum` smallint(5) unsigned NOT NULL default '0',
+  `fdnum` smallint(5) unsigned NOT NULL default '0',
+  `userid` mediumint(8) unsigned NOT NULL default '0',
+  `isgood` tinyint(1) NOT NULL default '0',
   `saytext` text NOT NULL,
-  PRIMARY KEY (`plid`),
+  PRIMARY KEY  (`plid`),
   KEY `id` (`id`),
   KEY `classid` (`classid`),
   KEY `pubid` (`pubid`,`checked`,`plid`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_enewspl_1`
@@ -6633,30 +6636,30 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_enewspl_set`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_enewspl_set` (
-  `id` tinyint(3) unsigned NOT NULL AUTO_INCREMENT,
-  `pltime` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `plsize` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `plincludesize` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `plkey_ok` tinyint(1) NOT NULL DEFAULT '0',
+  `id` tinyint(3) unsigned NOT NULL auto_increment,
+  `pltime` smallint(5) unsigned NOT NULL default '0',
+  `plsize` smallint(5) unsigned NOT NULL default '0',
+  `plincludesize` smallint(5) unsigned NOT NULL default '0',
+  `plkey_ok` tinyint(1) NOT NULL default '0',
   `plface` text NOT NULL,
-  `plfacenum` tinyint(3) unsigned NOT NULL DEFAULT '0',
-  `plgroupid` smallint(5) unsigned NOT NULL DEFAULT '0',
+  `plfacenum` tinyint(3) unsigned NOT NULL default '0',
+  `plgroupid` smallint(5) unsigned NOT NULL default '0',
   `plclosewords` text NOT NULL,
   `plf` text NOT NULL,
   `plmustf` text NOT NULL,
   `pldatatbs` text NOT NULL,
-  `defpltempid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `pl_num` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `pldeftb` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `plurl` varchar(200) NOT NULL DEFAULT '',
-  `plmaxfloor` smallint(5) unsigned NOT NULL DEFAULT '0',
+  `defpltempid` smallint(5) unsigned NOT NULL default '0',
+  `pl_num` smallint(5) unsigned NOT NULL default '0',
+  `pldeftb` smallint(5) unsigned NOT NULL default '0',
+  `plurl` varchar(200) NOT NULL default '',
+  `plmaxfloor` smallint(5) unsigned NOT NULL default '0',
   `plquotetemp` text NOT NULL,
-  PRIMARY KEY (`id`)
+  PRIMARY KEY  (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_enewspl_set`
@@ -6673,16 +6676,16 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_enewsplayer`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_enewsplayer` (
-  `id` smallint(5) unsigned NOT NULL AUTO_INCREMENT,
-  `player` varchar(30) NOT NULL DEFAULT '',
-  `filename` varchar(20) NOT NULL DEFAULT '',
-  `bz` varchar(255) NOT NULL DEFAULT '',
-  PRIMARY KEY (`id`)
+  `id` smallint(5) unsigned NOT NULL auto_increment,
+  `player` varchar(30) NOT NULL default '',
+  `filename` varchar(20) NOT NULL default '',
+  `bz` varchar(255) NOT NULL default '',
+  PRIMARY KEY  (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_enewsplayer`
@@ -6699,19 +6702,19 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_enewsplf`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_enewsplf` (
-  `fid` smallint(5) unsigned NOT NULL AUTO_INCREMENT,
-  `f` varchar(30) NOT NULL DEFAULT '',
-  `fname` varchar(30) NOT NULL DEFAULT '',
-  `fzs` varchar(255) NOT NULL DEFAULT '',
-  `ftype` varchar(30) NOT NULL DEFAULT '',
-  `flen` varchar(20) NOT NULL DEFAULT '',
-  `ismust` tinyint(1) NOT NULL DEFAULT '0',
-  PRIMARY KEY (`fid`)
+  `fid` smallint(5) unsigned NOT NULL auto_increment,
+  `f` varchar(30) NOT NULL default '',
+  `fname` varchar(30) NOT NULL default '',
+  `fzs` varchar(255) NOT NULL default '',
+  `ftype` varchar(30) NOT NULL default '',
+  `flen` varchar(20) NOT NULL default '',
+  `ismust` tinyint(1) NOT NULL default '0',
+  PRIMARY KEY  (`fid`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_enewsplf`
@@ -6727,16 +6730,16 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_enewspltemp`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_enewspltemp` (
-  `tempid` smallint(5) unsigned NOT NULL AUTO_INCREMENT,
-  `tempname` varchar(60) NOT NULL DEFAULT '',
+  `tempid` smallint(5) unsigned NOT NULL auto_increment,
+  `tempname` varchar(60) NOT NULL default '',
   `temptext` mediumtext NOT NULL,
-  `isdefault` tinyint(1) NOT NULL DEFAULT '0',
-  PRIMARY KEY (`tempid`)
+  `isdefault` tinyint(1) NOT NULL default '0',
+  PRIMARY KEY  (`tempid`)
 ) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_enewspltemp`
@@ -6753,17 +6756,17 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_enewspostdata`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_enewspostdata` (
-  `postid` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
-  `rnd` varchar(32) NOT NULL DEFAULT '',
-  `postdata` varchar(255) NOT NULL DEFAULT '',
-  `ispath` tinyint(1) NOT NULL DEFAULT '0',
-  PRIMARY KEY (`postid`),
+  `postid` bigint(20) unsigned NOT NULL auto_increment,
+  `rnd` varchar(32) NOT NULL default '',
+  `postdata` varchar(255) NOT NULL default '',
+  `ispath` tinyint(1) NOT NULL default '0',
+  PRIMARY KEY  (`postid`),
   KEY `rnd` (`rnd`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_enewspostdata`
@@ -6779,27 +6782,27 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_enewspostserver`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_enewspostserver` (
-  `pid` smallint(5) unsigned NOT NULL AUTO_INCREMENT,
-  `pname` varchar(60) NOT NULL DEFAULT '',
-  `purl` varchar(255) NOT NULL DEFAULT '',
-  `ptype` tinyint(1) NOT NULL DEFAULT '0',
-  `ftphost` varchar(255) NOT NULL DEFAULT '',
-  `ftpport` varchar(20) NOT NULL DEFAULT '',
-  `ftpusername` varchar(120) NOT NULL DEFAULT '',
-  `ftppassword` varchar(120) NOT NULL DEFAULT '',
-  `ftppath` varchar(255) NOT NULL DEFAULT '',
-  `ftpmode` tinyint(1) NOT NULL DEFAULT '0',
-  `ftpssl` tinyint(1) NOT NULL DEFAULT '0',
-  `ftppasv` tinyint(1) NOT NULL DEFAULT '0',
-  `ftpouttime` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `lastposttime` int(10) unsigned NOT NULL DEFAULT '0',
-  PRIMARY KEY (`pid`),
+  `pid` smallint(5) unsigned NOT NULL auto_increment,
+  `pname` varchar(60) NOT NULL default '',
+  `purl` varchar(255) NOT NULL default '',
+  `ptype` tinyint(1) NOT NULL default '0',
+  `ftphost` varchar(255) NOT NULL default '',
+  `ftpport` varchar(20) NOT NULL default '',
+  `ftpusername` varchar(120) NOT NULL default '',
+  `ftppassword` varchar(120) NOT NULL default '',
+  `ftppath` varchar(255) NOT NULL default '',
+  `ftpmode` tinyint(1) NOT NULL default '0',
+  `ftpssl` tinyint(1) NOT NULL default '0',
+  `ftppasv` tinyint(1) NOT NULL default '0',
+  `ftpouttime` smallint(5) unsigned NOT NULL default '0',
+  `lastposttime` int(10) unsigned NOT NULL default '0',
+  PRIMARY KEY  (`pid`),
   KEY `ptype` (`ptype`)
 ) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_enewspostserver`
@@ -6816,18 +6819,18 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_enewsprinttemp`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_enewsprinttemp` (
-  `tempid` smallint(5) unsigned NOT NULL AUTO_INCREMENT,
-  `tempname` varchar(60) NOT NULL DEFAULT '',
+  `tempid` smallint(5) unsigned NOT NULL auto_increment,
+  `tempname` varchar(60) NOT NULL default '',
   `temptext` mediumtext NOT NULL,
-  `isdefault` tinyint(1) NOT NULL DEFAULT '0',
-  `showdate` varchar(50) NOT NULL DEFAULT '',
-  `modid` smallint(6) NOT NULL DEFAULT '0',
-  PRIMARY KEY (`tempid`)
+  `isdefault` tinyint(1) NOT NULL default '0',
+  `showdate` varchar(50) NOT NULL default '',
+  `modid` smallint(6) NOT NULL default '0',
+  PRIMARY KEY  (`tempid`)
 ) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_enewsprinttemp`
@@ -6844,259 +6847,259 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_enewspublic`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_enewspublic` (
-  `id` tinyint(3) unsigned NOT NULL AUTO_INCREMENT,
-  `newsurl` varchar(120) NOT NULL DEFAULT '',
-  `sitename` varchar(60) NOT NULL DEFAULT '',
-  `email` varchar(50) NOT NULL DEFAULT '',
+  `id` tinyint(3) unsigned NOT NULL auto_increment,
+  `newsurl` varchar(120) NOT NULL default '',
+  `sitename` varchar(60) NOT NULL default '',
+  `email` varchar(50) NOT NULL default '',
   `filetype` text NOT NULL,
-  `filesize` int(11) NOT NULL DEFAULT '0',
-  `hotnum` tinyint(4) NOT NULL DEFAULT '0',
-  `newnum` tinyint(4) NOT NULL DEFAULT '0',
-  `relistnum` int(11) NOT NULL DEFAULT '0',
-  `renewsnum` int(11) NOT NULL DEFAULT '0',
-  `min_keyboard` tinyint(4) NOT NULL DEFAULT '0',
-  `max_keyboard` tinyint(4) NOT NULL DEFAULT '0',
-  `search_num` tinyint(4) NOT NULL DEFAULT '0',
-  `search_pagenum` tinyint(4) NOT NULL DEFAULT '0',
-  `newslink` tinyint(4) NOT NULL DEFAULT '0',
-  `checked` tinyint(1) NOT NULL DEFAULT '0',
-  `searchtime` int(11) NOT NULL DEFAULT '0',
-  `loginnum` smallint(6) NOT NULL DEFAULT '0',
-  `logintime` int(11) NOT NULL DEFAULT '0',
-  `addnews_ok` tinyint(1) NOT NULL DEFAULT '0',
-  `register_ok` tinyint(1) NOT NULL DEFAULT '0',
-  `indextype` varchar(10) NOT NULL DEFAULT '',
-  `goodlencord` tinyint(4) NOT NULL DEFAULT '0',
-  `goodtype` varchar(10) NOT NULL DEFAULT '',
-  `goodnum` tinyint(4) NOT NULL DEFAULT '0',
-  `searchtype` varchar(10) NOT NULL DEFAULT '',
-  `exittime` smallint(6) NOT NULL DEFAULT '0',
-  `smalltextlen` smallint(6) NOT NULL DEFAULT '0',
-  `defaultgroupid` smallint(6) NOT NULL DEFAULT '0',
-  `fileurl` varchar(255) NOT NULL DEFAULT '',
-  `phpmode` tinyint(1) NOT NULL DEFAULT '0',
-  `ftphost` varchar(255) NOT NULL DEFAULT '',
-  `ftpport` varchar(20) NOT NULL DEFAULT '21',
-  `ftpusername` varchar(120) NOT NULL DEFAULT '',
-  `ftppassword` varchar(120) NOT NULL DEFAULT '',
-  `ftppath` varchar(255) NOT NULL DEFAULT '',
-  `ftpmode` tinyint(1) NOT NULL DEFAULT '0',
-  `install` tinyint(1) NOT NULL DEFAULT '0',
-  `hotplnum` tinyint(4) NOT NULL DEFAULT '0',
-  `softversion` varchar(30) NOT NULL DEFAULT '0',
-  `lctime` int(11) NOT NULL DEFAULT '0',
-  `dorepnum` smallint(6) NOT NULL DEFAULT '0',
-  `loadtempnum` smallint(6) NOT NULL DEFAULT '0',
-  `firstnum` tinyint(4) NOT NULL DEFAULT '0',
-  `bakdbpath` varchar(50) NOT NULL DEFAULT '',
-  `bakdbzip` varchar(50) NOT NULL DEFAULT '',
-  `downpass` varchar(32) NOT NULL DEFAULT '',
-  `min_userlen` tinyint(4) NOT NULL DEFAULT '0',
-  `max_userlen` tinyint(4) NOT NULL DEFAULT '0',
-  `min_passlen` tinyint(4) NOT NULL DEFAULT '0',
-  `max_passlen` tinyint(4) NOT NULL DEFAULT '0',
-  `filechmod` tinyint(1) NOT NULL DEFAULT '0',
-  `tid` smallint(6) NOT NULL DEFAULT '0',
-  `tbname` varchar(60) NOT NULL DEFAULT '',
-  `loginkey_ok` tinyint(1) NOT NULL DEFAULT '0',
-  `limittype` tinyint(1) NOT NULL DEFAULT '0',
-  `redodown` smallint(6) NOT NULL DEFAULT '0',
-  `candocode` tinyint(1) NOT NULL DEFAULT '0',
-  `opennotcj` tinyint(1) NOT NULL DEFAULT '0',
-  `reuserpagenum` int(11) NOT NULL DEFAULT '0',
-  `revotejsnum` int(11) NOT NULL DEFAULT '0',
-  `readjsnum` int(11) NOT NULL DEFAULT '0',
-  `qaddtran` tinyint(1) NOT NULL DEFAULT '0',
-  `qaddtransize` int(11) NOT NULL DEFAULT '0',
-  `ebakthisdb` tinyint(1) NOT NULL DEFAULT '0',
-  `delnewsnum` int(11) NOT NULL DEFAULT '0',
-  `markpos` tinyint(4) NOT NULL DEFAULT '0',
-  `markimg` varchar(80) NOT NULL DEFAULT '',
-  `marktext` varchar(80) NOT NULL DEFAULT '',
-  `markfontsize` varchar(12) NOT NULL DEFAULT '',
-  `markfontcolor` varchar(12) NOT NULL DEFAULT '',
-  `markfont` varchar(80) NOT NULL DEFAULT '',
-  `adminloginkey` tinyint(1) NOT NULL DEFAULT '0',
-  `php_outtime` int(11) NOT NULL DEFAULT '0',
-  `listpagefun` varchar(36) NOT NULL DEFAULT '',
-  `textpagefun` varchar(36) NOT NULL DEFAULT '',
-  `adfile` varchar(30) NOT NULL DEFAULT '',
+  `filesize` int(11) NOT NULL default '0',
+  `hotnum` tinyint(4) NOT NULL default '0',
+  `newnum` tinyint(4) NOT NULL default '0',
+  `relistnum` int(11) NOT NULL default '0',
+  `renewsnum` int(11) NOT NULL default '0',
+  `min_keyboard` tinyint(4) NOT NULL default '0',
+  `max_keyboard` tinyint(4) NOT NULL default '0',
+  `search_num` tinyint(4) NOT NULL default '0',
+  `search_pagenum` tinyint(4) NOT NULL default '0',
+  `newslink` tinyint(4) NOT NULL default '0',
+  `checked` tinyint(1) NOT NULL default '0',
+  `searchtime` int(11) NOT NULL default '0',
+  `loginnum` smallint(6) NOT NULL default '0',
+  `logintime` int(11) NOT NULL default '0',
+  `addnews_ok` tinyint(1) NOT NULL default '0',
+  `register_ok` tinyint(1) NOT NULL default '0',
+  `indextype` varchar(10) NOT NULL default '',
+  `goodlencord` tinyint(4) NOT NULL default '0',
+  `goodtype` varchar(10) NOT NULL default '',
+  `goodnum` tinyint(4) NOT NULL default '0',
+  `searchtype` varchar(10) NOT NULL default '',
+  `exittime` smallint(6) NOT NULL default '0',
+  `smalltextlen` smallint(6) NOT NULL default '0',
+  `defaultgroupid` smallint(6) NOT NULL default '0',
+  `fileurl` varchar(255) NOT NULL default '',
+  `phpmode` tinyint(1) NOT NULL default '0',
+  `ftphost` varchar(255) NOT NULL default '',
+  `ftpport` varchar(20) NOT NULL default '21',
+  `ftpusername` varchar(120) NOT NULL default '',
+  `ftppassword` varchar(120) NOT NULL default '',
+  `ftppath` varchar(255) NOT NULL default '',
+  `ftpmode` tinyint(1) NOT NULL default '0',
+  `install` tinyint(1) NOT NULL default '0',
+  `hotplnum` tinyint(4) NOT NULL default '0',
+  `softversion` varchar(30) NOT NULL default '0',
+  `lctime` int(11) NOT NULL default '0',
+  `dorepnum` smallint(6) NOT NULL default '0',
+  `loadtempnum` smallint(6) NOT NULL default '0',
+  `firstnum` tinyint(4) NOT NULL default '0',
+  `bakdbpath` varchar(50) NOT NULL default '',
+  `bakdbzip` varchar(50) NOT NULL default '',
+  `downpass` varchar(32) NOT NULL default '',
+  `min_userlen` tinyint(4) NOT NULL default '0',
+  `max_userlen` tinyint(4) NOT NULL default '0',
+  `min_passlen` tinyint(4) NOT NULL default '0',
+  `max_passlen` tinyint(4) NOT NULL default '0',
+  `filechmod` tinyint(1) NOT NULL default '0',
+  `tid` smallint(6) NOT NULL default '0',
+  `tbname` varchar(60) NOT NULL default '',
+  `loginkey_ok` tinyint(1) NOT NULL default '0',
+  `limittype` tinyint(1) NOT NULL default '0',
+  `redodown` smallint(6) NOT NULL default '0',
+  `candocode` tinyint(1) NOT NULL default '0',
+  `opennotcj` tinyint(1) NOT NULL default '0',
+  `reuserpagenum` int(11) NOT NULL default '0',
+  `revotejsnum` int(11) NOT NULL default '0',
+  `readjsnum` int(11) NOT NULL default '0',
+  `qaddtran` tinyint(1) NOT NULL default '0',
+  `qaddtransize` int(11) NOT NULL default '0',
+  `ebakthisdb` tinyint(1) NOT NULL default '0',
+  `delnewsnum` int(11) NOT NULL default '0',
+  `markpos` tinyint(4) NOT NULL default '0',
+  `markimg` varchar(80) NOT NULL default '',
+  `marktext` varchar(80) NOT NULL default '',
+  `markfontsize` varchar(12) NOT NULL default '',
+  `markfontcolor` varchar(12) NOT NULL default '',
+  `markfont` varchar(80) NOT NULL default '',
+  `adminloginkey` tinyint(1) NOT NULL default '0',
+  `php_outtime` int(11) NOT NULL default '0',
+  `listpagefun` varchar(36) NOT NULL default '',
+  `textpagefun` varchar(36) NOT NULL default '',
+  `adfile` varchar(30) NOT NULL default '',
   `notsaveurl` text NOT NULL,
-  `jstempid` smallint(6) NOT NULL DEFAULT '0',
-  `rssnum` smallint(6) NOT NULL DEFAULT '0',
-  `rsssub` smallint(6) NOT NULL DEFAULT '0',
+  `jstempid` smallint(6) NOT NULL default '0',
+  `rssnum` smallint(6) NOT NULL default '0',
+  `rsssub` smallint(6) NOT NULL default '0',
   `savetxtf` text NOT NULL,
-  `dorepdlevelnum` int(11) NOT NULL DEFAULT '0',
-  `listpagelistfun` varchar(36) NOT NULL DEFAULT '',
-  `listpagelistnum` smallint(6) NOT NULL DEFAULT '0',
-  `infolinknum` int(11) NOT NULL DEFAULT '0',
-  `searchgroupid` smallint(6) NOT NULL DEFAULT '0',
-  `opencopytext` tinyint(1) NOT NULL DEFAULT '0',
-  `reuserjsnum` int(11) NOT NULL DEFAULT '0',
-  `reuserlistnum` int(11) NOT NULL DEFAULT '0',
-  `opentitleurl` tinyint(1) NOT NULL DEFAULT '0',
+  `dorepdlevelnum` int(11) NOT NULL default '0',
+  `listpagelistfun` varchar(36) NOT NULL default '',
+  `listpagelistnum` smallint(6) NOT NULL default '0',
+  `infolinknum` int(11) NOT NULL default '0',
+  `searchgroupid` smallint(6) NOT NULL default '0',
+  `opencopytext` tinyint(1) NOT NULL default '0',
+  `reuserjsnum` int(11) NOT NULL default '0',
+  `reuserlistnum` int(11) NOT NULL default '0',
+  `opentitleurl` tinyint(1) NOT NULL default '0',
   `qaddtranimgtype` text NOT NULL,
-  `qaddtranfile` tinyint(1) NOT NULL DEFAULT '0',
-  `qaddtranfilesize` int(11) NOT NULL DEFAULT '0',
+  `qaddtranfile` tinyint(1) NOT NULL default '0',
+  `qaddtranfilesize` int(11) NOT NULL default '0',
   `qaddtranfiletype` text NOT NULL,
-  `sendmailtype` tinyint(1) NOT NULL DEFAULT '0',
-  `smtphost` varchar(255) NOT NULL DEFAULT '',
-  `fromemail` varchar(120) NOT NULL DEFAULT '',
-  `loginemail` tinyint(1) NOT NULL DEFAULT '0',
-  `emailusername` varchar(60) NOT NULL DEFAULT '',
-  `emailpassword` varchar(60) NOT NULL DEFAULT '',
-  `smtpport` varchar(20) NOT NULL DEFAULT '',
-  `emailname` varchar(120) NOT NULL DEFAULT '',
-  `deftempid` smallint(6) NOT NULL DEFAULT '0',
-  `feedbacktfile` tinyint(1) NOT NULL DEFAULT '0',
-  `feedbackfilesize` int(11) NOT NULL DEFAULT '0',
+  `sendmailtype` tinyint(1) NOT NULL default '0',
+  `smtphost` varchar(255) NOT NULL default '',
+  `fromemail` varchar(120) NOT NULL default '',
+  `loginemail` tinyint(1) NOT NULL default '0',
+  `emailusername` varchar(60) NOT NULL default '',
+  `emailpassword` varchar(60) NOT NULL default '',
+  `smtpport` varchar(20) NOT NULL default '',
+  `emailname` varchar(120) NOT NULL default '',
+  `deftempid` smallint(6) NOT NULL default '0',
+  `feedbacktfile` tinyint(1) NOT NULL default '0',
+  `feedbackfilesize` int(11) NOT NULL default '0',
   `feedbackfiletype` text NOT NULL,
-  `searchtempvar` tinyint(1) NOT NULL DEFAULT '0',
-  `showinfolevel` smallint(6) NOT NULL DEFAULT '0',
-  `navfh` varchar(20) NOT NULL DEFAULT '',
-  `spicwidth` smallint(6) NOT NULL DEFAULT '0',
-  `spicheight` smallint(6) NOT NULL DEFAULT '0',
-  `spickill` tinyint(1) NOT NULL DEFAULT '0',
-  `jpgquality` tinyint(4) NOT NULL DEFAULT '0',
-  `markpct` tinyint(4) NOT NULL DEFAULT '0',
-  `redoview` smallint(6) NOT NULL DEFAULT '0',
-  `reggetfen` smallint(6) NOT NULL DEFAULT '0',
-  `regbooktime` smallint(6) NOT NULL DEFAULT '0',
-  `revotetime` smallint(6) NOT NULL DEFAULT '0',
+  `searchtempvar` tinyint(1) NOT NULL default '0',
+  `showinfolevel` smallint(6) NOT NULL default '0',
+  `navfh` varchar(20) NOT NULL default '',
+  `spicwidth` smallint(6) NOT NULL default '0',
+  `spicheight` smallint(6) NOT NULL default '0',
+  `spickill` tinyint(1) NOT NULL default '0',
+  `jpgquality` tinyint(4) NOT NULL default '0',
+  `markpct` tinyint(4) NOT NULL default '0',
+  `redoview` smallint(6) NOT NULL default '0',
+  `reggetfen` smallint(6) NOT NULL default '0',
+  `regbooktime` smallint(6) NOT NULL default '0',
+  `revotetime` smallint(6) NOT NULL default '0',
   `nreclass` text NOT NULL,
   `nreinfo` text NOT NULL,
   `nrejs` text NOT NULL,
-  `fpath` tinyint(1) NOT NULL DEFAULT '0',
-  `filepath` varchar(30) NOT NULL DEFAULT '',
-  `openmembertranimg` tinyint(1) NOT NULL DEFAULT '0',
-  `memberimgsize` int(11) NOT NULL DEFAULT '0',
+  `fpath` tinyint(1) NOT NULL default '0',
+  `filepath` varchar(30) NOT NULL default '',
+  `openmembertranimg` tinyint(1) NOT NULL default '0',
+  `memberimgsize` int(11) NOT NULL default '0',
   `memberimgtype` text NOT NULL,
-  `openmembertranfile` tinyint(1) NOT NULL DEFAULT '0',
-  `memberfilesize` int(11) NOT NULL DEFAULT '0',
+  `openmembertranfile` tinyint(1) NOT NULL default '0',
+  `memberfilesize` int(11) NOT NULL default '0',
   `memberfiletype` text NOT NULL,
   `nottobq` text NOT NULL,
-  `defspacestyleid` smallint(6) NOT NULL DEFAULT '0',
+  `defspacestyleid` smallint(6) NOT NULL default '0',
   `canposturl` text NOT NULL,
-  `openspace` tinyint(1) NOT NULL DEFAULT '0',
-  `defadminstyle` smallint(6) NOT NULL DEFAULT '0',
-  `realltime` smallint(6) NOT NULL DEFAULT '0',
+  `openspace` tinyint(1) NOT NULL default '0',
+  `defadminstyle` smallint(6) NOT NULL default '0',
+  `realltime` smallint(6) NOT NULL default '0',
   `closeip` text NOT NULL,
   `openip` text NOT NULL,
   `hopenip` text NOT NULL,
   `closewords` text NOT NULL,
   `closewordsf` text NOT NULL,
-  `textpagelistnum` smallint(6) NOT NULL DEFAULT '0',
-  `memberlistlevel` smallint(6) NOT NULL DEFAULT '0',
-  `wapopen` tinyint(1) NOT NULL DEFAULT '0',
-  `wapdefstyle` smallint(6) NOT NULL DEFAULT '0',
-  `wapshowmid` varchar(255) NOT NULL DEFAULT '',
-  `waplistnum` tinyint(4) NOT NULL DEFAULT '0',
-  `wapsubtitle` tinyint(4) NOT NULL DEFAULT '0',
-  `wapshowdate` varchar(50) NOT NULL DEFAULT '',
-  `wapchar` tinyint(1) NOT NULL DEFAULT '0',
-  `ebakcanlistdb` tinyint(1) NOT NULL DEFAULT '0',
-  `paymoneytofen` int(11) NOT NULL DEFAULT '0',
-  `payminmoney` int(11) NOT NULL DEFAULT '0',
-  `keytog` tinyint(1) NOT NULL DEFAULT '0',
-  `keyrnd` varchar(60) NOT NULL DEFAULT '',
-  `keytime` int(11) NOT NULL DEFAULT '0',
-  `regkey_ok` tinyint(1) NOT NULL DEFAULT '0',
-  `opengetdown` tinyint(1) NOT NULL DEFAULT '0',
-  `gbkey_ok` tinyint(1) NOT NULL DEFAULT '0',
-  `fbkey_ok` tinyint(1) NOT NULL DEFAULT '0',
-  `newaddinfotime` smallint(6) NOT NULL DEFAULT '0',
-  `classnavline` smallint(6) NOT NULL DEFAULT '0',
-  `classnavfh` varchar(120) NOT NULL DEFAULT '',
+  `textpagelistnum` smallint(6) NOT NULL default '0',
+  `memberlistlevel` smallint(6) NOT NULL default '0',
+  `wapopen` tinyint(1) NOT NULL default '0',
+  `wapdefstyle` smallint(6) NOT NULL default '0',
+  `wapshowmid` varchar(255) NOT NULL default '',
+  `waplistnum` tinyint(4) NOT NULL default '0',
+  `wapsubtitle` tinyint(4) NOT NULL default '0',
+  `wapshowdate` varchar(50) NOT NULL default '',
+  `wapchar` tinyint(1) NOT NULL default '0',
+  `ebakcanlistdb` tinyint(1) NOT NULL default '0',
+  `paymoneytofen` int(11) NOT NULL default '0',
+  `payminmoney` int(11) NOT NULL default '0',
+  `keytog` tinyint(1) NOT NULL default '0',
+  `keyrnd` varchar(60) NOT NULL default '',
+  `keytime` int(11) NOT NULL default '0',
+  `regkey_ok` tinyint(1) NOT NULL default '0',
+  `opengetdown` tinyint(1) NOT NULL default '0',
+  `gbkey_ok` tinyint(1) NOT NULL default '0',
+  `fbkey_ok` tinyint(1) NOT NULL default '0',
+  `newaddinfotime` smallint(6) NOT NULL default '0',
+  `classnavline` smallint(6) NOT NULL default '0',
+  `classnavfh` varchar(120) NOT NULL default '',
   `adminstyle` text NOT NULL,
-  `sitekey` varchar(255) NOT NULL DEFAULT '',
+  `sitekey` varchar(255) NOT NULL default '',
   `siteintro` text NOT NULL,
-  `docnewsnum` int(11) NOT NULL DEFAULT '0',
-  `openschall` tinyint(1) NOT NULL DEFAULT '0',
-  `schallfield` tinyint(1) NOT NULL DEFAULT '0',
-  `schallminlen` tinyint(4) NOT NULL DEFAULT '0',
-  `schallmaxlen` tinyint(4) NOT NULL DEFAULT '0',
+  `docnewsnum` int(11) NOT NULL default '0',
+  `openschall` tinyint(1) NOT NULL default '0',
+  `schallfield` tinyint(1) NOT NULL default '0',
+  `schallminlen` tinyint(4) NOT NULL default '0',
+  `schallmaxlen` tinyint(4) NOT NULL default '0',
   `schallnotcid` text NOT NULL,
-  `schallnum` smallint(6) NOT NULL DEFAULT '0',
-  `schallpagenum` smallint(6) NOT NULL DEFAULT '0',
-  `dtcanbq` tinyint(1) NOT NULL DEFAULT '0',
-  `dtcachetime` int(11) NOT NULL DEFAULT '0',
-  `regretime` smallint(6) NOT NULL DEFAULT '0',
+  `schallnum` smallint(6) NOT NULL default '0',
+  `schallpagenum` smallint(6) NOT NULL default '0',
+  `dtcanbq` tinyint(1) NOT NULL default '0',
+  `dtcachetime` int(11) NOT NULL default '0',
+  `regretime` smallint(6) NOT NULL default '0',
   `regclosewords` text NOT NULL,
-  `regemailonly` tinyint(1) NOT NULL DEFAULT '0',
-  `repkeynum` smallint(6) NOT NULL DEFAULT '0',
-  `getpasstime` int(11) NOT NULL DEFAULT '0',
-  `acttime` int(11) NOT NULL DEFAULT '0',
-  `regacttype` tinyint(1) NOT NULL DEFAULT '0',
+  `regemailonly` tinyint(1) NOT NULL default '0',
+  `repkeynum` smallint(6) NOT NULL default '0',
+  `getpasstime` int(11) NOT NULL default '0',
+  `acttime` int(11) NOT NULL default '0',
+  `regacttype` tinyint(1) NOT NULL default '0',
   `acttext` text NOT NULL,
   `getpasstext` text NOT NULL,
-  `acttitle` varchar(120) NOT NULL DEFAULT '',
-  `getpasstitle` varchar(120) NOT NULL DEFAULT '',
-  `opengetpass` tinyint(1) NOT NULL DEFAULT '0',
-  `hlistinfonum` int(11) NOT NULL DEFAULT '0',
-  `qlistinfonum` int(11) NOT NULL DEFAULT '0',
-  `dtncanbq` tinyint(1) NOT NULL DEFAULT '0',
-  `dtncachetime` int(11) NOT NULL DEFAULT '0',
-  `readdinfotime` smallint(6) NOT NULL DEFAULT '0',
-  `qeditinfotime` int(11) NOT NULL DEFAULT '0',
-  `ftpssl` tinyint(1) NOT NULL DEFAULT '0',
-  `ftppasv` tinyint(1) NOT NULL DEFAULT '0',
-  `ftpouttime` smallint(6) NOT NULL DEFAULT '0',
-  `onclicktype` tinyint(1) NOT NULL DEFAULT '0',
-  `onclickfilesize` int(11) NOT NULL DEFAULT '0',
-  `onclickfiletime` int(11) NOT NULL DEFAULT '0',
-  `schalltime` smallint(6) NOT NULL DEFAULT '0',
-  `defprinttempid` smallint(6) NOT NULL DEFAULT '0',
-  `opentags` tinyint(1) NOT NULL DEFAULT '0',
-  `tagstempid` smallint(6) NOT NULL DEFAULT '0',
+  `acttitle` varchar(120) NOT NULL default '',
+  `getpasstitle` varchar(120) NOT NULL default '',
+  `opengetpass` tinyint(1) NOT NULL default '0',
+  `hlistinfonum` int(11) NOT NULL default '0',
+  `qlistinfonum` int(11) NOT NULL default '0',
+  `dtncanbq` tinyint(1) NOT NULL default '0',
+  `dtncachetime` int(11) NOT NULL default '0',
+  `readdinfotime` smallint(6) NOT NULL default '0',
+  `qeditinfotime` int(11) NOT NULL default '0',
+  `ftpssl` tinyint(1) NOT NULL default '0',
+  `ftppasv` tinyint(1) NOT NULL default '0',
+  `ftpouttime` smallint(6) NOT NULL default '0',
+  `onclicktype` tinyint(1) NOT NULL default '0',
+  `onclickfilesize` int(11) NOT NULL default '0',
+  `onclickfiletime` int(11) NOT NULL default '0',
+  `schalltime` smallint(6) NOT NULL default '0',
+  `defprinttempid` smallint(6) NOT NULL default '0',
+  `opentags` tinyint(1) NOT NULL default '0',
+  `tagstempid` smallint(6) NOT NULL default '0',
   `usetags` text NOT NULL,
   `chtags` text NOT NULL,
-  `tagslistnum` smallint(6) NOT NULL DEFAULT '0',
-  `closeqdt` tinyint(1) NOT NULL DEFAULT '0',
-  `settop` tinyint(1) NOT NULL DEFAULT '0',
-  `qlistinfomod` tinyint(1) NOT NULL DEFAULT '0',
-  `gb_num` tinyint(4) NOT NULL DEFAULT '0',
-  `member_num` tinyint(4) NOT NULL DEFAULT '0',
-  `space_num` tinyint(4) NOT NULL DEFAULT '0',
+  `tagslistnum` smallint(6) NOT NULL default '0',
+  `closeqdt` tinyint(1) NOT NULL default '0',
+  `settop` tinyint(1) NOT NULL default '0',
+  `qlistinfomod` tinyint(1) NOT NULL default '0',
+  `gb_num` tinyint(4) NOT NULL default '0',
+  `member_num` tinyint(4) NOT NULL default '0',
+  `space_num` tinyint(4) NOT NULL default '0',
   `opendoip` text NOT NULL,
   `closedoip` text NOT NULL,
-  `doiptype` varchar(255) NOT NULL DEFAULT '',
-  `filelday` int(11) NOT NULL DEFAULT '0',
-  `infolday` int(11) NOT NULL DEFAULT '0',
-  `baktempnum` tinyint(4) NOT NULL DEFAULT '0',
-  `dorepkey` tinyint(1) NOT NULL DEFAULT '0',
-  `dorepword` tinyint(1) NOT NULL DEFAULT '0',
-  `onclickrnd` varchar(20) NOT NULL DEFAULT '',
-  `indexpagedt` tinyint(1) NOT NULL DEFAULT '0',
-  `keybgcolor` varchar(8) NOT NULL DEFAULT '',
-  `keyfontcolor` varchar(8) NOT NULL DEFAULT '',
-  `keydistcolor` varchar(8) NOT NULL DEFAULT '',
-  `indexpageid` smallint(6) NOT NULL DEFAULT '0',
-  `closeqdtmsg` varchar(255) NOT NULL DEFAULT '',
-  `openfileserver` tinyint(1) NOT NULL DEFAULT '0',
-  `closemods` varchar(255) NOT NULL DEFAULT '',
-  `fieldandtop` tinyint(1) NOT NULL DEFAULT '0',
+  `doiptype` varchar(255) NOT NULL default '',
+  `filelday` int(11) NOT NULL default '0',
+  `infolday` int(11) NOT NULL default '0',
+  `baktempnum` tinyint(4) NOT NULL default '0',
+  `dorepkey` tinyint(1) NOT NULL default '0',
+  `dorepword` tinyint(1) NOT NULL default '0',
+  `onclickrnd` varchar(20) NOT NULL default '',
+  `indexpagedt` tinyint(1) NOT NULL default '0',
+  `keybgcolor` varchar(8) NOT NULL default '',
+  `keyfontcolor` varchar(8) NOT NULL default '',
+  `keydistcolor` varchar(8) NOT NULL default '',
+  `indexpageid` smallint(6) NOT NULL default '0',
+  `closeqdtmsg` varchar(255) NOT NULL default '',
+  `openfileserver` tinyint(1) NOT NULL default '0',
+  `closemods` varchar(255) NOT NULL default '',
+  `fieldandtop` tinyint(1) NOT NULL default '0',
   `fieldandclosetb` text NOT NULL,
   `filedatatbs` text NOT NULL,
-  `filedeftb` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `firsttitlename` varchar(255) NOT NULL DEFAULT '',
-  `isgoodname` varchar(255) NOT NULL DEFAULT '',
-  `closelisttemp` varchar(255) NOT NULL DEFAULT '',
-  `chclasscolor` varchar(8) NOT NULL DEFAULT '',
-  `timeclose` varchar(255) NOT NULL DEFAULT '',
-  `timeclosedo` varchar(255) NOT NULL DEFAULT '',
-  `ipaddinfonum` int(10) unsigned NOT NULL DEFAULT '0',
-  `ipaddinfotime` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `rewriteinfo` varchar(120) NOT NULL DEFAULT '',
-  `rewriteclass` varchar(120) NOT NULL DEFAULT '',
-  `rewriteinfotype` varchar(120) NOT NULL DEFAULT '',
-  `rewritetags` varchar(120) NOT NULL DEFAULT '',
-  `closehmenu` varchar(80) NOT NULL DEFAULT '',
-  PRIMARY KEY (`id`)
+  `filedeftb` smallint(5) unsigned NOT NULL default '0',
+  `firsttitlename` varchar(255) NOT NULL default '',
+  `isgoodname` varchar(255) NOT NULL default '',
+  `closelisttemp` varchar(255) NOT NULL default '',
+  `chclasscolor` varchar(8) NOT NULL default '',
+  `timeclose` varchar(255) NOT NULL default '',
+  `timeclosedo` varchar(255) NOT NULL default '',
+  `ipaddinfonum` int(10) unsigned NOT NULL default '0',
+  `ipaddinfotime` smallint(5) unsigned NOT NULL default '0',
+  `rewriteinfo` varchar(120) NOT NULL default '',
+  `rewriteclass` varchar(120) NOT NULL default '',
+  `rewriteinfotype` varchar(120) NOT NULL default '',
+  `rewritetags` varchar(120) NOT NULL default '',
+  `closehmenu` varchar(80) NOT NULL default '',
+  PRIMARY KEY  (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_enewspublic`
@@ -7113,25 +7116,25 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_enewspublic_update`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_enewspublic_update` (
-  `id` tinyint(3) unsigned NOT NULL AUTO_INCREMENT,
-  `lasttimeinfo` int(10) unsigned NOT NULL DEFAULT '0',
-  `lasttimepl` int(10) unsigned NOT NULL DEFAULT '0',
-  `lastnuminfo` int(10) unsigned NOT NULL DEFAULT '0',
-  `lastnumpl` int(10) unsigned NOT NULL DEFAULT '0',
+  `id` tinyint(3) unsigned NOT NULL auto_increment,
+  `lasttimeinfo` int(10) unsigned NOT NULL default '0',
+  `lasttimepl` int(10) unsigned NOT NULL default '0',
+  `lastnuminfo` int(10) unsigned NOT NULL default '0',
+  `lastnumpl` int(10) unsigned NOT NULL default '0',
   `lastnuminfotb` text NOT NULL,
   `lastnumpltb` text NOT NULL,
-  `todaytimeinfo` int(10) unsigned NOT NULL DEFAULT '0',
-  `todaytimepl` int(10) unsigned NOT NULL DEFAULT '0',
-  `todaynuminfo` int(10) unsigned NOT NULL DEFAULT '0',
-  `yesterdaynuminfo` int(10) unsigned NOT NULL DEFAULT '0',
-  `todaynumpl` int(10) unsigned NOT NULL DEFAULT '0',
-  `yesterdaynumpl` int(10) unsigned NOT NULL DEFAULT '0',
-  PRIMARY KEY (`id`)
+  `todaytimeinfo` int(10) unsigned NOT NULL default '0',
+  `todaytimepl` int(10) unsigned NOT NULL default '0',
+  `todaynuminfo` int(10) unsigned NOT NULL default '0',
+  `yesterdaynuminfo` int(10) unsigned NOT NULL default '0',
+  `todaynumpl` int(10) unsigned NOT NULL default '0',
+  `yesterdaynumpl` int(10) unsigned NOT NULL default '0',
+  PRIMARY KEY  (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_enewspublic_update`
@@ -7139,7 +7142,7 @@ CREATE TABLE `ziyi_enewspublic_update` (
 
 LOCK TABLES `ziyi_enewspublic_update` WRITE;
 /*!40000 ALTER TABLE `ziyi_enewspublic_update` DISABLE KEYS */;
-INSERT INTO `ziyi_enewspublic_update` VALUES (1,1355124469,1355124476,4,0,'|3,4|','',1377675708,1377675708,0,0,0,0);
+INSERT INTO `ziyi_enewspublic_update` VALUES (1,1355124469,1355124476,6,0,'|3,4|1,2|','',1377875108,1377875108,2,0,0,0);
 /*!40000 ALTER TABLE `ziyi_enewspublic_update` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -7148,10 +7151,10 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_enewspubtemp`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_enewspubtemp` (
-  `id` smallint(6) NOT NULL AUTO_INCREMENT,
+  `id` smallint(6) NOT NULL auto_increment,
   `indextemp` mediumtext NOT NULL,
   `cptemp` mediumtext NOT NULL,
   `searchtemp` mediumtext NOT NULL,
@@ -7163,17 +7166,17 @@ CREATE TABLE `ziyi_enewspubtemp` (
   `listpagetemp` text NOT NULL,
   `gbooktemp` mediumtext NOT NULL,
   `loginiframe` mediumtext NOT NULL,
-  `otherlinktempsub` tinyint(4) NOT NULL DEFAULT '0',
-  `otherlinktempdate` varchar(20) NOT NULL DEFAULT '',
+  `otherlinktempsub` tinyint(4) NOT NULL default '0',
+  `otherlinktempdate` varchar(20) NOT NULL default '',
   `loginjstemp` mediumtext NOT NULL,
   `downpagetemp` mediumtext NOT NULL,
   `pljstemp` mediumtext NOT NULL,
   `schalltemp` mediumtext NOT NULL,
-  `schallsubnum` smallint(6) NOT NULL DEFAULT '0',
-  `schalldate` varchar(20) NOT NULL DEFAULT '',
-  PRIMARY KEY (`id`)
+  `schallsubnum` smallint(6) NOT NULL default '0',
+  `schalldate` varchar(20) NOT NULL default '',
+  PRIMARY KEY  (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_enewspubtemp`
@@ -7181,7 +7184,7 @@ CREATE TABLE `ziyi_enewspubtemp` (
 
 LOCK TABLES `ziyi_enewspubtemp` WRITE;
 /*!40000 ALTER TABLE `ziyi_enewspubtemp` DISABLE KEYS */;
-INSERT INTO `ziyi_enewspubtemp` VALUES (1,'<!DOCTYPE html PUBLIC \\\"-//W3C//DTD XHTML 1.0 Strict//EN\\\" \\\"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\\\">\r\n<html xmlns=\\\"http://www.w3.org/1999/xhtml\\\">\r\n<head>\r\n<meta http-equiv=\\\"Content-Type\\\" content=\\\"text/html; charset=utf-8\\\" />\r\n<title>ziyi title</title>\r\n<meta name=\\\"keywords\\\" content=\\\"\\\" />\r\n<meta name=\\\"description\\\" content=\\\"\\\" />\r\n<script type=\\\"text/javascript\\\" src=\\\"[!--news.url--]briefcase/jquery-1.7.1.min.js\\\"></script>\r\n<script type=\\\"text/javascript\\\" src=\\\"[!--news.url--]briefcase/jquery.slidertron-1.1.js\\\"></script>\r\n\r\n<link href=\\\"[!--news.url--]briefcase/default.css\\\" rel=\\\"stylesheet\\\" type=\\\"text/css\\\" media=\\\"all\\\" />\r\n<!--[if IE 6]>\r\n<link href=\\\"[!--news.url--]briefcase/[!--news.url--]briefcase/default_ie6.css\\\" rel=\\\"stylesheet\\\" type=\\\"text/css\\\" />\r\n<![endif]-->\r\n</head>\r\n<body>\r\n<div id=\\\"header\\\" class=\\\"container\\\">\r\n    <div id=\\\"logo\\\">\r\n        <h1><a href=\\\"[!--news.url--]\\\"><img src=\\\"[!--news.url--]briefcase/images/logo.png\\\"/></a></h1>\r\n    </div>\r\n    <div id=\\\"menu\\\">\r\n       [showclasstemp]\\\'0\\\',13,0,7[/showclasstemp]\r\n    </div>\r\n</div>\r\n<div id=\\\"banner\\\" class=\\\"container\\\">\r\n    <div id=\\\"slider\\\">\r\n    [ecmsinfo]9,4,32,0,0,14,0[/ecmsinfo]\r\n        <div class=\\\"indicator\\\">\r\n            <ul>\r\n                <li class=\\\"active\\\">1</li>\r\n                <li>2</li>\r\n                <li>3</li>\r\n                <li>4</li>\r\n            </ul>\r\n        </div>\r\n    </div>\r\n    <script type=\\\"text/javascript\\\">\r\n        $(\\\'#slider\\\').slidertron({\r\n            viewerSelector: \\\'.viewer\\\',\r\n            reelSelector: \\\'.viewer .reel\\\',\r\n            slidesSelector: \\\'.viewer .reel .slide\\\',\r\n            advanceDelay: 3000,\r\n            speed: \\\'slow\\\',\r\n            navPreviousSelector: \\\'.previous-button\\\',\r\n            navNextSelector: \\\'.next-button\\\',\r\n            indicatorSelector: \\\'.indicator ul li\\\',\r\n            slideLinkSelector: \\\'.link\\\'\r\n        });\r\n    </script> \r\n</div>\r\n<div id=\\\"page\\\" class=\\\"container\\\">\r\n    <div id=\\\"content\\\">\r\n        <div id=\\\"onecolumn\\\">\r\n            <h2>Welcome to out website!</h2>\r\n            <p>This is BriefCase , a free, fully standards-compliant CSS template designed by FCT. The photo used in this template is from Fotogrph. This free template is released under a Creative Commons Attributions 3.0 license, so you’re pretty much free to do whatever you want with it (even use it commercially) provided you keep the links in the footer intact. Aside from that, have fun with it :)</p>\r\n        </div>\r\n        <div id=\\\"two-column\\\">\r\n            <div class=\\\"box-content\\\">\r\n                <h2 class=\\\"title title01\\\">Nulla luctus eleifend</h2>\r\n                <div style=\\\"float:left;width:320px\\\">Pellentesque tristique ante ut risus. Quisque dictum. Integer nisl risus, sagittis convallis, rutrum id, elementum congue, nibh. Suspendisse dictum porta lectus. Donec placerat odio vel elit. Nullam ante orci, pellentesque quis.</div>\r\n		<div style=\\\"float:left;width:200px\\\">\r\n			this is float left\r\n		</div>\r\n		<div style=\\\"clear:both\\\">\r\n		</div>\r\n            </div>\r\n            <div class=\\\"box-content\\\">\r\n                <h2 class=\\\"title title02\\\">Maecenas luctus lectus</h2>\r\n                <p>Curabitur sit amet nulla. Nam in massa. Sed vel tellus. Curabitur sem urna, consequat vel, suscipit in, mattis placerat, nulla. Sed ac leo. Pellentesque imperdiet. In posuere  odio quisque semper augue mattis maecenas ligula.</p>\r\n            </div>\r\n        </div>\r\n    </div>\r\n    <div id=\\\"sidebar\\\">\r\n        <div id=\\\"sbox1\\\">\r\n            <h2>Fusce fringilla</h2>\r\n            <ul class=\\\"list-style1\\\">\r\n                <li class=\\\"first\\\">\r\n                    <p>Etiam non felis. Donec ut ante. In id eros. Suspendisse lacus, cursus egestas at sem. </p>\r\n                    <p><a href=\\\"[!--news.url--]briefcase/#\\\" class=\\\"link-style\\\">Read More</a></p>\r\n                </li>\r\n                <li>\r\n                    <p>Etiam non felis. Donec ut ante. In id eros. Suspendisse lacus turpis, cursus  at sem. </p>\r\n                    <p><a href=\\\"[!--news.url--]briefcase/#\\\" class=\\\"link-style\\\">Read More</a></p>\r\n                </li>\r\n            </ul>\r\n        </div>\r\n        <div id=\\\"sbox2\\\">\r\n            <h2>Testimonials</h2>\r\n            <p class=\\\"testimonial\\\">Pellentesque adipiscing purus ac magna. Pellentesque habitant morbi tristique senectus et netus et malesuada fames.</p>\r\n            <div class=\\\"author\\\"><img src=\\\"[!--news.url--]briefcase/images/pic03.jpg\\\" width=\\\"80\\\" height=\\\"80\\\" alt=\\\"\\\" /><span class=\\\"name\\\">Juan Dela Cruz</span><span class=\\\"position\\\">Company CEO</span><span>MyCompany, LLC</span></div>\r\n        </div>\r\n    </div>\r\n</div>\r\n<div id=\\\"footer\\\" class=\\\"container\\\">\r\n    <div id=\\\"fbox1\\\">\r\n        <h2>Aenean elementum</h2>\r\n        <ul class=\\\"style1\\\">\r\n            <li class=\\\"first\\\"><a href=\\\"[!--news.url--]briefcase/#\\\">Consectetuer adipiscing elit</a></li>\r\n            <li><a href=\\\"[!--news.url--]briefcase/#\\\">Metus aliquam pellentesque</a></li>\r\n            <li><a href=\\\"[!--news.url--]briefcase/#\\\">Suspendisse iaculis mauris</a></li>\r\n            <li><a href=\\\"[!--news.url--]briefcase/#\\\">Urnanet non molestie semper</a></li>\r\n            <li><a href=\\\"[!--news.url--]briefcase/#\\\">Proin gravida orci porttitor</a></li>\r\n        </ul>\r\n    </div>\r\n    <div id=\\\"fbox2\\\">\r\n        <h2>Vestibulum luctus</h2>\r\n        <ul class=\\\"style1\\\">\r\n            <li class=\\\"first\\\"><a href=\\\"[!--news.url--]briefcase/#\\\">Consectetuer adipiscing elit</a></li>\r\n            <li><a href=\\\"[!--news.url--]briefcase/#\\\">Metus aliquam pellentesque</a></li>\r\n            <li><a href=\\\"[!--news.url--]briefcase/#\\\">Suspendisse iaculis mauris</a></li>\r\n            <li><a href=\\\"[!--news.url--]briefcase/#\\\">Urnanet non molestie semper</a></li>\r\n            <li><a href=\\\"[!--news.url--]briefcase/#\\\">Proin gravida orci porttitor</a></li>\r\n        </ul>\r\n    </div>\r\n    <div id=\\\"fbox3\\\">\r\n        <h2>Etiam malesuada</h2>\r\n        <p>In posuere eleifend odio. Quisque semper augue mattis wisi. Maecenas ligula. Pellentesque viverra vulputate enim. Donec leo. Vivamus fermentum nibh in augue.</p>\r\n        <ul class=\\\"style2\\\">\r\n            <li><a href=\\\"[!--news.url--]briefcase/#\\\"><img src=\\\"[!--news.url--]briefcase/images/social03.png\\\" width=\\\"32\\\" height=\\\"32\\\" alt=\\\"\\\" /></a></li>\r\n            <li><a href=\\\"[!--news.url--]briefcase/#\\\"><img src=\\\"[!--news.url--]briefcase/images/social01.png\\\" width=\\\"32\\\" height=\\\"32\\\" alt=\\\"\\\" /></a></li>\r\n            <li><a href=\\\"[!--news.url--]briefcase/#\\\"><img src=\\\"[!--news.url--]briefcase/images/social04.png\\\" width=\\\"32\\\" height=\\\"32\\\" alt=\\\"\\\" /></a></li>\r\n            <li><a href=\\\"[!--news.url--]briefcase/#\\\"><img src=\\\"[!--news.url--]briefcase/images/social02.png\\\" width=\\\"32\\\" height=\\\"32\\\" alt=\\\"\\\" /></a></li>\r\n        </ul>\r\n    </div>\r\n</div>\r\n<div id=\\\"copyright\\\" class=\\\"container\\\">\r\n    <p>Copyright (c) 2013 Sitename.com. All rights reserved. Design by <a href=\\\"[!--news.url--]briefcase/http://www.freecsstemplates.org/\\\" rel=\\\"nofollow\\\">FreeCSSTemplates.org</a>. Photos by <a href=\\\"[!--news.url--]briefcase/http://fotogrph.com/\\\">Fotogrph</a>.</p>\r\n</div>\r\n</body>\r\n</html>','<!DOCTYPE html PUBLIC \\\"-//W3C//DTD XHTML 1.0 Transitional//EN\\\" \\\"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\\\">\r\n<html xmlns=\\\"http://www.w3.org/1999/xhtml\\\">\r\n<head>\r\n<meta http-equiv=\\\"Content-Type\\\" content=\\\"text/html; charset=utf-8\\\" />\r\n<title>[!--pagetitle--] - Powered by EmpireCMS</title>\r\n<meta name=\\\"keywords\\\" content=\\\"[!--pagekey--]\\\" />\r\n<meta name=\\\"description\\\" content=\\\"[!--pagedes--]\\\" />\r\n<link href=\\\"[!--news.url--]skin/default/css/style.css\\\" rel=\\\"stylesheet\\\" type=\\\"text/css\\\" />\r\n<script type=\\\"text/javascript\\\" src=\\\"[!--news.url--]skin/default/js/tabs.js\\\"></script>\r\n</head>\r\n<body class=\\\"listpage\\\">\r\n[!--temp.dtheader--] \r\n<table width=\\\"100%\\\" border=\\\"0\\\" cellspacing=\\\"10\\\" cellpadding=\\\"0\\\">\r\n<tr valign=\\\"top\\\">\r\n<td class=\\\"list_content\\\"><table width=\\\"100%\\\" border=\\\"0\\\" cellspacing=\\\"0\\\" cellpadding=\\\"0\\\" class=\\\"position\\\">\r\n<tr>\r\n<td>现在的位置：[!--newsnav--]\r\n</td>\r\n</tr>\r\n</table>\r\n      <table width=\\\"100%\\\" border=\\\"0\\\" cellspacing=\\\"0\\\" cellpadding=\\\"0\\\" class=\\\"box\\\">\r\n        <tr> \r\n          <td width=\\\"300\\\" valign=\\\"top\\\"> \r\n		  <?php\r\n		  $lguserid=intval(getcvar(\\\'mluserid\\\'));//登陆用户ID\r\n		  $lgusername=RepPostVar(getcvar(\\\'mlusername\\\'));//登陆用户\r\n		  $lggroupid=intval(getcvar(\\\'mlgroupid\\\'));//会员组ID\r\n		  if($lggroupid)	//登陆会员显示菜单\r\n		  {\r\n		  ?>\r\n            <table width=\\\"100%\\\" border=\\\"0\\\" cellpadding=\\\"3\\\" cellspacing=\\\"1\\\" class=\\\"tableborder\\\">\r\n              <tr class=\\\"header\\\"> \r\n                <td height=\\\"20\\\" bgcolor=\\\"#FFFFFF\\\"> <div align=\\\"center\\\"><strong><a href=\\\"[!--news.url--]e/member/cp/\\\">功能菜单</a></strong></div></td>\r\n              </tr>\r\n              <tr> \r\n                <td height=\\\"25\\\" bgcolor=\\\"#FFFFFF\\\" onmouseout=\\\"this.style.backgroundColor=\\\'#ffffff\\\'\\\" onmouseover=\\\"this.style.backgroundColor=\\\'#EBF3FC\\\'\\\"><div align=\\\"center\\\"><a href=\\\"[!--news.url--]e/member/EditInfo/\\\">修改资料</a></div></td>\r\n              </tr>\r\n              <tr> \r\n                <td height=\\\"25\\\" bgcolor=\\\"#FFFFFF\\\" onmouseout=\\\"this.style.backgroundColor=\\\'#ffffff\\\'\\\" onmouseover=\\\"this.style.backgroundColor=\\\'#EBF3FC\\\'\\\"><div align=\\\"center\\\"><a href=\\\"[!--news.url--]e/member/my/\\\">帐号状态</a></div></td>\r\n              </tr>\r\n              <tr> \r\n                <td height=\\\"25\\\" bgcolor=\\\"#FFFFFF\\\" onmouseout=\\\"this.style.backgroundColor=\\\'#ffffff\\\'\\\" onmouseover=\\\"this.style.backgroundColor=\\\'#EBF3FC\\\'\\\"><div align=\\\"center\\\"><a href=\\\"[!--news.url--]e/member/msg/\\\">站内信息</a></div></td>\r\n              </tr>\r\n              <tr> \r\n                <td height=\\\"25\\\" bgcolor=\\\"#FFFFFF\\\" onmouseout=\\\"this.style.backgroundColor=\\\'#ffffff\\\'\\\" onmouseover=\\\"this.style.backgroundColor=\\\'#EBF3FC\\\'\\\"><div align=\\\"center\\\"><a href=\\\"[!--news.url--]e/member/mspace/SetSpace.php\\\">空间设置</a></div></td>\r\n              </tr>\r\n              <tr> \r\n                <td height=\\\"25\\\" bgcolor=\\\"#FFFFFF\\\" onmouseout=\\\"this.style.backgroundColor=\\\'#ffffff\\\'\\\" onmouseover=\\\"this.style.backgroundColor=\\\'#EBF3FC\\\'\\\"><div align=\\\"center\\\"><a href=\\\"[!--news.url--]e/DoInfo/\\\">管理信息</a></div></td>\r\n              </tr>\r\n              <tr> \r\n                <td height=\\\"25\\\" bgcolor=\\\"#FFFFFF\\\" onmouseout=\\\"this.style.backgroundColor=\\\'#ffffff\\\'\\\" onmouseover=\\\"this.style.backgroundColor=\\\'#EBF3FC\\\'\\\"><div align=\\\"center\\\"><a href=\\\"[!--news.url--]e/member/fava/\\\">收藏夹</a></div></td>\r\n              </tr>\r\n              <tr> \r\n                <td height=\\\"25\\\" bgcolor=\\\"#FFFFFF\\\" onmouseout=\\\"this.style.backgroundColor=\\\'#ffffff\\\'\\\" onmouseover=\\\"this.style.backgroundColor=\\\'#EBF3FC\\\'\\\"><div align=\\\"center\\\"><a href=\\\"[!--news.url--]e/payapi/\\\">在线支付</a></div></td>\r\n              </tr>\r\n              <tr> \r\n                <td height=\\\"25\\\" bgcolor=\\\"#FFFFFF\\\" onmouseout=\\\"this.style.backgroundColor=\\\'#ffffff\\\'\\\" onmouseover=\\\"this.style.backgroundColor=\\\'#EBF3FC\\\'\\\"><div align=\\\"center\\\"><a href=\\\"[!--news.url--]e/member/friend/\\\">我的好友</a></div></td>\r\n              </tr>\r\n              <tr> \r\n                <td height=\\\"25\\\" bgcolor=\\\"#FFFFFF\\\" onmouseout=\\\"this.style.backgroundColor=\\\'#ffffff\\\'\\\" onmouseover=\\\"this.style.backgroundColor=\\\'#EBF3FC\\\'\\\"><div align=\\\"center\\\"><a href=\\\"[!--news.url--]e/member/buybak/\\\">消费记录</a></div></td>\r\n              </tr>\r\n              <tr> \r\n                <td height=\\\"25\\\" bgcolor=\\\"#FFFFFF\\\" onmouseout=\\\"this.style.backgroundColor=\\\'#ffffff\\\'\\\" onmouseover=\\\"this.style.backgroundColor=\\\'#EBF3FC\\\'\\\"><div align=\\\"center\\\"><a href=\\\"[!--news.url--]e/member/buygroup/\\\">在线充值</a></div></td>\r\n              </tr>\r\n              <tr> \r\n                <td height=\\\"25\\\" bgcolor=\\\"#FFFFFF\\\" onmouseout=\\\"this.style.backgroundColor=\\\'#ffffff\\\'\\\" onmouseover=\\\"this.style.backgroundColor=\\\'#EBF3FC\\\'\\\"><div align=\\\"center\\\"><a href=\\\"[!--news.url--]e/member/card/\\\">点卡充值</a></div></td>\r\n              </tr>\r\n              <tr> \r\n                <td height=\\\"25\\\" bgcolor=\\\"#FFFFFF\\\" onmouseout=\\\"this.style.backgroundColor=\\\'#ffffff\\\'\\\" onmouseover=\\\"this.style.backgroundColor=\\\'#EBF3FC\\\'\\\"><div align=\\\"center\\\"><a href=\\\"#ecms\\\" onclick=\\\"window.open(\\\'[!--news.url--]e/ShopSys/buycar/\\\',\\\'\\\',\\\'width=680,height=500,scrollbars=yes,resizable=yes\\\');\\\">我的购物车</a></div></td>\r\n              </tr>\r\n              <tr> \r\n                <td height=\\\"25\\\" bgcolor=\\\"#FFFFFF\\\" onmouseout=\\\"this.style.backgroundColor=\\\'#ffffff\\\'\\\" onmouseover=\\\"this.style.backgroundColor=\\\'#EBF3FC\\\'\\\"><div align=\\\"center\\\"><a href=\\\"[!--news.url--]e/ShopSys/ListDd/\\\">我的订单</a></div></td>\r\n              </tr>\r\n			  <tr> \r\n                <td height=\\\"25\\\" bgcolor=\\\"#FFFFFF\\\" onmouseout=\\\"this.style.backgroundColor=\\\'#ffffff\\\'\\\" onmouseover=\\\"this.style.backgroundColor=\\\'#EBF3FC\\\'\\\"><div align=\\\"center\\\"><a href=\\\"[!--news.url--]e/member/login/\\\">重新登陆</a></div></td>\r\n              </tr>\r\n              <tr> \r\n                <td height=\\\"25\\\" bgcolor=\\\"#FFFFFF\\\" onmouseout=\\\"this.style.backgroundColor=\\\'#ffffff\\\'\\\" onmouseover=\\\"this.style.backgroundColor=\\\'#EBF3FC\\\'\\\"><div align=\\\"center\\\"><a href=\\\"[!--news.url--]e/member/doaction.php?enews=exit\\\" onclick=\\\"return confirm(\\\'确认要退出?\\\');\\\">退出登陆</a></div></td>\r\n              </tr>\r\n            </table>\r\n			<?php\r\n			}\r\n			else	//游客显示菜单\r\n			{\r\n			?>  \r\n            <table width=\\\"100%\\\" border=\\\"0\\\" cellpadding=\\\"3\\\" cellspacing=\\\"1\\\" class=\\\"tableborder\\\">\r\n              <tr class=\\\"header\\\"> \r\n                <td height=\\\"20\\\" bgcolor=\\\"#FFFFFF\\\"> <div align=\\\"center\\\"><strong><a href=\\\"[!--news.url--]e/member/cp/\\\">功能菜单</a></strong></div></td>\r\n              </tr>\r\n              <tr> \r\n                <td height=\\\"25\\\" bgcolor=\\\"#FFFFFF\\\" onmouseout=\\\"this.style.backgroundColor=\\\'#ffffff\\\'\\\" onmouseover=\\\"this.style.backgroundColor=\\\'#EBF3FC\\\'\\\"><div align=\\\"center\\\"><a href=\\\"[!--news.url--]e/member/login/\\\">会员登陆</a></div></td>\r\n              </tr>\r\n              <tr> \r\n                <td height=\\\"25\\\" bgcolor=\\\"#FFFFFF\\\" onmouseout=\\\"this.style.backgroundColor=\\\'#ffffff\\\'\\\" onmouseover=\\\"this.style.backgroundColor=\\\'#EBF3FC\\\'\\\"><div align=\\\"center\\\"><a href=\\\"[!--news.url--]e/member/register/\\\">注册帐号</a></div></td>\r\n              </tr>\r\n              <tr> \r\n                <td height=\\\"25\\\" bgcolor=\\\"#FFFFFF\\\" onmouseout=\\\"this.style.backgroundColor=\\\'#ffffff\\\'\\\" onmouseover=\\\"this.style.backgroundColor=\\\'#EBF3FC\\\'\\\"><div align=\\\"center\\\"><a href=\\\"[!--news.url--]e/DoInfo/\\\">发布投稿</a></div></td>\r\n              </tr>\r\n              <tr> \r\n                <td height=\\\"25\\\" bgcolor=\\\"#FFFFFF\\\" onmouseout=\\\"this.style.backgroundColor=\\\'#ffffff\\\'\\\" onmouseover=\\\"this.style.backgroundColor=\\\'#EBF3FC\\\'\\\"><div align=\\\"center\\\"><a href=\\\"#ecms\\\" onclick=\\\"window.open(\\\'[!--news.url--]e/ShopSys/buycar/\\\',\\\'\\\',\\\'width=680,height=500,scrollbars=yes,resizable=yes\\\');\\\">我的购物车</a></div></td>\r\n              </tr>\r\n            </table>\r\n			<?php\r\n			}\r\n			?>\r\n			</td>\r\n          <td width=\\\"85%\\\" valign=\\\"top\\\">[!--empirenews.template--]</td>\r\n        </tr>\r\n      </table></td>\r\n</tr>\r\n</table>\r\n[!--temp.footer--]\r\n</body>\r\n</html>','<!DOCTYPE html PUBLIC \\\"-//W3C//DTD XHTML 1.0 Transitional//EN\\\" \\\"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\\\">\r\n<html xmlns=\\\"http://www.w3.org/1999/xhtml\\\">\r\n<head>\r\n<meta http-equiv=\\\"Content-Type\\\" content=\\\"text/html; charset=utf-8\\\" />\r\n<title>高级搜索 - Powered by EmpireCMS</title>\r\n<link href=\\\"[!--news.url--]skin/default/css/style.css\\\" rel=\\\"stylesheet\\\" type=\\\"text/css\\\" />\r\n<script type=\\\"text/javascript\\\" src=\\\"[!--news.url--]skin/default/js/tabs.js\\\"></script>\r\n<script src=\\\"[!--news.url--]e/data/images/setday.js\\\"></script>\r\n</head>\r\n<body class=\\\"listpage\\\">\r\n[!--temp.dtheader--]\r\n<table width=\\\"100%\\\" border=\\\"0\\\" cellspacing=\\\"10\\\" cellpadding=\\\"0\\\">\r\n	<tr valign=\\\"top\\\">\r\n		<td class=\\\"list_content\\\"><table width=\\\"100%\\\" border=\\\"0\\\" cellspacing=\\\"0\\\" cellpadding=\\\"0\\\" class=\\\"position\\\">\r\n				<tr>\r\n					<td>现在的位置：[!--url--]</td>\r\n				</tr>\r\n			</table>\r\n			<table width=\\\"100%\\\" border=\\\"0\\\" cellspacing=\\\"0\\\" cellpadding=\\\"0\\\" class=\\\"box\\\">\r\n				<tr>\r\n					<td><table width=\\\"100%\\\" border=\\\"0\\\" cellpadding=\\\"0\\\" cellspacing=\\\"0\\\">\r\n						<tr>\r\n							<td><form action=\\\'[!--news.url--]e/search/index.php\\\' method=\\\"post\\\" name=\\\"search_news\\\" id=\\\"search_news\\\">\r\n									<table width=\\\"100%\\\" border=\\\"0\\\" cellspacing=\\\"0\\\" cellpadding=\\\"0\\\">\r\n										<tr>\r\n											<td width=\\\"54%\\\"><table width=\\\"100%\\\" border=\\\"0\\\" cellpadding=\\\"6\\\" cellspacing=\\\"0\\\">\r\n													<tr>\r\n														<td bgcolor=\\\"#F4F4F4\\\"><strong>搜索范围</strong></td>\r\n													</tr>\r\n											</table></td>\r\n											<td width=\\\"46%\\\"><table width=\\\"100%\\\" border=\\\"0\\\" cellpadding=\\\"6\\\" cellspacing=\\\"0\\\">\r\n													<tr>\r\n														<td bgcolor=\\\"#F4F4F4\\\"><strong>搜索栏目</strong></td>\r\n													</tr>\r\n											</table></td>\r\n										</tr>\r\n										<tr>\r\n											<td valign=\\\"top\\\"><table width=\\\"100%\\\" border=\\\"0\\\" cellpadding=\\\"6\\\" cellspacing=\\\"0\\\">\r\n													<tr>\r\n														<td><input type=\\\"radio\\\" name=\\\"show\\\" value=\\\"title\\\" checked=\\\"checked\\\" />\r\n															标题\r\n															<input type=\\\"radio\\\" name=\\\"show\\\" value=\\\"smalltext\\\" />\r\n															简介\r\n															<input type=\\\"radio\\\" name=\\\"show\\\" value=\\\"newstext\\\" />\r\n															内容\r\n															<input type=\\\"radio\\\" name=\\\"show\\\" value=\\\"writer\\\" />\r\n															作者\r\n															<input name=\\\"show\\\" type=\\\"radio\\\" value=\\\"title,smalltext,newstext,writer\\\" />\r\n															不限</td>\r\n													</tr>\r\n												</table>\r\n													<br />\r\n													<table width=\\\"100%\\\" border=\\\"0\\\" cellpadding=\\\"6\\\" cellspacing=\\\"0\\\">\r\n														<tr bgcolor=\\\"#F4F4F4\\\">\r\n															<td><strong>时间限制</strong><font color=\\\"#666666\\\">(0000-00-00为不限制)</font></td>\r\n														</tr>\r\n														<tr>\r\n															<td height=\\\"30\\\" valign=\\\"top\\\">从\r\n																<input name=\\\"starttime\\\" type=\\\"text\\\" value=\\\"0000-00-00\\\" size=\\\"12\\\" onclick=\\\"setday(this)\\\" />\r\n																到\r\n																<input name=\\\"endtime\\\" type=\\\"text\\\" value=\\\"0000-00-00\\\" size=\\\"12\\\" onclick=\\\"setday(this)\\\" />\r\n																之间的数据</td>\r\n														</tr>\r\n														<tr>\r\n															<td bgcolor=\\\"#F4F4F4\\\"><strong>价格限制</strong><font color=\\\"#666666\\\">(商城模型中有效,0为不限制)</font></td>\r\n														</tr>\r\n														<tr>\r\n															<td>从\r\n																<input name=\\\"startprice\\\" type=\\\"text\\\" id=\\\"startprice\\\" value=\\\"0\\\" size=\\\"6\\\" />\r\n																到\r\n																<input name=\\\"endprice\\\" type=\\\"text\\\" id=\\\"endprice\\\" value=\\\"0\\\" size=\\\"6\\\" />\r\n																元之间</td>\r\n														</tr>\r\n												</table></td>\r\n											<td valign=\\\"top\\\"><table width=\\\"100%\\\" border=\\\"0\\\" cellspacing=\\\"6\\\" cellpadding=\\\"0\\\">\r\n													<tr>\r\n														<td><select name=\\\"classid\\\" size=\\\"8\\\" id=\\\"select2\\\" style=\\\"width: 100%;height:112px\\\">\r\n																<option value=\\\"0\\\" selected=\\\"selected\\\">所有栏目</option>\r\n															[!--class--]\r\n          \r\n														</select></td>\r\n													</tr>\r\n												</table>\r\n													<table width=\\\"100%\\\" border=\\\"0\\\" cellpadding=\\\"6\\\" cellspacing=\\\"0\\\">\r\n														<tr>\r\n															<td bgcolor=\\\"#F4F4F4\\\"><strong>结果显示</strong></td>\r\n														</tr>\r\n														<tr>\r\n															<td height=\\\"30\\\"><select name=\\\"orderby\\\" id=\\\"select4\\\">\r\n																	<option value=\\\"\\\">按发布日期</option>\r\n																	<option value=\\\"id\\\">信息ID</option>\r\n																	<option value=\\\"plnum\\\">评论数</option>\r\n																	<option value=\\\"onclick\\\">人气</option>\r\n																	<option value=\\\"totaldown\\\">下载数</option>\r\n																</select>\r\n																	<select name=\\\"myorder\\\" id=\\\"select5\\\">\r\n																		<option value=\\\"0\\\">倒序排列</option>\r\n																		<option value=\\\"1\\\">顺序排列</option>\r\n																	</select>\r\n															</td>\r\n														</tr>\r\n												</table></td>\r\n										</tr>\r\n									</table>\r\n								<table width=\\\"100%\\\" border=\\\"0\\\" cellpadding=\\\"4\\\" cellspacing=\\\"0\\\">\r\n										<tr>\r\n											<td>关键字：\r\n												<input name=\\\"keyboard\\\" type=\\\"text\\\" id=\\\"keyboard2\\\" size=\\\"60\\\" />\r\n													<input type=\\\"submit\\\" name=\\\"Submit22\\\" value=\\\"搜索\\\" />\r\n											</td>\r\n										</tr>\r\n									</table>\r\n							</form></td>\r\n						</tr>\r\n					</table></td>\r\n				</tr>\r\n			</table></td>\r\n	</tr>\r\n</table>\r\n[!--temp.footer--]\r\n</body>\r\n</html>','<table border=0 cellpadding=3 cellspacing=1><form name=search_js1 method=post action=\'[!--news.url--]e/search/index.php\' onsubmit=\'return search_check(document.search_js1);\'><tr><td><div align=center>搜索: <select name=show><option value=title>标题</option><option value=smalltext>简介</option><option value=newstext>内容</option><option value=writer>作者</option><option value=title,smalltext,newstext,writer>搜索全部</option></select><select name=classid><option value=0>所有栏目</option>[!--class--]</select><input name=keyboard type=text size=13><input type=submit name=Submit value=搜索></div></td></tr></form></table>','<table width=99% border=0 cellpadding=3 cellspacing=1><form name=search_js2 method=post action=\'[!--news.url--]e/search/index.php\' onsubmit=\'return search_check(document.search_js2);\'><tr><td height=25><div align=center>关键字: <input name=keyboard type=text size=13></div></td></tr><tr><td><div align=center>范围: <select name=show><option value=title>标题</option><option value=smalltext>简介</option><option value=newstext>内容</option><option value=writer>作者</option><option value=title,smalltext,newstext,writer>搜索全部</option></select></div></td></tr><tr><td><div align=center>栏目:<select name=classid><option value=0>所有栏目</option>[!--class--]</select></div></td></tr><tr><td><div align=center><input type=submit name=Submit value=搜索></div></td></tr></form></table>','[!--empirenews.listtemp--]<li><a href=\"[!--titleurl--]\" title=\"[!--oldtitle--]\">[!--title--]</a></li>[!--empirenews.listtemp--]','[ <a href=\\\"#ecms\\\" onclick=\\\"window.open(\\\'[!--down.url--]\\\',\\\'\\\',\\\'width=300,height=300,resizable=yes\\\');\\\">[!--down.name--]</a> ]','[ <a href=\\\"#ecms\\\" onclick=\\\"window.open(\\\'[!--down.url--]\\\',\\\'\\\',\\\'width=300,height=300,resizable=yes\\\');\\\">[!--down.name--]</a> ]','页次：[!--thispage--]/[!--pagenum--]&nbsp;每页[!--lencord--]&nbsp;总数[!--num--]&nbsp;&nbsp;&nbsp;&nbsp;[!--pagelink--]&nbsp;&nbsp;&nbsp;&nbsp;转到:[!--options--]','<!DOCTYPE html PUBLIC \\\"-//W3C//DTD XHTML 1.0 Transitional//EN\\\" \\\"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\\\">\r\n<html xmlns=\\\"http://www.w3.org/1999/xhtml\\\">\r\n<head>\r\n<meta http-equiv=\\\"Content-Type\\\" content=\\\"text/html; charset=utf-8\\\" />\r\n<title>留言板 - Powered by EmpireCMS</title>\r\n<meta name=\\\"keywords\\\" content=\\\"[!--bname--]\\\" />\r\n<meta name=\\\"description\\\" content=\\\"[!--bname--]\\\" />\r\n<link href=\\\"[!--news.url--]skin/default/css/style.css\\\" rel=\\\"stylesheet\\\" type=\\\"text/css\\\" />\r\n<script type=\\\"text/javascript\\\" src=\\\"[!--news.url--]skin/default/js/tabs.js\\\"></script>\r\n</head>\r\n<body class=\\\"listpage\\\">\r\n[!--temp.dtheader--]\r\n<table width=\\\"100%\\\" border=\\\"0\\\" cellspacing=\\\"10\\\" cellpadding=\\\"0\\\">\r\n<tr valign=\\\"top\\\">\r\n<td class=\\\"list_content\\\"><table width=\\\"100%\\\" border=\\\"0\\\" cellspacing=\\\"0\\\" cellpadding=\\\"0\\\" class=\\\"position\\\">\r\n<tr>\r\n<td>现在的位置：<a href=../../../>首页</a>&nbsp;>&nbsp;[!--bname--]\r\n</td>\r\n</tr>\r\n</table><table width=\\\"100%\\\" border=\\\"0\\\" cellspacing=\\\"0\\\" cellpadding=\\\"0\\\" class=\\\"box\\\">\r\n	<tr>\r\n		<td><table width=\\\"100%\\\" border=\\\"0\\\" cellpadding=\\\"3\\\" cellspacing=\\\"2\\\">\r\n			<tr>\r\n				<td align=\\\"center\\\" bgcolor=\\\"#E1EFFB\\\"><strong>[!--bname--]</strong></td>\r\n			</tr>\r\n			<tr>\r\n				<td align=\\\"left\\\" valign=\\\"top\\\"><table width=\\\"100%\\\" border=\\\"0\\\" cellpadding=\\\"4\\\" cellspacing=\\\"0\\\" bgcolor=\\\"#FFFFFF\\\">\r\n						<tr>\r\n							<td height=\\\"100%\\\" valign=\\\"top\\\" bgcolor=\\\"#FFFFFF\\\"> [!--empirenews.listtemp--]\r\n								<table width=\\\"92%\\\" border=\\\"0\\\" align=\\\"center\\\" cellpadding=\\\"4\\\" cellspacing=\\\"1\\\" bgcolor=\\\"#F4F9FD\\\" class=\\\"tableborder\\\">\r\n										<tr class=\\\"header\\\">\r\n											<td width=\\\"55%\\\" height=\\\"23\\\">发布者: [!--name--] </td>\r\n											<td width=\\\"45%\\\">发布时间: [!--lytime--] </td>\r\n										</tr>\r\n										<tr bgcolor=\\\"#FFFFFF\\\">\r\n											<td height=\\\"23\\\" colspan=\\\"2\\\"><table border=\\\"0\\\" width=\\\"100%\\\" cellspacing=\\\"1\\\" cellpadding=\\\"8\\\" bgcolor=\\\'#cccccc\\\'>\r\n													<tr>\r\n														<td width=\\\'100%\\\' bgcolor=\\\'#FFFFFF\\\' style=\\\'word-break:break-all\\\'> [!--lytext--] </td>\r\n													</tr>\r\n												</table>\r\n												[!--start.regbook--]\r\n												<table width=\\\"100%\\\" border=\\\"0\\\" align=\\\"center\\\" cellpadding=\\\"3\\\" cellspacing=\\\"1\\\">\r\n													<tr>\r\n														<td><img src=\\\"../../data/images/regb.gif\\\" width=\\\"18\\\" height=\\\"18\\\" /><strong><font color=\\\"#FF0000\\\">回复:</font></strong> [!--retext--] </td>\r\n													</tr>\r\n												</table>\r\n												[!--end.regbook--] </td>\r\n										</tr>\r\n									</table>\r\n								<br />\r\n								[!--empirenews.listtemp--]\r\n								<table width=\\\"92%\\\" border=\\\"0\\\" align=\\\"center\\\" cellpadding=\\\"4\\\" cellspacing=\\\"1\\\">\r\n									<tr>\r\n										<td>分页: [!--listpage--]</td>\r\n									</tr>\r\n								</table>\r\n								<form action=\\\"../../enews/index.php\\\" method=\\\"post\\\" name=\\\"form1\\\" id=\\\"form1\\\">\r\n									<table width=\\\"92%\\\" border=\\\"0\\\" align=\\\"center\\\" cellpadding=\\\"4\\\" cellspacing=\\\"1\\\"class=\\\"tableborder\\\">\r\n										<tr class=\\\"header\\\">\r\n											<td colspan=\\\"2\\\" bgcolor=\\\"#F4F9FD\\\"><strong>请您留言:</strong></td>\r\n										</tr>\r\n										<tr bgcolor=\\\"#FFFFFF\\\">\r\n											<td width=\\\"20%\\\">姓名:</td>\r\n											<td width=\\\"722\\\" height=\\\"23\\\"><input name=\\\"name\\\" type=\\\"text\\\" id=\\\"name\\\" />\r\n												*</td>\r\n										</tr>\r\n										<tr bgcolor=\\\"#FFFFFF\\\">\r\n											<td>联系邮箱:</td>\r\n											<td height=\\\"23\\\"><input name=\\\"email\\\" type=\\\"text\\\" id=\\\"email\\\" />\r\n												*</td>\r\n										</tr>\r\n										<tr bgcolor=\\\"#FFFFFF\\\">\r\n											<td>联系电话:</td>\r\n											<td height=\\\"23\\\"><input name=\\\"mycall\\\" type=\\\"text\\\" id=\\\"mycall\\\" /></td>\r\n										</tr>\r\n										<tr bgcolor=\\\"#FFFFFF\\\">\r\n											<td>留言内容(*):</td>\r\n											<td height=\\\"23\\\"><textarea name=\\\"lytext\\\" cols=\\\"60\\\" rows=\\\"12\\\" id=\\\"lytext\\\"></textarea></td>\r\n										</tr>\r\n										<tr bgcolor=\\\"#FFFFFF\\\">\r\n											<td height=\\\"23\\\">&nbsp;</td>\r\n											<td height=\\\"23\\\"><input type=\\\"submit\\\" name=\\\"Submit3\\\" value=\\\"提交\\\" />\r\n											<input type=\\\"reset\\\" name=\\\"Submit22\\\" value=\\\"重置\\\" />\r\n											<input name=\\\"enews\\\" type=\\\"hidden\\\" id=\\\"enews\\\" value=\\\"AddGbook\\\" /></td>\r\n										</tr>\r\n									</table>\r\n								</form></td>\r\n						</tr>\r\n				</table></td>\r\n			</tr>\r\n		</table></td>\r\n	</tr>\r\n</table></td>\r\n</tr>\r\n</table>\r\n[!--temp.footer--]\r\n</body>\r\n</html>','<html>\r\n<head>\r\n<meta http-equiv=\\\"Content-Type\\\" content=\\\"text/html; charset=utf-8\\\">\r\n<title>登陆</title>\r\n<LINK href=\\\"../../data/images/qcss.css\\\" rel=stylesheet>\r\n</head>\r\n<body bgcolor=\\\"#ededed\\\" topmargin=\\\"0\\\">\r\n<table border=\\\"0\\\" cellpadding=\\\"0\\\" cellspacing=\\\"0\\\" width=\\\"100%\\\">\r\n  <form name=login method=post action=\\\"../../member/doaction.php\\\">\r\n    <input type=hidden name=enews value=login>\r\n    <input type=hidden name=prtype value=1>\r\n    <tr> \r\n      <td height=\\\"23\\\" align=\\\"center\\\">\r\n      <div align=\\\"left\\\">\r\n      用户名：<input name=\\\"username\\\" type=\\\"text\\\" size=\\\"8\\\">&nbsp;\r\n      密码：<input name=\\\"password\\\" type=\\\"password\\\" size=\\\"8\\\">\r\n      <select name=\\\"lifetime\\\" id=\\\"lifetime\\\">\r\n         <option value=\\\"0\\\">不保存</option>\r\n         <option value=\\\"3600\\\">一小时</option>\r\n         <option value=\\\"86400\\\">一天</option>\r\n         <option value=\\\"2592000\\\">一个月</option>\r\n         <option value=\\\"315360000\\\">永久</option>\r\n      </select>&nbsp;\r\n      <input type=\\\"submit\\\" name=\\\"Submit\\\" value=\\\"登陆\\\">&nbsp;\r\n      <input type=\\\"button\\\" name=\\\"Submit2\\\" value=\\\"注册\\\" onclick=\\\"window.open(\\\'../register/\\\');\\\">\r\n      </div>\r\n      </td>\r\n    </tr>\r\n  </form>\r\n</table>\r\n</body>\r\n</html>\r\n[!--empirenews.template--]\r\n<html>\r\n<head>\r\n<meta http-equiv=\\\"Content-Type\\\" content=\\\"text/html; charset=utf-8\\\">\r\n<title>登陆</title>\r\n<LINK href=\\\"../../data/images/qcss.css\\\" rel=stylesheet>\r\n</head>\r\n<body bgcolor=\\\"#ededed\\\" topmargin=\\\"0\\\">\r\n<table border=\\\"0\\\" cellpadding=\\\"0\\\" cellspacing=\\\"0\\\" width=\\\"100%\\\">\r\n    <tr>\r\n	<td height=\\\"23\\\" align=\\\"center\\\">\r\n	<div align=\\\"left\\\">\r\n		&raquo;&nbsp;<font color=red><b>[!--username--]</b></font>&nbsp;&nbsp;<a href=\\\"../my/\\\" target=\\\"_parent\\\">[!--groupname--]</a>&nbsp;[!--havemsg--]&nbsp;<a href=\\\"[!--news.url--]e/space/?userid=[!--userid--]\\\" target=_blank>我的空间</a>&nbsp;&nbsp;<a href=\\\"../msg/\\\" target=_blank>短信息</a>&nbsp;&nbsp;<a href=\\\"../fava/\\\" target=_blank>收藏夹</a>&nbsp;&nbsp;<a href=\\\"../cp/\\\" target=\\\"_parent\\\">控制面板</a>&nbsp;&nbsp;<a href=\\\"../../member/doaction.php?enews=exit&prtype=9\\\" onclick=\\\"return confirm(\\\'确认要退出?\\\');\\\">退出</a> \r\n	</div>\r\n	</td>\r\n    </tr>\r\n</table>\r\n</body>\r\n</html>',50,'Y-m-d H:i:s','<form name=login method=post action=\\\"[!--news.url--]e/member/doaction.php\\\">\r\n    <input type=hidden name=enews value=login>\r\n    <input type=hidden name=ecmsfrom value=9>\r\n    用户名：<input name=\\\"username\\\" type=\\\"text\\\" class=\\\"inputText\\\" size=\\\"16\\\" />&nbsp;\r\n    密码：<input name=\\\"password\\\" type=\\\"password\\\" class=\\\"inputText\\\" size=\\\"16\\\" />&nbsp;\r\n    <input type=\\\"submit\\\" name=\\\"Submit\\\" value=\\\"登陆\\\" class=\\\"inputSub\\\" />&nbsp;\r\n    <input type=\\\"button\\\" name=\\\"Submit2\\\" value=\\\"注册\\\" class=\\\"inputSub\\\" onclick=\\\"window.open(\\\'[!--news.url--]e/member/register/\\\');\\\" />\r\n</form>\r\n[!--empirenews.template--]\r\n&raquo;&nbsp;<font color=red><b>[!--username--]</b></font>&nbsp;&nbsp;<a href=\\\"[!--news.url--]e/member/my/\\\" target=\\\"_parent\\\">[!--groupname--]</a>&nbsp;[!--havemsg--]&nbsp;<a href=\\\"[!--news.url--]e/space/?userid=[!--userid--]\\\" target=_blank>我的空间</a>&nbsp;&nbsp;<a href=\\\"[!--news.url--]e/member/msg/\\\" target=_blank>短信息</a>&nbsp;&nbsp;<a href=\\\"[!--news.url--]e/member/fava/\\\" target=_blank>收藏夹</a>&nbsp;&nbsp;<a href=\\\"[!--news.url--]e/member/cp/\\\" target=\\\"_parent\\\">控制面板</a>&nbsp;&nbsp;<a href=\\\"[!--news.url--]e/member/doaction.php?enews=exit&ecmsfrom=9\\\" onclick=\\\"return confirm(\\\'确认要退出?\\\');\\\">退出</a>','<html>\r\n<head>\r\n<meta http-equiv=\\\"Content-Type\\\" content=\\\"text/html; charset=utf-8\\\">\r\n<title>[!--pagetitle--]</title>\r\n<meta name=\\\"keywords\\\" content=\\\"[!--pagekey--]\\\">\r\n<meta name=\\\"description\\\" content=\\\"[!--pagedes--]\\\">\r\n<link href=\\\"../../data/images/qcss.css\\\" rel=\\\"stylesheet\\\" type=\\\"text/css\\\">\r\n</head>\r\n<body>\r\n<br>\r\n<br>\r\n<br>\r\n<br>\r\n<table align=\\\"center\\\" width=\\\"100%\\\">\r\n  <tr> \r\n    <td height=\\\"32\\\" align=center>\r\n	<a href=\\\"[!--down.url--]\\\" title=\\\"[!--title--] －[!--down.name--]\\\">\r\n	<img src=\\\"../../data/images/download.jpg\\\" border=0>\r\n	</a>\r\n	</td>\r\n  </tr>\r\n  <tr> \r\n    <td align=center>(点击下载)</td>\r\n  </tr>\r\n</table>\r\n<br>\r\n</body>\r\n</html>','[!--empirenews.listtemp--] \r\n      <table width=\\\"100%\\\" border=\\\"0\\\" align=\\\"center\\\" cellpadding=\\\"3\\\" cellspacing=\\\"1\\\" style=\\\"word-break:break-all; word-wrap:break-all;\\\">\r\n        <tr> \r\n          <td height=\\\"30\\\"><span class=\\\"name\\\">本站网友 [!--username--]</span> <font color=\\\"#666666\\\">ip:[!--plip--]</font></td>\r\n          <td><div align=\\\"right\\\"><font color=\\\"#666666\\\">[!--pltime--] 发表</font></div></td>\r\n        </tr>\r\n        <tr valign=\\\"top\\\"> \r\n          <td height=\\\"50\\\" colspan=\\\"2\\\" class=\\\"text\\\">[!--pltext--]</td>\r\n        </tr>\r\n        <tr> \r\n          <td height=\\\"30\\\">&nbsp;</td>\r\n          <td><div align=\\\"right\\\" class=\\\"re\\\"> \r\n              <a href=\\\"JavaScript:makeRequest(\\\'[!--news.url--]e/pl/doaction.php?enews=DoForPl&plid=[!--plid--]&classid=[!--classid--]&id=[!--id--]&dopl=1&doajax=1&ajaxarea=zcpldiv[!--plid--]\\\',\\\'EchoReturnedText\\\',\\\'GET\\\',\\\'\\\');\\\">支持</a>[<span id=\\\"zcpldiv[!--plid--]\\\">[!--zcnum--]</span>]&nbsp; \r\n              <a href=\\\"JavaScript:makeRequest(\\\'[!--news.url--]e/pl/doaction.php?enews=DoForPl&plid=[!--plid--]&classid=[!--classid--]&id=[!--id--]&dopl=0&doajax=1&ajaxarea=fdpldiv[!--plid--]\\\',\\\'EchoReturnedText\\\',\\\'GET\\\',\\\'\\\');\\\">反对</a>[<span id=\\\"fdpldiv[!--plid--]\\\">[!--fdnum--]</span>]\r\n            </div></td>\r\n        </tr>\r\n      </table>\r\n      <table width=\\\"100%\\\" border=\\\"0\\\" cellspacing=\\\"1\\\" cellpadding=\\\"3\\\">\r\n        <tr>\r\n          <td background=\\\"[!--news.url--]skin/default/images/plhrbg.gif\\\"></td>\r\n        </tr>\r\n      </table>\r\n[!--empirenews.listtemp--]','<!DOCTYPE html PUBLIC \\\"-//W3C//DTD XHTML 1.0 Transitional//EN\\\" \\\"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\\\">\r\n<html xmlns=\\\"http://www.w3.org/1999/xhtml\\\">\r\n<head>\r\n<meta http-equiv=\\\"Content-Type\\\" content=\\\"text/html; charset=utf-8\\\" />\r\n<title>搜索 - Powered by EmpireCMS</title>\r\n<link href=\\\"[!--news.url--]skin/default/css/style.css\\\" rel=\\\"stylesheet\\\" type=\\\"text/css\\\" />\r\n<script type=\\\"text/javascript\\\" src=\\\"[!--news.url--]skin/default/js/tabs.js\\\"></script>\r\n<style type=\\\"text/css\\\">\r\n<!--\r\n.r {\r\ndisplay:inline;\r\nfont-weight:normal;\r\nmargin:0;\r\nfont-size:16px;\r\nmargin-top:10px;\r\n}\r\n.a{color:green}\r\n.fl{color:#77c}\r\n-->\r\n</style>\r\n</head>\r\n<body class=\\\"listpage\\\">\r\n[!--temp.dtheader--]\r\n<table width=\\\"100%\\\" border=\\\"0\\\" cellspacing=\\\"10\\\" cellpadding=\\\"0\\\">\r\n	<tr valign=\\\"top\\\">\r\n		<td class=\\\"list_content\\\"><table width=\\\"100%\\\" border=\\\"0\\\" cellspacing=\\\"0\\\" cellpadding=\\\"0\\\" class=\\\"position\\\">\r\n				<tr>\r\n					<td>现在的位置：<a href=\\\"[!--news.url--]\\\">首页</a>&nbsp;>&nbsp;搜索</td>\r\n				</tr>\r\n			</table>\r\n			<table width=\\\"100%\\\" border=\\\"0\\\" cellspacing=\\\"0\\\" cellpadding=\\\"0\\\" class=\\\"box\\\">\r\n				<tr>\r\n					<td><form action=\\\'index.php\\\' method=\\\"GET\\\" name=\\\"search_news\\\" id=\\\"search_news\\\">\r\n							<table width=\\\"100%\\\" border=\\\"0\\\" cellspacing=\\\"6\\\" cellpadding=\\\"0\\\">\r\n								<tr>\r\n									<td height=\\\"32\\\">关键字：\r\n										<input name=\\\"keyboard\\\" type=\\\"text\\\" id=\\\"keyboard\\\" value=\\\"[!--keyboard--]\\\" size=\\\"42\\\" />\r\n                    <select name=\\\"field\\\" id=\\\"field\\\">\r\n                      <option value=\\\"1\\\">全文</option>\r\n                      <option value=\\\"2\\\">标题</option>\r\n                      <option value=\\\"3\\\">内容</option>\r\n                    </select> \r\n                    <input type=\\\"submit\\\" name=\\\"Submit22\\\" value=\\\"搜索\\\" />\r\n                    <font color=\\\"#666666\\\">(多个关键字请用&quot;空格&quot;隔开)</font> </td>\r\n								</tr>\r\n							</table>\r\n						</form>\r\n						<table width=\\\"100%\\\" border=\\\"0\\\" cellpadding=\\\"0\\\" cellspacing=\\\"6\\\">\r\n							<tr>\r\n								<td>系统搜索到约有<strong>[!--num--]</strong>项符合<strong>[!--keyboard--]</strong>的查询结果</td>\r\n							</tr>\r\n						</table>\r\n						[!--empirenews.listtemp--]\r\n						<h2 class=\\\"r\\\"><span>[!--no.num--].</span> <a class=\\\"l\\\" href=\\\"[!--titleurl--]\\\" target=\\\"_blank\\\">[!--title--]</a></h2>\r\n						<table width=\\\"80%\\\" border=\\\"0\\\" cellpadding=\\\"0\\\" cellspacing=\\\"0\\\">\r\n							<tbody>\r\n							<tr>\r\n								<td>[!--smalltext--]</td>\r\n							</tr>\r\n							<tr>\r\n								<td><span class=\\\"a\\\">[!--titleurl--] - [!--newstime--]</span></td>\r\n							</tr>\r\n							<tr>\r\n								<td>&nbsp;</td>\r\n							</tr>\r\n							</tbody>\r\n						</table>\r\n						[!--empirenews.listtemp--]\r\n						<table width=\\\"100%\\\" border=\\\"0\\\" cellspacing=\\\"0\\\" cellpadding=\\\"0\\\" class=\\\"list_page\\\">\r\n							<tr>\r\n								<td>[!--listpage--]</td>\r\n							</tr>\r\n						</table></td>\r\n				</tr>\r\n			</table></td>\r\n	</tr>\r\n</table>\r\n[!--temp.footer--]\r\n</body>\r\n</html>',120,'Y-m-d H:i:s');
+INSERT INTO `ziyi_enewspubtemp` VALUES (1,'<!DOCTYPE html PUBLIC \\\"-//W3C//DTD XHTML 1.0 Strict//EN\\\" \\\"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\\\">\r\n<html xmlns=\\\"http://www.w3.org/1999/xhtml\\\">\r\n<head>\r\n<meta http-equiv=\\\"Content-Type\\\" content=\\\"text/html; charset=utf-8\\\" />\r\n<title>ziyi title</title>\r\n<meta name=\\\"keywords\\\" content=\\\"\\\" />\r\n<meta name=\\\"description\\\" content=\\\"\\\" />\r\n<script type=\\\"text/javascript\\\" src=\\\"[!--news.url--]briefcase/jquery-1.7.1.min.js\\\"></script>\r\n<script type=\\\"text/javascript\\\" src=\\\"[!--news.url--]briefcase/jquery.slidertron-1.1.js\\\"></script>\r\n\r\n<link href=\\\"[!--news.url--]briefcase/default.css\\\" rel=\\\"stylesheet\\\" type=\\\"text/css\\\" media=\\\"all\\\" />\r\n<!--[if IE 6]>\r\n<link href=\\\"[!--news.url--]briefcase/[!--news.url--]briefcase/default_ie6.css\\\" rel=\\\"stylesheet\\\" type=\\\"text/css\\\" />\r\n<![endif]-->\r\n</head>\r\n<body>\r\n<div id=\\\"header\\\" class=\\\"container\\\">\r\n    <div id=\\\"logo\\\">\r\n        <h1><a href=\\\"[!--news.url--]\\\"><img src=\\\"[!--news.url--]briefcase/images/logo.png\\\"/></a></h1>\r\n    </div>\r\n    <div id=\\\"menu\\\">\r\n       [showclasstemp]\\\'0\\\',13,0,7[/showclasstemp]\r\n    </div>\r\n</div>\r\n<div id=\\\"banner\\\" class=\\\"container\\\">\r\n    <div id=\\\"slider\\\">\r\n    [ecmsinfo]9,4,32,0,0,14,0[/ecmsinfo]\r\n        <div class=\\\"indicator\\\">\r\n            <ul>\r\n                <li class=\\\"active\\\">1</li>\r\n                <li>2</li>\r\n                <li>3</li>\r\n                <li>4</li>\r\n            </ul>\r\n        </div>\r\n    </div>\r\n    <script type=\\\"text/javascript\\\">\r\n        $(\\\'#slider\\\').slidertron({\r\n            viewerSelector: \\\'.viewer\\\',\r\n            reelSelector: \\\'.viewer .reel\\\',\r\n            slidesSelector: \\\'.viewer .reel .slide\\\',\r\n            advanceDelay: 3000,\r\n            speed: \\\'slow\\\',\r\n            navPreviousSelector: \\\'.previous-button\\\',\r\n            navNextSelector: \\\'.next-button\\\',\r\n            indicatorSelector: \\\'.indicator ul li\\\',\r\n            slideLinkSelector: \\\'.link\\\'\r\n        });\r\n    </script> \r\n</div>\r\n<div id=\\\"page\\\" class=\\\"container\\\">\r\n    <div id=\\\"content\\\">\r\n        <div id=\\\"two-column\\\">\r\n           [ecmsinfo]5,2,32,0,0,15,0[/ecmsinfo]\r\n            <div class=\\\"box-content\\\">\r\n                <h2 class=\\\"title title02\\\">Maecenas luctus lectus</h2>\r\n                <p>Curabitur sit amet nulla. Nam in massa. Sed vel tellus. Curabitur sem urna, consequat vel, suscipit in, mattis placerat, nulla. Sed ac leo. Pellentesque imperdiet. In posuere  odio quisque semper augue mattis maecenas ligula.</p>\r\n            </div>\r\n        </div>\r\n    </div>\r\n    <div id=\\\"sidebar\\\">\r\n        <div id=\\\"sbox1\\\">\r\n            <h2>Fusce fringilla</h2>\r\n            <ul class=\\\"list-style1\\\">\r\n                <li class=\\\"first\\\">\r\n                    <p>Etiam non felis. Donec ut ante. In id eros. Suspendisse lacus, cursus egestas at sem. </p>\r\n                    <p><a href=\\\"[!--news.url--]briefcase/#\\\" class=\\\"link-style\\\">Read More</a></p>\r\n                </li>\r\n                <li>\r\n                    <p>Etiam non felis. Donec ut ante. In id eros. Suspendisse lacus turpis, cursus  at sem. </p>\r\n                    <p><a href=\\\"[!--news.url--]briefcase/#\\\" class=\\\"link-style\\\">Read More</a></p>\r\n                </li>\r\n            </ul>\r\n        </div>\r\n        <div id=\\\"sbox2\\\">\r\n            <h2>Testimonials</h2>\r\n            <p class=\\\"testimonial\\\">Pellentesque adipiscing purus ac magna. Pellentesque habitant morbi tristique senectus et netus et malesuada fames.</p>\r\n            <div class=\\\"author\\\"><img src=\\\"[!--news.url--]briefcase/images/pic03.jpg\\\" width=\\\"80\\\" height=\\\"80\\\" alt=\\\"\\\" /><span class=\\\"name\\\">Juan Dela Cruz</span><span class=\\\"position\\\">Company CEO</span><span>MyCompany, LLC</span></div>\r\n        </div>\r\n    </div>\r\n</div>\r\n<div id=\\\"footer\\\" class=\\\"container\\\">\r\n    <div id=\\\"fbox1\\\">\r\n        <h2>Aenean elementum</h2>\r\n        <ul class=\\\"style1\\\">\r\n            <li class=\\\"first\\\"><a href=\\\"[!--news.url--]briefcase/#\\\">Consectetuer adipiscing elit</a></li>\r\n            <li><a href=\\\"[!--news.url--]briefcase/#\\\">Metus aliquam pellentesque</a></li>\r\n            <li><a href=\\\"[!--news.url--]briefcase/#\\\">Suspendisse iaculis mauris</a></li>\r\n            <li><a href=\\\"[!--news.url--]briefcase/#\\\">Urnanet non molestie semper</a></li>\r\n            <li><a href=\\\"[!--news.url--]briefcase/#\\\">Proin gravida orci porttitor</a></li>\r\n        </ul>\r\n    </div>\r\n    <div id=\\\"fbox2\\\">\r\n        <h2>Vestibulum luctus</h2>\r\n        <ul class=\\\"style1\\\">\r\n            <li class=\\\"first\\\"><a href=\\\"[!--news.url--]briefcase/#\\\">Consectetuer adipiscing elit</a></li>\r\n            <li><a href=\\\"[!--news.url--]briefcase/#\\\">Metus aliquam pellentesque</a></li>\r\n            <li><a href=\\\"[!--news.url--]briefcase/#\\\">Suspendisse iaculis mauris</a></li>\r\n            <li><a href=\\\"[!--news.url--]briefcase/#\\\">Urnanet non molestie semper</a></li>\r\n            <li><a href=\\\"[!--news.url--]briefcase/#\\\">Proin gravida orci porttitor</a></li>\r\n        </ul>\r\n    </div>\r\n    <div id=\\\"fbox3\\\">\r\n        <h2>Etiam malesuada</h2>\r\n        <p>In posuere eleifend odio. Quisque semper augue mattis wisi. Maecenas ligula. Pellentesque viverra vulputate enim. Donec leo. Vivamus fermentum nibh in augue.</p>\r\n        <ul class=\\\"style2\\\">\r\n            <li><a href=\\\"[!--news.url--]briefcase/#\\\"><img src=\\\"[!--news.url--]briefcase/images/social03.png\\\" width=\\\"32\\\" height=\\\"32\\\" alt=\\\"\\\" /></a></li>\r\n            <li><a href=\\\"[!--news.url--]briefcase/#\\\"><img src=\\\"[!--news.url--]briefcase/images/social01.png\\\" width=\\\"32\\\" height=\\\"32\\\" alt=\\\"\\\" /></a></li>\r\n            <li><a href=\\\"[!--news.url--]briefcase/#\\\"><img src=\\\"[!--news.url--]briefcase/images/social04.png\\\" width=\\\"32\\\" height=\\\"32\\\" alt=\\\"\\\" /></a></li>\r\n            <li><a href=\\\"[!--news.url--]briefcase/#\\\"><img src=\\\"[!--news.url--]briefcase/images/social02.png\\\" width=\\\"32\\\" height=\\\"32\\\" alt=\\\"\\\" /></a></li>\r\n        </ul>\r\n    </div>\r\n</div>\r\n<div id=\\\"copyright\\\" class=\\\"container\\\">\r\n    <p>Copyright (c) 2013 Sitename.com. All rights reserved. Design by <a href=\\\"[!--news.url--]briefcase/http://www.freecsstemplates.org/\\\" rel=\\\"nofollow\\\">FreeCSSTemplates.org</a>. Photos by <a href=\\\"[!--news.url--]briefcase/http://fotogrph.com/\\\">Fotogrph</a>.</p>\r\n</div>\r\n</body>\r\n</html>','<!DOCTYPE html PUBLIC \\\"-//W3C//DTD XHTML 1.0 Transitional//EN\\\" \\\"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\\\">\r\n<html xmlns=\\\"http://www.w3.org/1999/xhtml\\\">\r\n<head>\r\n<meta http-equiv=\\\"Content-Type\\\" content=\\\"text/html; charset=utf-8\\\" />\r\n<title>[!--pagetitle--] - Powered by EmpireCMS</title>\r\n<meta name=\\\"keywords\\\" content=\\\"[!--pagekey--]\\\" />\r\n<meta name=\\\"description\\\" content=\\\"[!--pagedes--]\\\" />\r\n<link href=\\\"[!--news.url--]skin/default/css/style.css\\\" rel=\\\"stylesheet\\\" type=\\\"text/css\\\" />\r\n<script type=\\\"text/javascript\\\" src=\\\"[!--news.url--]skin/default/js/tabs.js\\\"></script>\r\n</head>\r\n<body class=\\\"listpage\\\">\r\n[!--temp.dtheader--] \r\n<table width=\\\"100%\\\" border=\\\"0\\\" cellspacing=\\\"10\\\" cellpadding=\\\"0\\\">\r\n<tr valign=\\\"top\\\">\r\n<td class=\\\"list_content\\\"><table width=\\\"100%\\\" border=\\\"0\\\" cellspacing=\\\"0\\\" cellpadding=\\\"0\\\" class=\\\"position\\\">\r\n<tr>\r\n<td>现在的位置：[!--newsnav--]\r\n</td>\r\n</tr>\r\n</table>\r\n      <table width=\\\"100%\\\" border=\\\"0\\\" cellspacing=\\\"0\\\" cellpadding=\\\"0\\\" class=\\\"box\\\">\r\n        <tr> \r\n          <td width=\\\"300\\\" valign=\\\"top\\\"> \r\n		  <?php\r\n		  $lguserid=intval(getcvar(\\\'mluserid\\\'));//登陆用户ID\r\n		  $lgusername=RepPostVar(getcvar(\\\'mlusername\\\'));//登陆用户\r\n		  $lggroupid=intval(getcvar(\\\'mlgroupid\\\'));//会员组ID\r\n		  if($lggroupid)	//登陆会员显示菜单\r\n		  {\r\n		  ?>\r\n            <table width=\\\"100%\\\" border=\\\"0\\\" cellpadding=\\\"3\\\" cellspacing=\\\"1\\\" class=\\\"tableborder\\\">\r\n              <tr class=\\\"header\\\"> \r\n                <td height=\\\"20\\\" bgcolor=\\\"#FFFFFF\\\"> <div align=\\\"center\\\"><strong><a href=\\\"[!--news.url--]e/member/cp/\\\">功能菜单</a></strong></div></td>\r\n              </tr>\r\n              <tr> \r\n                <td height=\\\"25\\\" bgcolor=\\\"#FFFFFF\\\" onmouseout=\\\"this.style.backgroundColor=\\\'#ffffff\\\'\\\" onmouseover=\\\"this.style.backgroundColor=\\\'#EBF3FC\\\'\\\"><div align=\\\"center\\\"><a href=\\\"[!--news.url--]e/member/EditInfo/\\\">修改资料</a></div></td>\r\n              </tr>\r\n              <tr> \r\n                <td height=\\\"25\\\" bgcolor=\\\"#FFFFFF\\\" onmouseout=\\\"this.style.backgroundColor=\\\'#ffffff\\\'\\\" onmouseover=\\\"this.style.backgroundColor=\\\'#EBF3FC\\\'\\\"><div align=\\\"center\\\"><a href=\\\"[!--news.url--]e/member/my/\\\">帐号状态</a></div></td>\r\n              </tr>\r\n              <tr> \r\n                <td height=\\\"25\\\" bgcolor=\\\"#FFFFFF\\\" onmouseout=\\\"this.style.backgroundColor=\\\'#ffffff\\\'\\\" onmouseover=\\\"this.style.backgroundColor=\\\'#EBF3FC\\\'\\\"><div align=\\\"center\\\"><a href=\\\"[!--news.url--]e/member/msg/\\\">站内信息</a></div></td>\r\n              </tr>\r\n              <tr> \r\n                <td height=\\\"25\\\" bgcolor=\\\"#FFFFFF\\\" onmouseout=\\\"this.style.backgroundColor=\\\'#ffffff\\\'\\\" onmouseover=\\\"this.style.backgroundColor=\\\'#EBF3FC\\\'\\\"><div align=\\\"center\\\"><a href=\\\"[!--news.url--]e/member/mspace/SetSpace.php\\\">空间设置</a></div></td>\r\n              </tr>\r\n              <tr> \r\n                <td height=\\\"25\\\" bgcolor=\\\"#FFFFFF\\\" onmouseout=\\\"this.style.backgroundColor=\\\'#ffffff\\\'\\\" onmouseover=\\\"this.style.backgroundColor=\\\'#EBF3FC\\\'\\\"><div align=\\\"center\\\"><a href=\\\"[!--news.url--]e/DoInfo/\\\">管理信息</a></div></td>\r\n              </tr>\r\n              <tr> \r\n                <td height=\\\"25\\\" bgcolor=\\\"#FFFFFF\\\" onmouseout=\\\"this.style.backgroundColor=\\\'#ffffff\\\'\\\" onmouseover=\\\"this.style.backgroundColor=\\\'#EBF3FC\\\'\\\"><div align=\\\"center\\\"><a href=\\\"[!--news.url--]e/member/fava/\\\">收藏夹</a></div></td>\r\n              </tr>\r\n              <tr> \r\n                <td height=\\\"25\\\" bgcolor=\\\"#FFFFFF\\\" onmouseout=\\\"this.style.backgroundColor=\\\'#ffffff\\\'\\\" onmouseover=\\\"this.style.backgroundColor=\\\'#EBF3FC\\\'\\\"><div align=\\\"center\\\"><a href=\\\"[!--news.url--]e/payapi/\\\">在线支付</a></div></td>\r\n              </tr>\r\n              <tr> \r\n                <td height=\\\"25\\\" bgcolor=\\\"#FFFFFF\\\" onmouseout=\\\"this.style.backgroundColor=\\\'#ffffff\\\'\\\" onmouseover=\\\"this.style.backgroundColor=\\\'#EBF3FC\\\'\\\"><div align=\\\"center\\\"><a href=\\\"[!--news.url--]e/member/friend/\\\">我的好友</a></div></td>\r\n              </tr>\r\n              <tr> \r\n                <td height=\\\"25\\\" bgcolor=\\\"#FFFFFF\\\" onmouseout=\\\"this.style.backgroundColor=\\\'#ffffff\\\'\\\" onmouseover=\\\"this.style.backgroundColor=\\\'#EBF3FC\\\'\\\"><div align=\\\"center\\\"><a href=\\\"[!--news.url--]e/member/buybak/\\\">消费记录</a></div></td>\r\n              </tr>\r\n              <tr> \r\n                <td height=\\\"25\\\" bgcolor=\\\"#FFFFFF\\\" onmouseout=\\\"this.style.backgroundColor=\\\'#ffffff\\\'\\\" onmouseover=\\\"this.style.backgroundColor=\\\'#EBF3FC\\\'\\\"><div align=\\\"center\\\"><a href=\\\"[!--news.url--]e/member/buygroup/\\\">在线充值</a></div></td>\r\n              </tr>\r\n              <tr> \r\n                <td height=\\\"25\\\" bgcolor=\\\"#FFFFFF\\\" onmouseout=\\\"this.style.backgroundColor=\\\'#ffffff\\\'\\\" onmouseover=\\\"this.style.backgroundColor=\\\'#EBF3FC\\\'\\\"><div align=\\\"center\\\"><a href=\\\"[!--news.url--]e/member/card/\\\">点卡充值</a></div></td>\r\n              </tr>\r\n              <tr> \r\n                <td height=\\\"25\\\" bgcolor=\\\"#FFFFFF\\\" onmouseout=\\\"this.style.backgroundColor=\\\'#ffffff\\\'\\\" onmouseover=\\\"this.style.backgroundColor=\\\'#EBF3FC\\\'\\\"><div align=\\\"center\\\"><a href=\\\"#ecms\\\" onclick=\\\"window.open(\\\'[!--news.url--]e/ShopSys/buycar/\\\',\\\'\\\',\\\'width=680,height=500,scrollbars=yes,resizable=yes\\\');\\\">我的购物车</a></div></td>\r\n              </tr>\r\n              <tr> \r\n                <td height=\\\"25\\\" bgcolor=\\\"#FFFFFF\\\" onmouseout=\\\"this.style.backgroundColor=\\\'#ffffff\\\'\\\" onmouseover=\\\"this.style.backgroundColor=\\\'#EBF3FC\\\'\\\"><div align=\\\"center\\\"><a href=\\\"[!--news.url--]e/ShopSys/ListDd/\\\">我的订单</a></div></td>\r\n              </tr>\r\n			  <tr> \r\n                <td height=\\\"25\\\" bgcolor=\\\"#FFFFFF\\\" onmouseout=\\\"this.style.backgroundColor=\\\'#ffffff\\\'\\\" onmouseover=\\\"this.style.backgroundColor=\\\'#EBF3FC\\\'\\\"><div align=\\\"center\\\"><a href=\\\"[!--news.url--]e/member/login/\\\">重新登陆</a></div></td>\r\n              </tr>\r\n              <tr> \r\n                <td height=\\\"25\\\" bgcolor=\\\"#FFFFFF\\\" onmouseout=\\\"this.style.backgroundColor=\\\'#ffffff\\\'\\\" onmouseover=\\\"this.style.backgroundColor=\\\'#EBF3FC\\\'\\\"><div align=\\\"center\\\"><a href=\\\"[!--news.url--]e/member/doaction.php?enews=exit\\\" onclick=\\\"return confirm(\\\'确认要退出?\\\');\\\">退出登陆</a></div></td>\r\n              </tr>\r\n            </table>\r\n			<?php\r\n			}\r\n			else	//游客显示菜单\r\n			{\r\n			?>  \r\n            <table width=\\\"100%\\\" border=\\\"0\\\" cellpadding=\\\"3\\\" cellspacing=\\\"1\\\" class=\\\"tableborder\\\">\r\n              <tr class=\\\"header\\\"> \r\n                <td height=\\\"20\\\" bgcolor=\\\"#FFFFFF\\\"> <div align=\\\"center\\\"><strong><a href=\\\"[!--news.url--]e/member/cp/\\\">功能菜单</a></strong></div></td>\r\n              </tr>\r\n              <tr> \r\n                <td height=\\\"25\\\" bgcolor=\\\"#FFFFFF\\\" onmouseout=\\\"this.style.backgroundColor=\\\'#ffffff\\\'\\\" onmouseover=\\\"this.style.backgroundColor=\\\'#EBF3FC\\\'\\\"><div align=\\\"center\\\"><a href=\\\"[!--news.url--]e/member/login/\\\">会员登陆</a></div></td>\r\n              </tr>\r\n              <tr> \r\n                <td height=\\\"25\\\" bgcolor=\\\"#FFFFFF\\\" onmouseout=\\\"this.style.backgroundColor=\\\'#ffffff\\\'\\\" onmouseover=\\\"this.style.backgroundColor=\\\'#EBF3FC\\\'\\\"><div align=\\\"center\\\"><a href=\\\"[!--news.url--]e/member/register/\\\">注册帐号</a></div></td>\r\n              </tr>\r\n              <tr> \r\n                <td height=\\\"25\\\" bgcolor=\\\"#FFFFFF\\\" onmouseout=\\\"this.style.backgroundColor=\\\'#ffffff\\\'\\\" onmouseover=\\\"this.style.backgroundColor=\\\'#EBF3FC\\\'\\\"><div align=\\\"center\\\"><a href=\\\"[!--news.url--]e/DoInfo/\\\">发布投稿</a></div></td>\r\n              </tr>\r\n              <tr> \r\n                <td height=\\\"25\\\" bgcolor=\\\"#FFFFFF\\\" onmouseout=\\\"this.style.backgroundColor=\\\'#ffffff\\\'\\\" onmouseover=\\\"this.style.backgroundColor=\\\'#EBF3FC\\\'\\\"><div align=\\\"center\\\"><a href=\\\"#ecms\\\" onclick=\\\"window.open(\\\'[!--news.url--]e/ShopSys/buycar/\\\',\\\'\\\',\\\'width=680,height=500,scrollbars=yes,resizable=yes\\\');\\\">我的购物车</a></div></td>\r\n              </tr>\r\n            </table>\r\n			<?php\r\n			}\r\n			?>\r\n			</td>\r\n          <td width=\\\"85%\\\" valign=\\\"top\\\">[!--empirenews.template--]</td>\r\n        </tr>\r\n      </table></td>\r\n</tr>\r\n</table>\r\n[!--temp.footer--]\r\n</body>\r\n</html>','<!DOCTYPE html PUBLIC \\\"-//W3C//DTD XHTML 1.0 Transitional//EN\\\" \\\"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\\\">\r\n<html xmlns=\\\"http://www.w3.org/1999/xhtml\\\">\r\n<head>\r\n<meta http-equiv=\\\"Content-Type\\\" content=\\\"text/html; charset=utf-8\\\" />\r\n<title>高级搜索 - Powered by EmpireCMS</title>\r\n<link href=\\\"[!--news.url--]skin/default/css/style.css\\\" rel=\\\"stylesheet\\\" type=\\\"text/css\\\" />\r\n<script type=\\\"text/javascript\\\" src=\\\"[!--news.url--]skin/default/js/tabs.js\\\"></script>\r\n<script src=\\\"[!--news.url--]e/data/images/setday.js\\\"></script>\r\n</head>\r\n<body class=\\\"listpage\\\">\r\n[!--temp.dtheader--]\r\n<table width=\\\"100%\\\" border=\\\"0\\\" cellspacing=\\\"10\\\" cellpadding=\\\"0\\\">\r\n	<tr valign=\\\"top\\\">\r\n		<td class=\\\"list_content\\\"><table width=\\\"100%\\\" border=\\\"0\\\" cellspacing=\\\"0\\\" cellpadding=\\\"0\\\" class=\\\"position\\\">\r\n				<tr>\r\n					<td>现在的位置：[!--url--]</td>\r\n				</tr>\r\n			</table>\r\n			<table width=\\\"100%\\\" border=\\\"0\\\" cellspacing=\\\"0\\\" cellpadding=\\\"0\\\" class=\\\"box\\\">\r\n				<tr>\r\n					<td><table width=\\\"100%\\\" border=\\\"0\\\" cellpadding=\\\"0\\\" cellspacing=\\\"0\\\">\r\n						<tr>\r\n							<td><form action=\\\'[!--news.url--]e/search/index.php\\\' method=\\\"post\\\" name=\\\"search_news\\\" id=\\\"search_news\\\">\r\n									<table width=\\\"100%\\\" border=\\\"0\\\" cellspacing=\\\"0\\\" cellpadding=\\\"0\\\">\r\n										<tr>\r\n											<td width=\\\"54%\\\"><table width=\\\"100%\\\" border=\\\"0\\\" cellpadding=\\\"6\\\" cellspacing=\\\"0\\\">\r\n													<tr>\r\n														<td bgcolor=\\\"#F4F4F4\\\"><strong>搜索范围</strong></td>\r\n													</tr>\r\n											</table></td>\r\n											<td width=\\\"46%\\\"><table width=\\\"100%\\\" border=\\\"0\\\" cellpadding=\\\"6\\\" cellspacing=\\\"0\\\">\r\n													<tr>\r\n														<td bgcolor=\\\"#F4F4F4\\\"><strong>搜索栏目</strong></td>\r\n													</tr>\r\n											</table></td>\r\n										</tr>\r\n										<tr>\r\n											<td valign=\\\"top\\\"><table width=\\\"100%\\\" border=\\\"0\\\" cellpadding=\\\"6\\\" cellspacing=\\\"0\\\">\r\n													<tr>\r\n														<td><input type=\\\"radio\\\" name=\\\"show\\\" value=\\\"title\\\" checked=\\\"checked\\\" />\r\n															标题\r\n															<input type=\\\"radio\\\" name=\\\"show\\\" value=\\\"smalltext\\\" />\r\n															简介\r\n															<input type=\\\"radio\\\" name=\\\"show\\\" value=\\\"newstext\\\" />\r\n															内容\r\n															<input type=\\\"radio\\\" name=\\\"show\\\" value=\\\"writer\\\" />\r\n															作者\r\n															<input name=\\\"show\\\" type=\\\"radio\\\" value=\\\"title,smalltext,newstext,writer\\\" />\r\n															不限</td>\r\n													</tr>\r\n												</table>\r\n													<br />\r\n													<table width=\\\"100%\\\" border=\\\"0\\\" cellpadding=\\\"6\\\" cellspacing=\\\"0\\\">\r\n														<tr bgcolor=\\\"#F4F4F4\\\">\r\n															<td><strong>时间限制</strong><font color=\\\"#666666\\\">(0000-00-00为不限制)</font></td>\r\n														</tr>\r\n														<tr>\r\n															<td height=\\\"30\\\" valign=\\\"top\\\">从\r\n																<input name=\\\"starttime\\\" type=\\\"text\\\" value=\\\"0000-00-00\\\" size=\\\"12\\\" onclick=\\\"setday(this)\\\" />\r\n																到\r\n																<input name=\\\"endtime\\\" type=\\\"text\\\" value=\\\"0000-00-00\\\" size=\\\"12\\\" onclick=\\\"setday(this)\\\" />\r\n																之间的数据</td>\r\n														</tr>\r\n														<tr>\r\n															<td bgcolor=\\\"#F4F4F4\\\"><strong>价格限制</strong><font color=\\\"#666666\\\">(商城模型中有效,0为不限制)</font></td>\r\n														</tr>\r\n														<tr>\r\n															<td>从\r\n																<input name=\\\"startprice\\\" type=\\\"text\\\" id=\\\"startprice\\\" value=\\\"0\\\" size=\\\"6\\\" />\r\n																到\r\n																<input name=\\\"endprice\\\" type=\\\"text\\\" id=\\\"endprice\\\" value=\\\"0\\\" size=\\\"6\\\" />\r\n																元之间</td>\r\n														</tr>\r\n												</table></td>\r\n											<td valign=\\\"top\\\"><table width=\\\"100%\\\" border=\\\"0\\\" cellspacing=\\\"6\\\" cellpadding=\\\"0\\\">\r\n													<tr>\r\n														<td><select name=\\\"classid\\\" size=\\\"8\\\" id=\\\"select2\\\" style=\\\"width: 100%;height:112px\\\">\r\n																<option value=\\\"0\\\" selected=\\\"selected\\\">所有栏目</option>\r\n															[!--class--]\r\n          \r\n														</select></td>\r\n													</tr>\r\n												</table>\r\n													<table width=\\\"100%\\\" border=\\\"0\\\" cellpadding=\\\"6\\\" cellspacing=\\\"0\\\">\r\n														<tr>\r\n															<td bgcolor=\\\"#F4F4F4\\\"><strong>结果显示</strong></td>\r\n														</tr>\r\n														<tr>\r\n															<td height=\\\"30\\\"><select name=\\\"orderby\\\" id=\\\"select4\\\">\r\n																	<option value=\\\"\\\">按发布日期</option>\r\n																	<option value=\\\"id\\\">信息ID</option>\r\n																	<option value=\\\"plnum\\\">评论数</option>\r\n																	<option value=\\\"onclick\\\">人气</option>\r\n																	<option value=\\\"totaldown\\\">下载数</option>\r\n																</select>\r\n																	<select name=\\\"myorder\\\" id=\\\"select5\\\">\r\n																		<option value=\\\"0\\\">倒序排列</option>\r\n																		<option value=\\\"1\\\">顺序排列</option>\r\n																	</select>\r\n															</td>\r\n														</tr>\r\n												</table></td>\r\n										</tr>\r\n									</table>\r\n								<table width=\\\"100%\\\" border=\\\"0\\\" cellpadding=\\\"4\\\" cellspacing=\\\"0\\\">\r\n										<tr>\r\n											<td>关键字：\r\n												<input name=\\\"keyboard\\\" type=\\\"text\\\" id=\\\"keyboard2\\\" size=\\\"60\\\" />\r\n													<input type=\\\"submit\\\" name=\\\"Submit22\\\" value=\\\"搜索\\\" />\r\n											</td>\r\n										</tr>\r\n									</table>\r\n							</form></td>\r\n						</tr>\r\n					</table></td>\r\n				</tr>\r\n			</table></td>\r\n	</tr>\r\n</table>\r\n[!--temp.footer--]\r\n</body>\r\n</html>','<table border=0 cellpadding=3 cellspacing=1><form name=search_js1 method=post action=\'[!--news.url--]e/search/index.php\' onsubmit=\'return search_check(document.search_js1);\'><tr><td><div align=center>搜索: <select name=show><option value=title>标题</option><option value=smalltext>简介</option><option value=newstext>内容</option><option value=writer>作者</option><option value=title,smalltext,newstext,writer>搜索全部</option></select><select name=classid><option value=0>所有栏目</option>[!--class--]</select><input name=keyboard type=text size=13><input type=submit name=Submit value=搜索></div></td></tr></form></table>','<table width=99% border=0 cellpadding=3 cellspacing=1><form name=search_js2 method=post action=\'[!--news.url--]e/search/index.php\' onsubmit=\'return search_check(document.search_js2);\'><tr><td height=25><div align=center>关键字: <input name=keyboard type=text size=13></div></td></tr><tr><td><div align=center>范围: <select name=show><option value=title>标题</option><option value=smalltext>简介</option><option value=newstext>内容</option><option value=writer>作者</option><option value=title,smalltext,newstext,writer>搜索全部</option></select></div></td></tr><tr><td><div align=center>栏目:<select name=classid><option value=0>所有栏目</option>[!--class--]</select></div></td></tr><tr><td><div align=center><input type=submit name=Submit value=搜索></div></td></tr></form></table>','[!--empirenews.listtemp--]<li><a href=\"[!--titleurl--]\" title=\"[!--oldtitle--]\">[!--title--]</a></li>[!--empirenews.listtemp--]','[ <a href=\\\"#ecms\\\" onclick=\\\"window.open(\\\'[!--down.url--]\\\',\\\'\\\',\\\'width=300,height=300,resizable=yes\\\');\\\">[!--down.name--]</a> ]','[ <a href=\\\"#ecms\\\" onclick=\\\"window.open(\\\'[!--down.url--]\\\',\\\'\\\',\\\'width=300,height=300,resizable=yes\\\');\\\">[!--down.name--]</a> ]','页次：[!--thispage--]/[!--pagenum--]&nbsp;每页[!--lencord--]&nbsp;总数[!--num--]&nbsp;&nbsp;&nbsp;&nbsp;[!--pagelink--]&nbsp;&nbsp;&nbsp;&nbsp;转到:[!--options--]','<!DOCTYPE html PUBLIC \\\"-//W3C//DTD XHTML 1.0 Transitional//EN\\\" \\\"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\\\">\r\n<html xmlns=\\\"http://www.w3.org/1999/xhtml\\\">\r\n<head>\r\n<meta http-equiv=\\\"Content-Type\\\" content=\\\"text/html; charset=utf-8\\\" />\r\n<title>留言板 - Powered by EmpireCMS</title>\r\n<meta name=\\\"keywords\\\" content=\\\"[!--bname--]\\\" />\r\n<meta name=\\\"description\\\" content=\\\"[!--bname--]\\\" />\r\n<link href=\\\"[!--news.url--]skin/default/css/style.css\\\" rel=\\\"stylesheet\\\" type=\\\"text/css\\\" />\r\n<script type=\\\"text/javascript\\\" src=\\\"[!--news.url--]skin/default/js/tabs.js\\\"></script>\r\n</head>\r\n<body class=\\\"listpage\\\">\r\n[!--temp.dtheader--]\r\n<table width=\\\"100%\\\" border=\\\"0\\\" cellspacing=\\\"10\\\" cellpadding=\\\"0\\\">\r\n<tr valign=\\\"top\\\">\r\n<td class=\\\"list_content\\\"><table width=\\\"100%\\\" border=\\\"0\\\" cellspacing=\\\"0\\\" cellpadding=\\\"0\\\" class=\\\"position\\\">\r\n<tr>\r\n<td>现在的位置：<a href=../../../>首页</a>&nbsp;>&nbsp;[!--bname--]\r\n</td>\r\n</tr>\r\n</table><table width=\\\"100%\\\" border=\\\"0\\\" cellspacing=\\\"0\\\" cellpadding=\\\"0\\\" class=\\\"box\\\">\r\n	<tr>\r\n		<td><table width=\\\"100%\\\" border=\\\"0\\\" cellpadding=\\\"3\\\" cellspacing=\\\"2\\\">\r\n			<tr>\r\n				<td align=\\\"center\\\" bgcolor=\\\"#E1EFFB\\\"><strong>[!--bname--]</strong></td>\r\n			</tr>\r\n			<tr>\r\n				<td align=\\\"left\\\" valign=\\\"top\\\"><table width=\\\"100%\\\" border=\\\"0\\\" cellpadding=\\\"4\\\" cellspacing=\\\"0\\\" bgcolor=\\\"#FFFFFF\\\">\r\n						<tr>\r\n							<td height=\\\"100%\\\" valign=\\\"top\\\" bgcolor=\\\"#FFFFFF\\\"> [!--empirenews.listtemp--]\r\n								<table width=\\\"92%\\\" border=\\\"0\\\" align=\\\"center\\\" cellpadding=\\\"4\\\" cellspacing=\\\"1\\\" bgcolor=\\\"#F4F9FD\\\" class=\\\"tableborder\\\">\r\n										<tr class=\\\"header\\\">\r\n											<td width=\\\"55%\\\" height=\\\"23\\\">发布者: [!--name--] </td>\r\n											<td width=\\\"45%\\\">发布时间: [!--lytime--] </td>\r\n										</tr>\r\n										<tr bgcolor=\\\"#FFFFFF\\\">\r\n											<td height=\\\"23\\\" colspan=\\\"2\\\"><table border=\\\"0\\\" width=\\\"100%\\\" cellspacing=\\\"1\\\" cellpadding=\\\"8\\\" bgcolor=\\\'#cccccc\\\'>\r\n													<tr>\r\n														<td width=\\\'100%\\\' bgcolor=\\\'#FFFFFF\\\' style=\\\'word-break:break-all\\\'> [!--lytext--] </td>\r\n													</tr>\r\n												</table>\r\n												[!--start.regbook--]\r\n												<table width=\\\"100%\\\" border=\\\"0\\\" align=\\\"center\\\" cellpadding=\\\"3\\\" cellspacing=\\\"1\\\">\r\n													<tr>\r\n														<td><img src=\\\"../../data/images/regb.gif\\\" width=\\\"18\\\" height=\\\"18\\\" /><strong><font color=\\\"#FF0000\\\">回复:</font></strong> [!--retext--] </td>\r\n													</tr>\r\n												</table>\r\n												[!--end.regbook--] </td>\r\n										</tr>\r\n									</table>\r\n								<br />\r\n								[!--empirenews.listtemp--]\r\n								<table width=\\\"92%\\\" border=\\\"0\\\" align=\\\"center\\\" cellpadding=\\\"4\\\" cellspacing=\\\"1\\\">\r\n									<tr>\r\n										<td>分页: [!--listpage--]</td>\r\n									</tr>\r\n								</table>\r\n								<form action=\\\"../../enews/index.php\\\" method=\\\"post\\\" name=\\\"form1\\\" id=\\\"form1\\\">\r\n									<table width=\\\"92%\\\" border=\\\"0\\\" align=\\\"center\\\" cellpadding=\\\"4\\\" cellspacing=\\\"1\\\"class=\\\"tableborder\\\">\r\n										<tr class=\\\"header\\\">\r\n											<td colspan=\\\"2\\\" bgcolor=\\\"#F4F9FD\\\"><strong>请您留言:</strong></td>\r\n										</tr>\r\n										<tr bgcolor=\\\"#FFFFFF\\\">\r\n											<td width=\\\"20%\\\">姓名:</td>\r\n											<td width=\\\"722\\\" height=\\\"23\\\"><input name=\\\"name\\\" type=\\\"text\\\" id=\\\"name\\\" />\r\n												*</td>\r\n										</tr>\r\n										<tr bgcolor=\\\"#FFFFFF\\\">\r\n											<td>联系邮箱:</td>\r\n											<td height=\\\"23\\\"><input name=\\\"email\\\" type=\\\"text\\\" id=\\\"email\\\" />\r\n												*</td>\r\n										</tr>\r\n										<tr bgcolor=\\\"#FFFFFF\\\">\r\n											<td>联系电话:</td>\r\n											<td height=\\\"23\\\"><input name=\\\"mycall\\\" type=\\\"text\\\" id=\\\"mycall\\\" /></td>\r\n										</tr>\r\n										<tr bgcolor=\\\"#FFFFFF\\\">\r\n											<td>留言内容(*):</td>\r\n											<td height=\\\"23\\\"><textarea name=\\\"lytext\\\" cols=\\\"60\\\" rows=\\\"12\\\" id=\\\"lytext\\\"></textarea></td>\r\n										</tr>\r\n										<tr bgcolor=\\\"#FFFFFF\\\">\r\n											<td height=\\\"23\\\">&nbsp;</td>\r\n											<td height=\\\"23\\\"><input type=\\\"submit\\\" name=\\\"Submit3\\\" value=\\\"提交\\\" />\r\n											<input type=\\\"reset\\\" name=\\\"Submit22\\\" value=\\\"重置\\\" />\r\n											<input name=\\\"enews\\\" type=\\\"hidden\\\" id=\\\"enews\\\" value=\\\"AddGbook\\\" /></td>\r\n										</tr>\r\n									</table>\r\n								</form></td>\r\n						</tr>\r\n				</table></td>\r\n			</tr>\r\n		</table></td>\r\n	</tr>\r\n</table></td>\r\n</tr>\r\n</table>\r\n[!--temp.footer--]\r\n</body>\r\n</html>','<html>\r\n<head>\r\n<meta http-equiv=\\\"Content-Type\\\" content=\\\"text/html; charset=utf-8\\\">\r\n<title>登陆</title>\r\n<LINK href=\\\"../../data/images/qcss.css\\\" rel=stylesheet>\r\n</head>\r\n<body bgcolor=\\\"#ededed\\\" topmargin=\\\"0\\\">\r\n<table border=\\\"0\\\" cellpadding=\\\"0\\\" cellspacing=\\\"0\\\" width=\\\"100%\\\">\r\n  <form name=login method=post action=\\\"../../member/doaction.php\\\">\r\n    <input type=hidden name=enews value=login>\r\n    <input type=hidden name=prtype value=1>\r\n    <tr> \r\n      <td height=\\\"23\\\" align=\\\"center\\\">\r\n      <div align=\\\"left\\\">\r\n      用户名：<input name=\\\"username\\\" type=\\\"text\\\" size=\\\"8\\\">&nbsp;\r\n      密码：<input name=\\\"password\\\" type=\\\"password\\\" size=\\\"8\\\">\r\n      <select name=\\\"lifetime\\\" id=\\\"lifetime\\\">\r\n         <option value=\\\"0\\\">不保存</option>\r\n         <option value=\\\"3600\\\">一小时</option>\r\n         <option value=\\\"86400\\\">一天</option>\r\n         <option value=\\\"2592000\\\">一个月</option>\r\n         <option value=\\\"315360000\\\">永久</option>\r\n      </select>&nbsp;\r\n      <input type=\\\"submit\\\" name=\\\"Submit\\\" value=\\\"登陆\\\">&nbsp;\r\n      <input type=\\\"button\\\" name=\\\"Submit2\\\" value=\\\"注册\\\" onclick=\\\"window.open(\\\'../register/\\\');\\\">\r\n      </div>\r\n      </td>\r\n    </tr>\r\n  </form>\r\n</table>\r\n</body>\r\n</html>\r\n[!--empirenews.template--]\r\n<html>\r\n<head>\r\n<meta http-equiv=\\\"Content-Type\\\" content=\\\"text/html; charset=utf-8\\\">\r\n<title>登陆</title>\r\n<LINK href=\\\"../../data/images/qcss.css\\\" rel=stylesheet>\r\n</head>\r\n<body bgcolor=\\\"#ededed\\\" topmargin=\\\"0\\\">\r\n<table border=\\\"0\\\" cellpadding=\\\"0\\\" cellspacing=\\\"0\\\" width=\\\"100%\\\">\r\n    <tr>\r\n	<td height=\\\"23\\\" align=\\\"center\\\">\r\n	<div align=\\\"left\\\">\r\n		&raquo;&nbsp;<font color=red><b>[!--username--]</b></font>&nbsp;&nbsp;<a href=\\\"../my/\\\" target=\\\"_parent\\\">[!--groupname--]</a>&nbsp;[!--havemsg--]&nbsp;<a href=\\\"[!--news.url--]e/space/?userid=[!--userid--]\\\" target=_blank>我的空间</a>&nbsp;&nbsp;<a href=\\\"../msg/\\\" target=_blank>短信息</a>&nbsp;&nbsp;<a href=\\\"../fava/\\\" target=_blank>收藏夹</a>&nbsp;&nbsp;<a href=\\\"../cp/\\\" target=\\\"_parent\\\">控制面板</a>&nbsp;&nbsp;<a href=\\\"../../member/doaction.php?enews=exit&prtype=9\\\" onclick=\\\"return confirm(\\\'确认要退出?\\\');\\\">退出</a> \r\n	</div>\r\n	</td>\r\n    </tr>\r\n</table>\r\n</body>\r\n</html>',50,'Y-m-d H:i:s','<form name=login method=post action=\\\"[!--news.url--]e/member/doaction.php\\\">\r\n    <input type=hidden name=enews value=login>\r\n    <input type=hidden name=ecmsfrom value=9>\r\n    用户名：<input name=\\\"username\\\" type=\\\"text\\\" class=\\\"inputText\\\" size=\\\"16\\\" />&nbsp;\r\n    密码：<input name=\\\"password\\\" type=\\\"password\\\" class=\\\"inputText\\\" size=\\\"16\\\" />&nbsp;\r\n    <input type=\\\"submit\\\" name=\\\"Submit\\\" value=\\\"登陆\\\" class=\\\"inputSub\\\" />&nbsp;\r\n    <input type=\\\"button\\\" name=\\\"Submit2\\\" value=\\\"注册\\\" class=\\\"inputSub\\\" onclick=\\\"window.open(\\\'[!--news.url--]e/member/register/\\\');\\\" />\r\n</form>\r\n[!--empirenews.template--]\r\n&raquo;&nbsp;<font color=red><b>[!--username--]</b></font>&nbsp;&nbsp;<a href=\\\"[!--news.url--]e/member/my/\\\" target=\\\"_parent\\\">[!--groupname--]</a>&nbsp;[!--havemsg--]&nbsp;<a href=\\\"[!--news.url--]e/space/?userid=[!--userid--]\\\" target=_blank>我的空间</a>&nbsp;&nbsp;<a href=\\\"[!--news.url--]e/member/msg/\\\" target=_blank>短信息</a>&nbsp;&nbsp;<a href=\\\"[!--news.url--]e/member/fava/\\\" target=_blank>收藏夹</a>&nbsp;&nbsp;<a href=\\\"[!--news.url--]e/member/cp/\\\" target=\\\"_parent\\\">控制面板</a>&nbsp;&nbsp;<a href=\\\"[!--news.url--]e/member/doaction.php?enews=exit&ecmsfrom=9\\\" onclick=\\\"return confirm(\\\'确认要退出?\\\');\\\">退出</a>','<html>\r\n<head>\r\n<meta http-equiv=\\\"Content-Type\\\" content=\\\"text/html; charset=utf-8\\\">\r\n<title>[!--pagetitle--]</title>\r\n<meta name=\\\"keywords\\\" content=\\\"[!--pagekey--]\\\">\r\n<meta name=\\\"description\\\" content=\\\"[!--pagedes--]\\\">\r\n<link href=\\\"../../data/images/qcss.css\\\" rel=\\\"stylesheet\\\" type=\\\"text/css\\\">\r\n</head>\r\n<body>\r\n<br>\r\n<br>\r\n<br>\r\n<br>\r\n<table align=\\\"center\\\" width=\\\"100%\\\">\r\n  <tr> \r\n    <td height=\\\"32\\\" align=center>\r\n	<a href=\\\"[!--down.url--]\\\" title=\\\"[!--title--] －[!--down.name--]\\\">\r\n	<img src=\\\"../../data/images/download.jpg\\\" border=0>\r\n	</a>\r\n	</td>\r\n  </tr>\r\n  <tr> \r\n    <td align=center>(点击下载)</td>\r\n  </tr>\r\n</table>\r\n<br>\r\n</body>\r\n</html>','[!--empirenews.listtemp--] \r\n      <table width=\\\"100%\\\" border=\\\"0\\\" align=\\\"center\\\" cellpadding=\\\"3\\\" cellspacing=\\\"1\\\" style=\\\"word-break:break-all; word-wrap:break-all;\\\">\r\n        <tr> \r\n          <td height=\\\"30\\\"><span class=\\\"name\\\">本站网友 [!--username--]</span> <font color=\\\"#666666\\\">ip:[!--plip--]</font></td>\r\n          <td><div align=\\\"right\\\"><font color=\\\"#666666\\\">[!--pltime--] 发表</font></div></td>\r\n        </tr>\r\n        <tr valign=\\\"top\\\"> \r\n          <td height=\\\"50\\\" colspan=\\\"2\\\" class=\\\"text\\\">[!--pltext--]</td>\r\n        </tr>\r\n        <tr> \r\n          <td height=\\\"30\\\">&nbsp;</td>\r\n          <td><div align=\\\"right\\\" class=\\\"re\\\"> \r\n              <a href=\\\"JavaScript:makeRequest(\\\'[!--news.url--]e/pl/doaction.php?enews=DoForPl&plid=[!--plid--]&classid=[!--classid--]&id=[!--id--]&dopl=1&doajax=1&ajaxarea=zcpldiv[!--plid--]\\\',\\\'EchoReturnedText\\\',\\\'GET\\\',\\\'\\\');\\\">支持</a>[<span id=\\\"zcpldiv[!--plid--]\\\">[!--zcnum--]</span>]&nbsp; \r\n              <a href=\\\"JavaScript:makeRequest(\\\'[!--news.url--]e/pl/doaction.php?enews=DoForPl&plid=[!--plid--]&classid=[!--classid--]&id=[!--id--]&dopl=0&doajax=1&ajaxarea=fdpldiv[!--plid--]\\\',\\\'EchoReturnedText\\\',\\\'GET\\\',\\\'\\\');\\\">反对</a>[<span id=\\\"fdpldiv[!--plid--]\\\">[!--fdnum--]</span>]\r\n            </div></td>\r\n        </tr>\r\n      </table>\r\n      <table width=\\\"100%\\\" border=\\\"0\\\" cellspacing=\\\"1\\\" cellpadding=\\\"3\\\">\r\n        <tr>\r\n          <td background=\\\"[!--news.url--]skin/default/images/plhrbg.gif\\\"></td>\r\n        </tr>\r\n      </table>\r\n[!--empirenews.listtemp--]','<!DOCTYPE html PUBLIC \\\"-//W3C//DTD XHTML 1.0 Transitional//EN\\\" \\\"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\\\">\r\n<html xmlns=\\\"http://www.w3.org/1999/xhtml\\\">\r\n<head>\r\n<meta http-equiv=\\\"Content-Type\\\" content=\\\"text/html; charset=utf-8\\\" />\r\n<title>搜索 - Powered by EmpireCMS</title>\r\n<link href=\\\"[!--news.url--]skin/default/css/style.css\\\" rel=\\\"stylesheet\\\" type=\\\"text/css\\\" />\r\n<script type=\\\"text/javascript\\\" src=\\\"[!--news.url--]skin/default/js/tabs.js\\\"></script>\r\n<style type=\\\"text/css\\\">\r\n<!--\r\n.r {\r\ndisplay:inline;\r\nfont-weight:normal;\r\nmargin:0;\r\nfont-size:16px;\r\nmargin-top:10px;\r\n}\r\n.a{color:green}\r\n.fl{color:#77c}\r\n-->\r\n</style>\r\n</head>\r\n<body class=\\\"listpage\\\">\r\n[!--temp.dtheader--]\r\n<table width=\\\"100%\\\" border=\\\"0\\\" cellspacing=\\\"10\\\" cellpadding=\\\"0\\\">\r\n	<tr valign=\\\"top\\\">\r\n		<td class=\\\"list_content\\\"><table width=\\\"100%\\\" border=\\\"0\\\" cellspacing=\\\"0\\\" cellpadding=\\\"0\\\" class=\\\"position\\\">\r\n				<tr>\r\n					<td>现在的位置：<a href=\\\"[!--news.url--]\\\">首页</a>&nbsp;>&nbsp;搜索</td>\r\n				</tr>\r\n			</table>\r\n			<table width=\\\"100%\\\" border=\\\"0\\\" cellspacing=\\\"0\\\" cellpadding=\\\"0\\\" class=\\\"box\\\">\r\n				<tr>\r\n					<td><form action=\\\'index.php\\\' method=\\\"GET\\\" name=\\\"search_news\\\" id=\\\"search_news\\\">\r\n							<table width=\\\"100%\\\" border=\\\"0\\\" cellspacing=\\\"6\\\" cellpadding=\\\"0\\\">\r\n								<tr>\r\n									<td height=\\\"32\\\">关键字：\r\n										<input name=\\\"keyboard\\\" type=\\\"text\\\" id=\\\"keyboard\\\" value=\\\"[!--keyboard--]\\\" size=\\\"42\\\" />\r\n                    <select name=\\\"field\\\" id=\\\"field\\\">\r\n                      <option value=\\\"1\\\">全文</option>\r\n                      <option value=\\\"2\\\">标题</option>\r\n                      <option value=\\\"3\\\">内容</option>\r\n                    </select> \r\n                    <input type=\\\"submit\\\" name=\\\"Submit22\\\" value=\\\"搜索\\\" />\r\n                    <font color=\\\"#666666\\\">(多个关键字请用&quot;空格&quot;隔开)</font> </td>\r\n								</tr>\r\n							</table>\r\n						</form>\r\n						<table width=\\\"100%\\\" border=\\\"0\\\" cellpadding=\\\"0\\\" cellspacing=\\\"6\\\">\r\n							<tr>\r\n								<td>系统搜索到约有<strong>[!--num--]</strong>项符合<strong>[!--keyboard--]</strong>的查询结果</td>\r\n							</tr>\r\n						</table>\r\n						[!--empirenews.listtemp--]\r\n						<h2 class=\\\"r\\\"><span>[!--no.num--].</span> <a class=\\\"l\\\" href=\\\"[!--titleurl--]\\\" target=\\\"_blank\\\">[!--title--]</a></h2>\r\n						<table width=\\\"80%\\\" border=\\\"0\\\" cellpadding=\\\"0\\\" cellspacing=\\\"0\\\">\r\n							<tbody>\r\n							<tr>\r\n								<td>[!--smalltext--]</td>\r\n							</tr>\r\n							<tr>\r\n								<td><span class=\\\"a\\\">[!--titleurl--] - [!--newstime--]</span></td>\r\n							</tr>\r\n							<tr>\r\n								<td>&nbsp;</td>\r\n							</tr>\r\n							</tbody>\r\n						</table>\r\n						[!--empirenews.listtemp--]\r\n						<table width=\\\"100%\\\" border=\\\"0\\\" cellspacing=\\\"0\\\" cellpadding=\\\"0\\\" class=\\\"list_page\\\">\r\n							<tr>\r\n								<td>[!--listpage--]</td>\r\n							</tr>\r\n						</table></td>\r\n				</tr>\r\n			</table></td>\r\n	</tr>\r\n</table>\r\n[!--temp.footer--]\r\n</body>\r\n</html>',120,'Y-m-d H:i:s');
 /*!40000 ALTER TABLE `ziyi_enewspubtemp` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -7190,23 +7193,23 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_enewspubvar`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_enewspubvar` (
-  `varid` smallint(5) unsigned NOT NULL AUTO_INCREMENT,
-  `myvar` varchar(60) NOT NULL DEFAULT '',
-  `varname` varchar(20) NOT NULL DEFAULT '',
+  `varid` smallint(5) unsigned NOT NULL auto_increment,
+  `myvar` varchar(60) NOT NULL default '',
+  `varname` varchar(20) NOT NULL default '',
   `varvalue` text NOT NULL,
-  `varsay` varchar(255) NOT NULL DEFAULT '',
-  `myorder` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `classid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `tocache` tinyint(1) NOT NULL DEFAULT '0',
-  PRIMARY KEY (`varid`),
+  `varsay` varchar(255) NOT NULL default '',
+  `myorder` smallint(5) unsigned NOT NULL default '0',
+  `classid` smallint(5) unsigned NOT NULL default '0',
+  `tocache` tinyint(1) NOT NULL default '0',
+  PRIMARY KEY  (`varid`),
   UNIQUE KEY `varname` (`varname`),
   KEY `classid` (`classid`),
   KEY `tocache` (`tocache`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_enewspubvar`
@@ -7222,15 +7225,15 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_enewspubvarclass`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_enewspubvarclass` (
-  `classid` smallint(5) unsigned NOT NULL AUTO_INCREMENT,
-  `classname` varchar(30) NOT NULL DEFAULT '',
-  `classsay` varchar(255) NOT NULL DEFAULT '',
-  PRIMARY KEY (`classid`)
+  `classid` smallint(5) unsigned NOT NULL auto_increment,
+  `classname` varchar(30) NOT NULL default '',
+  `classsay` varchar(255) NOT NULL default '',
+  PRIMARY KEY  (`classid`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_enewspubvarclass`
@@ -7246,23 +7249,23 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_enewsqmsg`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_enewsqmsg` (
-  `mid` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `title` varchar(80) NOT NULL DEFAULT '',
+  `mid` int(10) unsigned NOT NULL auto_increment,
+  `title` varchar(80) NOT NULL default '',
   `msgtext` text NOT NULL,
-  `haveread` tinyint(1) NOT NULL DEFAULT '0',
-  `msgtime` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `to_username` varchar(30) NOT NULL DEFAULT '',
-  `from_userid` int(10) unsigned NOT NULL DEFAULT '0',
-  `from_username` varchar(30) NOT NULL DEFAULT '',
-  `isadmin` tinyint(1) NOT NULL DEFAULT '0',
-  `issys` tinyint(1) NOT NULL DEFAULT '0',
-  PRIMARY KEY (`mid`),
+  `haveread` tinyint(1) NOT NULL default '0',
+  `msgtime` datetime NOT NULL default '0000-00-00 00:00:00',
+  `to_username` varchar(30) NOT NULL default '',
+  `from_userid` int(10) unsigned NOT NULL default '0',
+  `from_username` varchar(30) NOT NULL default '',
+  `isadmin` tinyint(1) NOT NULL default '0',
+  `issys` tinyint(1) NOT NULL default '0',
+  PRIMARY KEY  (`mid`),
   KEY `to_username` (`to_username`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_enewsqmsg`
@@ -7278,29 +7281,29 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_enewssearch`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_enewssearch` (
-  `searchid` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
-  `keyboard` varchar(255) NOT NULL DEFAULT '',
-  `searchtime` int(10) unsigned NOT NULL DEFAULT '0',
-  `searchclass` varchar(255) NOT NULL DEFAULT '',
-  `result_num` int(10) unsigned NOT NULL DEFAULT '0',
-  `searchip` varchar(20) NOT NULL DEFAULT '',
-  `classid` varchar(255) NOT NULL DEFAULT '',
-  `onclick` int(10) unsigned NOT NULL DEFAULT '0',
-  `orderby` varchar(30) NOT NULL DEFAULT '0',
-  `myorder` tinyint(1) NOT NULL DEFAULT '0',
-  `checkpass` varchar(32) NOT NULL DEFAULT '',
-  `tbname` varchar(60) NOT NULL DEFAULT '',
-  `tempid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `iskey` tinyint(1) NOT NULL DEFAULT '0',
+  `searchid` bigint(20) unsigned NOT NULL auto_increment,
+  `keyboard` varchar(255) NOT NULL default '',
+  `searchtime` int(10) unsigned NOT NULL default '0',
+  `searchclass` varchar(255) NOT NULL default '',
+  `result_num` int(10) unsigned NOT NULL default '0',
+  `searchip` varchar(20) NOT NULL default '',
+  `classid` varchar(255) NOT NULL default '',
+  `onclick` int(10) unsigned NOT NULL default '0',
+  `orderby` varchar(30) NOT NULL default '0',
+  `myorder` tinyint(1) NOT NULL default '0',
+  `checkpass` varchar(32) NOT NULL default '',
+  `tbname` varchar(60) NOT NULL default '',
+  `tempid` smallint(5) unsigned NOT NULL default '0',
+  `iskey` tinyint(1) NOT NULL default '0',
   `andsql` text NOT NULL,
-  `trueclassid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  PRIMARY KEY (`searchid`),
+  `trueclassid` smallint(5) unsigned NOT NULL default '0',
+  PRIMARY KEY  (`searchid`),
   KEY `checkpass` (`checkpass`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_enewssearch`
@@ -7316,20 +7319,20 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_enewssearchall`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_enewssearchall` (
-  `sid` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `id` int(10) unsigned NOT NULL DEFAULT '0',
-  `classid` smallint(5) unsigned NOT NULL DEFAULT '0',
+  `sid` int(10) unsigned NOT NULL auto_increment,
+  `id` int(10) unsigned NOT NULL default '0',
+  `classid` smallint(5) unsigned NOT NULL default '0',
   `title` text NOT NULL,
-  `infotime` int(10) unsigned NOT NULL DEFAULT '0',
+  `infotime` int(10) unsigned NOT NULL default '0',
   `infotext` mediumtext NOT NULL,
-  PRIMARY KEY (`sid`),
+  PRIMARY KEY  (`sid`),
   KEY `id` (`id`,`classid`,`infotime`),
   FULLTEXT KEY `title` (`title`,`infotext`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_enewssearchall`
@@ -7345,20 +7348,20 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_enewssearchall_load`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_enewssearchall_load` (
-  `lid` smallint(5) unsigned NOT NULL AUTO_INCREMENT,
-  `tbname` varchar(60) NOT NULL DEFAULT '',
-  `titlefield` varchar(30) NOT NULL DEFAULT '',
-  `infotextfield` varchar(30) NOT NULL DEFAULT '',
-  `smalltextfield` varchar(30) NOT NULL DEFAULT '',
-  `loadnum` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `lasttime` int(10) unsigned NOT NULL DEFAULT '0',
-  `lastid` int(10) unsigned NOT NULL DEFAULT '0',
-  PRIMARY KEY (`lid`)
+  `lid` smallint(5) unsigned NOT NULL auto_increment,
+  `tbname` varchar(60) NOT NULL default '',
+  `titlefield` varchar(30) NOT NULL default '',
+  `infotextfield` varchar(30) NOT NULL default '',
+  `smalltextfield` varchar(30) NOT NULL default '',
+  `loadnum` smallint(5) unsigned NOT NULL default '0',
+  `lasttime` int(10) unsigned NOT NULL default '0',
+  `lastid` int(10) unsigned NOT NULL default '0',
+  PRIMARY KEY  (`lid`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_enewssearchall_load`
@@ -7374,25 +7377,25 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_enewssearchtemp`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_enewssearchtemp` (
-  `tempid` smallint(5) unsigned NOT NULL AUTO_INCREMENT,
-  `tempname` varchar(60) NOT NULL DEFAULT '',
+  `tempid` smallint(5) unsigned NOT NULL auto_increment,
+  `tempname` varchar(60) NOT NULL default '',
   `temptext` mediumtext NOT NULL,
-  `subnews` smallint(6) NOT NULL DEFAULT '0',
-  `isdefault` tinyint(1) NOT NULL DEFAULT '0',
+  `subnews` smallint(6) NOT NULL default '0',
+  `isdefault` tinyint(1) NOT NULL default '0',
   `listvar` text NOT NULL,
-  `rownum` smallint(6) NOT NULL DEFAULT '0',
-  `modid` smallint(6) NOT NULL DEFAULT '0',
-  `showdate` varchar(50) NOT NULL DEFAULT '',
-  `subtitle` smallint(6) NOT NULL DEFAULT '0',
-  `classid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `docode` tinyint(1) NOT NULL DEFAULT '0',
-  PRIMARY KEY (`tempid`),
+  `rownum` smallint(6) NOT NULL default '0',
+  `modid` smallint(6) NOT NULL default '0',
+  `showdate` varchar(50) NOT NULL default '',
+  `subtitle` smallint(6) NOT NULL default '0',
+  `classid` smallint(5) unsigned NOT NULL default '0',
+  `docode` tinyint(1) NOT NULL default '0',
+  PRIMARY KEY  (`tempid`),
   KEY `classid` (`classid`)
 ) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_enewssearchtemp`
@@ -7409,14 +7412,14 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_enewssearchtempclass`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_enewssearchtempclass` (
-  `classid` smallint(5) unsigned NOT NULL AUTO_INCREMENT,
-  `classname` varchar(30) NOT NULL DEFAULT '',
-  PRIMARY KEY (`classid`)
+  `classid` smallint(5) unsigned NOT NULL auto_increment,
+  `classname` varchar(30) NOT NULL default '',
+  PRIMARY KEY  (`classid`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_enewssearchtempclass`
@@ -7432,27 +7435,27 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_enewsshop_address`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_enewsshop_address` (
-  `addressid` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `addressname` char(50) NOT NULL DEFAULT '',
-  `userid` mediumint(8) unsigned NOT NULL DEFAULT '0',
-  `truename` char(20) NOT NULL DEFAULT '',
-  `oicq` char(20) NOT NULL DEFAULT '',
-  `msn` char(60) NOT NULL DEFAULT '',
-  `email` char(60) NOT NULL DEFAULT '',
-  `address` char(255) NOT NULL DEFAULT '',
-  `zip` char(8) NOT NULL DEFAULT '',
-  `mycall` char(30) NOT NULL DEFAULT '',
-  `phone` char(30) NOT NULL DEFAULT '',
-  `signbuild` char(100) NOT NULL DEFAULT '',
-  `besttime` char(120) NOT NULL DEFAULT '',
-  `isdefault` tinyint(1) NOT NULL DEFAULT '0',
-  PRIMARY KEY (`addressid`),
+  `addressid` int(10) unsigned NOT NULL auto_increment,
+  `addressname` char(50) NOT NULL default '',
+  `userid` mediumint(8) unsigned NOT NULL default '0',
+  `truename` char(20) NOT NULL default '',
+  `oicq` char(20) NOT NULL default '',
+  `msn` char(60) NOT NULL default '',
+  `email` char(60) NOT NULL default '',
+  `address` char(255) NOT NULL default '',
+  `zip` char(8) NOT NULL default '',
+  `mycall` char(30) NOT NULL default '',
+  `phone` char(30) NOT NULL default '',
+  `signbuild` char(100) NOT NULL default '',
+  `besttime` char(120) NOT NULL default '',
+  `isdefault` tinyint(1) NOT NULL default '0',
+  PRIMARY KEY  (`addressid`),
   KEY `userid` (`userid`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_enewsshop_address`
@@ -7468,21 +7471,21 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_enewsshop_ddlog`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_enewsshop_ddlog` (
-  `logid` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `ddid` int(10) unsigned NOT NULL DEFAULT '0',
-  `userid` int(10) unsigned NOT NULL DEFAULT '0',
-  `username` varchar(30) NOT NULL DEFAULT '',
-  `ecms` varchar(30) NOT NULL DEFAULT '',
-  `bz` varchar(255) NOT NULL DEFAULT '',
-  `addbz` varchar(255) NOT NULL DEFAULT '',
-  `logtime` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
-  PRIMARY KEY (`logid`),
+  `logid` int(10) unsigned NOT NULL auto_increment,
+  `ddid` int(10) unsigned NOT NULL default '0',
+  `userid` int(10) unsigned NOT NULL default '0',
+  `username` varchar(30) NOT NULL default '',
+  `ecms` varchar(30) NOT NULL default '',
+  `bz` varchar(255) NOT NULL default '',
+  `addbz` varchar(255) NOT NULL default '',
+  `logtime` datetime NOT NULL default '0000-00-00 00:00:00',
+  PRIMARY KEY  (`logid`),
   KEY `ddid` (`ddid`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_enewsshop_ddlog`
@@ -7498,24 +7501,24 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_enewsshop_precode`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_enewsshop_precode` (
-  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `prename` varchar(30) NOT NULL DEFAULT '',
-  `precode` varchar(36) NOT NULL DEFAULT '',
-  `premoney` int(10) unsigned NOT NULL DEFAULT '0',
-  `pretype` tinyint(1) NOT NULL DEFAULT '0',
-  `reuse` tinyint(1) NOT NULL DEFAULT '0',
-  `addtime` int(10) unsigned NOT NULL DEFAULT '0',
-  `endtime` int(10) unsigned NOT NULL DEFAULT '0',
-  `groupid` varchar(255) NOT NULL DEFAULT '',
+  `id` int(10) unsigned NOT NULL auto_increment,
+  `prename` varchar(30) NOT NULL default '',
+  `precode` varchar(36) NOT NULL default '',
+  `premoney` int(10) unsigned NOT NULL default '0',
+  `pretype` tinyint(1) NOT NULL default '0',
+  `reuse` tinyint(1) NOT NULL default '0',
+  `addtime` int(10) unsigned NOT NULL default '0',
+  `endtime` int(10) unsigned NOT NULL default '0',
+  `groupid` varchar(255) NOT NULL default '',
   `classid` text NOT NULL,
-  `musttotal` int(10) unsigned NOT NULL DEFAULT '0',
-  PRIMARY KEY (`id`),
+  `musttotal` int(10) unsigned NOT NULL default '0',
+  PRIMARY KEY  (`id`),
   UNIQUE KEY `precode` (`precode`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_enewsshop_precode`
@@ -7531,29 +7534,29 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_enewsshop_set`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_enewsshop_set` (
-  `id` tinyint(3) unsigned NOT NULL AUTO_INCREMENT,
-  `shopddgroupid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `buycarnum` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `havefp` tinyint(1) NOT NULL DEFAULT '0',
-  `fpnum` smallint(5) unsigned NOT NULL DEFAULT '0',
+  `id` tinyint(3) unsigned NOT NULL auto_increment,
+  `shopddgroupid` smallint(5) unsigned NOT NULL default '0',
+  `buycarnum` smallint(5) unsigned NOT NULL default '0',
+  `havefp` tinyint(1) NOT NULL default '0',
+  `fpnum` smallint(5) unsigned NOT NULL default '0',
   `fpname` text NOT NULL,
   `ddmust` text NOT NULL,
-  `haveatt` tinyint(1) NOT NULL DEFAULT '0',
-  `shoptbs` varchar(255) NOT NULL DEFAULT '',
-  `buystep` tinyint(3) unsigned NOT NULL DEFAULT '0',
-  `shoppsmust` tinyint(1) NOT NULL DEFAULT '0',
-  `shoppayfsmust` tinyint(1) NOT NULL DEFAULT '0',
-  `dddeltime` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `cutnumtype` tinyint(1) NOT NULL DEFAULT '0',
-  `cutnumtime` int(10) unsigned NOT NULL DEFAULT '0',
-  `freepstotal` int(10) unsigned NOT NULL DEFAULT '0',
-  `singlenum` int(10) unsigned NOT NULL DEFAULT '0',
-  PRIMARY KEY (`id`)
+  `haveatt` tinyint(1) NOT NULL default '0',
+  `shoptbs` varchar(255) NOT NULL default '',
+  `buystep` tinyint(3) unsigned NOT NULL default '0',
+  `shoppsmust` tinyint(1) NOT NULL default '0',
+  `shoppayfsmust` tinyint(1) NOT NULL default '0',
+  `dddeltime` smallint(5) unsigned NOT NULL default '0',
+  `cutnumtype` tinyint(1) NOT NULL default '0',
+  `cutnumtime` int(10) unsigned NOT NULL default '0',
+  `freepstotal` int(10) unsigned NOT NULL default '0',
+  `singlenum` int(10) unsigned NOT NULL default '0',
+  PRIMARY KEY  (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_enewsshop_set`
@@ -7570,48 +7573,48 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_enewsshopdd`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_enewsshopdd` (
-  `ddid` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `ddno` varchar(30) NOT NULL DEFAULT '',
-  `ddtime` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `userid` mediumint(8) unsigned NOT NULL DEFAULT '0',
-  `username` varchar(30) NOT NULL DEFAULT '',
-  `outproduct` tinyint(1) NOT NULL DEFAULT '0',
-  `haveprice` tinyint(1) NOT NULL DEFAULT '0',
-  `checked` tinyint(1) NOT NULL DEFAULT '0',
-  `truename` varchar(20) NOT NULL DEFAULT '',
-  `oicq` varchar(25) NOT NULL DEFAULT '',
-  `msn` varchar(120) NOT NULL DEFAULT '',
-  `email` varchar(120) NOT NULL DEFAULT '',
-  `mycall` varchar(30) NOT NULL DEFAULT '',
-  `phone` varchar(30) NOT NULL DEFAULT '',
-  `address` varchar(255) NOT NULL DEFAULT '',
-  `zip` varchar(8) NOT NULL DEFAULT '',
-  `psid` smallint(6) NOT NULL DEFAULT '0',
-  `psname` varchar(60) NOT NULL DEFAULT '',
-  `pstotal` float(11,2) NOT NULL DEFAULT '0.00',
-  `alltotal` float(11,2) NOT NULL DEFAULT '0.00',
-  `payfsid` smallint(6) NOT NULL DEFAULT '0',
-  `payfsname` varchar(60) NOT NULL DEFAULT '',
-  `payby` tinyint(4) NOT NULL DEFAULT '0',
-  `alltotalfen` float(11,2) NOT NULL DEFAULT '0.00',
-  `fp` tinyint(1) NOT NULL DEFAULT '0',
-  `fptt` varchar(255) NOT NULL DEFAULT '',
-  `fptotal` float(11,2) NOT NULL DEFAULT '0.00',
-  `fpname` varchar(50) NOT NULL DEFAULT '',
-  `userip` varchar(20) NOT NULL DEFAULT '',
-  `signbuild` varchar(100) NOT NULL DEFAULT '',
-  `besttime` varchar(120) NOT NULL DEFAULT '',
-  `pretotal` float(11,2) NOT NULL DEFAULT '0.00',
-  `ddtruetime` int(10) unsigned NOT NULL DEFAULT '0',
-  `havecutnum` tinyint(1) NOT NULL DEFAULT '0',
-  PRIMARY KEY (`ddid`),
+  `ddid` int(10) unsigned NOT NULL auto_increment,
+  `ddno` varchar(30) NOT NULL default '',
+  `ddtime` datetime NOT NULL default '0000-00-00 00:00:00',
+  `userid` mediumint(8) unsigned NOT NULL default '0',
+  `username` varchar(30) NOT NULL default '',
+  `outproduct` tinyint(1) NOT NULL default '0',
+  `haveprice` tinyint(1) NOT NULL default '0',
+  `checked` tinyint(1) NOT NULL default '0',
+  `truename` varchar(20) NOT NULL default '',
+  `oicq` varchar(25) NOT NULL default '',
+  `msn` varchar(120) NOT NULL default '',
+  `email` varchar(120) NOT NULL default '',
+  `mycall` varchar(30) NOT NULL default '',
+  `phone` varchar(30) NOT NULL default '',
+  `address` varchar(255) NOT NULL default '',
+  `zip` varchar(8) NOT NULL default '',
+  `psid` smallint(6) NOT NULL default '0',
+  `psname` varchar(60) NOT NULL default '',
+  `pstotal` float(11,2) NOT NULL default '0.00',
+  `alltotal` float(11,2) NOT NULL default '0.00',
+  `payfsid` smallint(6) NOT NULL default '0',
+  `payfsname` varchar(60) NOT NULL default '',
+  `payby` tinyint(4) NOT NULL default '0',
+  `alltotalfen` float(11,2) NOT NULL default '0.00',
+  `fp` tinyint(1) NOT NULL default '0',
+  `fptt` varchar(255) NOT NULL default '',
+  `fptotal` float(11,2) NOT NULL default '0.00',
+  `fpname` varchar(50) NOT NULL default '',
+  `userip` varchar(20) NOT NULL default '',
+  `signbuild` varchar(100) NOT NULL default '',
+  `besttime` varchar(120) NOT NULL default '',
+  `pretotal` float(11,2) NOT NULL default '0.00',
+  `ddtruetime` int(10) unsigned NOT NULL default '0',
+  `havecutnum` tinyint(1) NOT NULL default '0',
+  PRIMARY KEY  (`ddid`),
   KEY `ddno` (`ddno`),
   KEY `userid` (`userid`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_enewsshopdd`
@@ -7627,16 +7630,16 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_enewsshopdd_add`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_enewsshopdd_add` (
-  `ddid` int(10) unsigned NOT NULL DEFAULT '0',
+  `ddid` int(10) unsigned NOT NULL default '0',
   `buycar` mediumtext NOT NULL,
   `bz` text NOT NULL,
   `retext` text NOT NULL,
-  PRIMARY KEY (`ddid`)
+  PRIMARY KEY  (`ddid`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_enewsshopdd_add`
@@ -7652,20 +7655,20 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_enewsshoppayfs`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_enewsshoppayfs` (
-  `payid` smallint(5) unsigned NOT NULL AUTO_INCREMENT,
-  `payname` varchar(60) NOT NULL DEFAULT '',
-  `payurl` varchar(255) NOT NULL DEFAULT '',
+  `payid` smallint(5) unsigned NOT NULL auto_increment,
+  `payname` varchar(60) NOT NULL default '',
+  `payurl` varchar(255) NOT NULL default '',
   `paysay` text NOT NULL,
-  `userpay` tinyint(1) NOT NULL DEFAULT '0',
-  `userfen` tinyint(1) NOT NULL DEFAULT '0',
-  `isclose` tinyint(1) NOT NULL DEFAULT '0',
-  `isdefault` tinyint(1) NOT NULL DEFAULT '0',
-  PRIMARY KEY (`payid`)
+  `userpay` tinyint(1) NOT NULL default '0',
+  `userfen` tinyint(1) NOT NULL default '0',
+  `isclose` tinyint(1) NOT NULL default '0',
+  `isdefault` tinyint(1) NOT NULL default '0',
+  PRIMARY KEY  (`payid`)
 ) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_enewsshoppayfs`
@@ -7682,19 +7685,19 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_enewsshopps`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_enewsshopps` (
-  `pid` smallint(5) unsigned NOT NULL AUTO_INCREMENT,
-  `pname` varchar(60) NOT NULL DEFAULT '',
-  `price` float(11,2) NOT NULL DEFAULT '0.00',
+  `pid` smallint(5) unsigned NOT NULL auto_increment,
+  `pname` varchar(60) NOT NULL default '',
+  `price` float(11,2) NOT NULL default '0.00',
   `otherprice` text NOT NULL,
   `psay` text NOT NULL,
-  `isclose` tinyint(1) NOT NULL DEFAULT '0',
-  `isdefault` tinyint(1) NOT NULL DEFAULT '0',
-  PRIMARY KEY (`pid`)
+  `isclose` tinyint(1) NOT NULL default '0',
+  `isdefault` tinyint(1) NOT NULL default '0',
+  PRIMARY KEY  (`pid`)
 ) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_enewsshopps`
@@ -7711,34 +7714,34 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_enewssp`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_enewssp` (
-  `spid` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `spname` varchar(30) NOT NULL DEFAULT '',
-  `varname` varchar(30) NOT NULL DEFAULT '',
-  `sppic` varchar(255) NOT NULL DEFAULT '',
-  `spsay` varchar(255) NOT NULL DEFAULT '',
-  `sptype` tinyint(1) NOT NULL DEFAULT '0',
-  `cid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `classid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `tempid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `maxnum` int(11) NOT NULL DEFAULT '0',
-  `sptime` int(10) unsigned NOT NULL DEFAULT '0',
+  `spid` int(10) unsigned NOT NULL auto_increment,
+  `spname` varchar(30) NOT NULL default '',
+  `varname` varchar(30) NOT NULL default '',
+  `sppic` varchar(255) NOT NULL default '',
+  `spsay` varchar(255) NOT NULL default '',
+  `sptype` tinyint(1) NOT NULL default '0',
+  `cid` smallint(5) unsigned NOT NULL default '0',
+  `classid` smallint(5) unsigned NOT NULL default '0',
+  `tempid` smallint(5) unsigned NOT NULL default '0',
+  `maxnum` int(11) NOT NULL default '0',
+  `sptime` int(10) unsigned NOT NULL default '0',
   `groupid` text NOT NULL,
   `userclass` text NOT NULL,
   `username` text NOT NULL,
-  `isclose` tinyint(1) NOT NULL DEFAULT '0',
-  `cladd` tinyint(1) NOT NULL DEFAULT '0',
-  `refile` tinyint(1) NOT NULL DEFAULT '0',
-  `spfile` varchar(255) NOT NULL DEFAULT '',
-  `spfileline` smallint(6) NOT NULL DEFAULT '0',
-  `spfilesub` smallint(6) NOT NULL DEFAULT '0',
-  PRIMARY KEY (`spid`),
+  `isclose` tinyint(1) NOT NULL default '0',
+  `cladd` tinyint(1) NOT NULL default '0',
+  `refile` tinyint(1) NOT NULL default '0',
+  `spfile` varchar(255) NOT NULL default '',
+  `spfileline` smallint(6) NOT NULL default '0',
+  `spfilesub` smallint(6) NOT NULL default '0',
+  PRIMARY KEY  (`spid`),
   UNIQUE KEY `varname` (`varname`),
   KEY `refile` (`refile`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_enewssp`
@@ -7754,25 +7757,25 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_enewssp_1`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_enewssp_1` (
-  `sid` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `spid` int(10) unsigned NOT NULL DEFAULT '0',
-  `title` varchar(200) NOT NULL DEFAULT '',
-  `titlepic` varchar(200) NOT NULL DEFAULT '',
-  `bigpic` varchar(200) NOT NULL DEFAULT '',
-  `titleurl` varchar(200) NOT NULL DEFAULT '',
-  `smalltext` varchar(255) NOT NULL DEFAULT '',
-  `titlefont` varchar(20) NOT NULL DEFAULT '',
-  `newstime` int(10) unsigned NOT NULL DEFAULT '0',
-  `titlepre` varchar(30) NOT NULL DEFAULT '',
-  `titlenext` varchar(30) NOT NULL DEFAULT '',
-  PRIMARY KEY (`sid`),
+  `sid` int(10) unsigned NOT NULL auto_increment,
+  `spid` int(10) unsigned NOT NULL default '0',
+  `title` varchar(200) NOT NULL default '',
+  `titlepic` varchar(200) NOT NULL default '',
+  `bigpic` varchar(200) NOT NULL default '',
+  `titleurl` varchar(200) NOT NULL default '',
+  `smalltext` varchar(255) NOT NULL default '',
+  `titlefont` varchar(20) NOT NULL default '',
+  `newstime` int(10) unsigned NOT NULL default '0',
+  `titlepre` varchar(30) NOT NULL default '',
+  `titlenext` varchar(30) NOT NULL default '',
+  PRIMARY KEY  (`sid`),
   KEY `spid` (`spid`),
   KEY `newstime` (`newstime`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_enewssp_1`
@@ -7788,19 +7791,19 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_enewssp_2`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_enewssp_2` (
-  `sid` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `spid` int(10) unsigned NOT NULL DEFAULT '0',
-  `classid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `id` int(10) unsigned NOT NULL DEFAULT '0',
-  `newstime` int(10) unsigned NOT NULL DEFAULT '0',
-  PRIMARY KEY (`sid`),
+  `sid` int(10) unsigned NOT NULL auto_increment,
+  `spid` int(10) unsigned NOT NULL default '0',
+  `classid` smallint(5) unsigned NOT NULL default '0',
+  `id` int(10) unsigned NOT NULL default '0',
+  `newstime` int(10) unsigned NOT NULL default '0',
+  PRIMARY KEY  (`sid`),
   KEY `spid` (`spid`),
   KEY `newstime` (`newstime`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_enewssp_2`
@@ -7816,16 +7819,16 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_enewssp_3`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_enewssp_3` (
-  `sid` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `spid` int(10) unsigned NOT NULL DEFAULT '0',
+  `sid` int(10) unsigned NOT NULL auto_increment,
+  `spid` int(10) unsigned NOT NULL default '0',
   `sptext` mediumtext NOT NULL,
-  PRIMARY KEY (`sid`),
+  PRIMARY KEY  (`sid`),
   UNIQUE KEY `spid` (`spid`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_enewssp_3`
@@ -7841,20 +7844,20 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_enewssp_3_bak`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_enewssp_3_bak` (
-  `bid` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `sid` int(10) unsigned NOT NULL DEFAULT '0',
-  `spid` int(10) unsigned NOT NULL DEFAULT '0',
+  `bid` int(10) unsigned NOT NULL auto_increment,
+  `sid` int(10) unsigned NOT NULL default '0',
+  `spid` int(10) unsigned NOT NULL default '0',
   `sptext` mediumtext NOT NULL,
-  `lastuser` varchar(30) NOT NULL DEFAULT '',
-  `lasttime` int(10) unsigned NOT NULL DEFAULT '0',
-  PRIMARY KEY (`bid`),
+  `lastuser` varchar(30) NOT NULL default '',
+  `lasttime` int(10) unsigned NOT NULL default '0',
+  PRIMARY KEY  (`bid`),
   KEY `sid` (`sid`),
   KEY `spid` (`spid`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_enewssp_3_bak`
@@ -7870,19 +7873,19 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_enewsspacestyle`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_enewsspacestyle` (
-  `styleid` smallint(5) unsigned NOT NULL AUTO_INCREMENT,
-  `stylename` varchar(30) NOT NULL DEFAULT '',
-  `stylepic` varchar(255) NOT NULL DEFAULT '',
-  `stylesay` varchar(255) NOT NULL DEFAULT '',
-  `stylepath` varchar(30) NOT NULL DEFAULT '0',
-  `isdefault` tinyint(1) NOT NULL DEFAULT '0',
-  `membergroup` varchar(255) NOT NULL DEFAULT '',
-  PRIMARY KEY (`styleid`)
+  `styleid` smallint(5) unsigned NOT NULL auto_increment,
+  `stylename` varchar(30) NOT NULL default '',
+  `stylepic` varchar(255) NOT NULL default '',
+  `stylesay` varchar(255) NOT NULL default '',
+  `stylepath` varchar(30) NOT NULL default '0',
+  `isdefault` tinyint(1) NOT NULL default '0',
+  `membergroup` varchar(255) NOT NULL default '',
+  PRIMARY KEY  (`styleid`)
 ) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_enewsspacestyle`
@@ -7899,15 +7902,15 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_enewsspclass`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_enewsspclass` (
-  `classid` smallint(5) unsigned NOT NULL AUTO_INCREMENT,
-  `classname` varchar(30) NOT NULL DEFAULT '',
-  `classsay` varchar(255) NOT NULL DEFAULT '',
-  PRIMARY KEY (`classid`)
+  `classid` smallint(5) unsigned NOT NULL auto_increment,
+  `classname` varchar(30) NOT NULL default '',
+  `classsay` varchar(255) NOT NULL default '',
+  PRIMARY KEY  (`classid`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_enewsspclass`
@@ -7923,15 +7926,15 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_enewssql`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_enewssql` (
-  `id` smallint(5) unsigned NOT NULL AUTO_INCREMENT,
-  `sqlname` varchar(60) NOT NULL DEFAULT '',
+  `id` smallint(5) unsigned NOT NULL auto_increment,
+  `sqlname` varchar(60) NOT NULL default '',
   `sqltext` text NOT NULL,
-  PRIMARY KEY (`id`)
+  PRIMARY KEY  (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_enewssql`
@@ -7947,22 +7950,22 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_enewstable`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_enewstable` (
-  `tid` smallint(5) unsigned NOT NULL AUTO_INCREMENT,
-  `tbname` varchar(60) NOT NULL DEFAULT '',
-  `tname` varchar(60) NOT NULL DEFAULT '',
+  `tid` smallint(5) unsigned NOT NULL auto_increment,
+  `tbname` varchar(60) NOT NULL default '',
+  `tname` varchar(60) NOT NULL default '',
   `tsay` text NOT NULL,
-  `isdefault` tinyint(1) NOT NULL DEFAULT '0',
+  `isdefault` tinyint(1) NOT NULL default '0',
   `datatbs` text NOT NULL,
-  `deftb` varchar(6) NOT NULL DEFAULT '',
-  `yhid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `mid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `intb` tinyint(1) NOT NULL DEFAULT '0',
-  PRIMARY KEY (`tid`)
+  `deftb` varchar(6) NOT NULL default '',
+  `yhid` smallint(5) unsigned NOT NULL default '0',
+  `mid` smallint(5) unsigned NOT NULL default '0',
+  `intb` tinyint(1) NOT NULL default '0',
+  PRIMARY KEY  (`tid`)
 ) ENGINE=MyISAM AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_enewstable`
@@ -7979,21 +7982,21 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_enewstags`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_enewstags` (
-  `tagid` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `tagname` char(20) NOT NULL DEFAULT '',
-  `num` int(10) unsigned NOT NULL DEFAULT '0',
-  `isgood` tinyint(1) NOT NULL DEFAULT '0',
-  `cid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  PRIMARY KEY (`tagid`),
+  `tagid` int(10) unsigned NOT NULL auto_increment,
+  `tagname` char(20) NOT NULL default '',
+  `num` int(10) unsigned NOT NULL default '0',
+  `isgood` tinyint(1) NOT NULL default '0',
+  `cid` smallint(5) unsigned NOT NULL default '0',
+  PRIMARY KEY  (`tagid`),
   UNIQUE KEY `tagname` (`tagname`),
   KEY `isgood` (`isgood`),
   KEY `cid` (`cid`),
   KEY `num` (`num`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_enewstags`
@@ -8009,14 +8012,14 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_enewstagsclass`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_enewstagsclass` (
-  `classid` smallint(5) unsigned NOT NULL AUTO_INCREMENT,
-  `classname` varchar(60) NOT NULL DEFAULT '',
-  PRIMARY KEY (`classid`)
+  `classid` smallint(5) unsigned NOT NULL auto_increment,
+  `classname` varchar(60) NOT NULL default '',
+  PRIMARY KEY  (`classid`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_enewstagsclass`
@@ -8032,23 +8035,23 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_enewstagsdata`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_enewstagsdata` (
-  `tid` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `tagid` int(10) unsigned NOT NULL DEFAULT '0',
-  `classid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `id` int(10) unsigned NOT NULL DEFAULT '0',
-  `newstime` int(10) unsigned NOT NULL DEFAULT '0',
-  `mid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  PRIMARY KEY (`tid`),
+  `tid` int(10) unsigned NOT NULL auto_increment,
+  `tagid` int(10) unsigned NOT NULL default '0',
+  `classid` smallint(5) unsigned NOT NULL default '0',
+  `id` int(10) unsigned NOT NULL default '0',
+  `newstime` int(10) unsigned NOT NULL default '0',
+  `mid` smallint(5) unsigned NOT NULL default '0',
+  PRIMARY KEY  (`tid`),
   KEY `tagid` (`tagid`),
   KEY `classid` (`classid`),
   KEY `id` (`id`),
   KEY `newstime` (`newstime`),
   KEY `mid` (`mid`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_enewstagsdata`
@@ -8064,22 +8067,22 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_enewstask`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_enewstask` (
-  `id` smallint(5) unsigned NOT NULL AUTO_INCREMENT,
-  `taskname` varchar(60) NOT NULL DEFAULT '',
-  `userid` int(10) unsigned NOT NULL DEFAULT '0',
-  `isopen` tinyint(1) NOT NULL DEFAULT '0',
-  `filename` varchar(60) NOT NULL DEFAULT '',
-  `lastdo` int(10) unsigned NOT NULL DEFAULT '0',
-  `doweek` char(1) NOT NULL DEFAULT '0',
-  `doday` char(2) NOT NULL DEFAULT '0',
-  `dohour` char(2) NOT NULL DEFAULT '0',
-  `dominute` varchar(255) NOT NULL DEFAULT '',
-  PRIMARY KEY (`id`)
+  `id` smallint(5) unsigned NOT NULL auto_increment,
+  `taskname` varchar(60) NOT NULL default '',
+  `userid` int(10) unsigned NOT NULL default '0',
+  `isopen` tinyint(1) NOT NULL default '0',
+  `filename` varchar(60) NOT NULL default '',
+  `lastdo` int(10) unsigned NOT NULL default '0',
+  `doweek` char(1) NOT NULL default '0',
+  `doday` char(2) NOT NULL default '0',
+  `dohour` char(2) NOT NULL default '0',
+  `dominute` varchar(255) NOT NULL default '',
+  PRIMARY KEY  (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_enewstask`
@@ -8095,32 +8098,32 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_enewstempbak`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_enewstempbak` (
-  `bid` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `tempid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `tempname` varchar(60) NOT NULL DEFAULT '',
+  `bid` int(10) unsigned NOT NULL auto_increment,
+  `tempid` smallint(5) unsigned NOT NULL default '0',
+  `tempname` varchar(60) NOT NULL default '',
   `temptext` mediumtext NOT NULL,
-  `subnews` smallint(6) NOT NULL DEFAULT '0',
-  `isdefault` tinyint(1) NOT NULL DEFAULT '0',
+  `subnews` smallint(6) NOT NULL default '0',
+  `isdefault` tinyint(1) NOT NULL default '0',
   `listvar` text NOT NULL,
-  `rownum` smallint(6) NOT NULL DEFAULT '0',
-  `modid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `showdate` varchar(50) NOT NULL DEFAULT '',
-  `subtitle` smallint(6) NOT NULL DEFAULT '0',
-  `classid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `docode` tinyint(1) NOT NULL DEFAULT '0',
-  `baktime` int(10) unsigned NOT NULL DEFAULT '0',
-  `temptype` varchar(30) NOT NULL DEFAULT '',
-  `gid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `lastuser` varchar(30) NOT NULL DEFAULT '',
-  PRIMARY KEY (`bid`),
+  `rownum` smallint(6) NOT NULL default '0',
+  `modid` smallint(5) unsigned NOT NULL default '0',
+  `showdate` varchar(50) NOT NULL default '',
+  `subtitle` smallint(6) NOT NULL default '0',
+  `classid` smallint(5) unsigned NOT NULL default '0',
+  `docode` tinyint(1) NOT NULL default '0',
+  `baktime` int(10) unsigned NOT NULL default '0',
+  `temptype` varchar(30) NOT NULL default '',
+  `gid` smallint(5) unsigned NOT NULL default '0',
+  `lastuser` varchar(30) NOT NULL default '',
+  PRIMARY KEY  (`bid`),
   KEY `tempid` (`tempid`),
   KEY `temptype` (`temptype`),
   KEY `gid` (`gid`)
-) ENGINE=MyISAM AUTO_INCREMENT=20 DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+) ENGINE=MyISAM AUTO_INCREMENT=25 DEFAULT CHARSET=utf8;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_enewstempbak`
@@ -8128,7 +8131,7 @@ CREATE TABLE `ziyi_enewstempbak` (
 
 LOCK TABLES `ziyi_enewstempbak` WRITE;
 /*!40000 ALTER TABLE `ziyi_enewstempbak` DISABLE KEYS */;
-INSERT INTO `ziyi_enewstempbak` VALUES (15,1,'','<!DOCTYPE html PUBLIC \\\"-//W3C//DTD XHTML 1.0 Strict//EN\\\" \\\"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\\\">\r\n<html xmlns=\\\"http://www.w3.org/1999/xhtml\\\">\r\n<head>\r\n<meta http-equiv=\\\"Content-Type\\\" content=\\\"text/html; charset=utf-8\\\" />\r\n<title>ziyi title</title>\r\n<meta name=\\\"keywords\\\" content=\\\"\\\" />\r\n<meta name=\\\"description\\\" content=\\\"\\\" />\r\n<script type=\\\"text/javascript\\\" src=\\\"[!--news.url--]briefcase/jquery-1.7.1.min.js\\\"></script>\r\n<script type=\\\"text/javascript\\\" src=\\\"[!--news.url--]briefcase/jquery.slidertron-1.1.js\\\"></script>\r\n\r\n<link href=\\\"[!--news.url--]briefcase/default.css\\\" rel=\\\"stylesheet\\\" type=\\\"text/css\\\" media=\\\"all\\\" />\r\n<!--[if IE 6]>\r\n<link href=\\\"[!--news.url--]briefcase/[!--news.url--]briefcase/default_ie6.css\\\" rel=\\\"stylesheet\\\" type=\\\"text/css\\\" />\r\n<![endif]-->\r\n</head>\r\n<body>\r\n<div id=\\\"header\\\" class=\\\"container\\\">\r\n    <div id=\\\"logo\\\">\r\n        <h1><a href=\\\"[!--news.url--]briefcase/#\\\">BriefCase</a></h1>\r\n    </div>\r\n    <div id=\\\"menu\\\">\r\n       [showclasstemp]\\\'0\\\',13,0,7[/showclasstemp]\r\n    </div>\r\n</div>\r\n<div id=\\\"banner\\\" class=\\\"container\\\">\r\n    <div id=\\\"slider\\\">\r\n    [ecmsinfo]9,4,32,0,0,14,0[/ecmsinfo]\r\n        <div class=\\\"indicator\\\">\r\n            <ul>\r\n                <li class=\\\"active\\\">1</li>\r\n                <li>2</li>\r\n                <li>3</li>\r\n                <li>4</li>\r\n            </ul>\r\n        </div>\r\n    </div>\r\n    <script type=\\\"text/javascript\\\">\r\n        $(\\\'#slider\\\').slidertron({\r\n            viewerSelector: \\\'.viewer\\\',\r\n            reelSelector: \\\'.viewer .reel\\\',\r\n            slidesSelector: \\\'.viewer .reel .slide\\\',\r\n            advanceDelay: 3000,\r\n            speed: \\\'slow\\\',\r\n            navPreviousSelector: \\\'.previous-button\\\',\r\n            navNextSelector: \\\'.next-button\\\',\r\n            indicatorSelector: \\\'.indicator ul li\\\',\r\n            slideLinkSelector: \\\'.link\\\'\r\n        });\r\n    </script> \r\n</div>\r\n<div id=\\\"page\\\" class=\\\"container\\\">\r\n    <div id=\\\"content\\\">\r\n        <div id=\\\"onecolumn\\\">\r\n            <h2>Welcome to out website!</h2>\r\n            <p>This is BriefCase , a free, fully standards-compliant CSS template designed by FCT. The photo used in this template is from Fotogrph. This free template is released under a Creative Commons Attributions 3.0 license, so you’re pretty much free to do whatever you want with it (even use it commercially) provided you keep the links in the footer intact. Aside from that, have fun with it :)</p>\r\n        </div>\r\n        <div id=\\\"two-column\\\">\r\n            <div class=\\\"box-content\\\">\r\n                <h2 class=\\\"title title01\\\">Nulla luctus eleifend</h2>\r\n                <p>Pellentesque tristique ante ut risus. Quisque dictum. Integer nisl risus, sagittis convallis, rutrum id, elementum congue, nibh. Suspendisse dictum porta lectus. Donec placerat odio vel elit. Nullam ante orci, pellentesque quis.</p>\r\n            </div>\r\n            <div class=\\\"box-content\\\">\r\n                <h2 class=\\\"title title02\\\">Maecenas luctus lectus</h2>\r\n                <p>Curabitur sit amet nulla. Nam in massa. Sed vel tellus. Curabitur sem urna, consequat vel, suscipit in, mattis placerat, nulla. Sed ac leo. Pellentesque imperdiet. In posuere  odio quisque semper augue mattis maecenas ligula.</p>\r\n            </div>\r\n        </div>\r\n    </div>\r\n    <div id=\\\"sidebar\\\">\r\n        <div id=\\\"sbox1\\\">\r\n            <h2>Fusce fringilla</h2>\r\n            <ul class=\\\"list-style1\\\">\r\n                <li class=\\\"first\\\">\r\n                    <p>Etiam non felis. Donec ut ante. In id eros. Suspendisse lacus, cursus egestas at sem. </p>\r\n                    <p><a href=\\\"[!--news.url--]briefcase/#\\\" class=\\\"link-style\\\">Read More</a></p>\r\n                </li>\r\n                <li>\r\n                    <p>Etiam non felis. Donec ut ante. In id eros. Suspendisse lacus turpis, cursus  at sem. </p>\r\n                    <p><a href=\\\"[!--news.url--]briefcase/#\\\" class=\\\"link-style\\\">Read More</a></p>\r\n                </li>\r\n            </ul>\r\n        </div>\r\n        <div id=\\\"sbox2\\\">\r\n            <h2>Testimonials</h2>\r\n            <p class=\\\"testimonial\\\">Pellentesque adipiscing purus ac magna. Pellentesque habitant morbi tristique senectus et netus et malesuada fames.</p>\r\n            <div class=\\\"author\\\"><img src=\\\"[!--news.url--]briefcase/images/pic03.jpg\\\" width=\\\"80\\\" height=\\\"80\\\" alt=\\\"\\\" /><span class=\\\"name\\\">Juan Dela Cruz</span><span class=\\\"position\\\">Company CEO</span><span>MyCompany, LLC</span></div>\r\n        </div>\r\n    </div>\r\n</div>\r\n<div id=\\\"footer\\\" class=\\\"container\\\">\r\n    <div id=\\\"fbox1\\\">\r\n        <h2>Aenean elementum</h2>\r\n        <ul class=\\\"style1\\\">\r\n            <li class=\\\"first\\\"><a href=\\\"[!--news.url--]briefcase/#\\\">Consectetuer adipiscing elit</a></li>\r\n            <li><a href=\\\"[!--news.url--]briefcase/#\\\">Metus aliquam pellentesque</a></li>\r\n            <li><a href=\\\"[!--news.url--]briefcase/#\\\">Suspendisse iaculis mauris</a></li>\r\n            <li><a href=\\\"[!--news.url--]briefcase/#\\\">Urnanet non molestie semper</a></li>\r\n            <li><a href=\\\"[!--news.url--]briefcase/#\\\">Proin gravida orci porttitor</a></li>\r\n        </ul>\r\n    </div>\r\n    <div id=\\\"fbox2\\\">\r\n        <h2>Vestibulum luctus</h2>\r\n        <ul class=\\\"style1\\\">\r\n            <li class=\\\"first\\\"><a href=\\\"[!--news.url--]briefcase/#\\\">Consectetuer adipiscing elit</a></li>\r\n            <li><a href=\\\"[!--news.url--]briefcase/#\\\">Metus aliquam pellentesque</a></li>\r\n            <li><a href=\\\"[!--news.url--]briefcase/#\\\">Suspendisse iaculis mauris</a></li>\r\n            <li><a href=\\\"[!--news.url--]briefcase/#\\\">Urnanet non molestie semper</a></li>\r\n            <li><a href=\\\"[!--news.url--]briefcase/#\\\">Proin gravida orci porttitor</a></li>\r\n        </ul>\r\n    </div>\r\n    <div id=\\\"fbox3\\\">\r\n        <h2>Etiam malesuada</h2>\r\n        <p>In posuere eleifend odio. Quisque semper augue mattis wisi. Maecenas ligula. Pellentesque viverra vulputate enim. Donec leo. Vivamus fermentum nibh in augue.</p>\r\n        <ul class=\\\"style2\\\">\r\n            <li><a href=\\\"[!--news.url--]briefcase/#\\\"><img src=\\\"[!--news.url--]briefcase/images/social03.png\\\" width=\\\"32\\\" height=\\\"32\\\" alt=\\\"\\\" /></a></li>\r\n            <li><a href=\\\"[!--news.url--]briefcase/#\\\"><img src=\\\"[!--news.url--]briefcase/images/social01.png\\\" width=\\\"32\\\" height=\\\"32\\\" alt=\\\"\\\" /></a></li>\r\n            <li><a href=\\\"[!--news.url--]briefcase/#\\\"><img src=\\\"[!--news.url--]briefcase/images/social04.png\\\" width=\\\"32\\\" height=\\\"32\\\" alt=\\\"\\\" /></a></li>\r\n            <li><a href=\\\"[!--news.url--]briefcase/#\\\"><img src=\\\"[!--news.url--]briefcase/images/social02.png\\\" width=\\\"32\\\" height=\\\"32\\\" alt=\\\"\\\" /></a></li>\r\n        </ul>\r\n    </div>\r\n</div>\r\n<div id=\\\"copyright\\\" class=\\\"container\\\">\r\n    <p>Copyright (c) 2013 Sitename.com. All rights reserved. Design by <a href=\\\"[!--news.url--]briefcase/http://www.freecsstemplates.org/\\\" rel=\\\"nofollow\\\">FreeCSSTemplates.org</a>. Photos by <a href=\\\"[!--news.url--]briefcase/http://fotogrph.com/\\\">Fotogrph</a>.</p>\r\n</div>\r\n</body>\r\n</html>',0,0,'',0,0,'',0,0,0,1377522270,'pubindextemp',1,'assnr'),(16,14,'ziyi首页焦点','[!--empirenews.listtemp--] <div class=\\\"viewer\\\">\r\n            <div class=\\\"reel\\\">\r\n<!--list.var1-->\r\n               \r\n              <!--list.var2--><!--list.var3--><!--list.var4-->\r\n            </div>\r\n        </div>[!--empirenews.listtemp--]',0,0,' <div class=\\\"slide\\\"> <a class=\\\"link\\\" href=\\\"[!--news.url--]briefcase/http://nodethirtythree.com/#slidertron-slide-1\\\">Full story ...</a> <img src=\\\"[!--news.url--]briefcase/images/pic01.jpg\\\" alt=\\\"\\\" /> </div>',4,3,'Y-m-d H:i:s',0,0,0,1377522345,'bqtemp',1,'assnr'),(17,14,'ziyi首页焦点','[!--empirenews.listtemp--] <div class=\\\"viewer\\\">\r\n            <div class=\\\"reel\\\">\r\n<!--list.var1-->\r\n               \r\n              <!--list.var2--><!--list.var3--><!--list.var4-->\r\n            </div>\r\n        </div>[!--empirenews.listtemp--]',0,0,' <div class=\\\"slide\\\"> <a class=\\\"link\\\" href=\\\"[!--titleurl--]\\\">[!--title--]</a> <img src=\\\"[!--titlepic--]\\\" alt=\\\"[!--title--]\\\" /> </div>',4,3,'Y-m-d H:i:s',0,0,0,1377522775,'bqtemp',1,'assnr'),(12,14,'ziyi首页焦点','[!--empirenews.listtemp--] <div class=\\\"viewer\\\">\r\n            <div class=\\\"reel\\\">\r\n<!--list.var1-->\r\n               \r\n              \r\n            </div>\r\n        </div>[!--empirenews.listtemp--]',0,0,' <div class=\\\"slide\\\"> <a class=\\\"link\\\" href=\\\"[!--news.url--]briefcase/http://nodethirtythree.com/#slidertron-slide-1\\\">Full story ...</a> <img src=\\\"[!--news.url--]briefcase/images/pic01.jpg\\\" alt=\\\"\\\" /> </div>',1,3,'Y-m-d H:i:s',0,0,0,1377521281,'bqtemp',1,'assnr'),(6,13,'ziyi首页导航','[!--empirenews.listtemp--]\r\n <ul>\r\n           <!--list.var1--><!--list.var2--><!--list.var3--><!--list.var4--><!--list.var5--><!--list.var6--><!--list.var7--><!--list.var8-->\r\n          \r\n</ul>\r\n[!--empirenews.listtemp--]',0,0,' <li><a href=\\\"[!--classurl--]\\\"  title=\\\"[!--classname--]\\\">[!--classname--]</a></li>',8,1,'Y-m-d H:i:s',0,0,0,1376644828,'bqtemp',1,'assnr'),(18,1,'','<!DOCTYPE html PUBLIC \\\"-//W3C//DTD XHTML 1.0 Strict//EN\\\" \\\"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\\\">\r\n<html xmlns=\\\"http://www.w3.org/1999/xhtml\\\">\r\n<head>\r\n<meta http-equiv=\\\"Content-Type\\\" content=\\\"text/html; charset=utf-8\\\" />\r\n<title>ziyi title</title>\r\n<meta name=\\\"keywords\\\" content=\\\"\\\" />\r\n<meta name=\\\"description\\\" content=\\\"\\\" />\r\n<script type=\\\"text/javascript\\\" src=\\\"[!--news.url--]briefcase/jquery-1.7.1.min.js\\\"></script>\r\n<script type=\\\"text/javascript\\\" src=\\\"[!--news.url--]briefcase/jquery.slidertron-1.1.js\\\"></script>\r\n\r\n<link href=\\\"[!--news.url--]briefcase/default.css\\\" rel=\\\"stylesheet\\\" type=\\\"text/css\\\" media=\\\"all\\\" />\r\n<!--[if IE 6]>\r\n<link href=\\\"[!--news.url--]briefcase/[!--news.url--]briefcase/default_ie6.css\\\" rel=\\\"stylesheet\\\" type=\\\"text/css\\\" />\r\n<![endif]-->\r\n</head>\r\n<body>\r\n<div id=\\\"header\\\" class=\\\"container\\\">\r\n    <div id=\\\"logo\\\">\r\n        <h1><a href=\\\"[!--news.url--]briefcase/#\\\">BriefCase</a></h1>\r\n    </div>\r\n    <div id=\\\"menu\\\">\r\n       [showclasstemp]\\\'0\\\',13,0,7[/showclasstemp]\r\n    </div>\r\n</div>\r\n<div id=\\\"banner\\\" class=\\\"container\\\">\r\n    <div id=\\\"slider\\\">\r\n    [ecmsinfo]9,4,32,0,0,14,0[/ecmsinfo]\r\n        <div class=\\\"indicator\\\">\r\n            <ul>\r\n                <li class=\\\"active\\\">1</li>\r\n                <li>2</li>\r\n                <li>3</li>\r\n                <li>4</li>\r\n            </ul>\r\n        </div>\r\n    </div>\r\n    <script type=\\\"text/javascript\\\">\r\n        $(\\\'#slider\\\').slidertron({\r\n            viewerSelector: \\\'.viewer\\\',\r\n            reelSelector: \\\'.viewer .reel\\\',\r\n            slidesSelector: \\\'.viewer .reel .slide\\\',\r\n            advanceDelay: 3000,\r\n            speed: \\\'slow\\\',\r\n            navPreviousSelector: \\\'.previous-button\\\',\r\n            navNextSelector: \\\'.next-button\\\',\r\n            indicatorSelector: \\\'.indicator ul li\\\',\r\n            slideLinkSelector: \\\'.link\\\'\r\n        });\r\n    </script> \r\n</div>\r\n<div id=\\\"page\\\" class=\\\"container\\\">\r\n    <div id=\\\"content\\\">\r\n        <div id=\\\"onecolumn\\\">\r\n            <h2>Welcome to out website!</h2>\r\n            <p>This is BriefCase , a free, fully standards-compliant CSS template designed by FCT. The photo used in this template is from Fotogrph. This free template is released under a Creative Commons Attributions 3.0 license, so you’re pretty much free to do whatever you want with it (even use it commercially) provided you keep the links in the footer intact. Aside from that, have fun with it :)</p>\r\n        </div>\r\n        <div id=\\\"two-column\\\">\r\n            <div class=\\\"box-content\\\">\r\n                <h2 class=\\\"title title01\\\">Nulla luctus eleifend</h2>\r\n                <div style=\\\"float:left;width:320px\\\">Pellentesque tristique ante ut risus. Quisque dictum. Integer nisl risus, sagittis convallis, rutrum id, elementum congue, nibh. Suspendisse dictum porta lectus. Donec placerat odio vel elit. Nullam ante orci, pellentesque quis.</div>\r\n		<div style=\\\"float:left;width:200px\\\">\r\n			this is float left\r\n		</div>\r\n		<div style=\\\"clear:both\\\">\r\n		</div>\r\n            </div>\r\n            <div class=\\\"box-content\\\">\r\n                <h2 class=\\\"title title02\\\">Maecenas luctus lectus</h2>\r\n                <p>Curabitur sit amet nulla. Nam in massa. Sed vel tellus. Curabitur sem urna, consequat vel, suscipit in, mattis placerat, nulla. Sed ac leo. Pellentesque imperdiet. In posuere  odio quisque semper augue mattis maecenas ligula.</p>\r\n            </div>\r\n        </div>\r\n    </div>\r\n    <div id=\\\"sidebar\\\">\r\n        <div id=\\\"sbox1\\\">\r\n            <h2>Fusce fringilla</h2>\r\n            <ul class=\\\"list-style1\\\">\r\n                <li class=\\\"first\\\">\r\n                    <p>Etiam non felis. Donec ut ante. In id eros. Suspendisse lacus, cursus egestas at sem. </p>\r\n                    <p><a href=\\\"[!--news.url--]briefcase/#\\\" class=\\\"link-style\\\">Read More</a></p>\r\n                </li>\r\n                <li>\r\n                    <p>Etiam non felis. Donec ut ante. In id eros. Suspendisse lacus turpis, cursus  at sem. </p>\r\n                    <p><a href=\\\"[!--news.url--]briefcase/#\\\" class=\\\"link-style\\\">Read More</a></p>\r\n                </li>\r\n            </ul>\r\n        </div>\r\n        <div id=\\\"sbox2\\\">\r\n            <h2>Testimonials</h2>\r\n            <p class=\\\"testimonial\\\">Pellentesque adipiscing purus ac magna. Pellentesque habitant morbi tristique senectus et netus et malesuada fames.</p>\r\n            <div class=\\\"author\\\"><img src=\\\"[!--news.url--]briefcase/images/pic03.jpg\\\" width=\\\"80\\\" height=\\\"80\\\" alt=\\\"\\\" /><span class=\\\"name\\\">Juan Dela Cruz</span><span class=\\\"position\\\">Company CEO</span><span>MyCompany, LLC</span></div>\r\n        </div>\r\n    </div>\r\n</div>\r\n<div id=\\\"footer\\\" class=\\\"container\\\">\r\n    <div id=\\\"fbox1\\\">\r\n        <h2>Aenean elementum</h2>\r\n        <ul class=\\\"style1\\\">\r\n            <li class=\\\"first\\\"><a href=\\\"[!--news.url--]briefcase/#\\\">Consectetuer adipiscing elit</a></li>\r\n            <li><a href=\\\"[!--news.url--]briefcase/#\\\">Metus aliquam pellentesque</a></li>\r\n            <li><a href=\\\"[!--news.url--]briefcase/#\\\">Suspendisse iaculis mauris</a></li>\r\n            <li><a href=\\\"[!--news.url--]briefcase/#\\\">Urnanet non molestie semper</a></li>\r\n            <li><a href=\\\"[!--news.url--]briefcase/#\\\">Proin gravida orci porttitor</a></li>\r\n        </ul>\r\n    </div>\r\n    <div id=\\\"fbox2\\\">\r\n        <h2>Vestibulum luctus</h2>\r\n        <ul class=\\\"style1\\\">\r\n            <li class=\\\"first\\\"><a href=\\\"[!--news.url--]briefcase/#\\\">Consectetuer adipiscing elit</a></li>\r\n            <li><a href=\\\"[!--news.url--]briefcase/#\\\">Metus aliquam pellentesque</a></li>\r\n            <li><a href=\\\"[!--news.url--]briefcase/#\\\">Suspendisse iaculis mauris</a></li>\r\n            <li><a href=\\\"[!--news.url--]briefcase/#\\\">Urnanet non molestie semper</a></li>\r\n            <li><a href=\\\"[!--news.url--]briefcase/#\\\">Proin gravida orci porttitor</a></li>\r\n        </ul>\r\n    </div>\r\n    <div id=\\\"fbox3\\\">\r\n        <h2>Etiam malesuada</h2>\r\n        <p>In posuere eleifend odio. Quisque semper augue mattis wisi. Maecenas ligula. Pellentesque viverra vulputate enim. Donec leo. Vivamus fermentum nibh in augue.</p>\r\n        <ul class=\\\"style2\\\">\r\n            <li><a href=\\\"[!--news.url--]briefcase/#\\\"><img src=\\\"[!--news.url--]briefcase/images/social03.png\\\" width=\\\"32\\\" height=\\\"32\\\" alt=\\\"\\\" /></a></li>\r\n            <li><a href=\\\"[!--news.url--]briefcase/#\\\"><img src=\\\"[!--news.url--]briefcase/images/social01.png\\\" width=\\\"32\\\" height=\\\"32\\\" alt=\\\"\\\" /></a></li>\r\n            <li><a href=\\\"[!--news.url--]briefcase/#\\\"><img src=\\\"[!--news.url--]briefcase/images/social04.png\\\" width=\\\"32\\\" height=\\\"32\\\" alt=\\\"\\\" /></a></li>\r\n            <li><a href=\\\"[!--news.url--]briefcase/#\\\"><img src=\\\"[!--news.url--]briefcase/images/social02.png\\\" width=\\\"32\\\" height=\\\"32\\\" alt=\\\"\\\" /></a></li>\r\n        </ul>\r\n    </div>\r\n</div>\r\n<div id=\\\"copyright\\\" class=\\\"container\\\">\r\n    <p>Copyright (c) 2013 Sitename.com. All rights reserved. Design by <a href=\\\"[!--news.url--]briefcase/http://www.freecsstemplates.org/\\\" rel=\\\"nofollow\\\">FreeCSSTemplates.org</a>. Photos by <a href=\\\"[!--news.url--]briefcase/http://fotogrph.com/\\\">Fotogrph</a>.</p>\r\n</div>\r\n</body>\r\n</html>',0,0,'',0,0,'',0,0,0,1377607365,'pubindextemp',1,'assnr'),(4,13,'ziyi首页导航','[!--empirenews.listtemp--]\r\n <ul>\r\n           <!--list.var1--><!--list.var2--><!--list.var3--><!--list.var4--><!--list.var5--><!--list.var6--><!--list.var7--><!--list.var8-->\r\n          \r\n</ul>\r\n[!--empirenews.listtemp--]',0,0,' <li class=\\\"active\\\"><a href=\\\"[!--classurl--]\\\" accesskey=\\\"1\\\" title=\\\"[!--classname--]\\\">[!--classname--]</a></li>',8,1,'Y-m-d H:i:s',0,0,0,1376643683,'bqtemp',1,'assnr'),(5,13,'ziyi首页导航','[!--empirenews.listtemp--]\r\n <ul>\r\n           <!--list.var1--><!--list.var2--><!--list.var3--><!--list.var4--><!--list.var5--><!--list.var6--><!--list.var7--><!--list.var8-->\r\n          \r\n</ul>\r\n[!--empirenews.listtemp--]',0,0,' <li><a href=\\\"[!--classurl--]\\\" accesskey=\\\"1\\\" title=\\\"[!--classname--]\\\">[!--classname--]</a></li>',8,1,'Y-m-d H:i:s',0,0,0,1376643729,'bqtemp',1,'assnr'),(19,1,'','<!DOCTYPE html PUBLIC \\\"-//W3C//DTD XHTML 1.0 Strict//EN\\\" \\\"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\\\">\r\n<html xmlns=\\\"http://www.w3.org/1999/xhtml\\\">\r\n<head>\r\n<meta http-equiv=\\\"Content-Type\\\" content=\\\"text/html; charset=utf-8\\\" />\r\n<title>ziyi title</title>\r\n<meta name=\\\"keywords\\\" content=\\\"\\\" />\r\n<meta name=\\\"description\\\" content=\\\"\\\" />\r\n<script type=\\\"text/javascript\\\" src=\\\"[!--news.url--]briefcase/jquery-1.7.1.min.js\\\"></script>\r\n<script type=\\\"text/javascript\\\" src=\\\"[!--news.url--]briefcase/jquery.slidertron-1.1.js\\\"></script>\r\n\r\n<link href=\\\"[!--news.url--]briefcase/default.css\\\" rel=\\\"stylesheet\\\" type=\\\"text/css\\\" media=\\\"all\\\" />\r\n<!--[if IE 6]>\r\n<link href=\\\"[!--news.url--]briefcase/[!--news.url--]briefcase/default_ie6.css\\\" rel=\\\"stylesheet\\\" type=\\\"text/css\\\" />\r\n<![endif]-->\r\n</head>\r\n<body>\r\n<div id=\\\"header\\\" class=\\\"container\\\">\r\n    <div id=\\\"logo\\\">\r\n        <h1><a href=\\\"[!--news.url--]\\\"><img src=\\\"[!--news.url--]briefcase/images/logo.png\\\"/></a></h1>\r\n    </div>\r\n    <div id=\\\"menu\\\">\r\n       [showclasstemp]\\\'0\\\',13,0,7[/showclasstemp]\r\n    </div>\r\n</div>\r\n<div id=\\\"banner\\\" class=\\\"container\\\">\r\n    <div id=\\\"slider\\\">\r\n    [ecmsinfo]9,4,32,0,0,14,0[/ecmsinfo]\r\n        <div class=\\\"indicator\\\">\r\n            <ul>\r\n                <li class=\\\"active\\\">1</li>\r\n                <li>2</li>\r\n                <li>3</li>\r\n                <li>4</li>\r\n            </ul>\r\n        </div>\r\n    </div>\r\n    <script type=\\\"text/javascript\\\">\r\n        $(\\\'#slider\\\').slidertron({\r\n            viewerSelector: \\\'.viewer\\\',\r\n            reelSelector: \\\'.viewer .reel\\\',\r\n            slidesSelector: \\\'.viewer .reel .slide\\\',\r\n            advanceDelay: 3000,\r\n            speed: \\\'slow\\\',\r\n            navPreviousSelector: \\\'.previous-button\\\',\r\n            navNextSelector: \\\'.next-button\\\',\r\n            indicatorSelector: \\\'.indicator ul li\\\',\r\n            slideLinkSelector: \\\'.link\\\'\r\n        });\r\n    </script> \r\n</div>\r\n<div id=\\\"page\\\" class=\\\"container\\\">\r\n    <div id=\\\"content\\\">\r\n        <div id=\\\"onecolumn\\\">\r\n            <h2>Welcome to out website!</h2>\r\n            <p>This is BriefCase , a free, fully standards-compliant CSS template designed by FCT. The photo used in this template is from Fotogrph. This free template is released under a Creative Commons Attributions 3.0 license, so you’re pretty much free to do whatever you want with it (even use it commercially) provided you keep the links in the footer intact. Aside from that, have fun with it :)</p>\r\n        </div>\r\n        <div id=\\\"two-column\\\">\r\n            <div class=\\\"box-content\\\">\r\n                <h2 class=\\\"title title01\\\">Nulla luctus eleifend</h2>\r\n                <div style=\\\"float:left;width:320px\\\">Pellentesque tristique ante ut risus. Quisque dictum. Integer nisl risus, sagittis convallis, rutrum id, elementum congue, nibh. Suspendisse dictum porta lectus. Donec placerat odio vel elit. Nullam ante orci, pellentesque quis.</div>\r\n		<div style=\\\"float:left;width:200px\\\">\r\n			this is float left\r\n		</div>\r\n		<div style=\\\"clear:both\\\">\r\n		</div>\r\n            </div>\r\n            <div class=\\\"box-content\\\">\r\n                <h2 class=\\\"title title02\\\">Maecenas luctus lectus</h2>\r\n                <p>Curabitur sit amet nulla. Nam in massa. Sed vel tellus. Curabitur sem urna, consequat vel, suscipit in, mattis placerat, nulla. Sed ac leo. Pellentesque imperdiet. In posuere  odio quisque semper augue mattis maecenas ligula.</p>\r\n            </div>\r\n        </div>\r\n    </div>\r\n    <div id=\\\"sidebar\\\">\r\n        <div id=\\\"sbox1\\\">\r\n            <h2>Fusce fringilla</h2>\r\n            <ul class=\\\"list-style1\\\">\r\n                <li class=\\\"first\\\">\r\n                    <p>Etiam non felis. Donec ut ante. In id eros. Suspendisse lacus, cursus egestas at sem. </p>\r\n                    <p><a href=\\\"[!--news.url--]briefcase/#\\\" class=\\\"link-style\\\">Read More</a></p>\r\n                </li>\r\n                <li>\r\n                    <p>Etiam non felis. Donec ut ante. In id eros. Suspendisse lacus turpis, cursus  at sem. </p>\r\n                    <p><a href=\\\"[!--news.url--]briefcase/#\\\" class=\\\"link-style\\\">Read More</a></p>\r\n                </li>\r\n            </ul>\r\n        </div>\r\n        <div id=\\\"sbox2\\\">\r\n            <h2>Testimonials</h2>\r\n            <p class=\\\"testimonial\\\">Pellentesque adipiscing purus ac magna. Pellentesque habitant morbi tristique senectus et netus et malesuada fames.</p>\r\n            <div class=\\\"author\\\"><img src=\\\"[!--news.url--]briefcase/images/pic03.jpg\\\" width=\\\"80\\\" height=\\\"80\\\" alt=\\\"\\\" /><span class=\\\"name\\\">Juan Dela Cruz</span><span class=\\\"position\\\">Company CEO</span><span>MyCompany, LLC</span></div>\r\n        </div>\r\n    </div>\r\n</div>\r\n<div id=\\\"footer\\\" class=\\\"container\\\">\r\n    <div id=\\\"fbox1\\\">\r\n        <h2>Aenean elementum</h2>\r\n        <ul class=\\\"style1\\\">\r\n            <li class=\\\"first\\\"><a href=\\\"[!--news.url--]briefcase/#\\\">Consectetuer adipiscing elit</a></li>\r\n            <li><a href=\\\"[!--news.url--]briefcase/#\\\">Metus aliquam pellentesque</a></li>\r\n            <li><a href=\\\"[!--news.url--]briefcase/#\\\">Suspendisse iaculis mauris</a></li>\r\n            <li><a href=\\\"[!--news.url--]briefcase/#\\\">Urnanet non molestie semper</a></li>\r\n            <li><a href=\\\"[!--news.url--]briefcase/#\\\">Proin gravida orci porttitor</a></li>\r\n        </ul>\r\n    </div>\r\n    <div id=\\\"fbox2\\\">\r\n        <h2>Vestibulum luctus</h2>\r\n        <ul class=\\\"style1\\\">\r\n            <li class=\\\"first\\\"><a href=\\\"[!--news.url--]briefcase/#\\\">Consectetuer adipiscing elit</a></li>\r\n            <li><a href=\\\"[!--news.url--]briefcase/#\\\">Metus aliquam pellentesque</a></li>\r\n            <li><a href=\\\"[!--news.url--]briefcase/#\\\">Suspendisse iaculis mauris</a></li>\r\n            <li><a href=\\\"[!--news.url--]briefcase/#\\\">Urnanet non molestie semper</a></li>\r\n            <li><a href=\\\"[!--news.url--]briefcase/#\\\">Proin gravida orci porttitor</a></li>\r\n        </ul>\r\n    </div>\r\n    <div id=\\\"fbox3\\\">\r\n        <h2>Etiam malesuada</h2>\r\n        <p>In posuere eleifend odio. Quisque semper augue mattis wisi. Maecenas ligula. Pellentesque viverra vulputate enim. Donec leo. Vivamus fermentum nibh in augue.</p>\r\n        <ul class=\\\"style2\\\">\r\n            <li><a href=\\\"[!--news.url--]briefcase/#\\\"><img src=\\\"[!--news.url--]briefcase/images/social03.png\\\" width=\\\"32\\\" height=\\\"32\\\" alt=\\\"\\\" /></a></li>\r\n            <li><a href=\\\"[!--news.url--]briefcase/#\\\"><img src=\\\"[!--news.url--]briefcase/images/social01.png\\\" width=\\\"32\\\" height=\\\"32\\\" alt=\\\"\\\" /></a></li>\r\n            <li><a href=\\\"[!--news.url--]briefcase/#\\\"><img src=\\\"[!--news.url--]briefcase/images/social04.png\\\" width=\\\"32\\\" height=\\\"32\\\" alt=\\\"\\\" /></a></li>\r\n            <li><a href=\\\"[!--news.url--]briefcase/#\\\"><img src=\\\"[!--news.url--]briefcase/images/social02.png\\\" width=\\\"32\\\" height=\\\"32\\\" alt=\\\"\\\" /></a></li>\r\n        </ul>\r\n    </div>\r\n</div>\r\n<div id=\\\"copyright\\\" class=\\\"container\\\">\r\n    <p>Copyright (c) 2013 Sitename.com. All rights reserved. Design by <a href=\\\"[!--news.url--]briefcase/http://www.freecsstemplates.org/\\\" rel=\\\"nofollow\\\">FreeCSSTemplates.org</a>. Photos by <a href=\\\"[!--news.url--]briefcase/http://fotogrph.com/\\\">Fotogrph</a>.</p>\r\n</div>\r\n</body>\r\n</html>',0,0,'',0,0,'',0,0,0,1377675804,'pubindextemp',1,'assnr');
+INSERT INTO `ziyi_enewstempbak` VALUES (20,1,'','<!DOCTYPE html PUBLIC \\\"-//W3C//DTD XHTML 1.0 Strict//EN\\\" \\\"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\\\">\r\n<html xmlns=\\\"http://www.w3.org/1999/xhtml\\\">\r\n<head>\r\n<meta http-equiv=\\\"Content-Type\\\" content=\\\"text/html; charset=utf-8\\\" />\r\n<title>ziyi title</title>\r\n<meta name=\\\"keywords\\\" content=\\\"\\\" />\r\n<meta name=\\\"description\\\" content=\\\"\\\" />\r\n<script type=\\\"text/javascript\\\" src=\\\"[!--news.url--]briefcase/jquery-1.7.1.min.js\\\"></script>\r\n<script type=\\\"text/javascript\\\" src=\\\"[!--news.url--]briefcase/jquery.slidertron-1.1.js\\\"></script>\r\n\r\n<link href=\\\"[!--news.url--]briefcase/default.css\\\" rel=\\\"stylesheet\\\" type=\\\"text/css\\\" media=\\\"all\\\" />\r\n<!--[if IE 6]>\r\n<link href=\\\"[!--news.url--]briefcase/[!--news.url--]briefcase/default_ie6.css\\\" rel=\\\"stylesheet\\\" type=\\\"text/css\\\" />\r\n<![endif]-->\r\n</head>\r\n<body>\r\n<div id=\\\"header\\\" class=\\\"container\\\">\r\n    <div id=\\\"logo\\\">\r\n        <h1><a href=\\\"[!--news.url--]\\\"><img src=\\\"[!--news.url--]briefcase/images/logo.png\\\"/></a></h1>\r\n    </div>\r\n    <div id=\\\"menu\\\">\r\n       [showclasstemp]\\\'0\\\',13,0,7[/showclasstemp]\r\n    </div>\r\n</div>\r\n<div id=\\\"banner\\\" class=\\\"container\\\">\r\n    <div id=\\\"slider\\\">\r\n    [ecmsinfo]9,4,32,0,0,14,0[/ecmsinfo]\r\n        <div class=\\\"indicator\\\">\r\n            <ul>\r\n                <li class=\\\"active\\\">1</li>\r\n                <li>2</li>\r\n                <li>3</li>\r\n                <li>4</li>\r\n            </ul>\r\n        </div>\r\n    </div>\r\n    <script type=\\\"text/javascript\\\">\r\n        $(\\\'#slider\\\').slidertron({\r\n            viewerSelector: \\\'.viewer\\\',\r\n            reelSelector: \\\'.viewer .reel\\\',\r\n            slidesSelector: \\\'.viewer .reel .slide\\\',\r\n            advanceDelay: 3000,\r\n            speed: \\\'slow\\\',\r\n            navPreviousSelector: \\\'.previous-button\\\',\r\n            navNextSelector: \\\'.next-button\\\',\r\n            indicatorSelector: \\\'.indicator ul li\\\',\r\n            slideLinkSelector: \\\'.link\\\'\r\n        });\r\n    </script> \r\n</div>\r\n<div id=\\\"page\\\" class=\\\"container\\\">\r\n    <div id=\\\"content\\\">\r\n        <div id=\\\"two-column\\\">\r\n            <div class=\\\"box-content\\\">\r\n                <h2 class=\\\"title title01\\\">Nulla luctus eleifend</h2>\r\n                <div style=\\\"float:left;width:320px\\\">Pellentesque tristique ante ut risus. Quisque dictum. Integer nisl risus, sagittis convallis, rutrum id, elementum congue, nibh. Suspendisse dictum porta lectus. Donec placerat odio vel elit. Nullam ante orci, pellentesque quis.</div>\r\n		<div style=\\\"float:left;width:200px\\\">\r\n			this is float left\r\n		</div>\r\n		<div style=\\\"clear:both\\\">\r\n		</div>\r\n            </div>\r\n            <div class=\\\"box-content\\\">\r\n                <h2 class=\\\"title title02\\\">Maecenas luctus lectus</h2>\r\n                <p>Curabitur sit amet nulla. Nam in massa. Sed vel tellus. Curabitur sem urna, consequat vel, suscipit in, mattis placerat, nulla. Sed ac leo. Pellentesque imperdiet. In posuere  odio quisque semper augue mattis maecenas ligula.</p>\r\n            </div>\r\n        </div>\r\n    </div>\r\n    <div id=\\\"sidebar\\\">\r\n        <div id=\\\"sbox1\\\">\r\n            <h2>Fusce fringilla</h2>\r\n            <ul class=\\\"list-style1\\\">\r\n                <li class=\\\"first\\\">\r\n                    <p>Etiam non felis. Donec ut ante. In id eros. Suspendisse lacus, cursus egestas at sem. </p>\r\n                    <p><a href=\\\"[!--news.url--]briefcase/#\\\" class=\\\"link-style\\\">Read More</a></p>\r\n                </li>\r\n                <li>\r\n                    <p>Etiam non felis. Donec ut ante. In id eros. Suspendisse lacus turpis, cursus  at sem. </p>\r\n                    <p><a href=\\\"[!--news.url--]briefcase/#\\\" class=\\\"link-style\\\">Read More</a></p>\r\n                </li>\r\n            </ul>\r\n        </div>\r\n        <div id=\\\"sbox2\\\">\r\n            <h2>Testimonials</h2>\r\n            <p class=\\\"testimonial\\\">Pellentesque adipiscing purus ac magna. Pellentesque habitant morbi tristique senectus et netus et malesuada fames.</p>\r\n            <div class=\\\"author\\\"><img src=\\\"[!--news.url--]briefcase/images/pic03.jpg\\\" width=\\\"80\\\" height=\\\"80\\\" alt=\\\"\\\" /><span class=\\\"name\\\">Juan Dela Cruz</span><span class=\\\"position\\\">Company CEO</span><span>MyCompany, LLC</span></div>\r\n        </div>\r\n    </div>\r\n</div>\r\n<div id=\\\"footer\\\" class=\\\"container\\\">\r\n    <div id=\\\"fbox1\\\">\r\n        <h2>Aenean elementum</h2>\r\n        <ul class=\\\"style1\\\">\r\n            <li class=\\\"first\\\"><a href=\\\"[!--news.url--]briefcase/#\\\">Consectetuer adipiscing elit</a></li>\r\n            <li><a href=\\\"[!--news.url--]briefcase/#\\\">Metus aliquam pellentesque</a></li>\r\n            <li><a href=\\\"[!--news.url--]briefcase/#\\\">Suspendisse iaculis mauris</a></li>\r\n            <li><a href=\\\"[!--news.url--]briefcase/#\\\">Urnanet non molestie semper</a></li>\r\n            <li><a href=\\\"[!--news.url--]briefcase/#\\\">Proin gravida orci porttitor</a></li>\r\n        </ul>\r\n    </div>\r\n    <div id=\\\"fbox2\\\">\r\n        <h2>Vestibulum luctus</h2>\r\n        <ul class=\\\"style1\\\">\r\n            <li class=\\\"first\\\"><a href=\\\"[!--news.url--]briefcase/#\\\">Consectetuer adipiscing elit</a></li>\r\n            <li><a href=\\\"[!--news.url--]briefcase/#\\\">Metus aliquam pellentesque</a></li>\r\n            <li><a href=\\\"[!--news.url--]briefcase/#\\\">Suspendisse iaculis mauris</a></li>\r\n            <li><a href=\\\"[!--news.url--]briefcase/#\\\">Urnanet non molestie semper</a></li>\r\n            <li><a href=\\\"[!--news.url--]briefcase/#\\\">Proin gravida orci porttitor</a></li>\r\n        </ul>\r\n    </div>\r\n    <div id=\\\"fbox3\\\">\r\n        <h2>Etiam malesuada</h2>\r\n        <p>In posuere eleifend odio. Quisque semper augue mattis wisi. Maecenas ligula. Pellentesque viverra vulputate enim. Donec leo. Vivamus fermentum nibh in augue.</p>\r\n        <ul class=\\\"style2\\\">\r\n            <li><a href=\\\"[!--news.url--]briefcase/#\\\"><img src=\\\"[!--news.url--]briefcase/images/social03.png\\\" width=\\\"32\\\" height=\\\"32\\\" alt=\\\"\\\" /></a></li>\r\n            <li><a href=\\\"[!--news.url--]briefcase/#\\\"><img src=\\\"[!--news.url--]briefcase/images/social01.png\\\" width=\\\"32\\\" height=\\\"32\\\" alt=\\\"\\\" /></a></li>\r\n            <li><a href=\\\"[!--news.url--]briefcase/#\\\"><img src=\\\"[!--news.url--]briefcase/images/social04.png\\\" width=\\\"32\\\" height=\\\"32\\\" alt=\\\"\\\" /></a></li>\r\n            <li><a href=\\\"[!--news.url--]briefcase/#\\\"><img src=\\\"[!--news.url--]briefcase/images/social02.png\\\" width=\\\"32\\\" height=\\\"32\\\" alt=\\\"\\\" /></a></li>\r\n        </ul>\r\n    </div>\r\n</div>\r\n<div id=\\\"copyright\\\" class=\\\"container\\\">\r\n    <p>Copyright (c) 2013 Sitename.com. All rights reserved. Design by <a href=\\\"[!--news.url--]briefcase/http://www.freecsstemplates.org/\\\" rel=\\\"nofollow\\\">FreeCSSTemplates.org</a>. Photos by <a href=\\\"[!--news.url--]briefcase/http://fotogrph.com/\\\">Fotogrph</a>.</p>\r\n</div>\r\n</body>\r\n</html>',0,0,'',0,0,'',0,0,0,1377874851,'pubindextemp',1,'assnr'),(21,15,'ziyi首页经典案例',' [!--empirenews.listtemp--]\r\n<!--list.var1-->\r\n          [!--empirenews.listtemp--]',0,0,'<div class=\\\"box-content\\\">\r\n                <a href=\\\"[!--titleurl--]\\\"><h2 class=\\\"title title01\\\">[!--oldtitle--]</h2></a>\r\n                <div style=\\\"float:left;width:320px\\\">[!--smalltext--]</div>\r\n		<div style=\\\"float:left;width:200px\\\">\r\n			\r\n<img src=\\\"[!--titlepic--]\\\"/>\r\n		</div>\r\n		<div style=\\\"clear:both\\\">\r\n		</div>  </div>',1,1,'Y-m-d H:i:s',0,0,0,1377875845,'bqtemp',1,'assnr'),(16,14,'ziyi首页焦点','[!--empirenews.listtemp--] <div class=\\\"viewer\\\">\r\n            <div class=\\\"reel\\\">\r\n<!--list.var1-->\r\n               \r\n              <!--list.var2--><!--list.var3--><!--list.var4-->\r\n            </div>\r\n        </div>[!--empirenews.listtemp--]',0,0,' <div class=\\\"slide\\\"> <a class=\\\"link\\\" href=\\\"[!--news.url--]briefcase/http://nodethirtythree.com/#slidertron-slide-1\\\">Full story ...</a> <img src=\\\"[!--news.url--]briefcase/images/pic01.jpg\\\" alt=\\\"\\\" /> </div>',4,3,'Y-m-d H:i:s',0,0,0,1377522345,'bqtemp',1,'assnr'),(17,14,'ziyi首页焦点','[!--empirenews.listtemp--] <div class=\\\"viewer\\\">\r\n            <div class=\\\"reel\\\">\r\n<!--list.var1-->\r\n               \r\n              <!--list.var2--><!--list.var3--><!--list.var4-->\r\n            </div>\r\n        </div>[!--empirenews.listtemp--]',0,0,' <div class=\\\"slide\\\"> <a class=\\\"link\\\" href=\\\"[!--titleurl--]\\\">[!--title--]</a> <img src=\\\"[!--titlepic--]\\\" alt=\\\"[!--title--]\\\" /> </div>',4,3,'Y-m-d H:i:s',0,0,0,1377522775,'bqtemp',1,'assnr'),(12,14,'ziyi首页焦点','[!--empirenews.listtemp--] <div class=\\\"viewer\\\">\r\n            <div class=\\\"reel\\\">\r\n<!--list.var1-->\r\n               \r\n              \r\n            </div>\r\n        </div>[!--empirenews.listtemp--]',0,0,' <div class=\\\"slide\\\"> <a class=\\\"link\\\" href=\\\"[!--news.url--]briefcase/http://nodethirtythree.com/#slidertron-slide-1\\\">Full story ...</a> <img src=\\\"[!--news.url--]briefcase/images/pic01.jpg\\\" alt=\\\"\\\" /> </div>',1,3,'Y-m-d H:i:s',0,0,0,1377521281,'bqtemp',1,'assnr'),(6,13,'ziyi首页导航','[!--empirenews.listtemp--]\r\n <ul>\r\n           <!--list.var1--><!--list.var2--><!--list.var3--><!--list.var4--><!--list.var5--><!--list.var6--><!--list.var7--><!--list.var8-->\r\n          \r\n</ul>\r\n[!--empirenews.listtemp--]',0,0,' <li><a href=\\\"[!--classurl--]\\\"  title=\\\"[!--classname--]\\\">[!--classname--]</a></li>',8,1,'Y-m-d H:i:s',0,0,0,1376644828,'bqtemp',1,'assnr'),(22,1,'','<!DOCTYPE html PUBLIC \\\"-//W3C//DTD XHTML 1.0 Strict//EN\\\" \\\"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\\\">\r\n<html xmlns=\\\"http://www.w3.org/1999/xhtml\\\">\r\n<head>\r\n<meta http-equiv=\\\"Content-Type\\\" content=\\\"text/html; charset=utf-8\\\" />\r\n<title>ziyi title</title>\r\n<meta name=\\\"keywords\\\" content=\\\"\\\" />\r\n<meta name=\\\"description\\\" content=\\\"\\\" />\r\n<script type=\\\"text/javascript\\\" src=\\\"[!--news.url--]briefcase/jquery-1.7.1.min.js\\\"></script>\r\n<script type=\\\"text/javascript\\\" src=\\\"[!--news.url--]briefcase/jquery.slidertron-1.1.js\\\"></script>\r\n\r\n<link href=\\\"[!--news.url--]briefcase/default.css\\\" rel=\\\"stylesheet\\\" type=\\\"text/css\\\" media=\\\"all\\\" />\r\n<!--[if IE 6]>\r\n<link href=\\\"[!--news.url--]briefcase/[!--news.url--]briefcase/default_ie6.css\\\" rel=\\\"stylesheet\\\" type=\\\"text/css\\\" />\r\n<![endif]-->\r\n</head>\r\n<body>\r\n<div id=\\\"header\\\" class=\\\"container\\\">\r\n    <div id=\\\"logo\\\">\r\n        <h1><a href=\\\"[!--news.url--]\\\"><img src=\\\"[!--news.url--]briefcase/images/logo.png\\\"/></a></h1>\r\n    </div>\r\n    <div id=\\\"menu\\\">\r\n       [showclasstemp]\\\'0\\\',13,0,7[/showclasstemp]\r\n    </div>\r\n</div>\r\n<div id=\\\"banner\\\" class=\\\"container\\\">\r\n    <div id=\\\"slider\\\">\r\n    [ecmsinfo]9,4,32,0,0,14,0[/ecmsinfo]\r\n        <div class=\\\"indicator\\\">\r\n            <ul>\r\n                <li class=\\\"active\\\">1</li>\r\n                <li>2</li>\r\n                <li>3</li>\r\n                <li>4</li>\r\n            </ul>\r\n        </div>\r\n    </div>\r\n    <script type=\\\"text/javascript\\\">\r\n        $(\\\'#slider\\\').slidertron({\r\n            viewerSelector: \\\'.viewer\\\',\r\n            reelSelector: \\\'.viewer .reel\\\',\r\n            slidesSelector: \\\'.viewer .reel .slide\\\',\r\n            advanceDelay: 3000,\r\n            speed: \\\'slow\\\',\r\n            navPreviousSelector: \\\'.previous-button\\\',\r\n            navNextSelector: \\\'.next-button\\\',\r\n            indicatorSelector: \\\'.indicator ul li\\\',\r\n            slideLinkSelector: \\\'.link\\\'\r\n        });\r\n    </script> \r\n</div>\r\n<div id=\\\"page\\\" class=\\\"container\\\">\r\n    <div id=\\\"content\\\">\r\n        <div id=\\\"two-column\\\">\r\n           [ecmsinfo]5,2,32,0,0,15,0[/ecmsinfo]\r\n            <div class=\\\"box-content\\\">\r\n                <h2 class=\\\"title title02\\\">Maecenas luctus lectus</h2>\r\n                <p>Curabitur sit amet nulla. Nam in massa. Sed vel tellus. Curabitur sem urna, consequat vel, suscipit in, mattis placerat, nulla. Sed ac leo. Pellentesque imperdiet. In posuere  odio quisque semper augue mattis maecenas ligula.</p>\r\n            </div>\r\n        </div>\r\n    </div>\r\n    <div id=\\\"sidebar\\\">\r\n        <div id=\\\"sbox1\\\">\r\n            <h2>Fusce fringilla</h2>\r\n            <ul class=\\\"list-style1\\\">\r\n                <li class=\\\"first\\\">\r\n                    <p>Etiam non felis. Donec ut ante. In id eros. Suspendisse lacus, cursus egestas at sem. </p>\r\n                    <p><a href=\\\"[!--news.url--]briefcase/#\\\" class=\\\"link-style\\\">Read More</a></p>\r\n                </li>\r\n                <li>\r\n                    <p>Etiam non felis. Donec ut ante. In id eros. Suspendisse lacus turpis, cursus  at sem. </p>\r\n                    <p><a href=\\\"[!--news.url--]briefcase/#\\\" class=\\\"link-style\\\">Read More</a></p>\r\n                </li>\r\n            </ul>\r\n        </div>\r\n        <div id=\\\"sbox2\\\">\r\n            <h2>Testimonials</h2>\r\n            <p class=\\\"testimonial\\\">Pellentesque adipiscing purus ac magna. Pellentesque habitant morbi tristique senectus et netus et malesuada fames.</p>\r\n            <div class=\\\"author\\\"><img src=\\\"[!--news.url--]briefcase/images/pic03.jpg\\\" width=\\\"80\\\" height=\\\"80\\\" alt=\\\"\\\" /><span class=\\\"name\\\">Juan Dela Cruz</span><span class=\\\"position\\\">Company CEO</span><span>MyCompany, LLC</span></div>\r\n        </div>\r\n    </div>\r\n</div>\r\n<div id=\\\"footer\\\" class=\\\"container\\\">\r\n    <div id=\\\"fbox1\\\">\r\n        <h2>Aenean elementum</h2>\r\n        <ul class=\\\"style1\\\">\r\n            <li class=\\\"first\\\"><a href=\\\"[!--news.url--]briefcase/#\\\">Consectetuer adipiscing elit</a></li>\r\n            <li><a href=\\\"[!--news.url--]briefcase/#\\\">Metus aliquam pellentesque</a></li>\r\n            <li><a href=\\\"[!--news.url--]briefcase/#\\\">Suspendisse iaculis mauris</a></li>\r\n            <li><a href=\\\"[!--news.url--]briefcase/#\\\">Urnanet non molestie semper</a></li>\r\n            <li><a href=\\\"[!--news.url--]briefcase/#\\\">Proin gravida orci porttitor</a></li>\r\n        </ul>\r\n    </div>\r\n    <div id=\\\"fbox2\\\">\r\n        <h2>Vestibulum luctus</h2>\r\n        <ul class=\\\"style1\\\">\r\n            <li class=\\\"first\\\"><a href=\\\"[!--news.url--]briefcase/#\\\">Consectetuer adipiscing elit</a></li>\r\n            <li><a href=\\\"[!--news.url--]briefcase/#\\\">Metus aliquam pellentesque</a></li>\r\n            <li><a href=\\\"[!--news.url--]briefcase/#\\\">Suspendisse iaculis mauris</a></li>\r\n            <li><a href=\\\"[!--news.url--]briefcase/#\\\">Urnanet non molestie semper</a></li>\r\n            <li><a href=\\\"[!--news.url--]briefcase/#\\\">Proin gravida orci porttitor</a></li>\r\n        </ul>\r\n    </div>\r\n    <div id=\\\"fbox3\\\">\r\n        <h2>Etiam malesuada</h2>\r\n        <p>In posuere eleifend odio. Quisque semper augue mattis wisi. Maecenas ligula. Pellentesque viverra vulputate enim. Donec leo. Vivamus fermentum nibh in augue.</p>\r\n        <ul class=\\\"style2\\\">\r\n            <li><a href=\\\"[!--news.url--]briefcase/#\\\"><img src=\\\"[!--news.url--]briefcase/images/social03.png\\\" width=\\\"32\\\" height=\\\"32\\\" alt=\\\"\\\" /></a></li>\r\n            <li><a href=\\\"[!--news.url--]briefcase/#\\\"><img src=\\\"[!--news.url--]briefcase/images/social01.png\\\" width=\\\"32\\\" height=\\\"32\\\" alt=\\\"\\\" /></a></li>\r\n            <li><a href=\\\"[!--news.url--]briefcase/#\\\"><img src=\\\"[!--news.url--]briefcase/images/social04.png\\\" width=\\\"32\\\" height=\\\"32\\\" alt=\\\"\\\" /></a></li>\r\n            <li><a href=\\\"[!--news.url--]briefcase/#\\\"><img src=\\\"[!--news.url--]briefcase/images/social02.png\\\" width=\\\"32\\\" height=\\\"32\\\" alt=\\\"\\\" /></a></li>\r\n        </ul>\r\n    </div>\r\n</div>\r\n<div id=\\\"copyright\\\" class=\\\"container\\\">\r\n    <p>Copyright (c) 2013 Sitename.com. All rights reserved. Design by <a href=\\\"[!--news.url--]briefcase/http://www.freecsstemplates.org/\\\" rel=\\\"nofollow\\\">FreeCSSTemplates.org</a>. Photos by <a href=\\\"[!--news.url--]briefcase/http://fotogrph.com/\\\">Fotogrph</a>.</p>\r\n</div>\r\n</body>\r\n</html>',0,0,'',0,0,'',0,0,0,1377875900,'pubindextemp',1,'assnr'),(23,15,'ziyi首页经典案例',' [!--empirenews.listtemp--]\r\n<!--list.var1-->\r\n          [!--empirenews.listtemp--]',0,0,'<div class=\\\"box-content\\\">\r\n        \r\n\r\n                <div style=\\\"float:left;width:320px\\\">\r\n<h2>        <a href=\\\"[!--titleurl--]\\\">[!--oldtitle--]</a>  </h2>\r\n<p class=\\\"psimple_content\\\">\r\n[!--smalltext--]\r\n</p>\r\n\r\n</div>\r\n		<div style=\\\"float:left;width:200px\\\">\r\n			\r\n<img src=\\\"[!--titlepic--]\\\"/>\r\n\r\n\r\n\r\n		</div>\r\n		<div style=\\\"clear:both\\\">\r\n		</div>  </div>',1,1,'Y-m-d H:i:s',0,0,0,1377876085,'bqtemp',1,'assnr'),(24,15,'ziyi首页经典案例',' [!--empirenews.listtemp--]\r\n<!--list.var1-->\r\n          [!--empirenews.listtemp--]',0,0,'<div class=\\\"box-content\\\">\r\n        \r\n\r\n                <div style=\\\"float:left;width:320px\\\">\r\n    <div class=\\\"jindiantitle\\\"> <a href=\\\"[!--titleurl--]\\\">[!--oldtitle--]</a></div> \r\n<p class=\\\"psimple_content\\\">\r\n[!--smalltext--]\r\n</p>\r\n\r\n</div>\r\n		<div style=\\\"float:left;width:200px\\\">\r\n			\r\n<img src=\\\"[!--titlepic--]\\\"/>\r\n\r\n\r\n\r\n		</div>\r\n		<div style=\\\"clear:both\\\">\r\n		</div>  </div>',1,1,'Y-m-d H:i:s',0,0,0,1377876195,'bqtemp',1,'assnr'),(4,13,'ziyi首页导航','[!--empirenews.listtemp--]\r\n <ul>\r\n           <!--list.var1--><!--list.var2--><!--list.var3--><!--list.var4--><!--list.var5--><!--list.var6--><!--list.var7--><!--list.var8-->\r\n          \r\n</ul>\r\n[!--empirenews.listtemp--]',0,0,' <li class=\\\"active\\\"><a href=\\\"[!--classurl--]\\\" accesskey=\\\"1\\\" title=\\\"[!--classname--]\\\">[!--classname--]</a></li>',8,1,'Y-m-d H:i:s',0,0,0,1376643683,'bqtemp',1,'assnr'),(5,13,'ziyi首页导航','[!--empirenews.listtemp--]\r\n <ul>\r\n           <!--list.var1--><!--list.var2--><!--list.var3--><!--list.var4--><!--list.var5--><!--list.var6--><!--list.var7--><!--list.var8-->\r\n          \r\n</ul>\r\n[!--empirenews.listtemp--]',0,0,' <li><a href=\\\"[!--classurl--]\\\" accesskey=\\\"1\\\" title=\\\"[!--classname--]\\\">[!--classname--]</a></li>',8,1,'Y-m-d H:i:s',0,0,0,1376643729,'bqtemp',1,'assnr'),(19,1,'','<!DOCTYPE html PUBLIC \\\"-//W3C//DTD XHTML 1.0 Strict//EN\\\" \\\"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\\\">\r\n<html xmlns=\\\"http://www.w3.org/1999/xhtml\\\">\r\n<head>\r\n<meta http-equiv=\\\"Content-Type\\\" content=\\\"text/html; charset=utf-8\\\" />\r\n<title>ziyi title</title>\r\n<meta name=\\\"keywords\\\" content=\\\"\\\" />\r\n<meta name=\\\"description\\\" content=\\\"\\\" />\r\n<script type=\\\"text/javascript\\\" src=\\\"[!--news.url--]briefcase/jquery-1.7.1.min.js\\\"></script>\r\n<script type=\\\"text/javascript\\\" src=\\\"[!--news.url--]briefcase/jquery.slidertron-1.1.js\\\"></script>\r\n\r\n<link href=\\\"[!--news.url--]briefcase/default.css\\\" rel=\\\"stylesheet\\\" type=\\\"text/css\\\" media=\\\"all\\\" />\r\n<!--[if IE 6]>\r\n<link href=\\\"[!--news.url--]briefcase/[!--news.url--]briefcase/default_ie6.css\\\" rel=\\\"stylesheet\\\" type=\\\"text/css\\\" />\r\n<![endif]-->\r\n</head>\r\n<body>\r\n<div id=\\\"header\\\" class=\\\"container\\\">\r\n    <div id=\\\"logo\\\">\r\n        <h1><a href=\\\"[!--news.url--]\\\"><img src=\\\"[!--news.url--]briefcase/images/logo.png\\\"/></a></h1>\r\n    </div>\r\n    <div id=\\\"menu\\\">\r\n       [showclasstemp]\\\'0\\\',13,0,7[/showclasstemp]\r\n    </div>\r\n</div>\r\n<div id=\\\"banner\\\" class=\\\"container\\\">\r\n    <div id=\\\"slider\\\">\r\n    [ecmsinfo]9,4,32,0,0,14,0[/ecmsinfo]\r\n        <div class=\\\"indicator\\\">\r\n            <ul>\r\n                <li class=\\\"active\\\">1</li>\r\n                <li>2</li>\r\n                <li>3</li>\r\n                <li>4</li>\r\n            </ul>\r\n        </div>\r\n    </div>\r\n    <script type=\\\"text/javascript\\\">\r\n        $(\\\'#slider\\\').slidertron({\r\n            viewerSelector: \\\'.viewer\\\',\r\n            reelSelector: \\\'.viewer .reel\\\',\r\n            slidesSelector: \\\'.viewer .reel .slide\\\',\r\n            advanceDelay: 3000,\r\n            speed: \\\'slow\\\',\r\n            navPreviousSelector: \\\'.previous-button\\\',\r\n            navNextSelector: \\\'.next-button\\\',\r\n            indicatorSelector: \\\'.indicator ul li\\\',\r\n            slideLinkSelector: \\\'.link\\\'\r\n        });\r\n    </script> \r\n</div>\r\n<div id=\\\"page\\\" class=\\\"container\\\">\r\n    <div id=\\\"content\\\">\r\n        <div id=\\\"onecolumn\\\">\r\n            <h2>Welcome to out website!</h2>\r\n            <p>This is BriefCase , a free, fully standards-compliant CSS template designed by FCT. The photo used in this template is from Fotogrph. This free template is released under a Creative Commons Attributions 3.0 license, so you’re pretty much free to do whatever you want with it (even use it commercially) provided you keep the links in the footer intact. Aside from that, have fun with it :)</p>\r\n        </div>\r\n        <div id=\\\"two-column\\\">\r\n            <div class=\\\"box-content\\\">\r\n                <h2 class=\\\"title title01\\\">Nulla luctus eleifend</h2>\r\n                <div style=\\\"float:left;width:320px\\\">Pellentesque tristique ante ut risus. Quisque dictum. Integer nisl risus, sagittis convallis, rutrum id, elementum congue, nibh. Suspendisse dictum porta lectus. Donec placerat odio vel elit. Nullam ante orci, pellentesque quis.</div>\r\n		<div style=\\\"float:left;width:200px\\\">\r\n			this is float left\r\n		</div>\r\n		<div style=\\\"clear:both\\\">\r\n		</div>\r\n            </div>\r\n            <div class=\\\"box-content\\\">\r\n                <h2 class=\\\"title title02\\\">Maecenas luctus lectus</h2>\r\n                <p>Curabitur sit amet nulla. Nam in massa. Sed vel tellus. Curabitur sem urna, consequat vel, suscipit in, mattis placerat, nulla. Sed ac leo. Pellentesque imperdiet. In posuere  odio quisque semper augue mattis maecenas ligula.</p>\r\n            </div>\r\n        </div>\r\n    </div>\r\n    <div id=\\\"sidebar\\\">\r\n        <div id=\\\"sbox1\\\">\r\n            <h2>Fusce fringilla</h2>\r\n            <ul class=\\\"list-style1\\\">\r\n                <li class=\\\"first\\\">\r\n                    <p>Etiam non felis. Donec ut ante. In id eros. Suspendisse lacus, cursus egestas at sem. </p>\r\n                    <p><a href=\\\"[!--news.url--]briefcase/#\\\" class=\\\"link-style\\\">Read More</a></p>\r\n                </li>\r\n                <li>\r\n                    <p>Etiam non felis. Donec ut ante. In id eros. Suspendisse lacus turpis, cursus  at sem. </p>\r\n                    <p><a href=\\\"[!--news.url--]briefcase/#\\\" class=\\\"link-style\\\">Read More</a></p>\r\n                </li>\r\n            </ul>\r\n        </div>\r\n        <div id=\\\"sbox2\\\">\r\n            <h2>Testimonials</h2>\r\n            <p class=\\\"testimonial\\\">Pellentesque adipiscing purus ac magna. Pellentesque habitant morbi tristique senectus et netus et malesuada fames.</p>\r\n            <div class=\\\"author\\\"><img src=\\\"[!--news.url--]briefcase/images/pic03.jpg\\\" width=\\\"80\\\" height=\\\"80\\\" alt=\\\"\\\" /><span class=\\\"name\\\">Juan Dela Cruz</span><span class=\\\"position\\\">Company CEO</span><span>MyCompany, LLC</span></div>\r\n        </div>\r\n    </div>\r\n</div>\r\n<div id=\\\"footer\\\" class=\\\"container\\\">\r\n    <div id=\\\"fbox1\\\">\r\n        <h2>Aenean elementum</h2>\r\n        <ul class=\\\"style1\\\">\r\n            <li class=\\\"first\\\"><a href=\\\"[!--news.url--]briefcase/#\\\">Consectetuer adipiscing elit</a></li>\r\n            <li><a href=\\\"[!--news.url--]briefcase/#\\\">Metus aliquam pellentesque</a></li>\r\n            <li><a href=\\\"[!--news.url--]briefcase/#\\\">Suspendisse iaculis mauris</a></li>\r\n            <li><a href=\\\"[!--news.url--]briefcase/#\\\">Urnanet non molestie semper</a></li>\r\n            <li><a href=\\\"[!--news.url--]briefcase/#\\\">Proin gravida orci porttitor</a></li>\r\n        </ul>\r\n    </div>\r\n    <div id=\\\"fbox2\\\">\r\n        <h2>Vestibulum luctus</h2>\r\n        <ul class=\\\"style1\\\">\r\n            <li class=\\\"first\\\"><a href=\\\"[!--news.url--]briefcase/#\\\">Consectetuer adipiscing elit</a></li>\r\n            <li><a href=\\\"[!--news.url--]briefcase/#\\\">Metus aliquam pellentesque</a></li>\r\n            <li><a href=\\\"[!--news.url--]briefcase/#\\\">Suspendisse iaculis mauris</a></li>\r\n            <li><a href=\\\"[!--news.url--]briefcase/#\\\">Urnanet non molestie semper</a></li>\r\n            <li><a href=\\\"[!--news.url--]briefcase/#\\\">Proin gravida orci porttitor</a></li>\r\n        </ul>\r\n    </div>\r\n    <div id=\\\"fbox3\\\">\r\n        <h2>Etiam malesuada</h2>\r\n        <p>In posuere eleifend odio. Quisque semper augue mattis wisi. Maecenas ligula. Pellentesque viverra vulputate enim. Donec leo. Vivamus fermentum nibh in augue.</p>\r\n        <ul class=\\\"style2\\\">\r\n            <li><a href=\\\"[!--news.url--]briefcase/#\\\"><img src=\\\"[!--news.url--]briefcase/images/social03.png\\\" width=\\\"32\\\" height=\\\"32\\\" alt=\\\"\\\" /></a></li>\r\n            <li><a href=\\\"[!--news.url--]briefcase/#\\\"><img src=\\\"[!--news.url--]briefcase/images/social01.png\\\" width=\\\"32\\\" height=\\\"32\\\" alt=\\\"\\\" /></a></li>\r\n            <li><a href=\\\"[!--news.url--]briefcase/#\\\"><img src=\\\"[!--news.url--]briefcase/images/social04.png\\\" width=\\\"32\\\" height=\\\"32\\\" alt=\\\"\\\" /></a></li>\r\n            <li><a href=\\\"[!--news.url--]briefcase/#\\\"><img src=\\\"[!--news.url--]briefcase/images/social02.png\\\" width=\\\"32\\\" height=\\\"32\\\" alt=\\\"\\\" /></a></li>\r\n        </ul>\r\n    </div>\r\n</div>\r\n<div id=\\\"copyright\\\" class=\\\"container\\\">\r\n    <p>Copyright (c) 2013 Sitename.com. All rights reserved. Design by <a href=\\\"[!--news.url--]briefcase/http://www.freecsstemplates.org/\\\" rel=\\\"nofollow\\\">FreeCSSTemplates.org</a>. Photos by <a href=\\\"[!--news.url--]briefcase/http://fotogrph.com/\\\">Fotogrph</a>.</p>\r\n</div>\r\n</body>\r\n</html>',0,0,'',0,0,'',0,0,0,1377675804,'pubindextemp',1,'assnr');
 /*!40000 ALTER TABLE `ziyi_enewstempbak` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -8137,22 +8140,22 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_enewstempdt`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_enewstempdt` (
-  `tempid` smallint(5) unsigned NOT NULL AUTO_INCREMENT,
-  `tempvar` char(30) NOT NULL DEFAULT '',
-  `tempname` char(30) NOT NULL DEFAULT '',
-  `tempsay` char(255) NOT NULL DEFAULT '',
-  `tempfile` char(200) NOT NULL DEFAULT '',
-  `myorder` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `temptype` char(20) NOT NULL DEFAULT '',
-  PRIMARY KEY (`tempid`),
+  `tempid` smallint(5) unsigned NOT NULL auto_increment,
+  `tempvar` char(30) NOT NULL default '',
+  `tempname` char(30) NOT NULL default '',
+  `tempsay` char(255) NOT NULL default '',
+  `tempfile` char(200) NOT NULL default '',
+  `myorder` smallint(5) unsigned NOT NULL default '0',
+  `temptype` char(20) NOT NULL default '',
+  PRIMARY KEY  (`tempid`),
   UNIQUE KEY `tempvar` (`tempvar`),
   KEY `temptype` (`temptype`),
   KEY `myorder` (`myorder`)
 ) ENGINE=MyISAM AUTO_INCREMENT=57 DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_enewstempdt`
@@ -8169,15 +8172,15 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_enewstempgroup`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_enewstempgroup` (
-  `gid` smallint(5) unsigned NOT NULL AUTO_INCREMENT,
-  `gname` varchar(60) NOT NULL DEFAULT '',
-  `isdefault` tinyint(1) NOT NULL DEFAULT '0',
-  PRIMARY KEY (`gid`)
+  `gid` smallint(5) unsigned NOT NULL auto_increment,
+  `gname` varchar(60) NOT NULL default '',
+  `isdefault` tinyint(1) NOT NULL default '0',
+  PRIMARY KEY  (`gid`)
 ) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_enewstempgroup`
@@ -8194,20 +8197,20 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_enewstempvar`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_enewstempvar` (
-  `varid` smallint(5) unsigned NOT NULL AUTO_INCREMENT,
-  `myvar` varchar(60) NOT NULL DEFAULT '',
-  `varname` varchar(60) NOT NULL DEFAULT '',
+  `varid` smallint(5) unsigned NOT NULL auto_increment,
+  `myvar` varchar(60) NOT NULL default '',
+  `varname` varchar(60) NOT NULL default '',
   `varvalue` mediumtext NOT NULL,
-  `classid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `isclose` tinyint(1) NOT NULL DEFAULT '0',
-  `myorder` smallint(5) unsigned NOT NULL DEFAULT '0',
-  PRIMARY KEY (`varid`),
+  `classid` smallint(5) unsigned NOT NULL default '0',
+  `isclose` tinyint(1) NOT NULL default '0',
+  `myorder` smallint(5) unsigned NOT NULL default '0',
+  PRIMARY KEY  (`varid`),
   KEY `classid` (`classid`)
 ) ENGINE=MyISAM AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_enewstempvar`
@@ -8224,14 +8227,14 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_enewstempvarclass`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_enewstempvarclass` (
-  `classid` smallint(5) unsigned NOT NULL AUTO_INCREMENT,
-  `classname` varchar(30) NOT NULL DEFAULT '',
-  PRIMARY KEY (`classid`)
+  `classid` smallint(5) unsigned NOT NULL auto_increment,
+  `classname` varchar(30) NOT NULL default '',
+  PRIMARY KEY  (`classid`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_enewstempvarclass`
@@ -8247,27 +8250,27 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_enewstogzts`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_enewstogzts` (
-  `togid` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `keyboard` varchar(255) NOT NULL DEFAULT '',
-  `searchf` varchar(255) NOT NULL DEFAULT '',
+  `togid` int(10) unsigned NOT NULL auto_increment,
+  `keyboard` varchar(255) NOT NULL default '',
+  `searchf` varchar(255) NOT NULL default '',
   `query` text NOT NULL,
-  `specialsearch` varchar(255) NOT NULL DEFAULT '',
-  `classid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `retype` tinyint(1) NOT NULL DEFAULT '0',
-  `startday` varchar(20) NOT NULL DEFAULT '',
-  `endday` varchar(20) NOT NULL DEFAULT '',
-  `startid` int(10) unsigned NOT NULL DEFAULT '0',
-  `endid` int(10) unsigned NOT NULL DEFAULT '0',
-  `pline` int(11) NOT NULL DEFAULT '0',
-  `doecmszt` tinyint(1) NOT NULL DEFAULT '0',
-  `togztname` varchar(30) NOT NULL DEFAULT '',
-  PRIMARY KEY (`togid`),
+  `specialsearch` varchar(255) NOT NULL default '',
+  `classid` smallint(5) unsigned NOT NULL default '0',
+  `retype` tinyint(1) NOT NULL default '0',
+  `startday` varchar(20) NOT NULL default '',
+  `endday` varchar(20) NOT NULL default '',
+  `startid` int(10) unsigned NOT NULL default '0',
+  `endid` int(10) unsigned NOT NULL default '0',
+  `pline` int(11) NOT NULL default '0',
+  `doecmszt` tinyint(1) NOT NULL default '0',
+  `togztname` varchar(30) NOT NULL default '',
+  PRIMARY KEY  (`togid`),
   KEY `togztname` (`togztname`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_enewstogzts`
@@ -8283,34 +8286,34 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_enewsuser`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_enewsuser` (
-  `userid` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `username` varchar(30) NOT NULL DEFAULT '',
-  `password` varchar(32) NOT NULL DEFAULT '',
-  `rnd` varchar(20) NOT NULL DEFAULT '',
+  `userid` int(10) unsigned NOT NULL auto_increment,
+  `username` varchar(30) NOT NULL default '',
+  `password` varchar(32) NOT NULL default '',
+  `rnd` varchar(20) NOT NULL default '',
   `adminclass` mediumtext NOT NULL,
-  `groupid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `checked` tinyint(1) NOT NULL DEFAULT '0',
-  `styleid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `filelevel` tinyint(1) NOT NULL DEFAULT '0',
-  `salt` varchar(8) NOT NULL DEFAULT '',
-  `loginnum` int(10) unsigned NOT NULL DEFAULT '0',
-  `lasttime` int(10) unsigned NOT NULL DEFAULT '0',
-  `lastip` varchar(20) NOT NULL DEFAULT '',
-  `truename` varchar(20) NOT NULL DEFAULT '',
-  `email` varchar(120) NOT NULL DEFAULT '',
-  `classid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `pretime` int(10) unsigned NOT NULL DEFAULT '0',
-  `preip` varchar(20) NOT NULL DEFAULT '',
-  `addtime` int(10) unsigned NOT NULL DEFAULT '0',
-  `addip` varchar(20) NOT NULL DEFAULT '',
-  `userprikey` varchar(50) NOT NULL DEFAULT '',
-  PRIMARY KEY (`userid`),
+  `groupid` smallint(5) unsigned NOT NULL default '0',
+  `checked` tinyint(1) NOT NULL default '0',
+  `styleid` smallint(5) unsigned NOT NULL default '0',
+  `filelevel` tinyint(1) NOT NULL default '0',
+  `salt` varchar(8) NOT NULL default '',
+  `loginnum` int(10) unsigned NOT NULL default '0',
+  `lasttime` int(10) unsigned NOT NULL default '0',
+  `lastip` varchar(20) NOT NULL default '',
+  `truename` varchar(20) NOT NULL default '',
+  `email` varchar(120) NOT NULL default '',
+  `classid` smallint(5) unsigned NOT NULL default '0',
+  `pretime` int(10) unsigned NOT NULL default '0',
+  `preip` varchar(20) NOT NULL default '',
+  `addtime` int(10) unsigned NOT NULL default '0',
+  `addip` varchar(20) NOT NULL default '',
+  `userprikey` varchar(50) NOT NULL default '',
+  PRIMARY KEY  (`userid`),
   UNIQUE KEY `username` (`username`)
 ) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_enewsuser`
@@ -8318,7 +8321,7 @@ CREATE TABLE `ziyi_enewsuser` (
 
 LOCK TABLES `ziyi_enewsuser` WRITE;
 /*!40000 ALTER TABLE `ziyi_enewsuser` DISABLE KEYS */;
-INSERT INTO `ziyi_enewsuser` VALUES (1,'assnr','223bdcac00b86304a8420768451908b4','qtWfdHRQr35PMG9czSNt','',1,0,1,0,'3yybmhsf',12,1377677562,'127.0.0.1','','',0,1377675701,'127.0.0.1',1376621191,'127.0.0.1','6XcKqtp6GgXjfVwa9enpgGshZVCQNtUrjSzAUF5BdBeLYaFP');
+INSERT INTO `ziyi_enewsuser` VALUES (1,'assnr','223bdcac00b86304a8420768451908b4','cjwJme4MZgXWsiCmzEvF','',1,0,1,0,'3yybmhsf',14,1377874735,'127.0.0.1','','',0,1377691770,'127.0.0.1',1376621191,'127.0.0.1','6XcKqtp6GgXjfVwa9enpgGshZVCQNtUrjSzAUF5BdBeLYaFP');
 /*!40000 ALTER TABLE `ziyi_enewsuser` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -8327,18 +8330,18 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_enewsuseradd`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_enewsuseradd` (
-  `userid` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `equestion` tinyint(4) NOT NULL DEFAULT '0',
-  `eanswer` varchar(32) NOT NULL DEFAULT '',
+  `userid` int(10) unsigned NOT NULL auto_increment,
+  `equestion` tinyint(4) NOT NULL default '0',
+  `eanswer` varchar(32) NOT NULL default '',
   `openip` text NOT NULL,
-  `certkey` varchar(60) NOT NULL DEFAULT '',
-  `certtime` int(10) unsigned NOT NULL DEFAULT '0',
-  PRIMARY KEY (`userid`)
+  `certkey` varchar(60) NOT NULL default '',
+  `certtime` int(10) unsigned NOT NULL default '0',
+  PRIMARY KEY  (`userid`)
 ) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_enewsuseradd`
@@ -8355,14 +8358,14 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_enewsuserclass`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_enewsuserclass` (
-  `classid` smallint(5) unsigned NOT NULL AUTO_INCREMENT,
-  `classname` varchar(30) NOT NULL DEFAULT '',
-  PRIMARY KEY (`classid`)
+  `classid` smallint(5) unsigned NOT NULL auto_increment,
+  `classname` varchar(30) NOT NULL default '',
+  PRIMARY KEY  (`classid`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_enewsuserclass`
@@ -8378,19 +8381,19 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_enewsuserjs`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_enewsuserjs` (
-  `jsid` smallint(5) unsigned NOT NULL AUTO_INCREMENT,
-  `jsname` varchar(60) NOT NULL DEFAULT '',
+  `jsid` smallint(5) unsigned NOT NULL auto_increment,
+  `jsname` varchar(60) NOT NULL default '',
   `jssql` text NOT NULL,
-  `jstempid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `jsfilename` varchar(120) NOT NULL DEFAULT '',
-  `classid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  PRIMARY KEY (`jsid`),
+  `jstempid` smallint(5) unsigned NOT NULL default '0',
+  `jsfilename` varchar(120) NOT NULL default '',
+  `classid` smallint(5) unsigned NOT NULL default '0',
+  PRIMARY KEY  (`jsid`),
   KEY `classid` (`classid`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_enewsuserjs`
@@ -8406,14 +8409,14 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_enewsuserjsclass`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_enewsuserjsclass` (
-  `classid` smallint(5) unsigned NOT NULL AUTO_INCREMENT,
-  `classname` varchar(30) NOT NULL DEFAULT '',
-  PRIMARY KEY (`classid`)
+  `classid` smallint(5) unsigned NOT NULL auto_increment,
+  `classname` varchar(30) NOT NULL default '',
+  PRIMARY KEY  (`classid`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_enewsuserjsclass`
@@ -8429,26 +8432,26 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_enewsuserlist`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_enewsuserlist` (
-  `listid` smallint(5) unsigned NOT NULL AUTO_INCREMENT,
-  `listname` varchar(60) NOT NULL DEFAULT '',
-  `pagetitle` varchar(120) NOT NULL DEFAULT '',
-  `filepath` varchar(120) NOT NULL DEFAULT '',
-  `filetype` varchar(12) NOT NULL DEFAULT '',
+  `listid` smallint(5) unsigned NOT NULL auto_increment,
+  `listname` varchar(60) NOT NULL default '',
+  `pagetitle` varchar(120) NOT NULL default '',
+  `filepath` varchar(120) NOT NULL default '',
+  `filetype` varchar(12) NOT NULL default '',
   `totalsql` text NOT NULL,
   `listsql` text NOT NULL,
-  `maxnum` int(11) NOT NULL DEFAULT '0',
-  `lencord` int(11) NOT NULL DEFAULT '0',
-  `listtempid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `pagekeywords` varchar(255) NOT NULL DEFAULT '',
-  `pagedescription` varchar(255) NOT NULL DEFAULT '',
-  `classid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  PRIMARY KEY (`listid`),
+  `maxnum` int(11) NOT NULL default '0',
+  `lencord` int(11) NOT NULL default '0',
+  `listtempid` smallint(5) unsigned NOT NULL default '0',
+  `pagekeywords` varchar(255) NOT NULL default '',
+  `pagedescription` varchar(255) NOT NULL default '',
+  `classid` smallint(5) unsigned NOT NULL default '0',
+  PRIMARY KEY  (`listid`),
   KEY `classid` (`classid`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_enewsuserlist`
@@ -8464,14 +8467,14 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_enewsuserlistclass`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_enewsuserlistclass` (
-  `classid` smallint(5) unsigned NOT NULL AUTO_INCREMENT,
-  `classname` varchar(30) NOT NULL DEFAULT '',
-  PRIMARY KEY (`classid`)
+  `classid` smallint(5) unsigned NOT NULL auto_increment,
+  `classname` varchar(30) NOT NULL default '',
+  PRIMARY KEY  (`classid`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_enewsuserlistclass`
@@ -8487,14 +8490,14 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_enewsuserloginck`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_enewsuserloginck` (
-  `userid` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `andauth` varchar(32) NOT NULL DEFAULT '',
-  PRIMARY KEY (`userid`)
+  `userid` int(10) unsigned NOT NULL auto_increment,
+  `andauth` varchar(32) NOT NULL default '',
+  PRIMARY KEY  (`userid`)
 ) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_enewsuserloginck`
@@ -8502,7 +8505,7 @@ CREATE TABLE `ziyi_enewsuserloginck` (
 
 LOCK TABLES `ziyi_enewsuserloginck` WRITE;
 /*!40000 ALTER TABLE `ziyi_enewsuserloginck` DISABLE KEYS */;
-INSERT INTO `ziyi_enewsuserloginck` VALUES (1,'e277d6676c37fb245b6b335abea30e27');
+INSERT INTO `ziyi_enewsuserloginck` VALUES (1,'420828c8e600480ac3f860922d47b265');
 /*!40000 ALTER TABLE `ziyi_enewsuserloginck` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -8511,25 +8514,25 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_enewsvote`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_enewsvote` (
-  `voteid` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `title` varchar(120) NOT NULL DEFAULT '',
-  `votenum` int(10) unsigned NOT NULL DEFAULT '0',
+  `voteid` int(10) unsigned NOT NULL auto_increment,
+  `title` varchar(120) NOT NULL default '',
+  `votenum` int(10) unsigned NOT NULL default '0',
   `voteip` mediumtext NOT NULL,
   `votetext` text NOT NULL,
-  `voteclass` tinyint(1) NOT NULL DEFAULT '0',
-  `doip` tinyint(1) NOT NULL DEFAULT '0',
-  `votetime` int(10) unsigned NOT NULL DEFAULT '0',
-  `dotime` date NOT NULL DEFAULT '0000-00-00',
-  `width` int(11) NOT NULL DEFAULT '0',
-  `height` int(11) NOT NULL DEFAULT '0',
-  `addtime` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `tempid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  PRIMARY KEY (`voteid`)
+  `voteclass` tinyint(1) NOT NULL default '0',
+  `doip` tinyint(1) NOT NULL default '0',
+  `votetime` int(10) unsigned NOT NULL default '0',
+  `dotime` date NOT NULL default '0000-00-00',
+  `width` int(11) NOT NULL default '0',
+  `height` int(11) NOT NULL default '0',
+  `addtime` datetime NOT NULL default '0000-00-00 00:00:00',
+  `tempid` smallint(5) unsigned NOT NULL default '0',
+  PRIMARY KEY  (`voteid`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_enewsvote`
@@ -8545,23 +8548,23 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_enewsvotemod`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_enewsvotemod` (
-  `voteid` smallint(5) unsigned NOT NULL AUTO_INCREMENT,
-  `title` varchar(120) NOT NULL DEFAULT '',
+  `voteid` smallint(5) unsigned NOT NULL auto_increment,
+  `title` varchar(120) NOT NULL default '',
   `votetext` text NOT NULL,
-  `voteclass` tinyint(1) NOT NULL DEFAULT '0',
-  `doip` tinyint(1) NOT NULL DEFAULT '0',
-  `dotime` date NOT NULL DEFAULT '0000-00-00',
-  `tempid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `width` int(11) NOT NULL DEFAULT '0',
-  `height` int(11) NOT NULL DEFAULT '0',
-  `votenum` int(10) unsigned NOT NULL DEFAULT '0',
-  `ysvotename` varchar(60) NOT NULL DEFAULT '',
-  PRIMARY KEY (`voteid`)
+  `voteclass` tinyint(1) NOT NULL default '0',
+  `doip` tinyint(1) NOT NULL default '0',
+  `dotime` date NOT NULL default '0000-00-00',
+  `tempid` smallint(5) unsigned NOT NULL default '0',
+  `width` int(11) NOT NULL default '0',
+  `height` int(11) NOT NULL default '0',
+  `votenum` int(10) unsigned NOT NULL default '0',
+  `ysvotename` varchar(60) NOT NULL default '',
+  PRIMARY KEY  (`voteid`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_enewsvotemod`
@@ -8577,15 +8580,15 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_enewsvotetemp`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_enewsvotetemp` (
-  `tempid` smallint(5) unsigned NOT NULL AUTO_INCREMENT,
-  `tempname` varchar(60) NOT NULL DEFAULT '',
+  `tempid` smallint(5) unsigned NOT NULL auto_increment,
+  `tempname` varchar(60) NOT NULL default '',
   `temptext` mediumtext NOT NULL,
-  PRIMARY KEY (`tempid`)
+  PRIMARY KEY  (`tempid`)
 ) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_enewsvotetemp`
@@ -8602,15 +8605,15 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_enewswapstyle`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_enewswapstyle` (
-  `styleid` smallint(5) unsigned NOT NULL AUTO_INCREMENT,
-  `stylename` varchar(60) NOT NULL DEFAULT '',
-  `path` smallint(5) unsigned NOT NULL DEFAULT '0',
-  PRIMARY KEY (`styleid`)
+  `styleid` smallint(5) unsigned NOT NULL auto_increment,
+  `stylename` varchar(60) NOT NULL default '',
+  `path` smallint(5) unsigned NOT NULL default '0',
+  PRIMARY KEY  (`styleid`)
 ) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_enewswapstyle`
@@ -8627,22 +8630,22 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_enewswfinfo`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_enewswfinfo` (
-  `id` int(10) unsigned NOT NULL DEFAULT '0',
-  `classid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `wfid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `tid` int(10) unsigned NOT NULL DEFAULT '0',
+  `id` int(10) unsigned NOT NULL default '0',
+  `classid` smallint(5) unsigned NOT NULL default '0',
+  `wfid` smallint(5) unsigned NOT NULL default '0',
+  `tid` int(10) unsigned NOT NULL default '0',
   `groupid` text NOT NULL,
   `userclass` text NOT NULL,
   `username` text NOT NULL,
-  `checknum` tinyint(4) NOT NULL DEFAULT '0',
-  `tstatus` varchar(30) NOT NULL DEFAULT '0',
-  `checktno` tinyint(4) NOT NULL DEFAULT '0',
+  `checknum` tinyint(4) NOT NULL default '0',
+  `tstatus` varchar(30) NOT NULL default '0',
+  `checktno` tinyint(4) NOT NULL default '0',
   KEY `id` (`id`,`classid`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_enewswfinfo`
@@ -8658,23 +8661,23 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_enewswfinfolog`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_enewswfinfolog` (
-  `logid` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `id` int(10) unsigned NOT NULL DEFAULT '0',
-  `classid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `wfid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `tid` int(10) unsigned NOT NULL DEFAULT '0',
-  `username` varchar(30) NOT NULL DEFAULT '',
-  `checktime` int(10) unsigned NOT NULL DEFAULT '0',
+  `logid` int(10) unsigned NOT NULL auto_increment,
+  `id` int(10) unsigned NOT NULL default '0',
+  `classid` smallint(5) unsigned NOT NULL default '0',
+  `wfid` smallint(5) unsigned NOT NULL default '0',
+  `tid` int(10) unsigned NOT NULL default '0',
+  `username` varchar(30) NOT NULL default '',
+  `checktime` int(10) unsigned NOT NULL default '0',
   `checktext` text NOT NULL,
-  `checknum` tinyint(4) NOT NULL DEFAULT '0',
-  `checktype` tinyint(1) NOT NULL DEFAULT '0',
-  PRIMARY KEY (`logid`),
+  `checknum` tinyint(4) NOT NULL default '0',
+  `checktype` tinyint(1) NOT NULL default '0',
+  PRIMARY KEY  (`logid`),
   KEY `id` (`id`,`classid`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_enewswfinfolog`
@@ -8690,15 +8693,15 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_enewswords`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_enewswords` (
-  `wordid` smallint(5) unsigned NOT NULL AUTO_INCREMENT,
-  `oldword` varchar(255) NOT NULL DEFAULT '',
-  `newword` varchar(255) NOT NULL DEFAULT '',
-  PRIMARY KEY (`wordid`)
+  `wordid` smallint(5) unsigned NOT NULL auto_increment,
+  `oldword` varchar(255) NOT NULL default '',
+  `newword` varchar(255) NOT NULL default '',
+  PRIMARY KEY  (`wordid`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_enewswords`
@@ -8714,18 +8717,18 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_enewsworkflow`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_enewsworkflow` (
-  `wfid` smallint(5) unsigned NOT NULL AUTO_INCREMENT,
-  `wfname` varchar(60) NOT NULL DEFAULT '',
-  `wftext` varchar(255) NOT NULL DEFAULT '',
-  `myorder` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `addtime` int(10) unsigned NOT NULL DEFAULT '0',
-  `adduser` varchar(30) NOT NULL DEFAULT '',
-  PRIMARY KEY (`wfid`)
+  `wfid` smallint(5) unsigned NOT NULL auto_increment,
+  `wfname` varchar(60) NOT NULL default '',
+  `wftext` varchar(255) NOT NULL default '',
+  `myorder` smallint(5) unsigned NOT NULL default '0',
+  `addtime` int(10) unsigned NOT NULL default '0',
+  `adduser` varchar(30) NOT NULL default '',
+  PRIMARY KEY  (`wfid`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_enewsworkflow`
@@ -8741,26 +8744,26 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_enewsworkflowitem`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_enewsworkflowitem` (
-  `tid` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `wfid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `tname` varchar(60) NOT NULL DEFAULT '',
-  `tno` int(11) NOT NULL DEFAULT '0',
-  `ttext` varchar(255) NOT NULL DEFAULT '',
+  `tid` int(10) unsigned NOT NULL auto_increment,
+  `wfid` smallint(5) unsigned NOT NULL default '0',
+  `tname` varchar(60) NOT NULL default '',
+  `tno` int(11) NOT NULL default '0',
+  `ttext` varchar(255) NOT NULL default '',
   `groupid` text NOT NULL,
   `userclass` text NOT NULL,
   `username` text NOT NULL,
-  `lztype` tinyint(1) NOT NULL DEFAULT '0',
-  `tbdo` int(10) unsigned NOT NULL DEFAULT '0',
-  `tddo` int(10) unsigned NOT NULL DEFAULT '0',
-  `tstatus` varchar(30) NOT NULL DEFAULT '',
-  PRIMARY KEY (`tid`),
+  `lztype` tinyint(1) NOT NULL default '0',
+  `tbdo` int(10) unsigned NOT NULL default '0',
+  `tddo` int(10) unsigned NOT NULL default '0',
+  `tstatus` varchar(30) NOT NULL default '',
+  PRIMARY KEY  (`tid`),
   KEY `wfid` (`wfid`),
   KEY `tno` (`tno`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_enewsworkflowitem`
@@ -8776,15 +8779,15 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_enewswriter`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_enewswriter` (
-  `wid` smallint(5) unsigned NOT NULL AUTO_INCREMENT,
-  `writer` varchar(30) NOT NULL DEFAULT '',
-  `email` varchar(120) NOT NULL DEFAULT '',
-  PRIMARY KEY (`wid`)
+  `wid` smallint(5) unsigned NOT NULL auto_increment,
+  `writer` varchar(30) NOT NULL default '',
+  `email` varchar(120) NOT NULL default '',
+  PRIMARY KEY  (`wid`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_enewswriter`
@@ -8800,29 +8803,29 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_enewsyh`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_enewsyh` (
-  `id` smallint(5) unsigned NOT NULL AUTO_INCREMENT,
-  `yhname` varchar(30) NOT NULL DEFAULT '',
-  `yhtext` varchar(255) NOT NULL DEFAULT '',
-  `hlist` int(11) NOT NULL DEFAULT '0',
-  `qlist` int(11) NOT NULL DEFAULT '0',
-  `bqnew` int(11) NOT NULL DEFAULT '0',
-  `bqhot` int(11) NOT NULL DEFAULT '0',
-  `bqpl` int(11) NOT NULL DEFAULT '0',
-  `bqgood` int(11) NOT NULL DEFAULT '0',
-  `bqfirst` int(11) NOT NULL DEFAULT '0',
-  `bqdown` int(11) NOT NULL DEFAULT '0',
-  `otherlink` int(11) NOT NULL DEFAULT '0',
-  `qmlist` int(11) NOT NULL DEFAULT '0',
-  `dobq` tinyint(1) NOT NULL DEFAULT '0',
-  `dojs` tinyint(1) NOT NULL DEFAULT '0',
-  `dosbq` tinyint(1) NOT NULL DEFAULT '0',
-  `rehtml` int(11) NOT NULL DEFAULT '0',
-  PRIMARY KEY (`id`)
+  `id` smallint(5) unsigned NOT NULL auto_increment,
+  `yhname` varchar(30) NOT NULL default '',
+  `yhtext` varchar(255) NOT NULL default '',
+  `hlist` int(11) NOT NULL default '0',
+  `qlist` int(11) NOT NULL default '0',
+  `bqnew` int(11) NOT NULL default '0',
+  `bqhot` int(11) NOT NULL default '0',
+  `bqpl` int(11) NOT NULL default '0',
+  `bqgood` int(11) NOT NULL default '0',
+  `bqfirst` int(11) NOT NULL default '0',
+  `bqdown` int(11) NOT NULL default '0',
+  `otherlink` int(11) NOT NULL default '0',
+  `qmlist` int(11) NOT NULL default '0',
+  `dobq` tinyint(1) NOT NULL default '0',
+  `dojs` tinyint(1) NOT NULL default '0',
+  `dosbq` tinyint(1) NOT NULL default '0',
+  `rehtml` int(11) NOT NULL default '0',
+  PRIMARY KEY  (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_enewsyh`
@@ -8838,43 +8841,43 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_enewszt`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_enewszt` (
-  `ztid` smallint(5) unsigned NOT NULL AUTO_INCREMENT,
-  `ztname` varchar(60) NOT NULL DEFAULT '',
-  `onclick` int(10) unsigned NOT NULL DEFAULT '0',
-  `ztnum` tinyint(3) unsigned NOT NULL DEFAULT '0',
-  `listtempid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `ztpath` varchar(255) NOT NULL DEFAULT '',
-  `zttype` varchar(10) NOT NULL DEFAULT '',
-  `zturl` varchar(200) NOT NULL DEFAULT '',
-  `classid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `islist` tinyint(1) NOT NULL DEFAULT '0',
-  `maxnum` int(11) NOT NULL DEFAULT '0',
-  `reorder` varchar(50) NOT NULL DEFAULT '',
+  `ztid` smallint(5) unsigned NOT NULL auto_increment,
+  `ztname` varchar(60) NOT NULL default '',
+  `onclick` int(10) unsigned NOT NULL default '0',
+  `ztnum` tinyint(3) unsigned NOT NULL default '0',
+  `listtempid` smallint(5) unsigned NOT NULL default '0',
+  `ztpath` varchar(255) NOT NULL default '',
+  `zttype` varchar(10) NOT NULL default '',
+  `zturl` varchar(200) NOT NULL default '',
+  `classid` smallint(5) unsigned NOT NULL default '0',
+  `islist` tinyint(1) NOT NULL default '0',
+  `maxnum` int(11) NOT NULL default '0',
+  `reorder` varchar(50) NOT NULL default '',
   `intro` text NOT NULL,
-  `ztimg` varchar(255) NOT NULL DEFAULT '',
-  `zcid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `showzt` tinyint(1) NOT NULL DEFAULT '0',
-  `ztpagekey` varchar(255) NOT NULL DEFAULT '',
-  `classtempid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `myorder` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `usezt` tinyint(1) NOT NULL DEFAULT '0',
-  `yhid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `endtime` int(10) unsigned NOT NULL DEFAULT '0',
-  `closepl` tinyint(1) NOT NULL DEFAULT '0',
-  `checkpl` tinyint(1) NOT NULL DEFAULT '0',
-  `restb` tinyint(3) unsigned NOT NULL DEFAULT '0',
-  `usernames` varchar(255) NOT NULL DEFAULT '',
-  `addtime` int(10) unsigned NOT NULL DEFAULT '0',
-  `pltempid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  PRIMARY KEY (`ztid`),
+  `ztimg` varchar(255) NOT NULL default '',
+  `zcid` smallint(5) unsigned NOT NULL default '0',
+  `showzt` tinyint(1) NOT NULL default '0',
+  `ztpagekey` varchar(255) NOT NULL default '',
+  `classtempid` smallint(5) unsigned NOT NULL default '0',
+  `myorder` smallint(5) unsigned NOT NULL default '0',
+  `usezt` tinyint(1) NOT NULL default '0',
+  `yhid` smallint(5) unsigned NOT NULL default '0',
+  `endtime` int(10) unsigned NOT NULL default '0',
+  `closepl` tinyint(1) NOT NULL default '0',
+  `checkpl` tinyint(1) NOT NULL default '0',
+  `restb` tinyint(3) unsigned NOT NULL default '0',
+  `usernames` varchar(255) NOT NULL default '',
+  `addtime` int(10) unsigned NOT NULL default '0',
+  `pltempid` smallint(5) unsigned NOT NULL default '0',
+  PRIMARY KEY  (`ztid`),
   KEY `classid` (`classid`),
   KEY `zcid` (`zcid`),
   KEY `usezt` (`usezt`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_enewszt`
@@ -8890,14 +8893,14 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_enewsztadd`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_enewsztadd` (
-  `ztid` smallint(5) unsigned NOT NULL DEFAULT '0',
+  `ztid` smallint(5) unsigned NOT NULL default '0',
   `classtext` mediumtext NOT NULL,
-  PRIMARY KEY (`ztid`)
+  PRIMARY KEY  (`ztid`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_enewsztadd`
@@ -8913,14 +8916,14 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_enewsztclass`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_enewsztclass` (
-  `classid` smallint(5) unsigned NOT NULL AUTO_INCREMENT,
-  `classname` varchar(30) NOT NULL DEFAULT '',
-  PRIMARY KEY (`classid`)
+  `classid` smallint(5) unsigned NOT NULL auto_increment,
+  `classname` varchar(30) NOT NULL default '',
+  PRIMARY KEY  (`classid`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_enewsztclass`
@@ -8936,23 +8939,23 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_enewsztf`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_enewsztf` (
-  `fid` smallint(5) unsigned NOT NULL AUTO_INCREMENT,
-  `f` varchar(30) NOT NULL DEFAULT '',
-  `fname` varchar(30) NOT NULL DEFAULT '',
-  `fform` varchar(20) NOT NULL DEFAULT '',
+  `fid` smallint(5) unsigned NOT NULL auto_increment,
+  `f` varchar(30) NOT NULL default '',
+  `fname` varchar(30) NOT NULL default '',
+  `fform` varchar(20) NOT NULL default '',
   `fhtml` mediumtext NOT NULL,
-  `fzs` varchar(255) NOT NULL DEFAULT '',
-  `myorder` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `ftype` varchar(30) NOT NULL DEFAULT '',
-  `flen` varchar(20) NOT NULL DEFAULT '',
+  `fzs` varchar(255) NOT NULL default '',
+  `myorder` smallint(5) unsigned NOT NULL default '0',
+  `ftype` varchar(30) NOT NULL default '',
+  `flen` varchar(20) NOT NULL default '',
   `fvalue` text NOT NULL,
-  `fformsize` varchar(12) NOT NULL DEFAULT '',
-  PRIMARY KEY (`fid`)
+  `fformsize` varchar(12) NOT NULL default '',
+  PRIMARY KEY  (`fid`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_enewsztf`
@@ -8968,18 +8971,18 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_enewsztinfo`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_enewsztinfo` (
-  `zid` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `ztid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `cid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `classid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `id` int(10) unsigned NOT NULL DEFAULT '0',
-  `newstime` int(10) unsigned NOT NULL DEFAULT '0',
-  `mid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `isgood` tinyint(1) unsigned NOT NULL DEFAULT '0',
-  PRIMARY KEY (`zid`),
+  `zid` int(10) unsigned NOT NULL auto_increment,
+  `ztid` smallint(5) unsigned NOT NULL default '0',
+  `cid` smallint(5) unsigned NOT NULL default '0',
+  `classid` smallint(5) unsigned NOT NULL default '0',
+  `id` int(10) unsigned NOT NULL default '0',
+  `newstime` int(10) unsigned NOT NULL default '0',
+  `mid` smallint(5) unsigned NOT NULL default '0',
+  `isgood` tinyint(1) unsigned NOT NULL default '0',
+  PRIMARY KEY  (`zid`),
   KEY `ztid` (`ztid`),
   KEY `cid` (`cid`),
   KEY `classid` (`classid`),
@@ -8988,7 +8991,7 @@ CREATE TABLE `ziyi_enewsztinfo` (
   KEY `mid` (`mid`),
   KEY `isgood` (`isgood`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_enewsztinfo`
@@ -9004,25 +9007,25 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_enewszttype`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_enewszttype` (
-  `cid` mediumint(8) unsigned NOT NULL AUTO_INCREMENT,
-  `ztid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `cname` varchar(20) NOT NULL DEFAULT '',
-  `myorder` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `islist` tinyint(1) NOT NULL DEFAULT '0',
-  `listtempid` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `maxnum` int(10) unsigned NOT NULL DEFAULT '0',
-  `tnum` tinyint(3) unsigned NOT NULL DEFAULT '0',
-  `reorder` varchar(50) NOT NULL DEFAULT '',
-  `ttype` varchar(10) NOT NULL DEFAULT '',
-  `endtime` int(10) unsigned NOT NULL DEFAULT '0',
-  PRIMARY KEY (`cid`),
+  `cid` mediumint(8) unsigned NOT NULL auto_increment,
+  `ztid` smallint(5) unsigned NOT NULL default '0',
+  `cname` varchar(20) NOT NULL default '',
+  `myorder` smallint(5) unsigned NOT NULL default '0',
+  `islist` tinyint(1) NOT NULL default '0',
+  `listtempid` smallint(5) unsigned NOT NULL default '0',
+  `maxnum` int(10) unsigned NOT NULL default '0',
+  `tnum` tinyint(3) unsigned NOT NULL default '0',
+  `reorder` varchar(50) NOT NULL default '',
+  `ttype` varchar(10) NOT NULL default '',
+  `endtime` int(10) unsigned NOT NULL default '0',
+  PRIMARY KEY  (`cid`),
   KEY `ztid` (`ztid`),
   KEY `myorder` (`myorder`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_enewszttype`
@@ -9038,14 +9041,14 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `ziyi_enewszttypeadd`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `ziyi_enewszttypeadd` (
-  `cid` mediumint(8) unsigned NOT NULL DEFAULT '0',
+  `cid` mediumint(8) unsigned NOT NULL default '0',
   `classtext` mediumtext NOT NULL,
-  PRIMARY KEY (`cid`)
+  PRIMARY KEY  (`cid`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `ziyi_enewszttypeadd`
@@ -9065,4 +9068,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2013-08-28 16:21:05
+-- Dump completed on 2013-08-30 15:27:35

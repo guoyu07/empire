@@ -55,20 +55,8 @@ if(!defined('InEmpireCMS'))
 </div>
 <div id="page" class="container">
     <div id="content">
-        <div id="onecolumn">
-            <h2>Welcome to out website!</h2>
-            <p>This is BriefCase , a free, fully standards-compliant CSS template designed by FCT. The photo used in this template is from Fotogrph. This free template is released under a Creative Commons Attributions 3.0 license, so you’re pretty much free to do whatever you want with it (even use it commercially) provided you keep the links in the footer intact. Aside from that, have fun with it :)</p>
-        </div>
         <div id="two-column">
-            <div class="box-content">
-                <h2 class="title title01">Nulla luctus eleifend</h2>
-                <div style="float:left;width:320px">Pellentesque tristique ante ut risus. Quisque dictum. Integer nisl risus, sagittis convallis, rutrum id, elementum congue, nibh. Suspendisse dictum porta lectus. Donec placerat odio vel elit. Nullam ante orci, pellentesque quis.</div>
-		<div style="float:left;width:200px">
-			this is float left
-		</div>
-		<div style="clear:both">
-		</div>
-            </div>
+           <? @sys_GetEcmsInfo(5,2,32,0,0,15,0);?>
             <div class="box-content">
                 <h2 class="title title02">Maecenas luctus lectus</h2>
                 <p>Curabitur sit amet nulla. Nam in massa. Sed vel tellus. Curabitur sem urna, consequat vel, suscipit in, mattis placerat, nulla. Sed ac leo. Pellentesque imperdiet. In posuere  odio quisque semper augue mattis maecenas ligula.</p>

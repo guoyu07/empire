@@ -64,7 +64,7 @@ $class_r[5]=Array('classid'=>5,
 'classname'=>'经典案例   ',
 'sonclass'=>'|',
 'featherclass'=>'',
-'islast'=>0,
+'islast'=>1,
 'classpath'=>'jingdiananli',
 'classtype'=>'.html',
 
@@ -73,7 +73,18 @@ $class_r[5]=Array('classid'=>5,
 'islist'=>0,
 'tid'=>1,
 'tbname'=>'news',
-'modid'=>1);
+'modid'=>1,
+'lencord'=>25,'link_num'=>10,
+'newstempid'=>0,
+'listtempid'=>0,
+'newspath'=>'Y-m-d',
+'filetype'=>'.html',
+
+
+'checked'=>1,
+'bname'=>'经典案例   ',
+
+'reorder'=>'newstime DESC');
 $class_r[6]=Array('classid'=>6,
 'bclassid'=>0,
 'classname'=>'招贤纳士   ',
