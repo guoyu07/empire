@@ -65,17 +65,8 @@ if(!defined('InEmpireCMS'))
     </div>
     <div id="sidebar">
         <div id="sbox1">
-            <h2>Fusce fringilla</h2>
-            <ul class="list-style1">
-                <li class="first">
-                    <p>Etiam non felis. Donec ut ante. In id eros. Suspendisse lacus, cursus egestas at sem. </p>
-                    <p><a href="/ziyi/briefcase/#" class="link-style">Read More</a></p>
-                </li>
-                <li>
-                    <p>Etiam non felis. Donec ut ante. In id eros. Suspendisse lacus turpis, cursus  at sem. </p>
-                    <p><a href="/ziyi/briefcase/#" class="link-style">Read More</a></p>
-                </li>
-            </ul>
+           <? @sys_GetEcmsInfo(3,5,32,0,2,16,0);?>
+            <div><a href="/ziyi/briefcase/#" class="link-style">Read More</a></div>
         </div>
         <div id="sbox2">
             <h2>Testimonials</h2>

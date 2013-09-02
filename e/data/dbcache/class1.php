@@ -34,7 +34,7 @@ $class_r[3]=Array('classid'=>3,
 'classname'=>'服务项目  ',
 'sonclass'=>'|',
 'featherclass'=>'',
-'islast'=>0,
+'islast'=>1,
 'classpath'=>'fuwuxiangmu',
 'classtype'=>'.html',
 
@@ -43,7 +43,18 @@ $class_r[3]=Array('classid'=>3,
 'islist'=>0,
 'tid'=>1,
 'tbname'=>'news',
-'modid'=>1);
+'modid'=>1,
+'lencord'=>25,'link_num'=>10,
+'newstempid'=>0,
+'listtempid'=>0,
+'newspath'=>'Y-m-d',
+'filetype'=>'.html',
+
+
+'checked'=>1,
+'bname'=>'服务项目  ',
+
+'reorder'=>'newstime DESC');
 $class_r[4]=Array('classid'=>4,
 'bclassid'=>0,
 'classname'=>'新闻动态 ',
