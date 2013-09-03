@@ -147,7 +147,7 @@ hr {
 #page {
 	overflow: hidden;
 	width: 900px;
-	padding: 70px 50px 50px 50px;
+	padding: 10px 50px 50px 50px;
 	background-color: #FFFFFF;
 }
 
@@ -415,7 +415,7 @@ ul.style2 li
 
 .box-content p
 {
-	padding-left: 60px;
+	padding-left: 10px;
 }
 
 .title
@@ -519,14 +519,29 @@ ul.style2 li
 	border: 5px solid rgba(0,0,0,.1);
 }
 
+.jindiantitle {
+	margin-bottom : 10px;
+}
+.jindiantitle a {
+	color:#777;
+	text-decoration:none;
+	font-size:16px;
+}
 
+.sbox {
+	margin-top : 25px;
+}
 
+a {
+	color : #555;
+	text-decoration:none;
+}
+a:hover {
+	text-decoration:underline;
+} 
 
-
-
-
-
-
-
-
-
+.cattitle {
+	font-weight : bold;
+	color : #333;
+	margin-bottom : 5px;
+}

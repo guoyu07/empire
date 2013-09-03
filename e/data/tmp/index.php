@@ -58,57 +58,36 @@ if(!defined('InEmpireCMS'))
         <div id="two-column">
            <? @sys_GetEcmsInfo(5,2,32,0,0,15,0);?>
             <div class="box-content">
-                <h2 class="title title02">Maecenas luctus lectus</h2>
-                <p>Curabitur sit amet nulla. Nam in massa. Sed vel tellus. Curabitur sem urna, consequat vel, suscipit in, mattis placerat, nulla. Sed ac leo. Pellentesque imperdiet. In posuere  odio quisque semper augue mattis maecenas ligula.</p>
+            <img src="/ziyi/briefcase/images/showwe.jpg"/>
+                <p>我们一直致力于各类会展的展览服务、商务礼仪、公司开业庆典等上海礼仪服务，包括：展会礼仪、展会模特、展会翻译、展会兼职、展位申请、展台搭建...等等。
+ 
+       公司与多所大学有合作渠道，能快速为每个企事业单位提供高素质的展会兼职人员。
+      
+      公司核心队伍由多名经验丰富、极具创造力的职业经理人组成，本着专业化、集团化的思想为标准专心致力于为客户提升品牌而不懈努力。
+   
+       公司的服务宗旨是：高效快捷，客户至上！
+ 
+       欢迎新老客户前来咨询与合作！
+.</p>
             </div>
         </div>
     </div>
     <div id="sidebar">
-        <div id="sbox1">
-           <? @sys_GetEcmsInfo(3,5,32,0,2,16,0);?>
+        <div class="sbox">
+           <div class="cattitle">服务推荐</div>
+           <? @sys_GetEcmsInfo(3,7,32,0,2,16,0);?>
             <div><a href="/ziyi/briefcase/#" class="link-style">Read More</a></div>
         </div>
-        <div id="sbox2">
-            <h2>Testimonials</h2>
-            <p class="testimonial">Pellentesque adipiscing purus ac magna. Pellentesque habitant morbi tristique senectus et netus et malesuada fames.</p>
-            <div class="author"><img src="/ziyi/briefcase/images/pic03.jpg" width="80" height="80" alt="" /><span class="name">Juan Dela Cruz</span><span class="position">Company CEO</span><span>MyCompany, LLC</span></div>
+       <div class="sbox">
+           <div class="cattitle">新闻中心</div>
+           <? @sys_GetEcmsInfo(3,7,32,0,2,16,0);?>
+            <div><a href="/ziyi/briefcase/#" class="link-style">Read More</a></div>
         </div>
     </div>
 </div>
-<div id="footer" class="container">
-    <div id="fbox1">
-        <h2>Aenean elementum</h2>
-        <ul class="style1">
-            <li class="first"><a href="/ziyi/briefcase/#">Consectetuer adipiscing elit</a></li>
-            <li><a href="/ziyi/briefcase/#">Metus aliquam pellentesque</a></li>
-            <li><a href="/ziyi/briefcase/#">Suspendisse iaculis mauris</a></li>
-            <li><a href="/ziyi/briefcase/#">Urnanet non molestie semper</a></li>
-            <li><a href="/ziyi/briefcase/#">Proin gravida orci porttitor</a></li>
-        </ul>
-    </div>
-    <div id="fbox2">
-        <h2>Vestibulum luctus</h2>
-        <ul class="style1">
-            <li class="first"><a href="/ziyi/briefcase/#">Consectetuer adipiscing elit</a></li>
-            <li><a href="/ziyi/briefcase/#">Metus aliquam pellentesque</a></li>
-            <li><a href="/ziyi/briefcase/#">Suspendisse iaculis mauris</a></li>
-            <li><a href="/ziyi/briefcase/#">Urnanet non molestie semper</a></li>
-            <li><a href="/ziyi/briefcase/#">Proin gravida orci porttitor</a></li>
-        </ul>
-    </div>
-    <div id="fbox3">
-        <h2>Etiam malesuada</h2>
-        <p>In posuere eleifend odio. Quisque semper augue mattis wisi. Maecenas ligula. Pellentesque viverra vulputate enim. Donec leo. Vivamus fermentum nibh in augue.</p>
-        <ul class="style2">
-            <li><a href="/ziyi/briefcase/#"><img src="/ziyi/briefcase/images/social03.png" width="32" height="32" alt="" /></a></li>
-            <li><a href="/ziyi/briefcase/#"><img src="/ziyi/briefcase/images/social01.png" width="32" height="32" alt="" /></a></li>
-            <li><a href="/ziyi/briefcase/#"><img src="/ziyi/briefcase/images/social04.png" width="32" height="32" alt="" /></a></li>
-            <li><a href="/ziyi/briefcase/#"><img src="/ziyi/briefcase/images/social02.png" width="32" height="32" alt="" /></a></li>
-        </ul>
-    </div>
-</div>
+
 <div id="copyright" class="container">
-    <p>Copyright (c) 2013 Sitename.com. All rights reserved. Design by <a href="/ziyi/briefcase/http://www.freecsstemplates.org/" rel="nofollow">FreeCSSTemplates.org</a>. Photos by <a href="/ziyi/briefcase/http://fotogrph.com/">Fotogrph</a>.</p>
+    <p>Copyright (c) 2013 ziyiliyi.com. All rights reserved. Design by <a href="assnr.com" rel="nofollow">assnr.com</a></p>
 </div>
 </body>
 </html>
