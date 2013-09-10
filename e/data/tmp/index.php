@@ -27,7 +27,10 @@ if(!defined('InEmpireCMS'))
        <? @sys_ShowClassByTemp('0',13,0,7);?>
     </div>
 </div>
-<div id="banner" class="container">
+
+<!-----------focus pic start-------------->
+
+    <div id="banner" class="container">
     <div id="slider">
     <? @sys_GetEcmsInfo(9,4,32,0,0,14,0);?>
         <div class="indicator">
@@ -53,8 +56,18 @@ if(!defined('InEmpireCMS'))
         });
     </script> 
 </div>
+
+<!------------focus pic end ------------------>
+
+
+
+
+<!------------------------page start------------------------->
 <div id="page" class="container">
-    <div id="content">
+
+               <!-------------------------content start------------------------------->
+
+                              <div id="content">
         <div id="two-column">
            <? @sys_GetEcmsInfo(5,2,32,0,0,15,0);?>
             <div class="box-content">
@@ -72,7 +85,15 @@ if(!defined('InEmpireCMS'))
             </div>
         </div>
     </div>
-    <div id="sidebar">
+
+              <!--------------------------------content end------------------------>
+
+
+
+             <!-----------------------------------右边sidebox------------------------->
+
+
+                                 <div id="sidebar">
         <div class="sbox">
            <div class="cattitle">服务推荐</div>
            <? @sys_GetEcmsInfo(3,7,32,0,2,16,0);?>
@@ -84,7 +105,17 @@ if(!defined('InEmpireCMS'))
             <div><a href="/ziyi/briefcase/#" class="link-style">Read More</a></div>
         </div>
     </div>
+
+
+             <!----------------------------右边sidebox end-------------------------->
 </div>
+
+<!---------------------------page end------------------------------->
+
+
+
+<!-------------------------footer start------------------------------------->
+
 
 <div id="copyright" class="container">
     <p>Copyright (c) 2013 ziyiliyi.com. All rights reserved. Design by <a href="assnr.com" rel="nofollow">assnr.com</a></p>

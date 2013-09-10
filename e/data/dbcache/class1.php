@@ -25,7 +25,7 @@ $class_r[2]=Array('classid'=>2,
 
 'down_num'=>2,
 'online_num'=>2,
-'islist'=>0,
+'islist'=>2,
 'tid'=>1,
 'tbname'=>'news',
 'modid'=>1);
@@ -45,8 +45,8 @@ $class_r[3]=Array('classid'=>3,
 'tbname'=>'news',
 'modid'=>1,
 'lencord'=>25,'link_num'=>10,
-'newstempid'=>0,
-'listtempid'=>0,
+'newstempid'=>1,
+'listtempid'=>9,'pltempid'=>1,
 'newspath'=>'Y-m-d',
 'filetype'=>'.html',
 
@@ -54,7 +54,8 @@ $class_r[3]=Array('classid'=>3,
 'checked'=>1,
 'bname'=>'服务项目  ',
 
-'reorder'=>'newstime DESC');
+'reorder'=>'newstime DESC',
+'dtlisttempid'=>9);
 $class_r[4]=Array('classid'=>4,
 'bclassid'=>0,
 'classname'=>'新闻动态 ',

@@ -545,3 +545,14 @@ a:hover {
 	color : #333;
 	margin-bottom : 5px;
 }
+.aboutus {
+	line-height: 20px;
+}
+
+.listinfo_ul {
+	list-style: none;	
+
+}
+.listinfo_ul li{
+	margin-top: 10px;
+}
