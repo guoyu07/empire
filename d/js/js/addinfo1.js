@@ -1,1 +1,1 @@
-document.write("<option value=\'3\' style=\'background:#99C4E3\'>|-服务项目  </option><option value=\'5\' style=\'background:#99C4E3\'>|-经典案例   </option>");
+document.write("<option value=\'3\' style=\'background:#99C4E3\'>|-服务项目  </option><option value=\'4\' style=\'background:#99C4E3\'>|-新闻动态 </option><option value=\'5\' style=\'background:#99C4E3\'>|-经典案例   </option><option value=\'6\' style=\'background:#99C4E3\'>|-招贤纳士   </option>");

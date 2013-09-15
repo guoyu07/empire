@@ -7,9 +7,9 @@ if(!defined('InEmpireCMS'))
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>ziyi title</title>
-<meta name="keywords" content="" />
-<meta name="description" content="" />
+<title>雅安礼仪-礼仪ziyiliyi.com</title>
+<meta name="description" content="雅安礼仪,社交礼仪,各国礼仪,商务礼仪,节日礼仪,涉外礼仪,饭桌礼仪,个人礼仪,接待礼仪,着装礼仪,外表礼仪,书信礼仪,礼仪小姐" />
+<meta name="keywords" content="雅安礼仪,社交礼仪,各国礼仪,商务礼仪,节日礼仪,涉外礼仪,饭桌礼仪,个人礼仪,接待礼仪,着装礼仪,外表礼仪,书信礼仪,礼仪小姐" />
 <script type="text/javascript" src="/ziyi/briefcase/jquery-1.7.1.min.js"></script>
 <script type="text/javascript" src="/ziyi/briefcase/jquery.slidertron-1.1.js"></script>
 
@@ -24,10 +24,9 @@ if(!defined('InEmpireCMS'))
         <h1><a href="/ziyi/"><img src="/ziyi/briefcase/images/logo.png"/></a></h1>
     </div>
     <div id="menu">
-       <? @sys_ShowClassByTemp('0',13,0,7);?>
+       <? @sys_ShowClassByTemp('0',13,0,6);?>
     </div>
 </div>
-
 <!-----------focus pic start-------------->
 
     <div id="banner" class="container">
@@ -96,13 +95,19 @@ if(!defined('InEmpireCMS'))
                                  <div id="sidebar">
         <div class="sbox">
            <div class="cattitle">服务推荐</div>
-           <? @sys_GetEcmsInfo(3,7,32,0,2,16,0);?>
-            <div><a href="/ziyi/briefcase/#" class="link-style">Read More</a></div>
+
+           <? @sys_GetEcmsInfo(3,5,32,0,2,16,0);?>
+
+            <div><a href="/ziyi/fuwuxiangmu/" class="link-style">Read More</a></div>
+
         </div>
        <div class="sbox">
-           <div class="cattitle">新闻中心</div>
-           <? @sys_GetEcmsInfo(3,7,32,0,2,16,0);?>
-            <div><a href="/ziyi/briefcase/#" class="link-style">Read More</a></div>
+           <div class="cattitle">新闻推荐</div>
+
+           <? @sys_GetEcmsInfo(4,7,32,0,2,16,0);?>
+
+            <div><a href="/ziyi/xinwendongtai/" class="link-style">Read More</a></div>
+
         </div>
     </div>
 
@@ -118,7 +123,7 @@ if(!defined('InEmpireCMS'))
 
 
 <div id="copyright" class="container">
-    <p>Copyright (c) 2013 ziyiliyi.com. All rights reserved. Design by <a href="assnr.com" rel="nofollow">assnr.com</a></p>
+    <p>Copyright (c) 2013 ziyiliyi.com. All rights reserved. Design by <a target="_blank" href="http://www.assnr.com">assnr.com</a></p>
 </div>
 </body>
 </html>

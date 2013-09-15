@@ -1,19 +1,4 @@
 <?php
-$class_r[1]=Array('classid'=>1,
-'bclassid'=>0,
-'classname'=>'首页',
-'sonclass'=>'|',
-'featherclass'=>'',
-'islast'=>0,
-'classpath'=>'shouye',
-'classtype'=>'.html',
-
-'down_num'=>2,
-'online_num'=>2,
-'islist'=>0,
-'tid'=>1,
-'tbname'=>'news',
-'modid'=>1);
 $class_r[2]=Array('classid'=>2,
 'bclassid'=>0,
 'classname'=>' 关于我们 ',
@@ -61,7 +46,7 @@ $class_r[4]=Array('classid'=>4,
 'classname'=>'新闻动态 ',
 'sonclass'=>'|',
 'featherclass'=>'',
-'islast'=>0,
+'islast'=>1,
 'classpath'=>'xinwendongtai',
 'classtype'=>'.html',
 
@@ -70,7 +55,19 @@ $class_r[4]=Array('classid'=>4,
 'islist'=>0,
 'tid'=>1,
 'tbname'=>'news',
-'modid'=>1);
+'modid'=>1,
+'lencord'=>25,'link_num'=>10,
+'newstempid'=>1,
+'listtempid'=>10,
+'newspath'=>'Y-m-d',
+'filetype'=>'.html',
+
+
+'checked'=>1,
+'bname'=>'新闻动态 ',
+
+'reorder'=>'newstime DESC',
+'dtlisttempid'=>10);
 $class_r[5]=Array('classid'=>5,
 'bclassid'=>0,
 'classname'=>'经典案例   ',
@@ -87,8 +84,8 @@ $class_r[5]=Array('classid'=>5,
 'tbname'=>'news',
 'modid'=>1,
 'lencord'=>25,'link_num'=>10,
-'newstempid'=>0,
-'listtempid'=>0,
+'newstempid'=>1,
+'listtempid'=>11,
 'newspath'=>'Y-m-d',
 'filetype'=>'.html',
 
@@ -96,13 +93,14 @@ $class_r[5]=Array('classid'=>5,
 'checked'=>1,
 'bname'=>'经典案例   ',
 
-'reorder'=>'newstime DESC');
+'reorder'=>'newstime DESC',
+'dtlisttempid'=>11);
 $class_r[6]=Array('classid'=>6,
 'bclassid'=>0,
 'classname'=>'招贤纳士   ',
 'sonclass'=>'|',
 'featherclass'=>'',
-'islast'=>0,
+'islast'=>1,
 'classpath'=>'zhaoxiannashi',
 'classtype'=>'.html',
 
@@ -111,7 +109,19 @@ $class_r[6]=Array('classid'=>6,
 'islist'=>0,
 'tid'=>1,
 'tbname'=>'news',
-'modid'=>1);
+'modid'=>1,
+'lencord'=>25,'link_num'=>10,
+'newstempid'=>1,
+'listtempid'=>1,
+'newspath'=>'Y-m-d',
+'filetype'=>'.html',
+
+
+'checked'=>1,
+'bname'=>'招贤纳士   ',
+
+'reorder'=>'newstime DESC',
+'dtlisttempid'=>1);
 $class_r[7]=Array('classid'=>7,
 'bclassid'=>0,
 'classname'=>'联系我们   ',
@@ -123,22 +133,7 @@ $class_r[7]=Array('classid'=>7,
 
 'down_num'=>2,
 'online_num'=>2,
-'islist'=>0,
-'tid'=>1,
-'tbname'=>'news',
-'modid'=>1);
-$class_r[8]=Array('classid'=>8,
-'bclassid'=>0,
-'classname'=>' 留言反馈 ',
-'sonclass'=>'|',
-'featherclass'=>'',
-'islast'=>0,
-'classpath'=>'liuyanfankui',
-'classtype'=>'.html',
-
-'down_num'=>2,
-'online_num'=>2,
-'islist'=>0,
+'islist'=>2,
 'tid'=>1,
 'tbname'=>'news',
 'modid'=>1);
